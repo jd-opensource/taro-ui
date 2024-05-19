@@ -39,6 +39,7 @@ export default class AtCalendarBody extends React.Component<
   public constructor(props: AtCalendarBodyProps) {
     super(props)
     const {
+      disabledDate,
       validDates,
       marks,
       format,
@@ -50,6 +51,7 @@ export default class AtCalendarBody extends React.Component<
     } = props
 
     this.generateFunc = generateCalendarGroup({
+      disabledDate,
       validDates,
       format,
       minDate,
@@ -76,6 +78,7 @@ export default class AtCalendarBody extends React.Component<
     nextProps: AtCalendarBodyProps
   ): void {
     const {
+      disabledDate,
       validDates,
       marks,
       format,
@@ -87,6 +90,7 @@ export default class AtCalendarBody extends React.Component<
     } = nextProps
 
     this.generateFunc = generateCalendarGroup({
+      disabledDate,
       validDates,
       format,
       minDate,

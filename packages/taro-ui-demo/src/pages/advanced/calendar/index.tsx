@@ -1,5 +1,6 @@
 import React from 'react'
 import { AtButton, AtCalendar } from 'taro-ui'
+import dayjs from 'dayjs'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
@@ -21,7 +22,8 @@ interface IndexState {
   [key: string]: any
 }
 
-export default class Index extends React.Component<{}, IndexState> {
+interface IndexProps {}
+export default class Index extends React.Component<IndexProps, IndexState> {
   public config: Taro.PageConfig = {
     navigationBarTitleText: 'Taro日历组件展示'
   }
@@ -30,8 +32,8 @@ export default class Index extends React.Component<{}, IndexState> {
     super(props)
     this.state = {
       now: Date.now(),
-      minDate: '2018/06/11',
-      maxDate: '2020/12/12',
+      minDate: dayjs().startOf('month').format('YYYY-MM-DD'),
+      maxDate: dayjs().endOf('month').format('YYYY-MM-DD'),
       multiCurentDate: {
         start: Date.now()
       },
@@ -86,14 +88,8 @@ export default class Index extends React.Component<{}, IndexState> {
   }
 
   public render(): JSX.Element {
-    const {
-      now,
-      minDate,
-      maxDate,
-      mark,
-      multiCurentDate,
-      validDates
-    } = this.state
+    const { now, minDate, maxDate, mark, multiCurentDate, validDates } =
+      this.state
     return (
       <View className='page calendar-page'>
         <DocsHeader title='Calendar 日历' />
@@ -209,6 +205,21 @@ export default class Index extends React.Component<{}, IndexState> {
             <View className='panel__title'>有效时间组</View>
             <View className='panel__content'>
               <AtCalendar validDates={validDates} />
+            </View>
+          </View>
+
+          <View className='panel'>
+            <View className='panel__title'>禁用日期</View>
+            <View className='panel__content'>
+              <AtCalendar
+                minDate={minDate}
+                maxDate={maxDate}
+                disabledDate={(currentDate: dayjs.Dayjs) => {
+                  // 禁用周末
+                  const currentDayOfWeek = dayjs(currentDate).day()
+                  return [0, 6].includes(currentDayOfWeek)
+                }}
+              />
             </View>
           </View>
         </View>

@@ -64,6 +64,8 @@ declare namespace Calendar {
     minDate?: DateArg
 
     maxDate?: DateArg
+
+    disabledDate?: (currentDate: dayjs.Dayjs) => boolean
   }
 
   export type List<T> = Array<T>
@@ -150,6 +152,8 @@ export interface AtCalendarDefaultProps {
   isMultiSelect: boolean
 
   selectedDates: Array<Calendar.SelectedDate>
+
+  disabledDate: (currentDate: dayjs.Dayjs) => boolean
 }
 
 export interface AtCalendarState {
@@ -189,6 +193,8 @@ export type AtCalendarBodyListGroup = Array<Calendar.ListInfo<Calendar.Item>>
 
 export interface AtCalendarBodyProps {
   format: string
+
+  disabledDate: (currentDate: dayjs.Dayjs) => boolean
 
   validDates: Array<Calendar.ValidDate>
 

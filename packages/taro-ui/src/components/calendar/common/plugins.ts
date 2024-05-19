@@ -87,15 +87,18 @@ export function handleDisabled(
   item: Calendar.Item
 ): Calendar.Item {
   const { options } = args
-  const { _value } = item
-  const { minDate, maxDate } = options
+  const { _value, value } = item
+  const { minDate, maxDate, disabledDate } = options
+
+  const dayjsItemDate = dayjs(value)
 
   const dayjsMinDate = dayjs(minDate)
   const dayjsMaxDate = dayjs(maxDate)
 
   item.isDisabled =
     !!(minDate && _value?.isBefore(dayjsMinDate)) ||
-    !!(maxDate && _value?.isAfter(dayjsMaxDate))
+    !!(maxDate && _value?.isAfter(dayjsMaxDate)) ||
+    (disabledDate && disabledDate(dayjsItemDate))
 
   return item
 }

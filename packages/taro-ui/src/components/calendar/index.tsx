@@ -23,7 +23,8 @@ const defaultProps: AtCalendarDefaultProps = {
   isMultiSelect: false,
   format: 'YYYY-MM-DD',
   currentDate: Date.now(),
-  monthFormat: 'YYYY年MM月'
+  monthFormat: 'YYYY年MM月',
+  disabledDate: () => false
 }
 
 export default class AtCalendar extends React.Component<
@@ -283,7 +284,8 @@ export default class AtCalendar extends React.Component<
       hideArrow,
       isVertical,
       monthFormat,
-      selectedDates
+      selectedDates,
+      disabledDate
     } = this.props as AtCalendarPropsWithDefaults
 
     return (
@@ -299,6 +301,7 @@ export default class AtCalendar extends React.Component<
           onSelectDate={this.handleSelectDate}
         />
         <AtCalendarBody
+          disabledDate={disabledDate}
           validDates={validDates}
           marks={marks}
           format={format}

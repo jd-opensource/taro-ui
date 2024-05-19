@@ -105,6 +105,26 @@ import { AtCalendar } from "taro-ui"
 
 :::
 
+## 不可选择的日期
+
+可以与`minDate`、`maxDate`一起使用
+
+:::demo
+
+```html
+<AtCalendar
+  minDate={minDate}
+  maxDate={maxDate}
+  disabledDate={(currentDate: dayjs.Dayjs) => {
+    // 禁用周末
+    const currentDayOfWeek = dayjs(currentDate).day();
+    return [0, 6].includes(currentDayOfWeek)
+  }}
+/>
+```
+
+:::
+
 ## AtCalendar 参数
 
 ```ts
@@ -116,19 +136,20 @@ interface SelectDate {
 }
 ```
 
-| 参数          | 说明           | 类型                            | 默认值       |
-| ------------- | -------------- | ------------------------------- | ------------ |
-| currentDate   | 当前的时间     | `DateArg | SelectDate`          | `Date.now()` |
-| minDate       | 最小的可选时间 | `DateArg`                       | -            |
-| maxDate       | 最大的可选时间 | `DateArg`                       | -            |
-| isSwiper      | 是否可以滑动   | `boolean`                       | `true`       |
-| marks         | 需要标记的时间 | `Array<{'{ value: DateArg }'}>` | `[]`         |
-| validDates    | 需要标记的有效时间 | `Array<{'{ value: DateArg }'}>` | `[]`      |
-| format        | 日期格式       | `string`                        | `YYYY-MM-DD` |
-| monthFormat   | 月份格式       | `string`                        | `YYYY年MM月` |
-| hideArrow     | 是否隐藏箭头   | `boolean`                       | `false`      |
-| isVertical    | 是否垂直滑动   | `boolean`                       | `false`      |
-| isMultiSelect | 是否范围选择   | `boolean`                       | `false`      |
+| 参数          | 说明            | 类型                            | 默认值          |
+| ------------- |---------------| ------------------------------- |--------------|
+| currentDate   | 当前的时间         | `DateArg | SelectDate`  | `Date.now()` |
+| minDate       | 最小的可选时间       | `DateArg`                       | -            |
+| maxDate       | 最大的可选时间       | `DateArg`                       | -            |
+| disabledDate    | 不可选择的日期 | `(currentDate: dayjs.Dayjs) => boolean` | -            |
+| isSwiper      | 是否可以滑动        | `boolean`                       | `true`       |
+| marks         | 需要标记的时间       | `Array<{'{ value: DateArg }'}>` | `[]`         |
+| validDates    | 需要标记的有效时间     | `Array<{'{ value: DateArg }'}>` | `[]`         |
+| format        | 日期格式          | `string`                        | `YYYY-MM-DD` |
+| monthFormat   | 月份格式          | `string`                        | `YYYY年MM月`   |
+| hideArrow     | 是否隐藏箭头        | `boolean`                       | `false`      |
+| isVertical    | 是否垂直滑动        | `boolean`                       | `false`      |
+| isMultiSelect | 是否范围选择        | `boolean`                       | `false`      |
 
 ## AtCalendar 事件
 
