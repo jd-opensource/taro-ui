@@ -56,6 +56,9 @@ $drop-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
 
 .darkbox {
   background-color: #23272f;
+  &.at-container {
+    box-shadow: none;
+  }
 }
 
 /**
