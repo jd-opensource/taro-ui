@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
+    "@types/react-router-dom": "5.1.5",
     "@types/webpack-env": "^1.15.1",
     "babel-loader": "^8.1.0",
     "chalk": "^4.0.0",
