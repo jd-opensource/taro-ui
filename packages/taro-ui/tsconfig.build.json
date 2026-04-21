@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "es6",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "types": ["node"]
   },
   "include": [
     "src/**/*"

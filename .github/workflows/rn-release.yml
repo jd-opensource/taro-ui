@@ -9,16 +9,16 @@ jobs:
     name: Taro Bundle Release
     steps:
       - name: Checkout Project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Cache node_modules Folder
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/node_modules
           key: ${{ runner.os }}-node_modules
           restore-keys: ${{ runner.os }}-node_modules
 
       - name: Cache pnpm modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -26,9 +26,10 @@ jobs:
             ${{ runner.os }}-
 
       - name: install
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
+        with:
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
@@ -41,7 +42,7 @@ jobs:
           appname: Taro-UI-Demo
           logo: https://pic5.58cdn.com.cn/nowater/fangfe/n_v25a185c1657984016926f26af591912c4.jpg
       - name: Upload Qr Image
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: bundle-qr-code
           path: |

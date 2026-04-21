@@ -10,6 +10,7 @@ on:
 
 env:
   CI: true
+  NODE_OPTIONS: --openssl-legacy-provider
 jobs:
   publish:
     name: Publish Docs to TCB
@@ -18,17 +19,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v4
         with:
-            version: 8
+          version: 9
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'

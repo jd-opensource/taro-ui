@@ -28,9 +28,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node ${{ matrix.node_version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
           registry-url: 'https://registry.npmjs.org'
       - name: Git Identity
         run: |
@@ -91,9 +91,9 @@ jobs:
           http_status_code=$(curl -LI $GET_API_URL -o /dev/null -w '%{http_code}\n' -s \
             -H "Authorization: token ${GITHUB_TOKEN}")
           if [ "$http_status_code" -ne "404" ] ; then
-            echo "::set-output name=exists_tag::true"
+            echo "exists_tag=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=exists_tag::false"
+            echo "exists_tag=false" >> $GITHUB_OUTPUT
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -106,16 +106,16 @@ jobs:
 
       # Bootstrap project
       - name: Cache pnpm modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-
       - name: install
-        uses: pnpm/action-setup@v2.4.0
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
@@ -157,13 +157,10 @@ jobs:
       - name: Create Release
         id: create_release
         if: startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) && steps.tag_check.outputs.exists_tag == 'false' && github.event.pull_request.merged == true
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ env.CURRENT_VERSION }}
-          # Copy Pull Request's tile and body to Release Note
-          release_name: ${{ github.event.pull_request.title }}
+          name: ${{ github.event.pull_request.title }}
           body: |
             ${{ github.event.pull_request.body }}
           draft: false
