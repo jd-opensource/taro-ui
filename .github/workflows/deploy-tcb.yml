@@ -1,12 +1,15 @@
 name: Publish root to TCB
+# 当前文档已迁移至 GitHub Pages，此 workflow 暂时禁用
+# 如需重新启用 TCB 部署，恢复下方触发条件即可
 on:
-  check_suite:
-    types: [completed]
-  push:
-    branches:
-      - next
-  schedule:
-    - cron: "0 21 * * *"
+  workflow_dispatch:
+  # check_suite:
+  #   types: [completed]
+  # push:
+  #   branches:
+  #     - next
+  # schedule:
+  #   - cron: "0 21 * * *"
 
 env:
   CI: true
