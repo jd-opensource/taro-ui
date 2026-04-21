@@ -24,17 +24,17 @@ export interface TabItem {
   /**
    * icon className 前缀，用于第三方字体图标库，
    * 比如想使用'fa fa-clock' 的图标，则传入 iconPrefixClass='fa' iconType='clock'，
-   * 参考[拓展图标库详细](https://taro-ui.taro.zone/#/docs/icon)
+   * 参考[拓展图标库详细](https://jd-opensource.github.io/taro-ui/#/docs/icon)
    */
   iconPrefixClass?: string
   /**
    * 未选中时展示的 icon 类型，可扩展第三方字体图标库，
-   * 参考[拓展图标库详细](https://taro-ui.taro.zone/#/docs/icon)
+   * 参考[拓展图标库详细](https://jd-opensource.github.io/taro-ui/#/docs/icon)
    */
   iconType?: string
   /**
    * 选中时展示的 icon 类型，可扩展第三方字体图标库，
-   * 参考[拓展图标库详细](https://taro-ui.taro.zone/#/docs/icon)
+   * 参考[拓展图标库详细](https://jd-opensource.github.io/taro-ui/#/docs/icon)
    */
   selectedIconType?: string
   /**

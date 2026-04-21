@@ -55,7 +55,7 @@ h5: {
 
 ## 如何自定义样式？
 
-请查看 [「自定义主题」](https://taro-ui.taro.zone/#/docs/customizetheme) 章节
+请查看 [「自定义主题」](https://jd-opensource.github.io/taro-ui/#/docs/customizetheme) 章节
 
 ## 自定义样式为什么没有生效（H5 生效，微信小程序没生效）？
 

@@ -24,7 +24,7 @@ const Footer = () => (
           <p>
             <a
               className='link'
-              href='https://taro-ui.taro.zone/'
+              href='https://jd-opensource.github.io/taro-ui/#/'
               target='_blank'
               rel='noopener noreferrer'
             >
