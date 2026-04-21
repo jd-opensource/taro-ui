@@ -38,7 +38,12 @@ export default class AtAvatar extends React.Component<
     if (text) letter = text[0]
 
     let elem: React.ReactNode
-    if (openData && openData.type === 'userAvatarUrl' && this.state.isWEAPP) {
+    if (
+      openData &&
+      openData.type === 'userAvatarUrl' &&
+      this.state.isWEAPP &&
+      Taro.canIUse('open-data')
+    ) {
       elem = <OpenData type={openData.type}></OpenData>
     } else if (image) {
       elem = <Image className='at-avatar__img' src={image} />

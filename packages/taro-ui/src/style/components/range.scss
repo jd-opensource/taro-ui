@@ -3,7 +3,7 @@
 
 .at-range {
   position: relative;
-  padding: 0 calc($at-range-slider-size / 2) + 4PX;
+  padding: 0 calc($at-range-slider-size / 2 + 4PX);
   width: 100%;
   box-sizing: border-box;
 
@@ -33,7 +33,7 @@
 
   &__slider {
     position: absolute;
-    margin-left: - calc($at-range-slider-size / 2);
+    margin-left: calc($at-range-slider-size / -2);
     width: $at-range-slider-size;
     height: $at-range-slider-size;
     border-radius: 50%;

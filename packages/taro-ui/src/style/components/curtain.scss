@@ -36,7 +36,7 @@ $at-curtain-btn-size: 56px;
     position: absolute;
     width: $at-curtain-btn-size;
     height: $at-curtain-btn-size;
-    margin-left: - calc($at-curtain-btn-size / 2);
+    margin-left: calc($at-curtain-btn-size / -2);
     left: 50%;
     bottom: -($at-curtain-btn-size + 24px);
     align-items: center;
@@ -68,7 +68,7 @@ $at-curtain-btn-size: 56px;
     }
 
     &--top {
-      margin-left: - calc($at-curtain-btn-size / 2);
+      margin-left: calc($at-curtain-btn-size / -2);
       top: -($at-curtain-btn-size + 24px);
       left: 50%;
       bottom: auto;
@@ -88,7 +88,7 @@ $at-curtain-btn-size: 56px;
     }
 
     &--bottom {
-      margin-left: - calc($at-curtain-btn-size / 2);
+      margin-left: calc($at-curtain-btn-size / -2);
       bottom: -($at-curtain-btn-size + 24px);
       left: 50%;
     }
