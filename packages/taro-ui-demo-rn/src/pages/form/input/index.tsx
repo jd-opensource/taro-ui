@@ -308,7 +308,7 @@ export default class Index extends React.Component<IndexProps, IndexState> {
                   >
                     {/* <Image
                       mode='scaleToFill'
-                      src='https://taro-ui.taro.zone/h5/static/images/verification_code.png'
+                      src='https://jd-opensource.github.io/taro-ui/h5/static/images/verification_code.png'
                     /> */}
                     <ImageBackground
                       style={{
@@ -316,7 +316,7 @@ export default class Index extends React.Component<IndexProps, IndexState> {
                         height: Taro.pxTransform(60)
                       }}
                       source={{
-                        uri: 'https://taro-ui.taro.zone/h5/static/images/verification_code.png'
+                        uri: 'https://jd-opensource.github.io/taro-ui/h5/static/images/verification_code.png'
                       }}
                       resizeMode='cover'
                     />
