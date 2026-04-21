@@ -1,0 +1,53 @@
+name: Deploy Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - next
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --shamefully-hoist
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Build taro-ui
+        run: pnpm run build:ui
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Build taro-ui-docs
+        run: pnpm run build:doc
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: packages/taro-ui-docs/dist
