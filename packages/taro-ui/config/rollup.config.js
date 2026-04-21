@@ -37,7 +37,13 @@ export default {
   ],
   external: externalPackages,
   plugins: [
+    RollupTypescript({
+      tsconfig: resolveFile('tsconfig.rollup.json'),
+      include: ['*.ts', '*.tsx', '**/*.ts', '**/*.tsx'],
+      exclude: ['node_modules']
+    }),
     RollupNodeResolve({
+      extensions: ['.mjs', '.js', '.jsx', '.json', '.node', '.ts', '.tsx'],
       customResolveOptions: {
         moduleDirectory: 'node_modules'
       }
@@ -46,9 +52,6 @@ export default {
       include: /\/node_modules\//
     }),
     RollupJson(),
-    RollupTypescript({
-      tsconfig: resolveFile('tsconfig.rollup.json')
-    }),
     RollupCopy({
       targets: [
         {
