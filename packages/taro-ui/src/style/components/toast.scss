@@ -86,7 +86,7 @@ $at-toast-bg-color: rgba($color: $color-black-0, $alpha: 0.8);
     &.at-toast__body--success,
     &.at-toast__body--error,
     &.at-toast__body--loading {
-      padding-bottom: $spacing-v-lg - calc(($at-toast-font-size * $line-height-zh - $at-toast-font-size) / 2);
+      padding-bottom: $spacing-v-lg - ($at-toast-font-size * $line-height-zh - $at-toast-font-size) / 2;
     }
   }
 }
