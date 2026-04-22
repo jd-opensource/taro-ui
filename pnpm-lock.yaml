@@ -128,25 +128,25 @@ importers:
     dependencies:
       '@tarojs/plugin-platform-alipay':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-h5':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-jd':
         specifier: '>=3'
         version: 3.6.6(@types/react@18.3.28)
       '@tarojs/plugin-platform-qq':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-swan':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-tt':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-weapp':
         specifier: '>=3'
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/taro-rn':
         specifier: '>=3'
         version: 3.6.6(c83880423854eabcaffe016cc29c3011)
@@ -169,7 +169,7 @@ importers:
         specifier: '>=16.13.0'
         version: 18.3.1(react@18.3.1)
       react-native-modal:
-        specifier: ^13.0.0
+        specifier: '>=13.0.0'
         version: 13.0.2(react-native@0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@rollup/plugin-commonjs':
@@ -183,7 +183,7 @@ importers:
         version: 7.1.3(rollup@2.80.0)
       '@tarojs/components':
         specifier: 3.6.40
-        version: 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react-native@0.64.38)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)
+        version: 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)
       '@tarojs/react':
         specifier: 3.6.40
         version: 3.6.40(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(react@18.3.1)
@@ -199,9 +199,6 @@ importers:
       '@types/node':
         specifier: ~16.6.0
         version: 16.6.2
-      '@types/react-native':
-        specifier: ^0.64.13
-        version: 0.64.38
       camelize:
         specifier: ^1.0.0
         version: 1.0.1
@@ -340,7 +337,7 @@ importers:
         version: 7.29.2
       '@tarojs/components':
         specifier: 3.6.6
-        version: 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+        version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-framework-react':
         specifier: 3.6.6
         version: 3.6.6(@types/react@18.3.28)(react@18.3.1)
@@ -350,6 +347,9 @@ importers:
       '@tarojs/rn-runner':
         specifier: 3.6.6
         version: 3.6.6(@babel/core@7.29.0)(acorn@8.16.0)(encoding@0.1.13)(postcss@8.5.10)(react-native-svg@13.8.0(react-native@0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1))(react@18.3.1))(react-native@0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1))(rollup@2.80.0)
+      '@tarojs/rn-supporter':
+        specifier: 3.6.6
+        version: 3.6.6(@babel/core@7.29.0)(encoding@0.1.13)(postcss@8.5.10)(react-native-svg@13.8.0(react-native@0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1))(react@18.3.1))(react-native@0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1))
       '@tarojs/runtime':
         specifier: 3.6.6
         version: 3.6.6
@@ -365,6 +365,9 @@ importers:
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
       react-native:
         specifier: ^0.71.6
         version: 0.71.19(@babel/core@7.29.0)(@babel/preset-env@7.29.2(@babel/core@7.29.0))(encoding@0.1.13)(react@18.3.1)
@@ -3134,17 +3137,11 @@ packages:
     peerDependencies:
       '@types/react': ^18.0.0
 
-  '@types/react-native@0.64.38':
-    resolution: {integrity: sha512-HzpneiIYqqAZVOv9W6ncAcsy9OAq+skGXVIuDD/CJy3WLHNpV69lD9wKyOWJRdzad5HUp2H1Lk7yDi+Vm1DNrw==}
-
   '@types/react-router-dom@5.1.5':
     resolution: {integrity: sha512-ArBM4B1g3BWLGbaGvwBGO75GNFbLDUthrDojV2vHLih/Tq8M+tgvY1DSwkuNrPSwdp/GUL93WSEpTZs8nVyJLw==}
 
   '@types/react-router@5.1.20':
     resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
-
-  '@types/react@17.0.91':
-    resolution: {integrity: sha512-xauZca6qMeCU3Moy0KxCM9jtf1vyk6qRYK39Ryf3afUqwgNUjRIGoDdS9BcGWgAMGSg1hvP4XcmlYrM66PtqeA==}
 
   '@types/react@18.3.28':
     resolution: {integrity: sha512-z9VXpC7MWrhfWipitjNdgCauoMLRdIILQsAEV+ZesIzBq/oUlxk0m3ApZuMFCXdnS4U7KrI+l3WRUEGQ8K1QKw==}
@@ -3161,9 +3158,6 @@ packages:
   '@types/sass@1.45.0':
     resolution: {integrity: sha512-jn7qwGFmJHwUSphV8zZneO3GmtlgLsmhs/LQyVvQbIIa+fzGMUiHI4HXJZL3FT8MJmgXWbLGiVVY7ElvHq6vDA==}
     deprecated: This is a stub types definition. sass provides its own type definitions, so you do not need this installed.
-
-  '@types/scheduler@0.16.8':
-    resolution: {integrity: sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==}
 
   '@types/semver@7.7.1':
     resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
@@ -14586,9 +14580,9 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
 
-  '@tarojs/components-advanced@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@tarojs/taro@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(postcss@8.5.10))(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/components-advanced@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@tarojs/taro@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(postcss@8.5.10))(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react-native@0.64.38)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)
+      '@tarojs/components': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)
       '@tarojs/runtime': 3.6.40(@tarojs/shared@3.6.40)
       '@tarojs/shared': 3.6.40
       '@tarojs/taro': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(@types/webpack@4.41.40)(postcss@8.5.10)
@@ -14606,9 +14600,9 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
 
-  '@tarojs/components-advanced@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/components-advanced@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/runtime': 3.6.6
       '@tarojs/shared': 3.6.6
       '@tarojs/taro': 3.6.6(@types/react@18.3.28)
@@ -14642,10 +14636,10 @@ snapshots:
       - react
       - vue
 
-  '@tarojs/components-react@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/components-react@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.29.2
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/taro': 3.6.6(@types/react@18.3.28)
       classnames: 2.5.1
       intersection-observer: 0.7.0
@@ -14718,29 +14712,6 @@ snapshots:
       - react-native-web
       - supports-color
 
-  '@tarojs/components@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react-native@0.64.38)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)':
-    dependencies:
-      '@stencil/core': 2.22.3
-      '@tarojs/components-advanced': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@tarojs/taro@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(postcss@8.5.10))(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
-      '@tarojs/taro': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(@types/webpack@4.41.40)(postcss@8.5.10)
-      classnames: 2.5.1
-      hammerjs: 2.0.8
-      hls.js: 1.6.16
-      resolve-pathname: 3.0.0
-      swiper: 6.8.0
-      tslib: 2.8.1
-    optionalDependencies:
-      '@types/react': 18.3.28
-      '@types/react-native': 0.64.38
-    transitivePeerDependencies:
-      - '@tarojs/helper'
-      - '@tarojs/runtime'
-      - '@tarojs/shared'
-      - '@types/webpack'
-      - '@types/webpack-dev-server'
-      - postcss
-      - react
-
   '@tarojs/components@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react@18.3.28)(@types/webpack@4.41.40)(postcss@8.5.10)(react@18.3.1)':
     dependencies:
       '@stencil/core': 2.22.3
@@ -14763,10 +14734,32 @@ snapshots:
       - postcss
       - react
 
-  '@tarojs/components@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/components@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)':
     dependencies:
       '@stencil/core': 2.22.3
-      '@tarojs/components-advanced': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components-advanced': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@tarojs/shared@3.6.40)(@tarojs/taro@3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(postcss@8.5.10))(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/taro': 3.6.40(@tarojs/helper@3.6.40)(@tarojs/runtime@3.6.40(@tarojs/shared@3.6.40))(@types/react@18.3.28)(@types/webpack@4.41.40)(postcss@8.5.10)
+      classnames: 2.5.1
+      hammerjs: 2.0.8
+      hls.js: 1.6.16
+      resolve-pathname: 3.0.0
+      swiper: 6.8.0
+      tslib: 2.8.1
+    optionalDependencies:
+      '@types/react': 18.3.28
+    transitivePeerDependencies:
+      - '@tarojs/helper'
+      - '@tarojs/runtime'
+      - '@tarojs/shared'
+      - '@types/webpack'
+      - '@types/webpack-dev-server'
+      - postcss
+      - react
+
+  '@tarojs/components@3.6.6(@types/react@18.3.28)(react@18.3.1)':
+    dependencies:
+      '@stencil/core': 2.22.3
+      '@tarojs/components-advanced': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/router': 3.6.6(@types/react@18.3.28)
       '@tarojs/taro': 3.6.6(@types/react@18.3.28)
       classnames: 2.5.1
@@ -14777,7 +14770,6 @@ snapshots:
       weui: 1.1.3
     optionalDependencies:
       '@types/react': 18.3.28
-      '@types/react-native': 0.64.38
     transitivePeerDependencies:
       - '@types/webpack'
       - '@types/webpack-dev-server'
@@ -14927,14 +14919,14 @@ snapshots:
   '@tarojs/mini-runner@3.6.6(@types/react@18.3.28)(postcss@8.5.10)(react@18.3.1)(rework-visit@1.0.0)(rework@1.0.1)':
     dependencies:
       '@babel/core': 7.29.0
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/helper': 3.6.6
-      '@tarojs/plugin-platform-alipay': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-alipay': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/plugin-platform-jd': 3.6.6(@types/react@18.3.28)
-      '@tarojs/plugin-platform-qq': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
-      '@tarojs/plugin-platform-swan': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
-      '@tarojs/plugin-platform-tt': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
-      '@tarojs/plugin-platform-weapp': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-qq': 3.6.6(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-swan': 3.6.6(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-tt': 3.6.6(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-weapp': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/runner-utils': 3.6.6
       '@tarojs/runtime': 3.6.6
       '@tarojs/shared': 3.6.6
@@ -15100,9 +15092,9 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-alipay@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-alipay@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
     transitivePeerDependencies:
@@ -15141,14 +15133,14 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-h5@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-h5@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
-      '@tarojs/components-react': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components-react': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/router': 3.6.6(@types/react@18.3.28)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
-      '@tarojs/taro-h5': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/taro-h5': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       babel-plugin-transform-taroapi: 3.6.6
       resolve: 1.22.12
     transitivePeerDependencies:
@@ -15203,9 +15195,9 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-qq@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-qq@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/plugin-platform-weapp': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/plugin-platform-weapp': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
     transitivePeerDependencies:
@@ -15228,9 +15220,9 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-swan@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-swan@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
     transitivePeerDependencies:
@@ -15254,9 +15246,9 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-tt@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-tt@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
     transitivePeerDependencies:
@@ -15279,9 +15271,9 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-weapp@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/plugin-platform-weapp@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/service': 3.6.6(@types/react@18.3.28)
       '@tarojs/shared': 3.6.6
     transitivePeerDependencies:
@@ -15603,10 +15595,10 @@ snapshots:
     transitivePeerDependencies:
       - '@tarojs/taro'
 
-  '@tarojs/taro-h5@3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)':
+  '@tarojs/taro-h5@3.6.6(@types/react@18.3.28)(react@18.3.1)':
     dependencies:
       '@tarojs/api': 3.6.6
-      '@tarojs/components': 3.6.6(@types/react-native@0.64.38)(@types/react@18.3.28)(react@18.3.1)
+      '@tarojs/components': 3.6.6(@types/react@18.3.28)(react@18.3.1)
       '@tarojs/router': 3.6.6(@types/react@18.3.28)
       '@tarojs/runtime': 3.6.6
       '@tarojs/shared': 3.6.6
@@ -15943,10 +15935,6 @@ snapshots:
     dependencies:
       '@types/react': 18.3.28
 
-  '@types/react-native@0.64.38':
-    dependencies:
-      '@types/react': 17.0.91
-
   '@types/react-router-dom@5.1.5':
     dependencies:
       '@types/history': 5.0.0
@@ -15957,12 +15945,6 @@ snapshots:
     dependencies:
       '@types/history': 4.7.11
       '@types/react': 18.3.28
-
-  '@types/react@17.0.91':
-    dependencies:
-      '@types/prop-types': 15.7.15
-      '@types/scheduler': 0.16.8
-      csstype: 3.2.3
 
   '@types/react@18.3.28':
     dependencies:
@@ -15984,8 +15966,6 @@ snapshots:
   '@types/sass@1.45.0':
     dependencies:
       sass: 1.99.0
-
-  '@types/scheduler@0.16.8': {}
 
   '@types/semver@7.7.1': {}
 
