@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /**
  * Mixes a color with white. It's different from lighten()
  *
@@ -19,5 +21,5 @@
   $color,
   $percent
 ) {
-  @return mix(#FFF, $color, $percent);
+  @return color.mix(#FFF, $color, $percent);
 }

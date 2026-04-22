@@ -3,10 +3,10 @@
  */
 
 /* Variables */
-@import './variables/default.scss';
+@use 'variables/default';
 
 /* Mixin */
-@import './mixins/index.scss';
+@use 'mixins/index';
 
 /* Components */
-@import './components/index.scss';
+@use 'components/index';

@@ -2,7 +2,7 @@
  * Red - 京东红主题
  */
 
-@import '../mixins/index.scss';
+@use '../mixins/index' as *;
 
 /* The Color of JD Brand */
 $color-brand: #E93B3D;
