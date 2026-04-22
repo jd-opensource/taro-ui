@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "taro-ui",
+  "version": "3.3.1",
   "description": "UI KIT for Taro",
   "author": "O2Team <aotu.io>",
   "homepage": "https://jd-opensource.github.io/taro-ui/#/",
