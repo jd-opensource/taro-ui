@@ -142,7 +142,8 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
     const inputStyle = {
       width: width ? `${pxTransform(width)}` : ''
     }
-    const inputValue = Number(this.handleValue(value))
+    const inputValue =
+      typeof value !== 'undefined' ? Number(this.handleValue(value)) : null
     const rootCls = classNames(
       'at-input-number',
       {
@@ -151,10 +152,12 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
       className
     )
     const minusBtnCls = classNames('at-input-number__btn', {
-      'at-input-number--disabled': inputValue <= min || disabled
+      'at-input-number--disabled':
+        (inputValue !== null && inputValue <= min) || disabled
     })
     const plusBtnCls = classNames('at-input-number__btn', {
-      'at-input-number--disabled': inputValue >= max || disabled
+      'at-input-number--disabled':
+        (inputValue !== null && inputValue >= max) || disabled
     })
 
     return (
@@ -169,7 +172,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
           className='at-input-number__input'
           style={inputStyle}
           type={type}
-          value={String(inputValue)}
+          {...(inputValue !== null ? { value: String(inputValue) } : {})}
           disabled={disabledInput || disabled}
           onInput={this.handleInput}
           onBlur={this.handleBlur}
@@ -190,7 +193,6 @@ AtInputNumber.defaultProps = {
   className: '',
   disabled: false,
   disabledInput: false,
-  value: 1,
   type: 'number',
   width: 0,
   min: 0,
