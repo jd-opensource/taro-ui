@@ -88,5 +88,10 @@
     "@tarojs/plugin-platform-weapp": ">=3",
     "@tarojs/taro-rn": ">=3"
   },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    }
+  },
   "gitHead": "c33cc7fbb734f0dbdd6e305dda1bc8300e5adbe2"
 }
