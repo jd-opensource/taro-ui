@@ -47,9 +47,11 @@
     "@tarojs/plugin-framework-react": "3.6.6",
     "@tarojs/react": "3.6.6",
     "@tarojs/rn-runner": "3.6.6",
+    "@tarojs/rn-supporter": "3.6.6",
     "@tarojs/runtime": "3.6.6",
     "@tarojs/taro": "3.6.6",
     "@tarojs/taro-rn": "3.6.6",
+    "react": "^18.2.0",
     "react-native": "^0.71.6",
     "react-native-modal": "^13.0.0",
     "taro-ui": "workspace:^"
