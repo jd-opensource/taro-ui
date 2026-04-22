@@ -20,9 +20,9 @@ export interface AtInputNumberProps extends AtComponent {
   /**
    * 输入框当前值
    * @type {number | string}
-   * @description 必填，输入框当前值，开发者需要通过 onChange 事件来更新 value 值
+   * @description 输入框当前值，开发者需要通过 onChange 事件来更新 value 值
    */
-  value: number | string
+  value?: number | string
 
   customStyle?: CSSProperties | string
   /**

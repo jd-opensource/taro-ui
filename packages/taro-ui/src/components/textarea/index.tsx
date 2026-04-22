@@ -78,7 +78,7 @@ export default class AtTextarea extends React.Component<AtTextareaProps> {
       'at-textarea',
       `at-textarea--${ENV}`,
       {
-        'at-textarea--error': _maxLength < value.length
+        'at-textarea--error': _maxLength < (value || '').length
       },
       className
     )
@@ -110,7 +110,7 @@ export default class AtTextarea extends React.Component<AtTextareaProps> {
         />
         {count && (
           <View className='at-textarea__counter'>
-            {value.length}/{_maxLength}
+            {(value || '').length}/{_maxLength}
           </View>
         )}
       </View>
@@ -141,7 +141,7 @@ AtTextarea.defaultProps = {
 AtTextarea.propTypes = {
   customStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   cursorSpacing: PropTypes.number,
   maxLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   placeholderClass: PropTypes.string,
