@@ -146,9 +146,9 @@ jobs:
       - name: Publish
         run: |
           if [ '${{ github.event_name }}' == 'pull_request' ] ; then
-            cd README.md packages/taro-ui & pnpm publish --registry=https://registry.npmjs.org/ --publish-branch=${{ github.ref }} -r
+            pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=next
           elif [ '${{ github.event_name }}' == 'push' ] ; then
-            cd README.md packages/taro-ui & pnpm publish --registry=https://registry.npmjs.org/ --publish-branch=${{ github.ref_name }} -r ${{ env.PUBLISH_PARAMS }}
+            pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=${{ github.ref_name }} ${{ env.PUBLISH_PARAMS }}
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
