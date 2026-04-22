@@ -68,6 +68,7 @@
     "escape-string-regexp": "^4.0.0",
     "eslint-config-taro": "3.6.6",
     "expo": "~48.0.0",
+    "metro-config": "0.73.10",
     "patch-package": "^6.4.7",
     "react-native-svg": "13.8.0",
     "typescript": "^3.8.3"

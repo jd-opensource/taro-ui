@@ -2,8 +2,8 @@ const { mergeConfig } = require('metro-config')
 const { getMetroConfig } = require('@tarojs/rn-supporter')
 const fs = require('fs')
 const path = require('path')
-const exclusionList = require('metro-config/src/defaults/exclusionList')
 const escape = require('escape-string-regexp')
+const exclusionList = require('metro-config/src/defaults/exclusionList')
 
 const taroUI = path.resolve(__dirname, '../taro-ui')
 const pak = JSON.parse(
