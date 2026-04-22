@@ -35,3 +35,5 @@ coverage
 
 # taro rn release
 !packages/taro-ui-demo-rn/release/**
+
+.mino
