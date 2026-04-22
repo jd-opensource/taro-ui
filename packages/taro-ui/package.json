@@ -49,8 +49,7 @@
     "classnames": "^2.2.6",
     "dayjs": "^1.7.7",
     "lodash": "^4.17.10",
-    "prop-types": "^15.7.2",
-    "react-native-modal": "^13.0.0"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
@@ -62,7 +61,6 @@
     "@tarojs/taro": "3.6.40",
     "@types/classnames": "^2.2.9",
     "@types/node": "~16.6.0",
-    "@types/react-native": "^0.64.13",
     "camelize": "^1.0.0",
     "react-native": "^0.71.6",
     "rollup": "^2.79.0",
@@ -79,6 +77,7 @@
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0",
     "react-native": ">=0.62.0",
+    "react-native-modal": ">=13.0.0",
     "@tarojs/plugin-platform-alipay": ">=3",
     "@tarojs/plugin-platform-h5": ">=3",
     "@tarojs/plugin-platform-jd": ">=3",
@@ -90,6 +89,9 @@
   },
   "peerDependenciesMeta": {
     "react-native": {
+      "optional": true
+    },
+    "react-native-modal": {
       "optional": true
     }
   },
