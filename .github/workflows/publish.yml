@@ -12,6 +12,7 @@ on:
 
 env:
   CI: true
+  NODE_OPTIONS: --openssl-legacy-provider
 permissions: {}
 jobs:
   publish:
