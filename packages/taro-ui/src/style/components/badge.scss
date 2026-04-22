@@ -1,5 +1,5 @@
-@use '../variables/default' as *;
-@use '../mixins/index' as *;
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 $at-badge-border-radius: $at-badge-font-size * 0.7;
 $at-badge-box-shadow: 0 4px 8px 0 rgba($color: $at-badge-bg-color, $alpha: 0.2);

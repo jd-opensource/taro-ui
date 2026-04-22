@@ -3,16 +3,16 @@
  */
 
 /* library */
-@forward 'libs/absolute-center';;
-@forward 'libs/clearfix';;
-@forward 'libs/line';;
-@forward 'libs/overlay';;
-@forward 'libs/shade';;
-@forward 'libs/tint';;
-@forward 'libs/flex';;
-@forward 'libs/border';;
-@forward 'libs/active';;
-@forward 'libs/disabled';;
-@forward 'libs/placeholder';;
-@forward 'libs/alignhack';;
-@forward 'libs/hairline';;
+@import 'libs/absolute-center.scss';
+@import 'libs/clearfix.scss';
+@import 'libs/line.scss';
+@import 'libs/overlay.scss';
+@import 'libs/shade.scss';
+@import 'libs/tint.scss';
+@import 'libs/flex.scss';
+@import 'libs/border.scss';
+@import 'libs/active.scss';
+@import 'libs/disabled.scss';
+@import 'libs/placeholder.scss';
+@import 'libs/alignhack.scss';
+@import 'libs/hairline.scss';

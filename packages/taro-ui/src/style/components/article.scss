@@ -1,5 +1,5 @@
-@use '../variables/default' as *;
-@use '../mixins/index' as *;
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 .at-article {
   word-break: break-all;
