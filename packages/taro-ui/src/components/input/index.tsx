@@ -148,7 +148,6 @@ export default class AtInput extends React.Component<AtInputProps> {
     })
     const placeholderCls = classNames('placeholder', placeholderClass)
 
-    const id = name && { id: name }
     return (
       <View className={rootCls} style={customStyle}>
         <View className={containerCls}>
@@ -165,7 +164,7 @@ export default class AtInput extends React.Component<AtInputProps> {
           )}
           <Input
             className='at-input__input'
-            {...id}
+            id={name}
             name={name}
             type={type}
             disabled={disabled}
@@ -177,7 +176,7 @@ export default class AtInput extends React.Component<AtInputProps> {
             maxlength={maxLength}
             autoFocus={autoFocus}
             // TODO: 临时解决方案，等 Taro 更新后还原到 focus={focus}
-            {...(focus ? { focus } : {})}
+            focus={focus}
             value={value}
             confirmType={confirmType}
             cursor={cursor}
