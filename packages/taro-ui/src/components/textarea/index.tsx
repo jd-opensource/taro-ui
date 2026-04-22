@@ -92,7 +92,7 @@ export default class AtTextarea extends React.Component<AtTextareaProps> {
           placeholderStyle={placeholderStyle}
           placeholderClass={placeholderCls}
           cursorSpacing={cursorSpacing}
-          {...(typeof value !== 'undefined' ? { value } : {})}
+          value={value || ''}
           maxlength={actualMaxLength}
           placeholder={placeholder}
           disabled={disabled}

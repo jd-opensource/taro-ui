@@ -172,7 +172,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
           className='at-input-number__input'
           style={inputStyle}
           type={type}
-          {...(inputValue !== null ? { value: String(inputValue) } : {})}
+          value={inputValue !== null ? String(inputValue) : ''}
           disabled={disabledInput || disabled}
           onInput={this.handleInput}
           onBlur={this.handleBlur}
