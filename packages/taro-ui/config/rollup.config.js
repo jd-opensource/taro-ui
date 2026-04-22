@@ -1,4 +1,6 @@
 import NodePath from 'path'
+import fs from 'fs'
+import sass from 'sass'
 import RollupJson from '@rollup/plugin-json'
 import RollupNodeResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
@@ -68,6 +70,17 @@ export default {
           }
         }
       ]
-    })
+    }),
+    {
+      name: 'sass-compile',
+      generateBundle() {
+        const scssPath = resolveFile('dist/style/index.scss')
+        const cssPath = resolveFile('dist/style/index.css')
+        const result = sass.compile(scssPath, {
+          silenceDeprecations: ['import', 'slash-div', 'global-builtin']
+        })
+        fs.writeFileSync(cssPath, result.css)
+      }
+    }
   ]
 }

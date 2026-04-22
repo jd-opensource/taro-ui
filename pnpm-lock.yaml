@@ -220,6 +220,9 @@ importers:
       rollup-plugin-visualizer:
         specifier: ^4.0.2
         version: 4.2.2(rollup@2.80.0)
+      sass:
+        specifier: ^1.50.0
+        version: 1.99.0
       typescript:
         specifier: ^4.7.4
         version: 4.9.5
@@ -411,6 +414,9 @@ importers:
       expo:
         specifier: ~48.0.0
         version: 48.0.21(@babel/core@7.29.0)(encoding@0.1.13)
+      metro-config:
+        specifier: 0.73.10
+        version: 0.73.10(encoding@0.1.13)
       patch-package:
         specifier: ^6.4.7
         version: 6.5.1
