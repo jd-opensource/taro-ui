@@ -28,6 +28,7 @@ module.exports = mergeConfig(
   {
     // maxWorkers: 1,
     // resetCache: true,
+    transformer: {},
     watchFolders: [taroUI, __dirname],
     resolver: {
       extraNodeModules: modules.reduce((acc, name) => {
