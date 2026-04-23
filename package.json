@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "taro-ui",
+  "name": "taro-ui-root",
   "version": "3.3.1",
   "description": "UI KIT for Taro",
   "author": "O2Team <aotu.io>",
@@ -10,13 +10,14 @@
     "url": "git@github.com:nervjs/taro-ui.git"
   },
   "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "start": "pnpm install --shamefully-hoist",
     "preinstall": "npx only-allow pnpm",
-    "build": "pnpm -r run build",
-    "build:ui": "pnpm --filter=taro-ui build",
-    "build:demo": "pnpm --filter=taro-ui-demo build:h5",
-    "build:doc": "pnpm run build:demo && pnpm --filter=taro-ui-docs build",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm -r run build",
+    "build:ui": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=taro-ui build",
+    "build:demo": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=taro-ui-demo build:h5",
+    "build:doc": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm run build:demo && cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=taro-ui-docs build",
     "clean": " rimraf **/dist && rimraf **/node_modules",
     "prepare": "husky install",
     "version": "run-s version:*",
