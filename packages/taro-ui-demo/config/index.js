@@ -17,6 +17,9 @@ const config = {
   },
   framework: 'react',
   mini: {
+    webpackChain(chain) {
+      chain.optimization.usedExports(false)
+    },
     postcss: {
       pxtransform: {
         enable: true,

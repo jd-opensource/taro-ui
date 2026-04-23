@@ -3,7 +3,10 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['src/**/*.ts', 'src/**/*.tsx'],
   outDir: 'lib',
-  format: ['cjs'],
+  format: ['esm'],
+  outExtension() {
+    return { js: '.js' }
+  },
   dts: false,
   bundle: false,
   sourcemap: true,
