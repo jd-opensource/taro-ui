@@ -69,7 +69,10 @@
     },
     "onlyBuiltDependencies": [
       "@swc/core"
-    ]
+    ],
+    "patchedDependencies": {
+      "metro@0.84.3": "patches/metro@0.84.3.patch"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --quiet --cache --fix",

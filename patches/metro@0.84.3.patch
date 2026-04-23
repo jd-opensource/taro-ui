@@ -1,0 +1,21 @@
+diff --git a/package.json b/package.json
+index 013fa742eaa56c5f755a3eb19dcb93c745bfdb6d..45aecfb10a8e39d5f229bae6351343c4c225cd96 100644
+--- a/package.json
++++ b/package.json
+@@ -1,13 +1,14 @@
+ {
+   "name": "metro",
+   "version": "0.84.3",
+-  "description": "🚇 The JavaScript bundler for React Native.",
++  "description": "\ud83d\ude87 The JavaScript bundler for React Native.",
+   "main": "src/index.js",
+   "bin": "src/cli.js",
+   "exports": {
+     ".": "./src/index.js",
+     "./package.json": "./package.json",
+-    "./private/*": "./src/*.js"
++    "./private/*": "./src/*.js",
++    "./src/*": "./src/*.js"
+   },
+   "repository": {
+     "type": "git",
