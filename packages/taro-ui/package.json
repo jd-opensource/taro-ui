@@ -2,16 +2,16 @@
   "name": "taro-ui",
   "version": "3.3.1",
   "description": "UI KIT for Taro",
-  "module": "dist/index.esm.js",
-  "main": "dist/index.js",
-  "style": "dist/style/index.css",
+  "module": "lib/index.js",
+  "main": "lib/index.js",
+  "style": "lib/style/index.css",
   "source": "src/index.ts",
   "react-native": "rn/index.ts",
   "sideEffects": [
     "*.scss",
     "*.css"
   ],
-  "types": "./types/index.d.ts",
+  "types": "lib/index.d.ts",
   "keywords": [
     "taro",
     "taro-ui",
@@ -19,8 +19,6 @@
   ],
   "files": [
     "lib",
-    "dist",
-    "types",
     "rn"
   ],
   "author": "O2Team <aotu.io>",
@@ -31,18 +29,16 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "pnpm run dev:lib",
-    "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
-    "dev:rollup": "rollup --config ./config/rollup.config.js --watch",
-    "build": "pnpm run build:rollup && pnpm run build:lib",
-    "build:lib": "tsc --project ./tsconfig.build.json",
-    "build:rollup": "rollup --config ./config/rollup.config.js",
+    "dev": "tsup --watch",
+    "build": "node config/iconsMaker.js && tsup && node config/copy-assets.js && pnpm run build:dts && pnpm run build:css",
+    "build:lib": "tsup && pnpm run build:dts",
+    "build:dts": "tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "build:css": "node -e \"require('fs').cpSync('src/style', 'lib/style', {recursive:true, force:true})\" && sass src/style/index.scss lib/style/index.css",
     "lint": "eslint ./src --fix",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
     "lint:style-fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "test": "cross-env NODE_ENV=test && jest --coverage",
     "test:ci": "pnpm run build:h5 && pnpm run test",
-    "test:analyze": "rollup --config ./config/rollup.config.analyze.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "clean": "rimraf .temp dist lib coverage"
   },
@@ -53,9 +49,6 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
     "@tarojs/components": "3.6.40",
     "@tarojs/react": "3.6.40",
     "@tarojs/runtime-rn": "3.6.40",
@@ -64,22 +57,12 @@
     "@types/node": "~16.6.0",
     "camelize": "^1.0.0",
     "react-native": "^0.71.6",
-    "rollup": "^2.79.0",
-    "rollup-plugin-ts": "^3.0.2",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-typescript2": "^0.35.0",
-    "rollup-plugin-visualizer": "^4.0.2",
     "sass": "^1.50.0",
+    "tsup": "^8.5.1",
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "@tarojs/components": ">=3",
-    "@tarojs/react": ">=3",
-    "@tarojs/taro": ">=3",
-    "react": ">=16.13.0",
-    "react-dom": ">=16.13.0",
-    "react-native": ">=0.62.0",
-    "react-native-modal": ">=13.0.0",
     "@tarojs/plugin-platform-alipay": ">=3",
     "@tarojs/plugin-platform-h5": ">=3",
     "@tarojs/plugin-platform-jd": ">=3",
@@ -87,7 +70,13 @@
     "@tarojs/plugin-platform-swan": ">=3",
     "@tarojs/plugin-platform-tt": ">=3",
     "@tarojs/plugin-platform-weapp": ">=3",
-    "@tarojs/taro-rn": ">=3"
+    "@tarojs/react": ">=3",
+    "@tarojs/taro": ">=3",
+    "@tarojs/taro-rn": ">=3",
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0",
+    "react-native": ">=0.62.0",
+    "react-native-modal": ">=13.0.0"
   },
   "peerDependenciesMeta": {
     "react-native": {
