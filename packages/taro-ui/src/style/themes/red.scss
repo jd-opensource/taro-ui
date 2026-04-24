@@ -2,44 +2,28 @@
  * Red - 京东红主题
  */
 
-@import '../mixins/index.scss';
+@use '../variables/default' with (
+  $color-brand: #E93B3D,
+  $color-brand-light: #EC585A,
+  $color-brand-dark: #E32D2F,
+  $color-success: #0C8,
+  $color-error: #F53,
+  $color-warning: #FFD400,
+  $color-info: #4D88FF,
+  $color-text-base: #2E2D2D,
+  $color-text-title: #2E2D2D,
+  $color-border-base: #DADADA,
+  $at-message-bg-color: rgba($color: #000, $alpha: 0.6),
+  $at-badge-bg-color: #E93B3D,
+  $at-badge-bg: linear-gradient(90deg, #E93B3D 0%, #FF9574 100%),
+  $at-tag-color-active: #E93B3D,
+  $at-input-number-btn-color: #333,
+  $at-range-track-bg-color: #EC585A,
+  $at-nav-bar-link-color: #2E2D2D,
+  $at-indexes-nav-color: #2E2D2D,
+  $at-steps-bg-color-active: #EC585A,
+  $at-timeline-dot-border-color: #E93B3D,
+  $at-calendar-day-color: #2E2D2D
+);
 
-/* The Color of JD Brand */
-$color-brand: #E93B3D;
-$color-brand-light: #EC585A;
-$color-brand-dark: #E32D2F;
-
-/* 辅助色 */
-$color-success: #0C8;
-$color-error: #F53;
-$color-warning: #FFD400;
-$color-info: #4D88FF;
-
-/* 文本颜色 */
-$color-text-base: #2E2D2D;
-$color-text-title: #2E2D2D; // 文章标题
-
-/* 边框颜色 */
-$color-border-base: #DADADA;
-
-/* 组件样式 */
-$at-message-bg-color: rgba($color: #000, $alpha: 0.6);
-
-$at-badge-bg-color: #E93B3D;
-$at-badge-bg: linear-gradient(90deg, #E93B3D 0%, #FF9574 100%);
-
-$at-tag-color-active: $color-brand;
-
-$at-input-number-btn-color: #333;
-
-$at-range-track-bg-color: $color-brand-light;
-
-$at-nav-bar-link-color: $color-text-title;
-
-$at-indexes-nav-color: $color-text-title;
-
-$at-steps-bg-color-active: $color-brand-light;
-
-$at-timeline-dot-border-color: $color-brand;
-
-$at-calendar-day-color: $color-text-base;
+@use '../mixins/index';

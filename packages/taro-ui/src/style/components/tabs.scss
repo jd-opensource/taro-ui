@@ -1,5 +1,5 @@
-@import '../variables/default.scss';
-@import '../mixins/index.scss';
+@use '../variables/default' as *;
+@use '../mixins/index' as *;
 
 $component:'.at-tabs';
 $at-tabs-pane-min-height: 100px;

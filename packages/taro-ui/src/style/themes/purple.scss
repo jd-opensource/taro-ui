@@ -2,43 +2,31 @@
  * Purple - 7FRESH 主题
  */
 
-@import '../mixins/index.scss';
+@use '../variables/default' with (
+  $color-brand: #345B8F,
+  $color-brand-light: #5274A0,
+  $color-brand-dark: #27497C,
+  $color-success: #0C8,
+  $color-error: #FA5B5B,
+  $color-warning: #FFD400,
+  $color-info: #4D88FF,
+  $color-text-base: #1D1F2B,
+  $color-text-title: #1D1F2B,
+  $at-button-border-color-primary: transparent,
+  $at-button-bg: linear-gradient(90deg, #5274A0, #27497C 100%),
+  $at-message-bg-color: #95969F,
+  $at-tag-color: #1D1F2B,
+  $at-tag-color-primary: #5274A0,
+  $at-tag-color-primary-active: #5274A0,
+  $at-tag-border-color: #BDBEC3,
+  $at-tag-bg-color: #FFF,
+  $at-tag-bg-color-primary: #E9F3FF,
+  $at-tag-bg-color-primary-active: #E9F3FF,
+  $at-range-track-bg-color: #5274A0,
+  $at-indexes-nav-color: #1D1F2B,
+  $at-steps-bg-color-active: #5274A0,
+  $at-timeline-dot-border-color: #345B8F,
+  $at-calendar-day-color: #1D1F2B
+);
 
-/* The Color of 7FRESH Brand */
-$color-brand: #345B8F;
-$color-brand-light: #5274A0;
-$color-brand-dark: #27497C;
-
-/* 辅助色 */
-$color-success: #0C8;
-$color-error: #FA5B5B;
-$color-warning: #FFD400;
-$color-info: #4D88FF;
-
-/* 文本颜色 */
-$color-text-base: #1D1F2B;
-$color-text-title: #1D1F2B; // 文章标题
-
-/* 组件样式 */
-$at-button-border-color-primary: transparent;
-$at-button-bg: linear-gradient(90deg, #5274A0, #27497C 100%);
-
-$at-message-bg-color: #95969F;
-
-$at-tag-color: $color-text-base;
-$at-tag-color-primary: $color-brand-light;
-$at-tag-color-primary-active: $color-brand-light;
-$at-tag-border-color: #BDBEC3;
-$at-tag-bg-color: #FFF;
-$at-tag-bg-color-primary: #E9F3FF;
-$at-tag-bg-color-primary-active: #E9F3FF;
-
-$at-range-track-bg-color: $color-brand-light;
-
-$at-indexes-nav-color: $color-text-title;
-
-$at-steps-bg-color-active: $color-brand-light;
-
-$at-timeline-dot-border-color: $color-brand;
-
-$at-calendar-day-color: $color-text-base;
+@use '../mixins/index';
