@@ -1,6 +1,6 @@
 @use "sass:math";
-@use '../variables/default' as *;
-@use '../mixins/index' as *;
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 .at-avatar {
   width: $at-avatar-size-md;

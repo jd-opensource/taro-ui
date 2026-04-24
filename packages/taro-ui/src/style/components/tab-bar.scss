@@ -1,5 +1,5 @@
-@use '../variables/default' as *;
-@use '../mixins/index' as *;
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 $at-tab-bar-min-height: 50px;
 $at-tab-bar-title-max-width: 200px;

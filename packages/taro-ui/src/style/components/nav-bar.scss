@@ -1,5 +1,5 @@
-@use '../variables/default' as *;
-@use '../mixins/index' as *;
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 $at-nav-bar-spacing-v: 9PX;
 $at-nav-bar-spacing-h: 5PX;
