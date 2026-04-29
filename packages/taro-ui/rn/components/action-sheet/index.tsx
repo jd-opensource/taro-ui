@@ -3,10 +3,9 @@ import PropTypes, { InferProps } from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import Modal from 'react-native-modal'
-import { CommonEvent } from '@tarojs/components/types/common'
 import {
   AtActionSheetProps,
-  AtActionSheetState,
+  AtActionSheetState
 } from '../../../types/action-sheet'
 import AtActionSheetBody from './body/index'
 import AtActionSheetFooter from './footer/index'
@@ -24,7 +23,7 @@ export default class AtActionSheet extends React.Component<
     const { isOpened } = props
 
     this.state = {
-      _isOpened: isOpened,
+      _isOpened: isOpened
     }
   }
 
@@ -32,7 +31,7 @@ export default class AtActionSheet extends React.Component<
     const { isOpened } = nextProps
     if (isOpened !== this.state._isOpened) {
       this.setState({
-        _isOpened: isOpened,
+        _isOpened: isOpened
       })
 
       !isOpened && this.handleClose()
@@ -55,15 +54,10 @@ export default class AtActionSheet extends React.Component<
   private close = (): void => {
     this.setState(
       {
-        _isOpened: false,
+        _isOpened: false
       },
-      this.handleClose,
+      this.handleClose
     )
-  }
-
-  private handleTouchMove = (e: CommonEvent): void => {
-    e.stopPropagation()
-    e.preventDefault()
   }
 
   public render(): JSX.Element {
@@ -89,7 +83,7 @@ export default class AtActionSheet extends React.Component<
         onBackButtonPress={this.handleClose}
         onBackdropPress={this.handleClose}
         style={{
-          margin: 0,
+          margin: 0
         }}
       >
         <View className={containerClass}>
@@ -109,7 +103,7 @@ export default class AtActionSheet extends React.Component<
 AtActionSheet.defaultProps = {
   title: '',
   cancelText: '',
-  isOpened: false,
+  isOpened: false
 }
 
 AtActionSheet.propTypes = {
@@ -117,5 +111,5 @@ AtActionSheet.propTypes = {
   onClose: PropTypes.func,
   onCancel: PropTypes.func,
   isOpened: PropTypes.bool.isRequired,
-  cancelText: PropTypes.string,
+  cancelText: PropTypes.string
 }

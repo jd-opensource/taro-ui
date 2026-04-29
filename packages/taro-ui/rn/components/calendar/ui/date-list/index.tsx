@@ -66,7 +66,7 @@ export default class AtCalendarList extends React.Component<Props> {
                 <View className='extra-marks'>
                   {item.marks.map((mark, key) => (
                     <Text key={key} className='mark'>
-                      {mark}
+                      {mark.value}
                     </Text>
                   ))}
                 </View>

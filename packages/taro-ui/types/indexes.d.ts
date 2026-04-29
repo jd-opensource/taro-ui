@@ -68,7 +68,7 @@ export interface AtIndexesState {
   _tipText: string
   _isShowToast: boolean
   isWEB: boolean
-  currentIndex: number
+  currentIndex?: number
 }
 
 declare const AtIndexes: ComponentClass<AtIndexesProps>

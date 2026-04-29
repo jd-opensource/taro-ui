@@ -87,8 +87,9 @@ export default class AtFloatLayout extends React.Component<
   }
 
   private handleClose = (): void => {
-    if (typeof this.props.onClose === 'function') {
-      this.props.onClose()
+    const onClose = this.props.onClose as (() => void) | undefined
+    if (typeof onClose === 'function') {
+      onClose()
     }
   }
 

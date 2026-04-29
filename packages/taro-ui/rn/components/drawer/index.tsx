@@ -22,7 +22,7 @@ export default class AtDrawer extends React.Component<
     this.state = {
       // animShow: false,
       _show: props.show,
-      translateX: 0,
+      translateX: 0
     }
   }
 
@@ -55,7 +55,7 @@ export default class AtDrawer extends React.Component<
     }
   }
 
-  private animateDrawer(isOpened: boolean, cb?: Function): void {
+  private animateDrawer(isOpened: boolean, cb?: () => void): void {
     this.animating = true
     let fromValue
     let toValue
@@ -75,28 +75,28 @@ export default class AtDrawer extends React.Component<
 
     this.setState(
       {
-        translateX,
+        translateX
       },
       () => {
         setTimeout(() => {
           this.setState(
             {
-              _show: isOpened,
+              _show: isOpened
             },
             () => {
               cb && cb()
-            },
+            }
           )
         }, setStateDelay)
 
         Animated.timing(this.state.translateX, {
           toValue,
           duration,
-          useNativeDriver: true,
+          useNativeDriver: true
         }).start(() => {
           this.animating = false
         })
-      },
+      }
     )
   }
 
@@ -107,22 +107,22 @@ export default class AtDrawer extends React.Component<
 
     const maskStyle = {
       opacity: _show ? 1 : 0,
-      display: mask ? 'flex' : 'none',
+      display: mask ? 'flex' : 'none'
     }
 
     const listStyle: Record<string, any> = {}
 
     if (width) {
-      listStyle.width = Taro.pxTransform(width)
+      listStyle.width = Taro.pxTransform(Number(width) || 0)
     }
 
     const classObject = {
-      'at-drawer--show': _show,
+      'at-drawer--show': _show
     }
 
     const contentClass = {
       'at-drawer__content--right': right,
-      'at-drawer__content--left': !right,
+      'at-drawer__content--left': !right
     }
 
     return (
@@ -136,7 +136,7 @@ export default class AtDrawer extends React.Component<
           className={classNames(
             rootClassName,
             classObject,
-            this.props.className,
+            this.props.className
           )}
         >
           <View
@@ -149,7 +149,7 @@ export default class AtDrawer extends React.Component<
             className={classNames('at-drawer__content', contentClass)}
             style={{
               ...listStyle,
-              transform: [{ translateX }],
+              transform: [{ translateX }]
             }}
           >
             {!!items && items.length ? (
@@ -179,7 +179,7 @@ AtDrawer.defaultProps = {
   mask: true,
   width: '',
   right: false,
-  items: [],
+  items: []
 }
 
 AtDrawer.propTypes = {
@@ -188,5 +188,5 @@ AtDrawer.propTypes = {
   width: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string),
   onItemClick: PropTypes.func,
-  onClose: PropTypes.func,
+  onClose: PropTypes.func
 }

@@ -27,7 +27,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
     this.state = {
       _scrollLeft: 0,
       _scrollTop: 0,
-      _scrollIntoView: '',
+      _scrollIntoView: ''
     }
     this._tabId = isTest() ? 'tabs-AOTU2018' : uuid()
     // 触摸时的原点
@@ -52,7 +52,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
         case Taro.ENV_TYPE.SWAN: {
           const index = Math.max(idx - 1, 0)
           this.setState({
-            _scrollIntoView: `tab${this._tabId}${index}`,
+            _scrollIntoView: `tab${this._tabId}${index}`
           })
           break
         }
@@ -62,7 +62,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
           prevTabItem &&
             this.setState({
               _scrollTop: prevTabItem.offsetTop,
-              _scrollLeft: prevTabItem.offsetLeft,
+              _scrollLeft: prevTabItem.offsetLeft
             })
           break
         }
@@ -79,7 +79,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
                 current--
               }
               this.setState({
-                _scrollLeft: width,
+                _scrollLeft: width
               })
             }
             if (scrollY) {
@@ -90,7 +90,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
                 current--
               }
               this.setState({
-                _scrollTop: height,
+                _scrollTop: height
               })
             }
           }
@@ -124,7 +124,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
     const { swipeable, tabDirection, current, tabList } = this.props
     if (!swipeable || tabDirection === 'vertical') return
 
-    const touchMove = e.nativeEvent.pageX
+    const touchMove = (e as any).nativeEvent.pageX
     const moveDistance = touchMove - this._touchDot
     const maxIndex = tabList.length
     if (
@@ -195,14 +195,14 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
       // animated,
       tabList,
       scroll,
-      current,
+      current
     } = this.props
     const { _scrollLeft, _scrollTop, _scrollIntoView } = this.state
 
-    const heightStyle = { height: height ? parseInt(height) : null }
+    const heightStyle = height ? { height: parseInt(height) } : {}
     const underlineStyle = {
       height: tabDirection === 'vertical' ? `${tabList.length * 100}%` : 1,
-      width: tabDirection === 'horizontal' ? `${tabList.length * 100}%` : 1,
+      width: tabDirection === 'horizontal' ? `${tabList.length * 100}%` : 1
     }
     const bodyStyle: React.CSSProperties = {}
     // let transformStyle = [{ translateY: '' }]
@@ -223,7 +223,7 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
         'at-tabs__item': true,
         'at-tabs__item--active': current === idx,
         [`at-tabs__item--${tabDirection}`]: true,
-        [`at-tabs__item--${tabDirection}--active`]: current === idx,
+        [`at-tabs__item--${tabDirection}--active`]: current === idx
       })
 
       return (
@@ -251,9 +251,9 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
         'at-tabs': true,
         'at-tabs--scroll': scroll,
         [`at-tabs--${tabDirection}`]: true,
-        [`at-tabs--${ENV}`]: true,
+        [`at-tabs--${ENV}`]: true
       },
-      className,
+      className
     )
     const scrollX = tabDirection === 'horizontal'
     const scrollY = tabDirection === 'vertical'
@@ -308,7 +308,7 @@ AtTabs.defaultProps = {
   animated: true,
   tabList: [],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {},
+  onClick: (): void => {}
 }
 
 AtTabs.propTypes = {
@@ -321,5 +321,5 @@ AtTabs.propTypes = {
   scroll: PropTypes.bool,
   animated: PropTypes.bool,
   tabList: PropTypes.array,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }

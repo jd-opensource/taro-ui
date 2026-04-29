@@ -53,8 +53,11 @@ export default class AtInput extends React.Component<AtInputProps> {
   // TODO: 有待考证是否为合理方式处理 #840
   private inputClearing = false
 
-  private handleInput = (event: BaseEventOrig<InputEventDetail>): void =>
-    this.props.onChange(event.detail.value, event)
+  private handleInput = (event: BaseEventOrig<InputEventDetail>): void => {
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(event.detail.value, event)
+    }
+  }
 
   private handleFocus = (event: BaseEventOrig<FocusEventDetail>): void => {
     if (typeof this.props.onFocus === 'function') {
@@ -68,10 +71,12 @@ export default class AtInput extends React.Component<AtInputProps> {
     }
     if (event.type === 'blur' && !this.inputClearing) {
       // fix # 583 AtInput 不触发 onChange 的问题
-      this.props.onChange(
-        event.detail.value,
-        event as BaseEventOrig<InputEventDetail>
-      )
+      if (typeof this.props.onChange === 'function') {
+        this.props.onChange(
+          event.detail.value,
+          event as BaseEventOrig<InputEventDetail>
+        )
+      }
     }
     // 还原状态
     this.inputClearing = false
@@ -91,7 +96,9 @@ export default class AtInput extends React.Component<AtInputProps> {
 
   private handleClearValue = (event: ITouchEvent): void => {
     this.inputClearing = true
-    this.props.onChange('', event)
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange('', event)
+    }
   }
 
   private handleKeyboardHeightChange = (

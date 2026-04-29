@@ -25,16 +25,18 @@ export default class AtSwipeAction extends React.Component<
   public constructor(props: AtSwipeActionProps) {
     super(props)
     const { isOpened, maxDistance, areaWidth } = props
-    this.maxOffsetSize = maxDistance
+    this.maxOffsetSize = maxDistance || 0
     this.state = {
       componentId: uuid(),
       // eslint-disable-next-line no-extra-boolean-cast
       offsetSize: !!isOpened ? -this.maxOffsetSize : 0,
       _isOpened: !!isOpened,
-      needAnimation: false
+      needAnimation: false,
+      eleWidth: this.eleWidth,
+      maxOffsetSize: this.maxOffsetSize
     }
     this.moveX = this.state.offsetSize
-    this.eleWidth = areaWidth
+    this.eleWidth = areaWidth || 0
   }
 
   public UNSAFE_componentWillReceiveProps(nextProps: AtSwipeActionProps): void {
@@ -106,8 +108,7 @@ export default class AtSwipeAction extends React.Component<
   }
 
   onTouchEnd = e => {
-    const { maxOffsetSize } = this.state
-    if (Math.abs(this.moveX) < maxOffsetSize / 2) {
+    if (Math.abs(this.moveX) < this.maxOffsetSize / 2) {
       this._reset(false)
       this.handleClosed(e)
     } else {

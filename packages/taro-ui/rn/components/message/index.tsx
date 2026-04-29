@@ -108,7 +108,7 @@ export default class AtMessage extends React.Component<
       <Animated.View
         className={rootCls}
         onLayout={this.onLayout.bind(this)}
-        style={Object.assign({}, customStyle, {
+        style={Object.assign({}, customStyle as object, {
           transform: [{ translateY }]
         })}
       >

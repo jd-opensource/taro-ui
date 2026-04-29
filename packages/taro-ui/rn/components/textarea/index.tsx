@@ -78,7 +78,7 @@ export default class AtTextarea extends React.Component<AtTextareaProps> {
     }
     const rootCls = classNames('at-textarea', `at-textarea--${ENV}`, className)
 
-    const sizeError = _maxLength < value.length
+    const sizeError = _maxLength < (value || '').length
     const placeholderCls = classNames('placeholder', placeholderClass)
 
     return (
@@ -111,7 +111,7 @@ export default class AtTextarea extends React.Component<AtTextareaProps> {
               'at-textarea__counter--error': sizeError
             })}
           >
-            {`${value.length}/${_maxLength}`}
+            {`${(value || '').length}/${_maxLength}`}
           </View>
         )}
       </View>
