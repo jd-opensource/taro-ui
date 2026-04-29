@@ -27,23 +27,8 @@ function mergeDemoH5AndDist() {
   }
 
   const distH5Path = path.resolve(distRoot, 'h5')
-  const distPath = distRoot
-  const files = fs.readdirSync(demoH5Path)
 
-  const promises = []
-  files.forEach(file => {
-    if (file !== 'index.html') {
-      promises.push(
-        fs.copy(path.resolve(demoH5Path, file), path.resolve(distPath, file))
-      )
-    } else {
-      promises.push(
-        fs.copy(path.resolve(demoH5Path, file), path.resolve(distH5Path, file))
-      )
-    }
-  })
-
-  Promise.all(promises)
+  fs.copy(demoH5Path, distH5Path)
     .then(() => {
       spinner.stop()
     })

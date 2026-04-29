@@ -9,10 +9,10 @@ export default defineConfig({
     lang: 'zh-CN',
     title: 'Taro UI',
     description: '一套基于 Taro 框架开发的多端 UI 组件库',
-    base: './',
+    base: '/taro-ui/',
     lastUpdated: true,
     head: [
-        ['link', { rel: 'icon', href: './assets/favicon.png' }]
+        ['link', { rel: 'icon', href: '/taro-ui/assets/favicon.png' }]
     ],
     themeConfig: {
         logo: '/assets/navbar-logo.png',

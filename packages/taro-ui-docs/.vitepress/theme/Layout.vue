@@ -1,12 +1,14 @@
 
 <script setup lang="ts">
-import { useRoute } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
 import { computed, onMounted, ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import pageRoute from '../../page-route'
 
 const { Layout } = DefaultTheme
 const route = useRoute()
+const { site } = useData()
+const base = computed(() => site.value.base || '/')
 
 const nameToRoute: Record<string, string> = {
     'input-number': 'inputnumber',
@@ -32,26 +34,18 @@ const demoPath = computed(() => {
 
 const iframeSrc = computed(() => {
     if (!demoPath.value) return ''
-    const path = route.path
-    const depth = path.split('/').filter(Boolean).length
-    const prefix = depth === 0 ? './' : '../'.repeat(depth)
-    return `${prefix}h5/index.html#/pages/${demoPath.value}/index`
+    return `${base.value}h5/index.html#/pages/${demoPath.value}/index`
 })
 
 const iframeBg = computed(() => {
-    const path = route.path
-    const depth = path.split('/').filter(Boolean).length
-    const prefix = depth === 0 ? './' : '../'.repeat(depth)
-    return `${prefix}iframe_iphonex.png`
+    return `${base.value}iframe_iphonex.png`
 })
 
 const hasH5Demo = ref(!import.meta.env.DEV)
 
 onMounted(() => {
     if (!demoPath.value || !import.meta.env.DEV) return
-    const depth = route.path.split('/').filter(Boolean).length
-    const prefix = depth === 0 ? './' : '../'.repeat(depth)
-    fetch(`${prefix}h5/index.html`)
+    fetch(`${base.value}h5/index.html`)
         .then(r => { hasH5Demo.value = r.ok })
         .catch(() => { hasH5Demo.value = false })
 })
