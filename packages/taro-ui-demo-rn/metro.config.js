@@ -26,8 +26,10 @@ const modules = [
 
 module.exports = mergeConfig(
   {
-    // maxWorkers: 1,
+    // Metro v0.73 worker threads hang on Node 20
+    maxWorkers: 1,
     // resetCache: true,
+    // Empty transformer required for Metro v0.73 + Node 20 compat
     transformer: {},
     watchFolders: [taroUI, __dirname],
     resolver: {
