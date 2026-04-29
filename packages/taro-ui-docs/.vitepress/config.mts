@@ -12,10 +12,10 @@ export default defineConfig({
     base: '/taro-ui/',
     lastUpdated: true,
     head: [
-        ['link', { rel: 'icon', href: '/taro-ui/assets/favicon.png' }]
+        ['link', { rel: 'icon', href: '/taro-ui/favicon.png' }]
     ],
     themeConfig: {
-        logo: '/assets/navbar-logo.png',
+        logo: '/navbar-logo.png',
         nav: [
             { text: '首页', link: '/' },
             { text: '文档', link: '/guide/introduction' },
