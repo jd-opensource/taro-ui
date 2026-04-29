@@ -6,8 +6,9 @@ const spinner = ora('Copy h5 website to docs...')
 
 spinner.start()
 
-// packages/taro-ui-docs/dist/h5
-fs.emptyDirSync(path.resolve(__dirname, '../dist/h5'))
+// packages/taro-ui-docs/.vitepress/dist/h5
+const distRoot = path.resolve(__dirname, '../.vitepress/dist')
+fs.emptyDirSync(path.resolve(distRoot, 'h5'))
 
 function mergeDemoH5AndDist() {
   const demoH5Path = path.resolve(__dirname, '../../taro-ui-demo/dist')
@@ -17,8 +18,8 @@ function mergeDemoH5AndDist() {
     return
   }
 
-  const distH5Path = path.resolve(__dirname, '../dist/h5')
-  const distPath = path.resolve(__dirname, '../dist')
+  const distH5Path = path.resolve(distRoot, 'h5')
+  const distPath = distRoot
   const files = fs.readdirSync(demoH5Path)
 
   const promises = []
