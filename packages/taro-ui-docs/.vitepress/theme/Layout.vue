@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vitepress'
-import { computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import pageRoute from '../../page-route'
 
@@ -44,12 +44,23 @@ const iframeBg = computed(() => {
     const prefix = depth === 0 ? './' : '../'.repeat(depth)
     return `${prefix}iframe_iphonex.png`
 })
+
+const hasH5Demo = ref(!import.meta.env.DEV)
+
+onMounted(() => {
+    if (!demoPath.value || !import.meta.env.DEV) return
+    const depth = route.path.split('/').filter(Boolean).length
+    const prefix = depth === 0 ? './' : '../'.repeat(depth)
+    fetch(`${prefix}h5/index.html`)
+        .then(r => { hasH5Demo.value = r.ok })
+        .catch(() => { hasH5Demo.value = false })
+})
 </script>
 
 <template>
     <Layout>
         <template #doc-top>
-            <div v-if="demoPath" class="demo-iframe-wrapper" :style="{ backgroundImage: `url('${iframeBg}')` }">
+            <div v-if="demoPath && hasH5Demo" class="demo-iframe-wrapper" :style="{ backgroundImage: `url('${iframeBg}')` }">
                 <iframe :src="iframeSrc" frameborder="0"></iframe>
             </div>
         </template>
