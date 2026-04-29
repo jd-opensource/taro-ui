@@ -1,8 +1,40 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const h5Path = path.resolve(__dirname, '../../taro-ui-demo/dist')
+
+function h5DemoMiddleware() {
+    const mimeTypes: Record<string, string> = {
+        '.html': 'text/html',
+        '.js': 'application/javascript',
+        '.css': 'text/css',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.svg': 'image/svg+xml',
+        '.json': 'application/json',
+        '.woff2': 'font/woff2',
+        '.woff': 'font/woff',
+        '.ttf': 'font/ttf',
+    }
+
+    return (req: any, res: any, next: any) => {
+        if (!req.url?.startsWith('/taro-ui/h5/')) return next()
+        const relPath = decodeURIComponent(req.url.slice('/taro-ui/h5/'.length).split('?')[0])
+        const filePath = path.join(h5Path, relPath)
+        if (!filePath.startsWith(h5Path + path.sep)) return next()
+        fs.readFile(filePath, (err, data) => {
+            if (err) return next()
+            const ext = path.extname(filePath)
+            res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream')
+            res.end(data)
+        })
+    }
+}
 
 export default defineConfig({
     srcDir: 'docs',
@@ -143,6 +175,14 @@ export default defineConfig({
         publicDir: path.resolve(__dirname, '../assets'),
         server: {
             port: 3000
-        }
+        },
+        plugins: [
+            {
+                name: 'h5-demo-dev-server',
+                configureServer(server) {
+                    server.middlewares.use(h5DemoMiddleware())
+                }
+            }
+        ]
     }
 })

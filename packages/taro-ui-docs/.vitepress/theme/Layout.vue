@@ -41,11 +41,22 @@ const iframeBg = computed(() => {
     return `${base.value}iframe_iphonex.png`
 })
 
-const hasH5Demo = computed(() => {
-    // VitePress dev server returns SPA fallback for all unmatched paths,
-    // so fetch-based detection is unreliable. Only show iframe in production.
-    if (import.meta.env.DEV) return false
-    return !!demoPath.value
+const hasH5Demo = ref(false)
+
+onMounted(() => {
+    if (!demoPath.value) return
+    fetch(`${base.value}h5/index.html`)
+        .then(async r => {
+            if (!r.ok) {
+                hasH5Demo.value = false
+                return
+            }
+            // VitePress dev server SPA fallback returns docs index.html,
+            // which does not contain H5 demo's app.js reference.
+            const text = await r.text()
+            hasH5Demo.value = text.includes('src="./js/app.js"')
+        })
+        .catch(() => { hasH5Demo.value = false })
 })
 </script>
 
