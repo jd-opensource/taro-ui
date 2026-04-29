@@ -22,8 +22,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Use Node.js 18.x
         uses: actions/setup-node@v4
@@ -42,7 +40,7 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build taro-ui-docs
-        run: pnpm run build:doc
+        run: pnpm --filter taro-ui-docs run build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
@@ -50,4 +48,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: packages/taro-ui-docs/dist
+          publish_dir: packages/taro-ui-docs/.vitepress/dist
