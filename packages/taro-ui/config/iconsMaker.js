@@ -1,8 +1,8 @@
 // iconfont.svg 通过 woff 字体文件转化而来
 // Convert iconfont.svg into svg icons
-import fs from 'fs'
-import path from 'path'
-import camelize from 'camelize'
+const fs = require('fs')
+const path = require('path')
+const camelize = require('camelize')
 
 const maker = source => {
   const file = fs.readFileSync(path.resolve(__dirname, source), 'utf-8')
@@ -46,4 +46,8 @@ const maker = source => {
   )
 }
 
-export default maker
+if (require.main === module) {
+  maker('../rn/assets/iconfont.svg')
+}
+
+module.exports = maker

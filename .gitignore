@@ -37,3 +37,4 @@ coverage
 !packages/taro-ui-demo-rn/release/**
 
 .mino
+.playwright-mcp/

@@ -47,6 +47,7 @@ export interface AtModalProps extends AtComponent {
 export interface AtModalState {
   _isOpened: boolean
   isWEB: boolean
+  opacity?: any
 }
 
 export interface AtModalActionProps extends AtComponent {

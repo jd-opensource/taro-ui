@@ -50,27 +50,27 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
   public static propTypes: InferProps<AtInputNumberProps>
 
   state = {
-    width: null,
+    width: null
   }
 
   widths = [] as number[]
 
   private handleClick(clickType: 'minus' | 'plus', e: CommonEvent): void {
     const { disabled, value, min = 0, max = 100, step = 1 } = this.props
-    const lowThanMin = clickType === 'minus' && value <= min
-    const overThanMax = clickType === 'plus' && value >= max
+    const lowThanMin = clickType === 'minus' && Number(value) <= min
+    const overThanMax = clickType === 'plus' && Number(value) >= max
     if (lowThanMin || overThanMax || disabled) {
       const deltaValue = clickType === 'minus' ? -step : step
       const errorValue = addNum(Number(value), deltaValue)
       if (disabled) {
         this.handleError({
           type: 'DISABLED',
-          errorValue,
+          errorValue
         })
       } else {
         this.handleError({
           type: lowThanMin ? 'LOW' : 'OVER',
-          errorValue,
+          errorValue
         })
       }
       return
@@ -85,18 +85,18 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
     const { max = 100, min = 0 } = this.props
     let resultValue = value === '' ? min : value
     // 此处不能使用 Math.max，会是字符串变数字，并丢失 .
-    if (resultValue > max) {
+    if (Number(resultValue) > max) {
       resultValue = max
       this.handleError({
         type: 'OVER',
-        errorValue: resultValue,
+        errorValue: resultValue
       })
     }
-    if (resultValue < min) {
+    if (Number(resultValue) < min) {
       resultValue = min
       this.handleError({
         type: 'LOW',
-        errorValue: resultValue,
+        errorValue: resultValue
       })
     }
     if (resultValue && !Number(resultValue)) {
@@ -104,7 +104,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
 
       this.handleError({
         type: 'OVER',
-        errorValue: resultValue,
+        errorValue: resultValue
       })
     }
 
@@ -139,7 +139,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
       const widths = type === 'input' ? this.widths : this.widths.reverse()
       const [btnWidth, inputWidth] = widths
       this.setState({
-        width: btnWidth * 2 + inputWidth + 2,
+        width: btnWidth * 2 + inputWidth + 2
       })
     }
     // console.log('event.nativeEvent.layout', event.nativeEvent.layout)
@@ -156,7 +156,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
       min = 0,
       max = 100,
       size,
-      disabledInput,
+      disabledInput
     } = this.props
 
     const inputStyle: any = {}
@@ -169,13 +169,13 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
       rootStyle.width = this.state.width
     }
 
-    const inputValue = Number(this.handleValue(value))
+    const inputValue = Number(this.handleValue(value ?? ''))
     const rootCls = classNames(
       'at-input-number',
       {
-        'at-input-number--lg': size === 'large',
+        'at-input-number--lg': size === 'large'
       },
-      className,
+      className
     )
     const minusBtnCls = classNames('at-input-number__btn')
     const plusBtnCls = classNames('at-input-number__btn')
@@ -194,7 +194,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
             value='subtract'
             className={classNames({
               'at-input-number__btn-subtract': true,
-              'at-input-number--disabled': minusDisabled,
+              'at-input-number--disabled': minusDisabled
             })}
           />
         </View>
@@ -216,7 +216,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
             value='add'
             className={classNames({
               'at-input-number__btn-add': true,
-              'at-input-number--disabled': addDisabled,
+              'at-input-number--disabled': addDisabled
             })}
           />
         </View>
@@ -238,7 +238,7 @@ AtInputNumber.defaultProps = {
   step: 1,
   size: 'normal',
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onChange: (): void => {},
+  onChange: (): void => {}
 }
 
 AtInputNumber.propTypes = {
@@ -255,5 +255,5 @@ AtInputNumber.propTypes = {
   disabledInput: PropTypes.bool,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
-  onErrorInput: PropTypes.func,
+  onErrorInput: PropTypes.func
 }

@@ -24,16 +24,43 @@ const modules = [
   })
 ]
 
+function resolveModulePath(name) {
+  try {
+    const pkgJson = require.resolve(path.join(name, 'package.json'))
+    return path.dirname(pkgJson)
+  } catch {
+    return null
+  }
+}
+
+const extraNodeModules = modules.reduce((acc, name) => {
+  const resolved = resolveModulePath(name)
+  if (resolved) {
+    acc[name] = resolved
+  }
+  return acc
+}, {})
+
+// Collect unique watch folders from resolved modules (for pnpm virtual store)
+const watchFoldersSet = new Set([taroUI, __dirname])
+Object.values(extraNodeModules).forEach(p => {
+  // Add the package dir and its parent node_modules so Metro sees siblings
+  watchFoldersSet.add(p)
+  const parentNodeModules = path.resolve(p, '../..')
+  if (fs.existsSync(parentNodeModules)) {
+    watchFoldersSet.add(parentNodeModules)
+  }
+})
+
 module.exports = mergeConfig(
   {
-    // maxWorkers: 1,
-    // resetCache: true,
-    watchFolders: [taroUI, __dirname],
+    // Metro v0.73 worker threads hang on Node 20
+    maxWorkers: 1,
+    // Empty transformer required for Metro v0.73 + Node 20 compat
+    transformer: {},
+    watchFolders: Array.from(watchFoldersSet),
     resolver: {
-      extraNodeModules: modules.reduce((acc, name) => {
-        acc[name] = path.join(__dirname, 'node_modules', name)
-        return acc
-      }, {}),
+      extraNodeModules,
       blockList: exclusionList([
         new RegExp(`^${escape(path.join(taroUI, 'node_modules'))}\\/.*$`)
       ])

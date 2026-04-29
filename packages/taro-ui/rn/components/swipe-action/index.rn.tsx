@@ -19,13 +19,15 @@ export default class AtSwipeAction extends React.Component<
   public constructor(props: AtSwipeActionProps) {
     super(props)
     const { isOpened, maxDistance } = props
-    this.maxOffsetSize = maxDistance
+    this.maxOffsetSize = maxDistance || 0
     this.state = {
       componentId: uuid(),
       // eslint-disable-next-line no-extra-boolean-cast
       offsetSize: !!isOpened ? -this.maxOffsetSize : 0,
       _isOpened: !!isOpened,
-      needAnimation: false
+      needAnimation: false,
+      eleWidth: 0,
+      maxOffsetSize: this.maxOffsetSize
     }
   }
 

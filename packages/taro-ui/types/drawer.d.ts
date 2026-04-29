@@ -38,7 +38,7 @@ export interface AtDrawerProps extends AtComponent {
 }
 
 export interface AtDrawerState {
-  animShow: boolean
+  animShow?: boolean
   translateX?: any
   _show: boolean
 }
