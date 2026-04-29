@@ -18,6 +18,14 @@ function mergeDemoH5AndDist() {
     return
   }
 
+  if (!fs.existsSync(path.resolve(demoH5Path, 'index.html'))) {
+    console.log(
+      'H5 demo index.html not found. Please run `pnpm --filter taro-ui-demo run build:h5` first'
+    )
+    spinner.stop()
+    return
+  }
+
   const distH5Path = path.resolve(distRoot, 'h5')
   const distPath = distRoot
   const files = fs.readdirSync(demoH5Path)
