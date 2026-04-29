@@ -179,18 +179,19 @@
         display: block;
     }
 
-    .vp-doc {
-        padding-right: 420px;
+    /* Hide VitePress aside (on-this-page TOC) to make room for iframe demo */
+    .VPDoc .aside {
+        display: none;
+    }
+
+    .VPDoc .aside-container {
+        display: none;
     }
 }
 
 @media (max-width: 1439px) {
     .demo-iframe-wrapper {
         display: none;
-    }
-
-    .vp-doc {
-        padding-right: 0;
     }
 }
 
