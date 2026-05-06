@@ -6,8 +6,9 @@ const spinner = ora('Copy h5 website to docs...')
 
 spinner.start()
 
-// packages/taro-ui-docs/dist/h5
-fs.emptyDirSync(path.resolve(__dirname, '../dist/h5'))
+// packages/taro-ui-docs/.vitepress/dist/h5
+const distRoot = path.resolve(__dirname, '../.vitepress/dist')
+fs.emptyDirSync(path.resolve(distRoot, 'h5'))
 
 function mergeDemoH5AndDist() {
   const demoH5Path = path.resolve(__dirname, '../../taro-ui-demo/dist')
@@ -17,24 +18,17 @@ function mergeDemoH5AndDist() {
     return
   }
 
-  const distH5Path = path.resolve(__dirname, '../dist/h5')
-  const distPath = path.resolve(__dirname, '../dist')
-  const files = fs.readdirSync(demoH5Path)
+  if (!fs.existsSync(path.resolve(demoH5Path, 'index.html'))) {
+    console.log(
+      'H5 demo index.html not found. Please run `pnpm --filter taro-ui-demo run build:h5` first'
+    )
+    spinner.stop()
+    return
+  }
 
-  const promises = []
-  files.forEach(file => {
-    if (file !== 'index.html') {
-      promises.push(
-        fs.copy(path.resolve(demoH5Path, file), path.resolve(distPath, file))
-      )
-    } else {
-      promises.push(
-        fs.copy(path.resolve(demoH5Path, file), path.resolve(distH5Path, file))
-      )
-    }
-  })
+  const distH5Path = path.resolve(distRoot, 'h5')
 
-  Promise.all(promises)
+  fs.copy(demoH5Path, distH5Path)
     .then(() => {
       spinner.stop()
     })
