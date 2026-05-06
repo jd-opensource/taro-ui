@@ -4,6 +4,7 @@ import { Form, Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
 import { AtButton, AtFab, AtForm } from 'taro-ui'
 import DocsHeader from '../../components/doc-header'
+import shareImg from '../../../assets/images/share.jpg'
 import './index.scss'
 
 interface ButtonPageState {
@@ -38,7 +39,7 @@ export default class Index extends Component<{}, ButtonPageState> {
     return {
       title: 'Taro UI',
       path: '/pages/index/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg'
+      imageUrl: shareImg
     }
   }
 

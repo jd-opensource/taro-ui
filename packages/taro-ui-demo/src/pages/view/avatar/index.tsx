@@ -3,6 +3,7 @@ import { AtAvatar } from 'taro-ui'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
+import avatarImg from '../../../assets/images/avatar.jpg'
 import './index.scss'
 
 export default class AvatarPage extends React.Component {
@@ -11,8 +12,6 @@ export default class AvatarPage extends React.Component {
   }
 
   public render(): JSX.Element {
-    const avatarImg =
-      'http://storage.360buyimg.com/mtd/home/32443566_635798770100444_2113947400891531264_n1533825816008.jpg'
 
     return (
       <View className='page'>

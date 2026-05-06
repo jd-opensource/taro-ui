@@ -4,6 +4,7 @@ import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
+import iconDemo3 from '../../../assets/images/icon-demo-3.png'
 
 export default class CardPage extends React.Component {
   public config: Taro.PageConfig = {
@@ -40,7 +41,7 @@ export default class CardPage extends React.Component {
               <View className='example-item'>
                 <AtCard
                   title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  thumb={iconDemo3}
                 >
                   这也是内容区 可以随意定义功能
                 </AtCard>
@@ -91,7 +92,7 @@ export default class CardPage extends React.Component {
                 <AtCard
                   note='小Tips'
                   title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  thumb={iconDemo3}
                 >
                   这也是内容区 可以随意定义功能
                 </AtCard>
@@ -112,7 +113,7 @@ export default class CardPage extends React.Component {
                     color: '#6190e8'
                   }}
                   title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  thumb={iconDemo3}
                 >
                   这也是内容区 可以随意定义功能
                 </AtCard>
@@ -131,7 +132,7 @@ export default class CardPage extends React.Component {
                     color: '#6190e8'
                   }}
                   title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  thumb={iconDemo3}
                 >
                   这也是内容区 可以随意定义功能
                 </AtCard>
@@ -148,7 +149,7 @@ export default class CardPage extends React.Component {
                   note='小Tips'
                   extra='额外信息'
                   title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  thumb={iconDemo3}
                 >
                   这也是内容区 可以随意定义功能 这也是内容区 可以随意定义功能
                   这也是内容区 可以随意定义功能

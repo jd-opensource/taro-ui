@@ -4,6 +4,9 @@ import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
+import iconDemo1 from '../../../assets/images/icon-demo-1.png'
+import iconDemo3 from '../../../assets/images/icon-demo-3.png'
+import iconDemo4 from '../../../assets/images/icon-demo-4.png'
 
 interface CardPageState {
   [key: string]: boolean
@@ -49,12 +52,12 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   <AtList hasBorder={false}>
                     <AtListItem
                       title='标题文字'
-                      thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      thumb={iconDemo1}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+                      thumb={iconDemo4}
                     />
                   </AtList>
                 </AtAccordion>
@@ -66,17 +69,17 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   <AtList hasBorder={false}>
                     <AtListItem
                       title='标题文字'
-                      thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      thumb={iconDemo1}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                      thumb={iconDemo3}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+                      thumb={iconDemo4}
                     />
                   </AtList>
                 </AtAccordion>
@@ -98,12 +101,12 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   <AtList hasBorder={false}>
                     <AtListItem
                       title='标题文字'
-                      thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      thumb={iconDemo1}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                      thumb={iconDemo3}
                     />
                   </AtList>
                 </AtAccordion>
@@ -126,17 +129,17 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   <AtList hasBorder={false}>
                     <AtListItem
                       title='标题文字'
-                      thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      thumb={iconDemo1}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                      thumb={iconDemo3}
                     />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
-                      thumb='http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+                      thumb={iconDemo4}
                     />
                   </AtList>
                 </AtAccordion>

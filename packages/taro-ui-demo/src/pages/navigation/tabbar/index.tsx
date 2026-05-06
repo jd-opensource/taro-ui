@@ -4,6 +4,10 @@ import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
+import iconDemo1 from '../../../assets/images/icon-demo-1.png'
+import iconDemo2 from '../../../assets/images/icon-demo-2.png'
+import iconDemo3 from '../../../assets/images/icon-demo-3.png'
+import iconDemo5 from '../../../assets/images/icon-demo-5.png'
 
 interface IndexPageState {
   [key: string]: number
@@ -47,20 +51,20 @@ export default class Index extends React.Component<{}, IndexPageState> {
       {
         title: '领取中心',
         image:
-          'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png',
+          iconDemo1,
         selectedImage:
-          'https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png',
+          iconDemo5,
         text: 'new'
       },
       {
         title: '找折扣',
         image:
-          'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png'
+          iconDemo2
       },
       {
         title: '领会员',
         image:
-          'https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png',
+          iconDemo3,
         text: '100',
         max: 99
       }

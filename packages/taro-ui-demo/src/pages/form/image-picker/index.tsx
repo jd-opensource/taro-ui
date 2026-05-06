@@ -3,6 +3,10 @@ import { AtImagePicker } from 'taro-ui'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
+import picker1 from '../../../assets/images/picker1.jpg'
+import picker2 from '../../../assets/images/picker2.jpg'
+import picker3 from '../../../assets/images/picker3.jpg'
+import picker4 from '../../../assets/images/picker4.jpg'
 import './index.scss'
 
 type DogaImage = {
@@ -11,13 +15,13 @@ type DogaImage = {
 
 const dogaImages: DogaImage[] = [
   {
-    url: 'https://storage.360buyimg.com/mtd/home/111543234387022.jpg'
+    url: picker1
   },
   {
-    url: 'https://storage.360buyimg.com/mtd/home/221543234387016.jpg'
+    url: picker2
   },
   {
-    url: 'https://storage.360buyimg.com/mtd/home/331543234387025.jpg'
+    url: picker3
   }
 ]
 
@@ -38,8 +42,7 @@ export default class Index extends React.Component<{}, IndexState> {
       files3: Array.from(dogaImages),
       files4: dogaImages.concat([
         {
-          url:
-            'https://storage.360buyimg.com/mtd/home/36549825_887087111478302_5745542532574478336_n1543234831971.jpg'
+          url: picker4
         }
       ])
     }

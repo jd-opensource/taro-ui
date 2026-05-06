@@ -3,6 +3,7 @@ import { AtButton, AtToast } from 'taro-ui'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
+import toastImg from '../../../assets/images/toast.png'
 import './index.scss'
 
 const INIT_STATE: ToastPageState = {
@@ -94,8 +95,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                 <AtButton
                   onClick={this.handleClick.bind(this, {
                     text: '凹凸实验室',
-                    image:
-                      'https://storage.360buyimg.com/mtd/home/group-21533885306540.png'
+                    image: toastImg
                   })}
                 >
                   自定义图片 Toast

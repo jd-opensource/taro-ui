@@ -12,6 +12,9 @@ import { CommonEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
+import swiper1 from '../../../assets/images/swiper-1.jpg'
+import swiper2 from '../../../assets/images/swiper-2.jpg'
+import swiper3 from '../../../assets/images/swiper-3.jpg'
 
 interface SwiperPageState {
   current: number
@@ -38,9 +41,9 @@ export default class SwiperPage extends React.Component<{}, SwiperPageState> {
       isAutoplay: false,
       hasIndicatorDots: true,
       imgUrls: [
-        'https://img10.360buyimg.com/babel/s700x360_jfs/t25855/203/725883724/96703/5a598a0f/5b7a22e1Nfd6ba344.jpg!q90!cc_350x180',
-        'https://img11.360buyimg.com/babel/s700x360_jfs/t1/4776/39/2280/143162/5b9642a5E83bcda10/d93064343eb12276.jpg!q90!cc_350x180',
-        'https://img14.360buyimg.com/babel/s700x360_jfs/t1/4099/12/2578/101668/5b971b4bE65ae279d/89dd1764797acfd9.jpg!q90!cc_350x180'
+        swiper1,
+        swiper2,
+        swiper3
       ]
     }
   }

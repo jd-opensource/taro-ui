@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
+import articleImg from '../../../assets/images/article.jpg'
 import './index.scss'
 
 export default class ArticlePage extends React.Component {
@@ -39,7 +40,7 @@ export default class ArticlePage extends React.Component {
                     </View>
                     <Image
                       className='at-article__img'
-                      src='http://storage.360buyimg.com/mtd/home/32443566_635798770100444_2113947400891531264_n1533825816008.jpg'
+                      src={articleImg}
                       mode='widthFix'
                     />
                   </View>
@@ -53,7 +54,7 @@ export default class ArticlePage extends React.Component {
                     </View>
                     <Image
                       className='at-article__img'
-                      src='https://img30.360buyimg.com/sku/jfs/t19660/324/841553494/117886/ad2742c1/5aab8d20Ne56ae3bf.jpg'
+                      src={articleImg}
                       mode='widthFix'
                     />
                   </View>
