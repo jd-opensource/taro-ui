@@ -41,10 +41,10 @@ const iframeBg = computed(() => {
     return `${base.value}iframe_iphonex.png`
 })
 
-const hasH5Demo = ref(false)
+const hasH5Demo = ref(!import.meta.env.DEV)
 
 onMounted(() => {
-    if (!demoPath.value) return
+    if (!demoPath.value || !import.meta.env.DEV) return
     fetch(`${base.value}h5/index.html`)
         .then(async r => {
             if (!r.ok) {

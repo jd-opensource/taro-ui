@@ -6,7 +6,7 @@ hero:
   text: 多端 UI 组件库
   tagline: 一套基于 Taro 框架开发的多端 UI 组件库，支持微信小程序、H5、React Native 等多端运行
   image:
-    src: /assets/header-bg.png
+    src: /taro-ui/header-bg.png
     alt: Taro UI
   actions:
     - theme: brand
