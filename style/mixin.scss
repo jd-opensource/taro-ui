@@ -1,0 +1,12 @@
+@mixin image2x-background($name, $full-size: false) {
+  $img-path: '../assets/' + $name + '.png';
+  $img2x-path: '../assets/' + $name + '@2x.png';
+
+  background-image: url($img-path);
+  background-image: -webkit-image-set(url($img-path) 1x, url($img2x-path) 2x);
+  background-repeat: no-repeat;
+
+  @if $full-size {
+    background-size: 100% auto;
+  }
+}

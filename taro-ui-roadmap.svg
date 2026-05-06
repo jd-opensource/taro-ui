@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500"><defs><style type="text/css"><![CDATA[ 
+.current {
+  fill: #2aa748;
+}
+.active {
+  fill: #47b4ff;
+}
+.maintenance {
+  fill: #89a19d;
+}
+.unstable {
+  fill: #ffb800;
+}
+.bar-join {
+  fill: #ffffff;
+}
+.bar-join.unstable, .bar-join.current {
+  display: none;
+}
+.tick text {
+  font: 16px sans-serif;
+  fill: #89a19d;
+}
+.axis--y .tick text {
+  text-anchor: end;
+}
+.label {
+  fill: #fff;
+  font: 20px sans-serif;
+  font-weight: 100;
+  text-anchor: start;
+  dominant-baseline: middle;
+  text-transform: uppercase;
+} ]]></style></defs><g id="bar-container" transform="translate(110, 30)"><g class="axis axis--x" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><g class="tick" opacity="1" transform="translate(91.77615571776155,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Feb 2020</text></g><g class="tick" opacity="1" transform="translate(178.56447688564478,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Mar 2020</text></g><g class="tick" opacity="1" transform="translate(271.338199513382,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Apr 2020</text></g><g class="tick" opacity="1" transform="translate(361.11922141119226,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">May 2020</text></g><g class="tick" opacity="1" transform="translate(453.8929440389295,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Jun 2020</text></g><g class="tick" opacity="1" transform="translate(543.6739659367397,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Jul 2020</text></g><g class="tick" opacity="1" transform="translate(636.447688564477,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Aug 2020</text></g><g class="tick" opacity="1" transform="translate(729.2214111922141,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Sep 2020</text></g><g class="tick" opacity="1" transform="translate(819.0024330900243,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Oct 2020</text></g></g><g class="axis axis--y" fill="none" font-size="10" font-family="sans-serif" text-anchor="start"><g class="tick" opacity="1" transform="translate(0,86.66666666666666)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Develop</text></g><g class="tick" opacity="1" transform="translate(0,219.99999999999997)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Taro UI 2.3.x</text></g><g class="tick" opacity="1" transform="translate(0,353.33333333333326)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Taro UI 3.x</text></g><line y1="440" y2="440" x2="820" stroke="#89a19d"></line></g><g><rect class="bar unstable" x="0" y="40" width="820" height="93.33333333333331"></rect><rect class="bar-join unstable" x="-1" y="40" width="2" height="93.33333333333331" style="opacity: 0;"></rect><text class="label" x="15" y="88.66666666666666" style="opacity: 1;">unstable</text></g><g><rect class="bar maintenance" x="445.91240875912405" y="173.33333333333331" width="83.7956204379563" height="93.33333333333331"></rect><rect class="bar-join maintenance" x="444.91240875912405" y="173.33333333333331" width="2" height="93.33333333333331" style="opacity: 1;"></rect><text class="label" x="460.91240875912405" y="221.99999999999997" style="opacity: 0;">maintenance</text></g><g><rect class="bar current" x="176.56934306569343" y="173.33333333333331" width="269.3430656934306" height="93.33333333333331"></rect><rect class="bar-join current" x="175.56934306569343" y="173.33333333333331" width="2" height="93.33333333333331" style="opacity: 0;"></rect><text class="label" x="191.56934306569343" y="221.99999999999997" style="opacity: 1;">current</text></g><g><rect class="bar current" x="260.3649635036496" y="306.66666666666663" width="559.6350364963504" height="93.33333333333331"></rect><rect class="bar-join current" x="259.3649635036496" y="306.66666666666663" width="2" height="93.33333333333331" style="opacity: 0;"></rect><text class="label" x="275.3649635036496" y="355.33333333333326" style="opacity: 1;">current</text></g></g></svg>
