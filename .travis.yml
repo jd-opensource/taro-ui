@@ -54,7 +54,7 @@ jobs:
       script:
         - yarn run build
       after_script:
-        - cd packages/taro-ui-docs/dist
+        - cd docs/dist
         - git init
         - git add -A
         - git commit -m "Update Document"

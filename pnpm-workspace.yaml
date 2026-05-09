@@ -1,5 +1,6 @@
 packages:
+  - "docs"
+  - "examples/**"
   - "packages/**"
   - "!**/test/**"
-  - "!examples/**"
 ignoreBuildScripts: false

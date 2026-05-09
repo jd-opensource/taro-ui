@@ -40,20 +40,20 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build H5 demo
-        run: pnpm --filter taro-ui-demo run build:h5
+        run: pnpm --filter demo run build:h5
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build taro-ui-docs
-        run: pnpm --filter taro-ui-docs run build
+        run: pnpm --filter docs run build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Copy H5 demo to docs dist
-        run: pnpm --filter taro-ui-docs run build:static
+        run: pnpm --filter docs run build:static
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: packages/taro-ui-docs/.vitepress/dist
+          publish_dir: docs/.vitepress/dist

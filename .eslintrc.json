@@ -174,7 +174,7 @@
               "@md": "./markdown"
             },
             "packages": [
-              "packages/taro-ui-docs"
+              "docs"
             ]
           }
         },
@@ -185,7 +185,7 @@
     },
     {
       "files": [
-        "packages/taro-ui-docs/build/*.js"
+        "docs/build/*.js"
       ],
       "rules": {
         "no-console": "off",
@@ -194,10 +194,10 @@
     },
     {
       "files": [
-        "packages/taro-ui-demo/**/*.ts",
-        "packages/taro-ui-demo/**/*.tsx",
-        "packages/taro-ui-demo-rn/**/*.ts",
-        "packages/taro-ui-demo-rn/**/*.tsx"
+        "examples/demo/**/*.ts",
+        "examples/demo/**/*.tsx",
+        "examples/demo-rn/**/*.ts",
+        "examples/demo-rn/**/*.tsx"
       ],
       "extends": [
         "taro/react"
@@ -205,10 +205,10 @@
     },
     {
       "files": [
-        "packages/taro-ui-demo/config/*.js",
-        "packages/taro-ui-demo/babel.config.js",
-        "packages/taro-ui-demo-rn/**/*.ts",
-        "packages/taro-ui-demo-rn/**/*.tsx"
+        "examples/demo/config/*.js",
+        "examples/demo/babel.config.js",
+        "examples/demo-rn/**/*.ts",
+        "examples/demo-rn/**/*.tsx"
       ],
       "rules": {
         "import/no-commonjs": "off"

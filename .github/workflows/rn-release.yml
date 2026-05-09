@@ -36,7 +36,7 @@ jobs:
       - name: Release Taro React Native bundle
         uses: zhiqingchen/taro-react-native-release@v1
         with:
-          workingdirectory: ./packages/taro-ui-demo-rn
+          workingdirectory: ./examples/demo-rn
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-UI-Demo
           logo: https://pic5.58cdn.com.cn/nowater/fangfe/n_v25a185c1657984016926f26af591912c4.jpg
@@ -45,5 +45,5 @@ jobs:
         with:
           name: bundle-qr-code
           path: |
-            packages/taro-ui-demo-rn/release/qrcode/ios.png
-            packages/taro-ui-demo-rn/release/qrcode/android.png
+            examples/demo-rn/release/qrcode/ios.png
+            examples/demo-rn/release/qrcode/android.png
