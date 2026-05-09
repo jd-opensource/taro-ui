@@ -194,10 +194,10 @@
     },
     {
       "files": [
-        "packages/taro-ui-demo/**/*.ts",
-        "packages/taro-ui-demo/**/*.tsx",
-        "packages/taro-ui-demo-rn/**/*.ts",
-        "packages/taro-ui-demo-rn/**/*.tsx"
+        "demo/**/*.ts",
+        "demo/**/*.tsx",
+        "demo-rn/**/*.ts",
+        "demo-rn/**/*.tsx"
       ],
       "extends": [
         "taro/react"
