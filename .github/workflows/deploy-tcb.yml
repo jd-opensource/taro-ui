@@ -46,4 +46,4 @@ jobs:
           secretId: ${{ secrets.TCB_SECRET_ID }}
           secretKey: ${{ secrets.TCB_SECRET_KEY }}
           envId: ${{ secrets.TCB_TARO_UI_ENV_ID }}
-          staticSrcPath: packages/taro-ui-docs/dist
+          staticSrcPath: docs/dist

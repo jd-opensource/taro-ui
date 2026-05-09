@@ -6,7 +6,7 @@ const spinner = ora('Copy h5 website to docs...')
 
 spinner.start()
 
-// packages/taro-ui-docs/.vitepress/dist/h5
+// docs/.vitepress/dist/h5
 const distRoot = path.resolve(__dirname, '../.vitepress/dist')
 fs.emptyDirSync(path.resolve(distRoot, 'h5'))
 
