@@ -45,12 +45,12 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build taro-ui-docs
-        run: pnpm --filter taro-ui-docs run build
+        run: pnpm --filter docs run build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Copy H5 demo to docs dist
-        run: pnpm --filter taro-ui-docs run build:static
+        run: pnpm --filter docs run build:static
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

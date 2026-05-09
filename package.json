@@ -17,7 +17,7 @@
     "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm -r run build",
     "build:ui": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=taro-ui build",
     "build:demo": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=demo build:h5",
-    "build:doc": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm run build:demo && cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=taro-ui-docs build",
+    "build:doc": "cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm run build:demo && cross-env NODE_OPTIONS='--openssl-legacy-provider' pnpm --filter=docs build",
     "clean": " rimraf **/dist && rimraf **/node_modules",
     "prepare": "husky install",
     "version": "run-s version:*",
