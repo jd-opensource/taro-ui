@@ -205,10 +205,10 @@
     },
     {
       "files": [
-        "packages/taro-ui-demo/config/*.js",
-        "packages/taro-ui-demo/babel.config.js",
-        "packages/taro-ui-demo-rn/**/*.ts",
-        "packages/taro-ui-demo-rn/**/*.tsx"
+        "demo/config/*.js",
+        "demo/babel.config.js",
+        "demo-rn/**/*.ts",
+        "demo-rn/**/*.tsx"
       ],
       "rules": {
         "import/no-commonjs": "off"
