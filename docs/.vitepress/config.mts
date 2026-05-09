@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const h5Path = path.resolve(__dirname, '../../taro-ui-demo/dist')
+const h5Path = path.resolve(__dirname, '../../examples/demo/dist')
 
 function h5DemoMiddleware() {
     const mimeTypes: Record<string, string> = {
