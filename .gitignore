@@ -34,7 +34,7 @@ coverage
 *.private.*
 
 # taro rn release
-!demo-rn/release/**
+!examples/demo-rn/release/**
 
 .mino
 .playwright-mcp/

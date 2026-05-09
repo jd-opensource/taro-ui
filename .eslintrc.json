@@ -194,10 +194,10 @@
     },
     {
       "files": [
-        "demo/**/*.ts",
-        "demo/**/*.tsx",
-        "demo-rn/**/*.ts",
-        "demo-rn/**/*.tsx"
+        "examples/demo/**/*.ts",
+        "examples/demo/**/*.tsx",
+        "examples/demo-rn/**/*.ts",
+        "examples/demo-rn/**/*.tsx"
       ],
       "extends": [
         "taro/react"
@@ -205,10 +205,10 @@
     },
     {
       "files": [
-        "demo/config/*.js",
-        "demo/babel.config.js",
-        "demo-rn/**/*.ts",
-        "demo-rn/**/*.tsx"
+        "examples/demo/config/*.js",
+        "examples/demo/babel.config.js",
+        "examples/demo-rn/**/*.ts",
+        "examples/demo-rn/**/*.tsx"
       ],
       "rules": {
         "import/no-commonjs": "off"

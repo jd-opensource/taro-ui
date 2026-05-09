@@ -27,10 +27,10 @@ rn 源码发布
 
 #### DEMO 启动
 ```
-cd demo-rn
+cd examples/demo-rn
 yarn dev:rn
 ```
-demo 适配开发，更改组件 style 样式，需要更改一下 demo-rn/src/app.scss 触发一下样式重编。
+demo 适配开发，更改组件 style 样式，需要更改一下 examples/demo-rn/src/app.scss 触发一下样式重编。
 
 #### DEMO release
 需要打一个 tag，比如：
