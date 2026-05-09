@@ -60,11 +60,11 @@ import { AtButton } from 'taro-ui'
 
 ## 开发计划
 
-[开发计划](./PLANS.md)
+[查看 Roadmap →](./ROADMAP.md)
 
 ## 路线图
 
-![Roadmap][roadmap-image]
+Taro UI 正在积极恢复维护中，当前重点完成 Monorepo 重构、CSS 预编译和 Taro v4 兼容性验证。详细规划请查看 [ROADMAP.md](./ROADMAP.md)。
 
 ## 贡献
 

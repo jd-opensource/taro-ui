@@ -38,3 +38,14 @@ coverage
 
 .mino
 .playwright-mcp/
+
+.vitepress/
+sessions/
+statuses/
+
+# Craft Agent
+.claude-plugin/
+config.json
+events.jsonl
+labels/
+views.json
