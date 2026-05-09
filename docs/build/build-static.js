@@ -20,7 +20,7 @@ function mergeDemoH5AndDist() {
 
   if (!fs.existsSync(path.resolve(demoH5Path, 'index.html'))) {
     console.log(
-      'H5 demo index.html not found. Please run `pnpm --filter taro-ui-demo run build:h5` first'
+      'H5 demo index.html not found. Please run `pnpm --filter demo run build:h5` first'
     )
     spinner.stop()
     return

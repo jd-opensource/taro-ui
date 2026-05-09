@@ -40,7 +40,7 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build H5 demo
-        run: pnpm --filter taro-ui-demo run build:h5
+        run: pnpm --filter demo run build:h5
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 

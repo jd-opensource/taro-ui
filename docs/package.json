@@ -30,7 +30,7 @@
     "qrcode.react": "^1.0.0",
     "react-router-dom": "^5.3.4",
     "regenerator-runtime": "^0.13.5",
-    "taro-ui-demo": "workspace:^"
+    "demo": "workspace:^"
   },
   "devDependencies": {
     "@types/react-router-dom": "5.1.5",
