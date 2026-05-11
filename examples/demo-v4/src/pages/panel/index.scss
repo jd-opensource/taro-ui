@@ -1,0 +1,64 @@
+@import '~taro-ui/lib/style/mixins/index.scss';
+@import '~taro-ui/lib/style/variables/default.scss';
+
+/**
+ * 分类页样式
+ */
+.panel-header {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  height: 180px;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    color: #78A4FA;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+
+    .img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__title {
+    margin-left: 32px;
+    color: #78A4FA;
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
+.panel-body {
+  min-height: calc(100vh - 180px);
+  background: #fff;
+  box-shadow: 0 26px 163px 0 rgba(0, 0, 0, 0.11);
+}
+
+.component-list {
+  margin: 20px 60px 40px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    @include hairline-bottom();
+
+    .name {
+      color: #1d1d26;
+      font-size: 28px;
+    }
+
+    .at-icon {
+      color: #CCC;
+    }
+  }
+}

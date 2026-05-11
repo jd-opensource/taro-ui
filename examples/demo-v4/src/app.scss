@@ -1,0 +1,118 @@
+@import "taro-ui/lib/style/index.scss";
+
+#app {
+  background-color: #f8f8f8;
+}
+
+.at-frozen {
+  position: fixed;
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+// 实例模板
+.example {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+
+  &:not(:first-child) {
+    border-top: 40px solid #f5f5f5;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-grey-4;
+
+    &-title {
+      color: $color-grey-2;
+      font-size: 28px;
+    }
+
+    &-note {
+      font-size: 24px;
+      margin-left: 20px;
+      color: $color-grey-3;
+    }
+  }
+}
+
+/**
+ * Example 样式
+ */
+.panel__content {
+  .example-item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .subitem {
+      display: inline-block;
+      margin-left: 24px;
+    }
+
+    &__desc {
+      margin-bottom: 12px;
+      color: #333;
+      font-size: 24px;
+    }
+  }
+}
+
+.doc-body {
+  min-height: calc(100vh - 180px);
+  background: #fff;
+  box-shadow: 0 26px 163px 0 rgba(0, 0, 0, 0.11);
+  padding-bottom: 60px;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 60px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 60px);
+
+  .panel {
+    margin: 32px 0 56px;
+
+    &__title {
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 50px;
+      color: #6a6a77;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.5;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        margin-top: -20px;
+        width: 2PX;
+        height: 40px;
+        background-color: #6190e8;
+        box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
+        border-radius: 1PX;
+      }
+    }
+
+    &__content {
+      padding: 0 20px;
+
+      &.no-padding {
+        padding: 0;
+      }
+    }
+  }
+}
