@@ -1,4 +1,5 @@
-@import "taro-ui/lib/style/index.scss";
+@use 'taro-ui/lib/style/variables/default.scss' as *;
+@import 'taro-ui/lib/style/index.scss';
 
 #app {
   background-color: #f8f8f8;

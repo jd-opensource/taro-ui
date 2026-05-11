@@ -78,6 +78,6 @@
     "react-refresh": "^0.11.0",
     "sass": "^1.49.9",
     "stylelint": "^14.4.0",
-    "webpack": "4.46.0"
+    "webpack": "5.106.2"
   }
 }

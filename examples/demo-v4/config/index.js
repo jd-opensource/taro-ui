@@ -10,6 +10,9 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
+  compiler: {
+    type: 'webpack5'
+  },
   defineConstants: {},
   copy: {
     patterns: [],

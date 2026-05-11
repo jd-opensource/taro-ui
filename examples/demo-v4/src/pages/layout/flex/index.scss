@@ -1,5 +1,5 @@
-@import "~taro-ui/lib/style/variables/default.scss";
-@import '~taro-ui/lib/style/components/flex.scss';
+@use 'taro-ui/lib/style/variables/default.scss' as *;
+@use 'taro-ui/lib/style/components/flex.scss';
 
 .flex-page .at-row {
   margin-bottom: 40px;
