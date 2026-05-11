@@ -39,7 +39,8 @@ coverage
 .mino
 .playwright-mcp/
 
-.vitepress/
+.vitepress/cache
+.vitepress/dist
 sessions/
 statuses/
 
