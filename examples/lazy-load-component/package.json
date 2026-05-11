@@ -36,20 +36,20 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@tarojs/components": "^4.0.0",
-    "@tarojs/helper": "^4.0.0",
-    "@tarojs/plugin-framework-react": "^4.0.0",
-    "@tarojs/plugin-platform-alipay": "^4.0.0",
-    "@tarojs/plugin-platform-h5": "^4.0.0",
-    "@tarojs/plugin-platform-jd": "^4.0.0",
-    "@tarojs/plugin-platform-qq": "^4.0.0",
-    "@tarojs/plugin-platform-swan": "^4.0.0",
-    "@tarojs/plugin-platform-tt": "^4.0.0",
-    "@tarojs/plugin-platform-weapp": "^4.0.0",
-    "@tarojs/react": "^4.0.0",
-    "@tarojs/runtime": "^4.0.0",
-    "@tarojs/shared": "^4.0.0",
-    "@tarojs/taro": "^4.0.0",
+    "@tarojs/components": "4.2.0",
+    "@tarojs/helper": "4.2.0",
+    "@tarojs/plugin-framework-react": "4.2.0",
+    "@tarojs/plugin-platform-alipay": "4.2.0",
+    "@tarojs/plugin-platform-h5": "4.2.0",
+    "@tarojs/plugin-platform-jd": "4.2.0",
+    "@tarojs/plugin-platform-qq": "4.2.0",
+    "@tarojs/plugin-platform-swan": "4.2.0",
+    "@tarojs/plugin-platform-tt": "4.2.0",
+    "@tarojs/plugin-platform-weapp": "4.2.0",
+    "@tarojs/react": "4.2.0",
+    "@tarojs/runtime": "4.2.0",
+    "@tarojs/shared": "4.2.0",
+    "@tarojs/taro": "4.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "taro-ui": "workspace:^"
@@ -57,8 +57,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
-    "@tarojs/cli": "^4.0.0",
-    "@tarojs/webpack5-runner": "^4.0.0",
+    "@tarojs/cli": "4.2.0",
+    "@tarojs/webpack5-runner": "4.2.0",
     "@types/react": "^18.0.0",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
@@ -75,8 +75,5 @@
     "stylelint": "^14.4.0",
     "typescript": "^4.1.0",
     "webpack": "5.69.0"
-  },
-  "resolutions": {
-    "@swc/core": "1.3.42"
   }
 }
