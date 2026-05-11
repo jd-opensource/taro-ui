@@ -1,6 +1,6 @@
 @use "sass:math";
-@import '../variables/default.scss';
-@import '../mixins/index.scss';
+@use '../variables/default.scss' as *;
+@use '../mixins/index.scss' as *;
 
 .at-row {
   @include display-flex();

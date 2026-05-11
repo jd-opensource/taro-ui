@@ -1,6 +1,6 @@
 @use "sass:math";
-@import '../variables/default.scss';
-@import '../mixins/index.scss';
+@use '../variables/default.scss' as *;
+@use '../mixins/index.scss' as *;
 
 $at-search-bar-font-size: 14PX;
 $at-search-bar-input-height: 30PX;

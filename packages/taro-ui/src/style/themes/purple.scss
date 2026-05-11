@@ -2,7 +2,7 @@
  * Purple - 7FRESH 主题
  */
 
-@import '../mixins/index.scss';
+@use '../mixins/index.scss' as *;
 
 /* The Color of 7FRESH Brand */
 $color-brand: #345B8F;

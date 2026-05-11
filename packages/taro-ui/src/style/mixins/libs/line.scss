@@ -1,3 +1,5 @@
+@use '../../variables/default.scss' as *;
+
 @mixin line($num: 1) {
   overflow: hidden;
   text-overflow: ellipsis;

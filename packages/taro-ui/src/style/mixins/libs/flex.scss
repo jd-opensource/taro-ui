@@ -1,3 +1,5 @@
+@use '../../variables/default.scss' as *;
+
 @mixin display-flex {
   display: flex;
 }
