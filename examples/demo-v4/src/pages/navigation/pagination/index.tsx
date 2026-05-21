@@ -34,7 +34,7 @@ export default class PaginationPage extends React.Component<
       current: data.current
     })
     Taro.showToast({
-      title: `Pagination: ${data}`,
+      title: `Pagination: ${JSON.stringify(data)}`,
       icon: 'none'
     })
   }

@@ -141,7 +141,6 @@ export default class ListPage extends React.Component {
                     note='描述信息'
                     arrow='right'
                     iconInfo={{ size: 25, color: '#78A4FA', value: 'calendar' }}
-                    thumb={iconDemo4}
                     icon={<View className='at-icon at-icon-bookmark' />}
                   />
                 </AtList>

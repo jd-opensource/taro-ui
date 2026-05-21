@@ -35,7 +35,7 @@ export default class Index extends React.Component<{}, IndexesState> {
 
   private onClick(item: CityItem): void {
     Taro.showToast({
-      title: `onClick: ${item}`,
+      title: `onClick: ${JSON.stringify(item)}`,
       icon: 'none'
     })
   }

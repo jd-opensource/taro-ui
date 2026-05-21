@@ -46,7 +46,7 @@ export default class Index extends React.Component<{}, IndexState> {
       month: 2,
       days,
       day: 2,
-      value: [9999, 5, 17],
+      value: [years.length - 1, 1, 1],
       isWeapp: false,
       isAlipay: false
     }

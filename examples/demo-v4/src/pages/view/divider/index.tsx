@@ -5,7 +5,7 @@ import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
 
-export default class LoadMorePage extends React.Component {
+export default class DividerPage extends React.Component {
   public config: Taro.PageConfig = {
     navigationBarTitleText: 'Taro UI'
   }

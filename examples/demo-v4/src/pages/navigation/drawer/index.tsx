@@ -50,14 +50,9 @@ export default class DrawerPage extends React.Component<{}, DrawerPageState> {
 
   private onItemClick(index: number): void {
     const ENV = Taro.getEnv()
-    let content: string
-    if (typeof index !== 'number') {
-      content = ''
-    } else {
-      content = `你点击了第 ${+index + 1} 个项目`
-    }
-    if (ENV !== 'WEB') content && Taro.showModal({ content, showCancel: false })
-    else content && alert(content)
+    const content = `你点击了第 ${+index + 1} 个项目`
+    if (ENV !== Taro.ENV_TYPE.WEB) Taro.showModal({ content, showCancel: false })
+    else alert(content)
   }
 
   private onClose(): void {

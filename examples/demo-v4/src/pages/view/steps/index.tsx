@@ -6,13 +6,13 @@ import Taro from '@tarojs/taro'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
 
-interface TimelinePageState {
+interface StepsPageState {
   [key: string]: number
 }
 
-export default class TimelinePage extends React.Component<
+export default class StepsPage extends React.Component<
   {},
-  TimelinePageState
+  StepsPageState
 > {
   public config: Taro.PageConfig = {
     navigationBarTitleText: 'Taro UI'

@@ -63,7 +63,7 @@ export default class Index extends React.Component<{}, IndexState> {
 
   private onImageClick(index: number, file: DogaImage): void {
     Taro.showToast({
-      title: `onImageClick: ${index}${file}`,
+      title: `onImageClick: ${index}: ${JSON.stringify(file)}`,
       icon: 'none'
     })
   }
