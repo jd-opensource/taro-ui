@@ -1,0 +1,21 @@
+@use 'taro-ui/lib/style/variables/default.scss' as *;
+@use 'taro-ui/lib/style/components/flex.scss';
+
+.flex-page .at-row {
+  margin-bottom: 40px;
+
+  .at-col {
+    padding: $spacing-v-md $spacing-h-md;
+    color: $color-white;
+    font-size: $font-size-base;
+    text-align: center;
+
+    &:nth-child(odd) {
+      background-color: $color-brand-light;
+    }
+
+    &:nth-child(even) {
+      background-color: tint($color-brand-light, 20%);
+    }
+  }
+}
