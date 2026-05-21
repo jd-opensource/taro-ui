@@ -1,0 +1,19 @@
+.icon-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-bottom: 60px;
+    width: 33%;
+    text-align: center;
+  }
+
+  &__name {
+    margin-top: 20px;
+    color: #88889C;
+    font-size: 20px;
+    text-align: center;
+  }
+}

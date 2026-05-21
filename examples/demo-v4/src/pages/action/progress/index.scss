@@ -1,0 +1,14 @@
+.progress-page .example-item {
+  &__buttons {
+    margin-top: 20px;
+
+    .btn {
+      display: inline-block;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

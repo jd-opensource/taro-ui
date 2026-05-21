@@ -1,0 +1,25 @@
+.example-item {
+  .control-cnt {
+    margin-top: 40px;
+  }
+
+  .slider-list {
+    margin-top: 80px;
+
+    &__item {
+      margin-bottom: 40px;
+
+      &-header {
+        margin-bottom: 16px;
+        color: #999;
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 360px;
+  }
+}

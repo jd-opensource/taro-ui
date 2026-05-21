@@ -1,0 +1,83 @@
+{
+  "private": true,
+  "name": "demo-v4",
+  "version": "3.3.1",
+  "description": "Taro UI demo",
+  "author": "O2Team <aotu.io>",
+  "homepage": "https://jd-opensource.github.io/taro-ui/#/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nervjs/taro-ui.git"
+  },
+  "license": "MIT",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type weapp",
+    "build:swan": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type swan",
+    "build:alipay": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type alipay",
+    "build:tt": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type tt",
+    "build:h5": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type h5",
+    "build:rn": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type rn",
+    "build:qq": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type qq",
+    "build:jd": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type jd",
+    "build:quickapp": "cross-env NODE_OPTIONS='--openssl-legacy-provider' taro build --type quickapp",
+    "dev:weapp": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:weapp -- --watch",
+    "dev:swan": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:swan -- --watch",
+    "dev:alipay": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:alipay -- --watch",
+    "dev:tt": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:tt -- --watch",
+    "dev:h5": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:h5 -- --watch",
+    "dev:rn": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:rn -- --watch",
+    "dev:qq": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:qq -- --watch",
+    "dev:jd": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:jd -- --watch",
+    "dev:quickapp": "cross-env NODE_OPTIONS='--openssl-legacy-provider' npm run build:quickapp -- --watch",
+    "clean": "rimraf .temp dist"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@tarojs/components": "4.2.0",
+    "@tarojs/helper": "4.2.0",
+    "@tarojs/plugin-framework-react": "4.2.0",
+    "@tarojs/plugin-platform-alipay": "4.2.0",
+    "@tarojs/plugin-platform-h5": "4.2.0",
+    "@tarojs/plugin-platform-jd": "4.2.0",
+    "@tarojs/plugin-platform-qq": "4.2.0",
+    "@tarojs/plugin-platform-swan": "4.2.0",
+    "@tarojs/plugin-platform-tt": "4.2.0",
+    "@tarojs/plugin-platform-weapp": "4.2.0",
+    "@tarojs/react": "4.2.0",
+    "@tarojs/runtime": "4.2.0",
+    "@tarojs/shared": "4.2.0",
+    "@tarojs/taro": "4.2.0",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "taro-ui": "workspace:^"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "@tarojs/cli": "4.2.0",
+    "@tarojs/mini-runner": "4.2.0",
+    "@tarojs/webpack-runner": "4.2.0",
+    "@types/webpack-env": "^1.13.6",
+    "babel-preset-taro": "4.2.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.12.0",
+    "eslint-config-taro": "4.2.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "postcss": "^8.4.31",
+    "react-refresh": "^0.11.0",
+    "sass": "^1.49.9",
+    "stylelint": "^14.4.0",
+    "webpack": "5.106.2"
+  }
+}

@@ -43,3 +43,9 @@ jobs:
 
       - name: build
         run: pnpm build:demo
+
+      - name: build:demoV4:h5
+        run: pnpm --filter demo-v4 run build:h5
+
+      - name: build:demoV4:weapp
+        run: pnpm --filter demo-v4 run build:weapp
