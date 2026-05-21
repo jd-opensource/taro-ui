@@ -100,12 +100,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # ------------------ If git tag already exists, skip -------------
-
-      - name: Git tag verification
-        if: steps.tag_check.outputs.exists_tag == 'true'
-        uses: andymckay/cancel-action@0.3
-
       # Bootstrap project
       - name: Cache pnpm modules
         uses: actions/cache@v4
