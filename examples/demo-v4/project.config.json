@@ -13,7 +13,20 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "condition": false
+        "condition": false,
+        "compileWorklet": false,
+        "uglifyFileName": false,
+        "uploadWithSourceMap": true,
+        "enhance": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "minifyWXML": true,
+        "localPlugins": false,
+        "disableUseStrict": false,
+        "useCompilerPlugins": false,
+        "swc": false,
+        "disableSWC": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.31.0",
@@ -26,5 +39,6 @@
         "tabIndent": "insertSpaces",
         "tabSize": 4
     },
-    "condition": {}
+    "condition": {},
+    "simulatorPluginLibVersion": {}
 }

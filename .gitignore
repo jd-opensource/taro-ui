@@ -50,3 +50,6 @@ config.json
 events.jsonl
 labels/
 views.json
+
+.mindmux/
+brain/
