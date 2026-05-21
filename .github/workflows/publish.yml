@@ -5,6 +5,7 @@ on:
     branches:
       - 'chore/**'
       - 'feat/**'
+      - next
   pull_request:
     branches:
       - next
@@ -60,7 +61,7 @@ jobs:
         uses: andymckay/cancel-action@0.3
 
       - name: Publish push tag verification
-        if: github.event_name == 'push' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true
+        if: github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true
         uses: andymckay/cancel-action@0.3
 
       # Get & check npm publish
@@ -102,7 +103,7 @@ jobs:
       # ------------------ If git tag already exists, skip -------------
 
       - name: Git tag verification
-        if: steps.tag_check.outputs.exists_tag == false
+        if: steps.tag_check.outputs.exists_tag == 'true'
         uses: andymckay/cancel-action@0.3
 
       # Bootstrap project
