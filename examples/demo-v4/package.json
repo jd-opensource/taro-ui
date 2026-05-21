@@ -64,8 +64,7 @@
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@tarojs/cli": "4.2.0",
-    "@tarojs/mini-runner": "4.2.0",
-    "@tarojs/webpack-runner": "4.2.0",
+    "@tarojs/webpack5-runner": "4.2.0",
     "@types/webpack-env": "^1.13.6",
     "babel-preset-taro": "4.2.0",
     "cross-env": "^7.0.3",
@@ -78,6 +77,6 @@
     "react-refresh": "^0.11.0",
     "sass": "^1.49.9",
     "stylelint": "^14.4.0",
-    "webpack": "5.106.2"
+    "webpack": "5.91.0"
   }
 }
