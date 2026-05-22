@@ -13,6 +13,7 @@ exports[`Card Snap render Card -- props extra  1`] = `
       <img
         alt=""
         class="at-card__header-thumb-info"
+        mode="scaleToFill"
         src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
     </div>
@@ -57,6 +58,7 @@ exports[`Card Snap render Card -- props extraStyle  1`] = `
       <img
         alt=""
         class="at-card__header-thumb-info"
+        mode="scaleToFill"
         src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
     </div>
@@ -102,6 +104,7 @@ exports[`Card Snap render Card -- props isFull  1`] = `
       <img
         alt=""
         class="at-card__header-thumb-info"
+        mode="scaleToFill"
         src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
     </div>
@@ -146,6 +149,7 @@ exports[`Card Snap render Card -- props note 1`] = `
       <img
         alt=""
         class="at-card__header-thumb-info"
+        mode="scaleToFill"
         src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
     </div>
@@ -185,6 +189,7 @@ exports[`Card Snap render Card -- props thumb 1`] = `
       <img
         alt=""
         class="at-card__header-thumb-info"
+        mode="scaleToFill"
         src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
       />
     </div>

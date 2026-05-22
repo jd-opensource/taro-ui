@@ -121,11 +121,13 @@ exports[`AtTabBar Snap render AtTabBar -- props color 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
@@ -254,11 +256,13 @@ exports[`AtTabBar Snap render AtTabBar -- props current 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
@@ -402,11 +406,13 @@ exports[`AtTabBar Snap render AtTabBar -- props fontSize 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
@@ -539,12 +545,14 @@ exports[`AtTabBar Snap render AtTabBar -- props iconSize 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
           style="width: 26px; height: 26px;"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
           style="width: 26px; height: 26px;"
         />
@@ -674,11 +682,13 @@ exports[`AtTabBar Snap render AtTabBar -- props scroll 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
@@ -809,11 +819,13 @@ exports[`AtTabBar Snap render AtTabBar -- props selectedColor 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
@@ -942,11 +954,13 @@ exports[`AtTabBar Snap render AtTabBar -- props tabList 1`] = `
         <img
           alt=""
           class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          mode="widthFix"
           src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
         />
         <img
           alt=""
           class="at-tab-bar__inner-img"
+          mode="widthFix"
           src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
         />
       </div>
