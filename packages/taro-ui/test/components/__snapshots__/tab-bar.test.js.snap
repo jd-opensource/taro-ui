@@ -1,25 +1,978 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtTabBar Snap render AtTabBar -- props backgroundColor 1`] = `"<div style=\\"background-color:red;\\" class=\\"at-tab-bar\\"></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props backgroundColor 1`] = `
+<div
+  class="at-tab-bar"
+/>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props className 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar test\\"></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props className 1`] = `
+<div
+  class="at-tab-bar test"
+/>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props color 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:red;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"color:red;font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:red;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"color:red;font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:red;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props color 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+    style="color: red;"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+          style="color: red;"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+    style="color: red;"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+          style="color: red;"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+    style="color: red;"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props current 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props current 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props customStyle 1`] = `"<div style=\\"background-color:;color:red;\\" class=\\"at-tab-bar\\"></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props customStyle 1`] = `
+<div
+  class="at-tab-bar"
+/>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props fixed 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar at-tab-bar--fixed\\"></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props fixed 1`] = `
+<div
+  class="at-tab-bar at-tab-bar--fixed"
+/>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props fontSize 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:26px;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:26px;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:26px;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:26px;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props fontSize 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+          style="font-size: 26px;"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+          style="font-size: 26px;"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+          style="font-size: 26px;"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+          style="font-size: 26px;"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props iconSize 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:26px;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:26px;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:26px;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:26px;height:26px;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:26px;height:26px;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props iconSize 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+          style="font-size: 26px;"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+          style="font-size: 26px;"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+          style="font-size: 26px;"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+          style="width: 26px; height: 26px;"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+          style="width: 26px; height: 26px;"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props scroll 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props scroll 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props selectedColor 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:red;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"color:red;font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props selectedColor 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+    style="color: red;"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+          style="color: red;"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render AtTabBar -- props tabList 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"><div style=\\"color:;\\" class=\\"at-tab-bar__item at-tab-bar__item--active\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-bullet-list\\"></span></div><div class=\\"at-badge__num\\">new</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">待办事项</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-camera\\"></span></div>undefined</div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">拍照</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\"><div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-folder\\"></span></div><div class=\\"at-badge__num\\">99+</div></div>undefined<div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">文件夹</div>undefined</div></div></div><div style=\\"color:;\\" class=\\"at-tab-bar__item\\">undefined<div class=\\"at-badge\\"><div class=\\"at-tab-bar__icon\\"><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img at-tab-bar__inner-img--inactive\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png\\"/></div><div class=\\"taro-img taro-img__widthfix at-tab-bar__inner-img\\" style=\\"width:undefinedpx;height:undefinedpx;\\"><img class=\\"taro-img__mode-widthfix\\" src=\\"https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png\\"/></div></div><div class=\\"at-badge__num\\">new</div></div><div class=\\"\\"><div class=\\"at-badge\\"><div style=\\"font-size:;\\" class=\\"at-tab-bar__title\\">领取中心</div>undefined</div></div></div></div>"`;
+exports[`AtTabBar Snap render AtTabBar -- props tabList 1`] = `
+<div
+  class="at-tab-bar"
+>
+  <div
+    class="at-tab-bar__item at-tab-bar__item--active"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-bullet-list"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          待办事项
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-camera"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          拍照
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <span
+          class="at-icon at-icon-folder"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        99+
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          文件夹
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-tab-bar__item"
+  >
+    <div
+      class="at-badge"
+    >
+      <div
+        class="at-tab-bar__icon"
+      >
+        <img
+          alt=""
+          class="at-tab-bar__inner-img at-tab-bar__inner-img--inactive"
+          src="https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png"
+        />
+        <img
+          alt=""
+          class="at-tab-bar__inner-img"
+          src="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
+        />
+      </div>
+      <div
+        class="at-badge__num"
+      >
+        new
+      </div>
+    </div>
+    <div>
+      <div
+        class="at-badge"
+      >
+        <div
+          class="at-tab-bar__title"
+        >
+          领取中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtTabBar Snap render initial AtTabBar 1`] = `"<div style=\\"background-color:;\\" class=\\"at-tab-bar\\"></div>"`;
+exports[`AtTabBar Snap render initial AtTabBar 1`] = `
+<div
+  class="at-tab-bar"
+/>
+`;

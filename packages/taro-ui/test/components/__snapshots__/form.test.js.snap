@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtForm Snap render AtForm -- props reportSubmit 1`] = `"<form class=\\"at-form\\"></form>"`;
+exports[`AtForm Snap render AtForm -- props reportSubmit 1`] = `
+<form
+  class="at-form"
+/>
+`;
 
-exports[`AtForm Snap render initial AtForm 1`] = `"<form class=\\"at-form\\"></form>"`;
+exports[`AtForm Snap render initial AtForm 1`] = `
+<form
+  class="at-form"
+/>
+`;

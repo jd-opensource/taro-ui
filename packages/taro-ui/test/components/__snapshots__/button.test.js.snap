@@ -1,17 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtButton Snap render AtButton -- props circle 1`] = `"<div class=\\"at-button at-button--normal at-button--circle\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props circle 1`] = `
+<div
+  class="at-button at-button--normal at-button--circle"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props disabled 1`] = `"<div class=\\"at-button at-button--normal at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props disabled 1`] = `
+<div
+  class="at-button at-button--normal at-button--disabled"
+>
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props full 1`] = `"<div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props full 1`] = `
+<div
+  class="at-button at-button--normal at-button--full"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props loading 1`] = `"<div class=\\"at-button at-button--icon at-button--normal\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefined<div class=\\"at-button__icon\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props loading 1`] = `
+<div
+  class="at-button at-button--icon at-button--normal"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__icon"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props size(normal) 1`] = `"<div class=\\"at-button at-button--normal\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props size(normal) 1`] = `
+<div
+  class="at-button at-button--normal"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props size(small) 1`] = `"<div class=\\"at-button at-button--small\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props size(small) 1`] = `
+<div
+  class="at-button at-button--small"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props type(primary) 1`] = `"<div class=\\"at-button at-button--normal at-button--primary\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props type(primary) 1`] = `
+<div
+  class="at-button at-button--normal at-button--primary"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;
 
-exports[`AtButton Snap render AtButton -- props type(secondary) 1`] = `"<div class=\\"at-button at-button--normal at-button--secondary\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">按钮</div></div>"`;
+exports[`AtButton Snap render AtButton -- props type(secondary) 1`] = `
+<div
+  class="at-button at-button--normal at-button--secondary"
+>
+  <button
+    class="at-button__wxbutton"
+    lang="en"
+  />
+  <div
+    class="at-button__text"
+  >
+    按钮
+  </div>
+</div>
+`;

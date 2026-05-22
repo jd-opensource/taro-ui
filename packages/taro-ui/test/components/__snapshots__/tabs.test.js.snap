@@ -1,21 +1,403 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtTabs Snap render AtTabs -- props animated 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);transition:unset;height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:300%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props animated 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px); transition: unset;"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props className 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB test\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:0%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props className 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB test"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  />
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props current 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(-200%, 0px, 0px);-webkit-transform:translate3d(-200%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:300%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props current 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  >
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-200%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props customStyle 1`] = `"<div style=\\"height:;color:red;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:0%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props customStyle 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  />
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props height 1`] = `"<div style=\\"height:300px;\\" class=\\"at-tabs at-tabs--vertical at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(0px, -0%, 0px);-webkit-transform:translate3d(0px, -0%, 0px);height:300px;\\" class=\\"at-tabs__body\\"><div style=\\"height:300%;width:1PX;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props height 1`] = `
+<div
+  class="at-tabs at-tabs--vertical at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(0px, -0%, 0px); height: 300px;"
+  >
+    <div
+      class="at-tabs__underline"
+      style="height: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props scroll 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--scroll at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" style=\\"height:;\\" scrollX scrollWithAnimation scrollIntoView=\\"\\" class=\\"taro-scroll taro-scroll-view__scroll-x at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:300%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props scroll 1`] = `
+<div
+  class="at-tabs at-tabs--scroll at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+    scrollintoview=""
+    scrollleft="0"
+    scrolltop="0"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props swipeable 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:300%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props swipeable 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props tabDirection 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--scroll at-tabs--vertical at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" style=\\"height:;\\" scrollY scrollWithAnimation scrollIntoView=\\"\\" class=\\"taro-scroll taro-scroll-view__scroll-y at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(0px, -0%, 0px);-webkit-transform:translate3d(0px, -0%, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:300%;width:1PX;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props tabDirection 1`] = `
+<div
+  class="at-tabs at-tabs--scroll at-tabs--vertical at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+    scrollintoview=""
+    scrollleft="0"
+    scrolltop="0"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(0px, -0%, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="height: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render AtTabs -- props tabList 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"><div id=\\"tab0\\" class=\\"at-tabs__item at-tabs__item--active\\">标签页1<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab1\\" class=\\"at-tabs__item\\">标签页2<div class=\\"at-tabs__item-underline\\"></div></div><div id=\\"tab2\\" class=\\"at-tabs__item\\">标签页3<div class=\\"at-tabs__item-underline\\"></div></div></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:300%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render AtTabs -- props tabList 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  >
+    <div
+      class="at-tabs__item at-tabs__item--active"
+      id="tabtabs-AOTU20180"
+    >
+      标签页1
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20181"
+    >
+      标签页2
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+    <div
+      class="at-tabs__item"
+      id="tabtabs-AOTU20182"
+    >
+      标签页3
+      <div
+        class="at-tabs__item-underline"
+      />
+    </div>
+  </div>
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 300%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtTabs Snap render initial AtTabs 1`] = `"<div style=\\"height:;\\" class=\\"at-tabs at-tabs--horizontal at-tabs--WEB\\"><div id=\\"tabs-AOTU2018\\" class=\\"at-tabs__header\\"></div><div style=\\"transform:translate3d(-0%, 0px, 0px);-webkit-transform:translate3d(-0%, 0px, 0px);height:;\\" class=\\"at-tabs__body\\"><div style=\\"height:1PX;width:0%;\\" class=\\"at-tabs__underline\\"></div></div></div>"`;
+exports[`AtTabs Snap render initial AtTabs 1`] = `
+<div
+  class="at-tabs at-tabs--horizontal at-tabs--WEB"
+>
+  <div
+    class="at-tabs__header"
+    id="tabs-AOTU2018"
+  />
+  <div
+    class="at-tabs__body"
+    style="transform: translate3d(-0%, 0px, 0px);"
+  >
+    <div
+      class="at-tabs__underline"
+      style="width: 0%;"
+    />
+  </div>
+</div>
+`;

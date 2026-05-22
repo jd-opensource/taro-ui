@@ -1,6 +1,6 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtTabBar from '../../.temp/components/tab-bar/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtTabBar from '../../lib/components/tab-bar/index'
 
 describe('AtTabBar Snap', () => {
   const tabList = [
@@ -18,68 +18,82 @@ describe('AtTabBar Snap', () => {
   ]
 
   it('render initial AtTabBar', () => {
-    const componet = renderToString(<AtTabBar />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTabBar />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props customStyle', () => {
-    const componet = renderToString(<AtTabBar customStyle='color:red;' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar customStyle='color:red;' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props className', () => {
-    const componet = renderToString(<AtTabBar className='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar className='test' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props fixed', () => {
-    const componet = renderToString(<AtTabBar fixed />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTabBar fixed />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props backgroundColor', () => {
-    const componet = renderToString(<AtTabBar backgroundColor='red' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar backgroundColor='red' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props tabList', () => {
-    const componet = renderToString(<AtTabBar tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props current', () => {
-    const componet = renderToString(<AtTabBar current='2' tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar current='2' tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props iconSize', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabBar iconSize='26' tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props fontSize', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabBar fontSize='26' tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props color', () => {
-    const componet = renderToString(<AtTabBar color='red' tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar color='red' tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props selectedColor', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabBar selectedColor='red' tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabBar -- props scroll', () => {
-    const componet = renderToString(<AtTabBar scroll tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabBar scroll tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 })

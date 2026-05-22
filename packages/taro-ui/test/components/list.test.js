@@ -1,12 +1,12 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtList from '../../.temp/components/list/index'
-import AtListItem from '../../.temp/components/list/item/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtList from '../../lib/components/list/index'
+import AtListItem from '../../lib/components/list/item/index'
 
 describe('List Snap', () => {
   it('render completed List', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtList>
         <AtListItem title='标题文字' />
         <AtListItem title='标题文字' arrow='right' />
@@ -45,17 +45,17 @@ describe('List Snap', () => {
         <AtListItem title='标题文字' switchIsCheck isSwitch disabled />
       </AtList>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render completed List -- no border', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtList hasBorder={false}>
         <AtListItem title='标题文字' hasBorder={false} />
         <AtListItem title='标题文字' hasBorder={false} />
       </AtList>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
@@ -63,33 +63,33 @@ describe('List Behavior ', () => {
   it('ListItem onClick', () => {
     const onClick = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem title='标题文字' onClick={onClick} />
       </AtList>
     )
-    const componentDom = findDOMNode(component, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemDom = componentDom.querySelector('.at-list__item')
 
-    Simulate.click(itemDom)
+    fireEvent.click(itemDom)
     expect(onClick).toBeCalled()
   })
 
   it('ListItem onSwitchChange', () => {
     const onChange = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem title='标题文字' isSwitch onSwitchChange={onChange} />
       </AtList>
     )
 
-    const componentDom = findDOMNode(component, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemSwitchDom = componentDom.querySelector(
       '.at-list__item .item-extra__switch'
     ).children[0]
 
-    Simulate.click(itemSwitchDom)
+    fireEvent.click(itemSwitchDom)
     expect(onChange).toBeCalled()
   })
 
@@ -97,7 +97,7 @@ describe('List Behavior ', () => {
     const onClick = jest.fn()
     const onChange = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem
           title='标题文字'
@@ -108,22 +108,20 @@ describe('List Behavior ', () => {
       </AtList>
     )
 
-    const componentDom = findDOMNode(component, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemDom = componentDom.querySelector('.at-list__item').children[0]
     const itemSwitchDom = componentDom.querySelector(
       '.at-list__item .item-extra__switch'
     ).children[0]
 
-    itemSwitchDom.value = true
-
-    Simulate.change(itemSwitchDom)
+    fireEvent.click(itemSwitchDom)
     expect(onChange).toBeCalled()
     expect(onClick).not.toBeCalled()
 
     onClick.mockReset()
     onChange.mockReset()
 
-    Simulate.click(itemDom)
+    fireEvent.click(itemDom)
     expect(onClick).toBeCalled()
     expect(onChange).not.toBeCalled()
   })
@@ -132,7 +130,7 @@ describe('List Behavior ', () => {
     const onClick = jest.fn()
     const onChange = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem
           isSwitch
@@ -144,49 +142,47 @@ describe('List Behavior ', () => {
       </AtList>
     )
 
-    const componentDom = findDOMNode(component, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemDom = componentDom.querySelector('.at-list__item').children[0]
     const itemSwitchDom = componentDom.querySelector(
       '.at-list__item .item-extra__switch'
     ).children[0]
 
-    itemSwitchDom.value = true
-
-    Simulate.change(itemSwitchDom)
+    fireEvent.click(itemSwitchDom)
     expect(onChange).not.toBeCalled()
 
     onClick.mockReset()
     onChange.mockReset()
 
-    Simulate.click(itemDom)
+    fireEvent.click(itemDom)
     expect(onClick).not.toBeCalled()
   })
 
   it('ListItem switch was checked', () => {
-    const checkedComponent = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem isSwitch switchIsCheck title='标题文字' />
       </AtList>
     )
 
-    const componentDom = findDOMNode(checkedComponent, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemSwitchInputDom = componentDom.querySelector(
       '.at-list__item .item-extra__switch input'
     )
-    expect(itemSwitchInputDom.style._length).toBeGreaterThan(0)
+    expect(itemSwitchInputDom.checked).toBeTruthy()
   })
 
   it('ListItem switch was unchecked', () => {
-    const checkedComponent = renderIntoDocument(
+    const { container } = render(
       <AtList>
         <AtListItem isSwitch title='标题文字' />
       </AtList>
     )
 
-    const componentDom = findDOMNode(checkedComponent, 'at-list')
+    const componentDom = queryByClass(container, 'at-list')
     const itemSwitchInputDom = componentDom.querySelector(
       '.at-list__item .item-extra__switch input'
     )
-    expect(itemSwitchInputDom.style._length).toEqual(0)
+    expect(itemSwitchInputDom.checked).toBeFalsy()
   })
 })

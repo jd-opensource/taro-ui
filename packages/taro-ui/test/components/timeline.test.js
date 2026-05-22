@@ -1,10 +1,10 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtTimeline from '../../.temp/components/timeline/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtTimeline from '../../lib/components/timeline/index'
 
 describe('AtTimeline Snap', () => {
   it('render AtNoticebar -- props pending', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtTimeline
         pending
         items={[
@@ -15,11 +15,11 @@ describe('AtTimeline Snap', () => {
         ]}
       ></AtTimeline>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props items', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtTimeline
         items={[
           { title: '刷牙洗脸' },
@@ -29,11 +29,11 @@ describe('AtTimeline Snap', () => {
         ]}
       ></AtTimeline>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props item.color', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtTimeline
         items={[
           { title: '刷牙洗脸' },
@@ -43,11 +43,11 @@ describe('AtTimeline Snap', () => {
         ]}
       ></AtTimeline>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props item.icon', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtTimeline
         items={[
           { title: '刷牙洗脸', icon: 'check-circle' },
@@ -57,11 +57,11 @@ describe('AtTimeline Snap', () => {
         ]}
       ></AtTimeline>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props item.content', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtTimeline
         pending
         items={[
@@ -80,6 +80,6 @@ describe('AtTimeline Snap', () => {
         ]}
       ></AtTimeline>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

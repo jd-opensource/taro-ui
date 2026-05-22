@@ -1,36 +1,36 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtIndexes from '../../.temp/components/indexes/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtIndexes from '../../lib/components/indexes/index'
 
 describe('AtIndexes Snap', () => {
   it('render initial AtIndexes', () => {
-    const component = renderToString(<AtIndexes />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props className', () => {
-    const component = renderToString(<AtIndexes className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props customStyle', () => {
-    const component = renderToString(<AtIndexes customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props animation', () => {
-    const component = renderToString(<AtIndexes animation />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes animation />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props topKey', () => {
-    const component = renderToString(<AtIndexes topKey='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes topKey='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props children', () => {
-    const component = renderToString(<AtIndexes>children</AtIndexes>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes>children</AtIndexes>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIndexes -- props list', () => {
@@ -78,7 +78,7 @@ describe('AtIndexes Snap', () => {
         ]
       }
     ]
-    const component = renderToString(<AtIndexes list={list} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIndexes list={list} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

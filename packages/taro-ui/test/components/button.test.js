@@ -1,74 +1,70 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtButton from '../../.temp/components/button/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtButton from '../../lib/components/button/index'
 
 describe('AtButton Snap', () => {
   it('render AtButton -- props size(normal)', () => {
-    const component = renderToString(<AtButton size='normal'>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton size='normal'>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props size(small)', () => {
-    const component = renderToString(<AtButton size='small'>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton size='small'>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props type(primary)', () => {
-    const component = renderToString(<AtButton type='primary'>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton type='primary'>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props type(secondary)', () => {
-    const component = renderToString(<AtButton type='secondary'>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton type='secondary'>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props circle', () => {
-    const component = renderToString(<AtButton circle>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton circle>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props full', () => {
-    const component = renderToString(<AtButton full>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton full>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props loading', () => {
-    const component = renderToString(<AtButton loading>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton loading>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtButton -- props disabled', () => {
-    const component = renderToString(<AtButton disabled>按钮</AtButton>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtButton disabled>按钮</AtButton>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('AtButton Event', () => {
   it('AtButton onClick', () => {
     const onClick = jest.fn()
+    const { container } = render(<AtButton onClick={onClick}>按钮</AtButton>)
+    const componentDom = queryByClass(container, 'at-button')
 
-    const component = renderIntoDocument(
-      <AtButton onClick={onClick}>按钮</AtButton>
-    )
-    const componentDom = findDOMNode(component, 'at-button')
-
-    Simulate.click(componentDom)
+    fireEvent.click(componentDom)
     expect(onClick).toBeCalled()
   })
 
   it('AtButton disabled, onClick not to be called', () => {
     const onClick = jest.fn()
-
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtButton disabled onClick={onClick}>
         按钮
       </AtButton>
     )
-    const componentDom = findDOMNode(component, 'at-button')
+    const componentDom = queryByClass(container, 'at-button')
 
-    Simulate.click(componentDom)
+    fireEvent.click(componentDom)
     expect(onClick).not.toBeCalled()
   })
 })

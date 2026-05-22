@@ -1,7 +1,7 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtGrid from '../../.temp/components/grid/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtGrid from '../../lib/components/grid/index'
 
 const IMAGE_DATA = [
   {
@@ -55,35 +55,35 @@ const ICON_DATA = [
 
 describe('Grid Snap', () => {
   it('render image Grid', () => {
-    const component = renderToString(<AtGrid data={IMAGE_DATA} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtGrid data={IMAGE_DATA} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render no border of image Grid', () => {
-    const component = renderToString(<AtGrid data={IMAGE_DATA} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtGrid data={IMAGE_DATA} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render rect image Grid', () => {
-    const component = renderToString(<AtGrid mode='rect' data={IMAGE_DATA} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtGrid mode='rect' data={IMAGE_DATA} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render icon Grid', () => {
-    const component = renderToString(<AtGrid data={ICON_DATA} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtGrid data={ICON_DATA} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render rect icon Grid', () => {
-    const component = renderToString(<AtGrid mode='rect' data={ICON_DATA} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtGrid mode='rect' data={ICON_DATA} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render rect icon Grid -- props columnNum', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtGrid mode='rect' columnNum={4} data={ICON_DATA} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
@@ -91,13 +91,13 @@ describe('Grid Behavior ', () => {
   it('Grid onClick', () => {
     const onClick = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtGrid mode='rect' columnNum={4} data={ICON_DATA} onClick={onClick} />
     )
-    const componentDom = findDOMNode(component, 'at-grid')
+    const componentDom = queryByClass(container, 'at-grid')
     const itemDom = componentDom.querySelector('.at-grid-item')
 
-    Simulate.click(itemDom)
+    fireEvent.click(itemDom)
     expect(onClick).toBeCalled()
   })
 })

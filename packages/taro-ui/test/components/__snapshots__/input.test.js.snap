@@ -1,37 +1,592 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtInput Snap render AtInput -- init 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- init 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props border 1`] = `"<div class=\\"at-input at-input--without-border\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props border 1`] = `
+<div
+  class="at-input at-input--without-border"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props clear 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props clear 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props disabled 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container at-input--disabled\\"><div class=\\"at-input__overlay\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props disabled 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container at-input--disabled"
+  >
+    <div
+      class="at-input__overlay"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      disabled=""
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props editable 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container at-input--disabled\\"><div class=\\"at-input__overlay\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props editable 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container at-input--disabled"
+  >
+    <div
+      class="at-input__overlay"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      disabled=""
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props error 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container at-input--error\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefined<div class=\\"at-input__icon\\"><span class=\\"taro-text at-icon at-icon-alert-circle at-input__icon-alert\\"></span></div><div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props error 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container at-input--error"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__icon"
+    >
+      <span
+        class="at-icon at-icon-alert-circle at-input__icon-alert"
+      />
+    </div>
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props maxlength 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props maxlength 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props name 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"name\\" name=\\"name\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props name 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id="name"
+      maxlength="140"
+      name="name"
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props name 2`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"placeholder\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props name 2`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder="placeholder"
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props required 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props required 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props style 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props style 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props title 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><label class=\\"at-input__title false\\" for=\\"\\">title</label><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props title 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <label
+      class="at-input__title false"
+      for=""
+    >
+      title
+    </label>
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props type(digit) 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"number\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props type(digit) 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="digit"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props type(idcard) 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"idcard\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props type(idcard) 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="idcard"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props type(number) 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"number\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props type(number) 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="number"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props type(password) 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" password placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"password\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props type(password) 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props type(phone) 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"11\\" value=\\"\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"11\\" type=\\"number\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props type(phone) 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="11"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="number"
+      value=""
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInput Snap render AtInput -- props value 1`] = `"<div class=\\"at-input\\"><div class=\\"at-input__container\\"><div class=\\"at-input__overlay at-input__overlay--hidden\\"></div><input id=\\"\\" name=\\"\\" placeholderStyle=\\"\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"50\\" maxLength=\\"140\\" value=\\"value\\" confirmType=\\"done\\" cursor=\\"0\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" adjustPosition class=\\"weui-input at-input__input\\" placeholder=\\"\\" maxlength=\\"140\\" type=\\"text\\"/>undefinedundefined<div class=\\"at-input__children\\"></div></div></div>"`;
+exports[`AtInput Snap render AtInput -- props value 1`] = `
+<div
+  class="at-input"
+>
+  <div
+    class="at-input__container"
+  >
+    <div
+      class="at-input__overlay at-input__overlay--hidden"
+    />
+    <input
+      class="at-input__input"
+      confirmtype="done"
+      cursorspacing="50"
+      id=""
+      maxlength="140"
+      name=""
+      placeholder=""
+      placeholderclass="placeholder"
+      placeholderstyle=""
+      selectionend="-1"
+      selectionstart="-1"
+      type="text"
+      value="value"
+    />
+    <div
+      class="at-input__children"
+    />
+  </div>
+</div>
+`;

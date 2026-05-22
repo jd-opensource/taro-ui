@@ -1,31 +1,441 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtNavBar Snap render AtNavBar -- props className 1`] = `"<div class=\\"at-nav-bar test\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props className 1`] = `
+<div
+  class="at-nav-bar test"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props color 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:#fff;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:#fff;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:#fff;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props color 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+    style="color: rgb(255, 255, 255);"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+      style="color: rgb(255, 255, 255);"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+      style="color: rgb(255, 255, 255);"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props customStyle 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props fixed 1`] = `"<div class=\\"at-nav-bar at-nav-bar--fixed\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props fixed 1`] = `
+<div
+  class="at-nav-bar at-nav-bar--fixed"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props leftIconType 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span style=\\"color:;font-size:1.024rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props leftIconType 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-icon at-icon-test"
+    />
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props leftIconType 2`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span style=\\"color:red;font-size:1.536rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props leftIconType 2`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-icon at-icon-test"
+    />
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props leftText 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\">test</span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props leftText 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    >
+      test
+    </span>
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props leftText 2`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\">test</span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props leftText 2`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    >
+      test
+    </span>
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container\\"><span style=\\"color:;font-size:1.024rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container"
+    >
+      <span
+        class="at-icon at-icon-test"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 2`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container\\"><span style=\\"color:red;font-size:1.536rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 2`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container"
+    >
+      <span
+        class="at-icon at-icon-test"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container\\"><span style=\\"color:;font-size:1.024rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container"
+    >
+      <span
+        class="at-icon at-icon-test"
+      />
+    </div>
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 2`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container\\"><span style=\\"color:red;font-size:1.536rem;\\" class=\\"taro-text at-icon at-icon-test\\"></span></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 2`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container"
+    >
+      <span
+        class="at-icon at-icon-test"
+      />
+    </div>
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props title 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\">test</div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props title 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  >
+    test
+  </div>
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render AtNavBar -- props title 2`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"><span class=\\"taro-text\\">test</span></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render AtNavBar -- props title 2`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  >
+    <span>
+      test
+    </span>
+  </div>
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtNavBar Snap render initial AtNavBar 1`] = `"<div class=\\"at-nav-bar\\"><div style=\\"color:;\\" class=\\"at-nav-bar__left-view\\"><span class=\\"taro-text at-nav-bar__text\\"></span></div><div class=\\"at-nav-bar__title\\"></div><div class=\\"at-nav-bar__right-view\\"><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div><div style=\\"color:;\\" class=\\"at-nav-bar__container at-nav-bar__container--hide\\"></div></div></div>"`;
+exports[`AtNavBar Snap render initial AtNavBar 1`] = `
+<div
+  class="at-nav-bar"
+>
+  <div
+    class="at-nav-bar__left-view"
+  >
+    <span
+      class="at-nav-bar__text"
+    />
+  </div>
+  <div
+    class="at-nav-bar__title"
+  />
+  <div
+    class="at-nav-bar__right-view"
+  >
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+    <div
+      class="at-nav-bar__container at-nav-bar__container--hide"
+    />
+  </div>
+</div>
+`;

@@ -1,7 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtFab Snap render AtFab -- default props 1`] = `"<div class=\\"at-fab at-fab--normal\\">按钮</div>"`;
+exports[`AtFab Snap render AtFab -- default props 1`] = `
+<div
+  class="at-fab at-fab--normal"
+>
+  按钮
+</div>
+`;
 
-exports[`AtFab Snap render AtFab -- props className 1`] = `"<div class=\\"at-fab button at-fab--normal\\">按钮</div>"`;
+exports[`AtFab Snap render AtFab -- props className 1`] = `
+<div
+  class="at-fab button at-fab--normal"
+>
+  按钮
+</div>
+`;
 
-exports[`AtFab Snap render AtFab -- size 50 1`] = `"<div class=\\"at-fab at-fab--50\\">按钮</div>"`;
+exports[`AtFab Snap render AtFab -- size 50 1`] = `
+<div
+  class="at-fab at-fab--50"
+>
+  按钮
+</div>
+`;

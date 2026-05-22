@@ -1,69 +1,67 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtCountDown from '../../.temp/components/countdown/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtCountDown from '../../lib/components/countdown/index'
 
 describe('AtCountDown Snap', () => {
   it('render initial AtCountDown', () => {
-    const component = renderToString(<AtCountDown />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props className', () => {
-    const component = renderToString(<AtCountDown className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props className', () => {
-    const component = renderToString(<AtCountDown customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props isCard', () => {
-    const component = renderToString(<AtCountDown isCard />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown isCard />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props format', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtCountDown format={{ hours: ':', minutes: ':', seconds: '' }} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props day', () => {
-    const component = renderToString(<AtCountDown day={1} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown day={1} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props hours', () => {
-    const component = renderToString(<AtCountDown hours={1} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown hours={1} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props format', () => {
-    const component = renderToString(<AtCountDown minutes={1} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown minutes={1} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props seconds', () => {
-    const component = renderToString(<AtCountDown seconds={1} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown seconds={1} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- props isShowDay', () => {
-    const component = renderToString(<AtCountDown isShowDay />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown isShowDay />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- hours > 24 and show day', () => {
-    const component = renderToString(<AtCountDown isShowDay hours={25} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown isShowDay hours={25} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCountDown -- hours > 24 and not show day', () => {
-    const component = renderToString(
-      <AtCountDown isShowDay={false} hours={25} />
-    )
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCountDown isShowDay={false} hours={25} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

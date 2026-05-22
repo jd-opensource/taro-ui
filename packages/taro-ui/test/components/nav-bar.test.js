@@ -1,95 +1,95 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
 import { Text } from '@tarojs/components'
-import AtNavBar from '../../.temp/components/nav-bar/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtNavBar from '../../lib/components/nav-bar/index'
 
 describe('AtNavBar Snap', () => {
   it('render initial AtNavBar', () => {
-    const component = renderToString(<AtNavBar />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props className', () => {
-    const component = renderToString(<AtNavBar className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props customStyle', () => {
-    const component = renderToString(<AtNavBar customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props fixed', () => {
-    const component = renderToString(<AtNavBar fixed />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar fixed />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props color', () => {
-    const component = renderToString(<AtNavBar color='#fff' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar color='#fff' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props leftIconType', () => {
-    const component = renderToString(<AtNavBar leftIconType='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar leftIconType='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props leftIconType', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNavBar leftIconType={{ value: 'test', color: 'red', size: 36 }} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props leftText', () => {
-    const component = renderToString(<AtNavBar leftText='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar leftText='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props title', () => {
-    const component = renderToString(<AtNavBar title='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar title='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props title', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNavBar>
         <Text>test</Text>
       </AtNavBar>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props leftText', () => {
-    const component = renderToString(<AtNavBar leftText='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar leftText='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props rightFirstIconType', () => {
-    const component = renderToString(<AtNavBar rightFirstIconType='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar rightFirstIconType='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props rightFirstIconType', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNavBar
         rightFirstIconType={{ value: 'test', color: 'red', size: 36 }}
       />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props rightSecondIconType', () => {
-    const component = renderToString(<AtNavBar rightSecondIconType='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNavBar rightSecondIconType='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNavBar -- props rightSecondIconType', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNavBar
         rightSecondIconType={{ value: 'test', color: 'red', size: 36 }}
       />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

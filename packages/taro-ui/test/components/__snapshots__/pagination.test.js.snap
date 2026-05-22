@@ -1,9 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtPagination Snap render AtPagination -- props current 1`] = `"<div class=\\"at-pagination\\"><div class=\\"at-pagination__btn-prev\\">undefined<div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">上一页</div></div></div><div class=\\"at-pagination__number\\"><span class=\\"taro-text at-pagination__number-current\\">1</span>/1</div><div class=\\"at-pagination__btn-next\\">undefined<div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">下一页</div></div></div></div>"`;
+exports[`AtPagination Snap render AtPagination -- props current 1`] = `
+<div
+  class="at-pagination"
+>
+  <div
+    class="at-pagination__btn-prev"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        上一页
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-pagination__number"
+  >
+    <span
+      class="at-pagination__number-current"
+    >
+      1
+    </span>
+    /
+    1
+  </div>
+  <div
+    class="at-pagination__btn-next"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        下一页
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtPagination Snap render AtPagination -- props icon 1`] = `"<div class=\\"at-pagination at-pagination--icon\\"><div class=\\"at-pagination__btn-prev\\"><div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\"><span class=\\"taro-text at-icon at-icon-chevron-left\\"></span></div></div>undefined</div><div class=\\"at-pagination__number\\"><span class=\\"taro-text at-pagination__number-current\\">1</span>/1</div><div class=\\"at-pagination__btn-next\\"><div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\"><span class=\\"taro-text at-icon at-icon-chevron-right\\"></span></div></div>undefined</div></div>"`;
+exports[`AtPagination Snap render AtPagination -- props icon 1`] = `
+<div
+  class="at-pagination at-pagination--icon"
+>
+  <div
+    class="at-pagination__btn-prev"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        <span
+          class="at-icon at-icon-chevron-left"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-pagination__number"
+  >
+    <span
+      class="at-pagination__number-current"
+    >
+      1
+    </span>
+    /
+    1
+  </div>
+  <div
+    class="at-pagination__btn-next"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        <span
+          class="at-icon at-icon-chevron-right"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtPagination Snap render AtPagination -- props pageSize 1`] = `"<div class=\\"at-pagination\\"><div class=\\"at-pagination__btn-prev\\">undefined<div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">上一页</div></div></div><div class=\\"at-pagination__number\\"><span class=\\"taro-text at-pagination__number-current\\">1</span>/1</div><div class=\\"at-pagination__btn-next\\">undefined<div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">下一页</div></div></div></div>"`;
+exports[`AtPagination Snap render AtPagination -- props pageSize 1`] = `
+<div
+  class="at-pagination"
+>
+  <div
+    class="at-pagination__btn-prev"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        上一页
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-pagination__number"
+  >
+    <span
+      class="at-pagination__number-current"
+    >
+      1
+    </span>
+    /
+    1
+  </div>
+  <div
+    class="at-pagination__btn-next"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        下一页
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtPagination Snap render AtPagination -- props total 1`] = `"<div class=\\"at-pagination\\"><div class=\\"at-pagination__btn-prev\\">undefined<div class=\\"at-button at-button--small at-button--disabled\\">undefinedundefinedundefinedundefined<div class=\\"at-button__text\\">上一页</div></div></div><div class=\\"at-pagination__number\\"><span class=\\"taro-text at-pagination__number-current\\">1</span>/5</div><div class=\\"at-pagination__btn-next\\">undefined<div class=\\"at-button at-button--small\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">下一页</div></div></div></div>"`;
+exports[`AtPagination Snap render AtPagination -- props total 1`] = `
+<div
+  class="at-pagination"
+>
+  <div
+    class="at-pagination__btn-prev"
+  >
+    <div
+      class="at-button at-button--small at-button--disabled"
+    >
+      <div
+        class="at-button__text"
+      >
+        上一页
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-pagination__number"
+  >
+    <span
+      class="at-pagination__number-current"
+    >
+      1
+    </span>
+    /
+    5
+  </div>
+  <div
+    class="at-pagination__btn-next"
+  >
+    <div
+      class="at-button at-button--small"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        下一页
+      </div>
+    </div>
+  </div>
+</div>
+`;

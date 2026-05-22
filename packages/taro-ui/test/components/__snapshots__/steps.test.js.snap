@@ -1,13 +1,307 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtSteps Snap render AtSteps -- props className 1`] = `"<div class=\\"at-steps test\\"></div>"`;
+exports[`AtSteps Snap render AtSteps -- props className 1`] = `
+<div
+  class="at-steps test"
+/>
+`;
 
-exports[`AtSteps Snap render AtSteps -- props current 1`] = `"<div class=\\"at-steps\\"><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\">undefined<div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-sound at-steps__circle-icon\\"></span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤一</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--active\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-shopping-cart at-steps__circle-icon\\"></span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤二</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-camera at-steps__circle-icon\\"></span></div>undefined</div><div class=\\"at-steps__title\\">步骤三</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div></div>"`;
+exports[`AtSteps Snap render AtSteps -- props current 1`] = `
+<div
+  class="at-steps"
+>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-sound at-steps__circle-icon"
+        />
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤一
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--active"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-shopping-cart at-steps__circle-icon"
+        />
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤二
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-camera at-steps__circle-icon"
+        />
+      </div>
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤三
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtSteps Snap render AtSteps -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-steps\\"></div>"`;
+exports[`AtSteps Snap render AtSteps -- props customStyle 1`] = `
+<div
+  class="at-steps"
+/>
+`;
 
-exports[`AtSteps Snap render AtSteps -- props items 1`] = `"<div class=\\"at-steps\\"><div class=\\"at-steps__item at-steps__item--active\\"><div class=\\"at-steps__circular-wrap\\">undefined<div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-sound at-steps__circle-icon\\"></span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤一</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-shopping-cart at-steps__circle-icon\\"></span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤二</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-icon at-icon-camera at-steps__circle-icon\\"></span></div>undefined</div><div class=\\"at-steps__title\\">步骤三</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div></div>"`;
+exports[`AtSteps Snap render AtSteps -- props items 1`] = `
+<div
+  class="at-steps"
+>
+  <div
+    class="at-steps__item at-steps__item--active"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-sound at-steps__circle-icon"
+        />
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤一
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-shopping-cart at-steps__circle-icon"
+        />
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤二
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-icon at-icon-camera at-steps__circle-icon"
+        />
+      </div>
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤三
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtSteps Snap render AtSteps -- props items 2`] = `"<div class=\\"at-steps\\"><div class=\\"at-steps__item at-steps__item--active\\"><div class=\\"at-steps__circular-wrap\\">undefined<div class=\\"at-steps__circular\\"><span class=\\"taro-text at-steps__num\\">1</span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤一</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-steps__num\\">2</span></div><div class=\\"at-steps__right-line\\"></div></div><div class=\\"at-steps__title\\">步骤二</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div><div class=\\"at-steps__item at-steps__item--inactive\\"><div class=\\"at-steps__circular-wrap\\"><div class=\\"at-steps__left-line\\"></div><div class=\\"at-steps__circular\\"><span class=\\"taro-text at-steps__num\\">3</span></div>undefined</div><div class=\\"at-steps__title\\">步骤三</div><div class=\\"at-steps__desc\\">这里是额外的信息，最多两行</div></div></div>"`;
+exports[`AtSteps Snap render AtSteps -- props items 2`] = `
+<div
+  class="at-steps"
+>
+  <div
+    class="at-steps__item at-steps__item--active"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-steps__num"
+        >
+          1
+        </span>
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤一
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-steps__num"
+        >
+          2
+        </span>
+      </div>
+      <div
+        class="at-steps__right-line"
+      />
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤二
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+  <div
+    class="at-steps__item at-steps__item--inactive"
+  >
+    <div
+      class="at-steps__circular-wrap"
+    >
+      <div
+        class="at-steps__left-line"
+      />
+      <div
+        class="at-steps__circular"
+      >
+        <span
+          class="at-steps__num"
+        >
+          3
+        </span>
+      </div>
+    </div>
+    <div
+      class="at-steps__title"
+    >
+      步骤三
+    </div>
+    <div
+      class="at-steps__desc"
+    >
+      这里是额外的信息，最多两行
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtSteps Snap render initial AtSteps 1`] = `"<div class=\\"at-steps\\"></div>"`;
+exports[`AtSteps Snap render initial AtSteps 1`] = `
+<div
+  class="at-steps"
+/>
+`;

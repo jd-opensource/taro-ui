@@ -1,15 +1,660 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtRate Snap render AtRate -- props className 1`] = `"<div class=\\"at-rate test\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props className 1`] = `
+<div
+  class="at-rate test"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtRate -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-rate\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props customStyle 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtRate -- props margin 1`] = `"<div class=\\"at-rate\\"><div style=\\"margin-right:0.2134rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.2134rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.2134rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.2134rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.2134rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props margin 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 10px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 10px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 10px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 10px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 10px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtRate -- props max 1`] = `"<div class=\\"at-rate\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props max 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtRate -- props size 1`] = `"<div class=\\"at-rate\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:10px;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props size 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+      style="font-size: 10px;"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+        style="font-size: 10px;"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+      style="font-size: 10px;"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+        style="font-size: 10px;"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+      style="font-size: 10px;"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+        style="font-size: 10px;"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+      style="font-size: 10px;"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+        style="font-size: 10px;"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+      style="font-size: 10px;"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+        style="font-size: 10px;"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtRate -- props value 1`] = `"<div class=\\"at-rate\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--on\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--on\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render AtRate -- props value 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--on"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--on"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render initial AtRate 1`] = `"<div class=\\"at-rate\\"><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div><div style=\\"margin-right:0.1067rem;\\" class=\\"at-rate__icon at-rate__icon--off\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span><div class=\\"at-rate__left\\"><span style=\\"font-size:;\\" class=\\"taro-text at-icon at-icon-star-2\\"></span></div></div></div>"`;
+exports[`AtRate Snap render initial AtRate 1`] = `
+<div
+  class="at-rate"
+>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+  <div
+    class="at-rate__icon at-rate__icon--off"
+    style="margin-right: 5px;"
+  >
+    <span
+      class="at-icon at-icon-star-2"
+    />
+    <div
+      class="at-rate__left"
+    >
+      <span
+        class="at-icon at-icon-star-2"
+      />
+    </div>
+  </div>
+</div>
+`;

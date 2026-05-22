@@ -1,25 +1,767 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtCountDown Snap render AtCountDown -- hours > 24 and not show day 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">25</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- hours > 24 and not show day 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        25
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- hours > 24 and show day 1`] = `"<div class=\\"at-countdown\\"><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">01</span></div><span class=\\"taro-text at-countdown__separator\\">天</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">01</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- hours > 24 and show day 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        01
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      天
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        01
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props className 1`] = `"<div class=\\"at-countdown test\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props className 1`] = `
+<div
+  class="at-countdown test"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props className 2`] = `"<div style=\\"color:red;\\" class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props className 2`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props day 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">24</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props day 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        24
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props format 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">:</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">:</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\"></span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props format 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      :
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      :
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props format 2`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">01</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props format 2`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        01
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props hours 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">01</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props hours 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        01
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props isCard 1`] = `"<div class=\\"at-countdown at-countdown--card\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props isCard 1`] = `
+<div
+  class="at-countdown at-countdown--card"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props isShowDay 1`] = `"<div class=\\"at-countdown\\"><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">天</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props isShowDay 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      天
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render AtCountDown -- props seconds 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">01</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render AtCountDown -- props seconds 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        01
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtCountDown Snap render initial AtCountDown 1`] = `"<div class=\\"at-countdown\\">undefined<div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">时</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">分</span></div><div class=\\"at-countdown__item\\"><div class=\\"at-countdown__time-box\\"><span class=\\"taro-text at-countdown__time\\">00</span></div><span class=\\"taro-text at-countdown__separator\\">秒</span></div></div>"`;
+exports[`AtCountDown Snap render initial AtCountDown 1`] = `
+<div
+  class="at-countdown"
+>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      时
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      分
+    </span>
+  </div>
+  <div
+    class="at-countdown__item"
+  >
+    <div
+      class="at-countdown__time-box"
+    >
+      <span
+        class="at-countdown__time"
+      >
+        00
+      </span>
+    </div>
+    <span
+      class="at-countdown__separator"
+    >
+      秒
+    </span>
+  </div>
+</div>
+`;

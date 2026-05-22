@@ -1,20 +1,20 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtMessage from '../../.temp/components/message/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtMessage from '../../lib/components/message/index'
 
 describe('AtMessage Snap', () => {
   it('render initial AtMessage', () => {
-    const component = renderToString(<AtMessage />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtMessage />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtMessage -- props className', () => {
-    const component = renderToString(<AtMessage className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtMessage className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtMessage -- props customStyle', () => {
-    const component = renderToString(<AtMessage customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtMessage customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

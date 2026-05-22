@@ -1,15 +1,15 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
+import React from 'react'
+import { render, fireEvent, waitFor } from '@testing-library/react'
 import { Button } from '@tarojs/components'
-import AtModal from '../../.temp/components/modal/index'
-import AtModalAction from '../../.temp/components/modal/action/index'
-import AtModalHeader from '../../.temp/components/modal/header/index'
-import AtModalContent from '../../.temp/components/modal/content/index'
+import { queryByClass } from '../utils'
+import AtModal from '../../lib/components/modal/index'
+import AtModalAction from '../../lib/components/modal/action/index'
+import AtModalHeader from '../../lib/components/modal/header/index'
+import AtModalContent from '../../lib/components/modal/content/index'
 
 describe('Modal Snap', () => {
   it('render initial Modal', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtModal>
         <AtModalHeader>标题</AtModalHeader>
         <AtModalContent>
@@ -23,11 +23,11 @@ describe('Modal Snap', () => {
         </AtModalAction>
       </AtModal>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render opened Modal', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtModal isOpened>
         <AtModalHeader>标题</AtModalHeader>
         <AtModalContent>
@@ -41,11 +41,11 @@ describe('Modal Snap', () => {
         </AtModalAction>
       </AtModal>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render opened Modal -- not header', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtModal isOpened>
         <AtModalContent>
           这里是正文内容，欢迎加入京东凹凸实验室
@@ -58,11 +58,11 @@ describe('Modal Snap', () => {
         </AtModalAction>
       </AtModal>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render opened Modal -- single button', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtModal isOpened>
         <AtModalContent>
           这里是正文内容，欢迎加入京东凹凸实验室
@@ -74,11 +74,11 @@ describe('Modal Snap', () => {
         </AtModalAction>
       </AtModal>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render opened  Modal -- simple', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtModal
         isOpened
         title='标题'
@@ -87,17 +87,17 @@ describe('Modal Snap', () => {
         content='欢迎加入京东凹凸实验室\n欢迎加入京东凹凸实验室'
       />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('Modal Behavior ', () => {
-  it('Modal onClose & onCancel & onClick', () => {
+  it('Modal onClose & onCancel & onClick', async () => {
     const onCancel = jest.fn()
     const onConfirm = jest.fn()
     const onClose = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtModal
         isOpened
         title='标题'
@@ -109,7 +109,7 @@ describe('Modal Behavior ', () => {
         content='欢迎加入京东凹凸实验室\n欢迎加入京东凹凸实验室'
       />
     )
-    const componentDom = findDOMNode(component, 'at-modal')
+    const componentDom = queryByClass(container, 'at-modal')
 
     const cancelDom = componentDom.querySelector(
       '.at-modal__footer .at-modal__action button:first-child'
@@ -119,24 +119,24 @@ describe('Modal Behavior ', () => {
     )
     const overlayDom = componentDom.querySelector('.at-modal__overlay')
 
-    Simulate.click(cancelDom)
+    fireEvent.click(cancelDom)
     expect(onCancel).toBeCalled()
 
-    Simulate.click(confirmDom)
+    fireEvent.click(confirmDom)
     expect(onConfirm).toBeCalled()
 
-    expect(component.state._isOpened).toBeTruthy()
-    Simulate.click(overlayDom)
-    process.nextTick(() => {
+    expect(componentDom.classList.contains('at-modal--active')).toBeTruthy()
+    fireEvent.click(overlayDom)
+    await waitFor(() => {
       expect(onClose).toBeCalled()
-      expect(component.state._isOpened).toBeFalsy()
+      expect(componentDom.classList.contains('at-modal--active')).toBeFalsy()
     })
   })
 
-  it('Modal onClose will not be called', () => {
+  it('Modal onClose will not be called', async () => {
     const onClose = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtModal
         isOpened
         title='标题'
@@ -147,17 +147,16 @@ describe('Modal Behavior ', () => {
         content='欢迎加入京东凹凸实验室\n欢迎加入京东凹凸实验室'
       />
     )
-    const componentDom = findDOMNode(component, 'at-modal')
-
+    const componentDom = queryByClass(container, 'at-modal')
     const overlayDom = componentDom.querySelector('.at-modal__overlay')
 
-    expect(component.state._isOpened).toBeTruthy()
+    expect(componentDom.classList.contains('at-modal--active')).toBeTruthy()
 
-    Simulate.click(overlayDom)
+    fireEvent.click(overlayDom)
 
-    process.nextTick(() => {
+    await waitFor(() => {
       expect(onClose).not.toBeCalled()
-      expect(component.state._isOpened).toBeTruthy()
+      expect(componentDom.classList.contains('at-modal--active')).toBeTruthy()
     })
   })
 })

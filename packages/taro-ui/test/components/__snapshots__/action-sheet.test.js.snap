@@ -1,11 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionSheet Snap render initial ActionSheet 1`] = `"<div class=\\"at-action-sheet\\"><div class=\\"at-action-sheet__overlay\\"></div><div class=\\"at-action-sheet__container\\"><div class=\\"at-action-sheet__body\\"><div class=\\"at-action-sheet__item\\">按钮一</div><div class=\\"at-action-sheet__item\\">按钮二</div></div></div></div>"`;
+exports[`ActionSheet Snap render initial ActionSheet 1`] = `
+<div
+  class="at-action-sheet"
+>
+  <div
+    class="at-action-sheet__overlay"
+  />
+  <div
+    class="at-action-sheet__container"
+  >
+    <div
+      class="at-action-sheet__body"
+    >
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮一
+      </div>
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮二
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`ActionSheet Snap render opened  ActionSheet -- props completed  1`] = `"<div class=\\"at-action-sheet at-action-sheet--active\\"><div class=\\"at-action-sheet__overlay\\"></div><div class=\\"at-action-sheet__container\\"><div class=\\"at-action-sheet__header\\">清除位置信息后， 别人将不能查看到你&#039;r&#039;n可以通过转义字符换行</div><div class=\\"at-action-sheet__body\\"><div class=\\"at-action-sheet__item\\">按钮一</div><div class=\\"at-action-sheet__item\\">按钮二</div></div><div class=\\"at-action-sheet__footer\\">取消</div></div></div>"`;
+exports[`ActionSheet Snap render opened  ActionSheet -- props completed  1`] = `
+<div
+  class="at-action-sheet at-action-sheet--active"
+>
+  <div
+    class="at-action-sheet__overlay"
+  />
+  <div
+    class="at-action-sheet__container"
+  >
+    <div
+      class="at-action-sheet__header"
+    >
+      清除位置信息后， 别人将不能查看到你\\r\\n可以通过转义字符换行
+    </div>
+    <div
+      class="at-action-sheet__body"
+    >
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮一
+      </div>
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮二
+      </div>
+    </div>
+    <div
+      class="at-action-sheet__footer"
+    >
+      取消
+    </div>
+  </div>
+</div>
+`;
 
-exports[`ActionSheet Snap render opened ActionSheet -- props cancelText 1`] = `"<div class=\\"at-action-sheet at-action-sheet--active\\"><div class=\\"at-action-sheet__overlay\\"></div><div class=\\"at-action-sheet__container\\"><div class=\\"at-action-sheet__body\\"><div class=\\"at-action-sheet__item\\">按钮一</div><div class=\\"at-action-sheet__item\\">按钮二</div></div><div class=\\"at-action-sheet__footer\\">取消</div></div></div>"`;
+exports[`ActionSheet Snap render opened ActionSheet -- props cancelText 1`] = `
+<div
+  class="at-action-sheet at-action-sheet--active"
+>
+  <div
+    class="at-action-sheet__overlay"
+  />
+  <div
+    class="at-action-sheet__container"
+  >
+    <div
+      class="at-action-sheet__body"
+    >
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮一
+      </div>
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮二
+      </div>
+    </div>
+    <div
+      class="at-action-sheet__footer"
+    >
+      取消
+    </div>
+  </div>
+</div>
+`;
 
-exports[`ActionSheet Snap render opened ActionSheet -- props title 1`] = `"<div class=\\"at-action-sheet at-action-sheet--active\\"><div class=\\"at-action-sheet__overlay\\"></div><div class=\\"at-action-sheet__container\\"><div class=\\"at-action-sheet__header\\">清除位置信息后， 别人将不能查看到你&#039;r&#039;n可以通过转义字符换行</div><div class=\\"at-action-sheet__body\\"><div class=\\"at-action-sheet__item\\">按钮一</div><div class=\\"at-action-sheet__item\\">按钮二</div></div></div></div>"`;
+exports[`ActionSheet Snap render opened ActionSheet -- props title 1`] = `
+<div
+  class="at-action-sheet at-action-sheet--active"
+>
+  <div
+    class="at-action-sheet__overlay"
+  />
+  <div
+    class="at-action-sheet__container"
+  >
+    <div
+      class="at-action-sheet__header"
+    >
+      清除位置信息后， 别人将不能查看到你\\r\\n可以通过转义字符换行
+    </div>
+    <div
+      class="at-action-sheet__body"
+    >
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮一
+      </div>
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮二
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`ActionSheet Snap render opened ActionSheet 1`] = `"<div class=\\"at-action-sheet at-action-sheet--active\\"><div class=\\"at-action-sheet__overlay\\"></div><div class=\\"at-action-sheet__container\\"><div class=\\"at-action-sheet__body\\"><div class=\\"at-action-sheet__item\\">按钮一</div><div class=\\"at-action-sheet__item\\">按钮二</div></div></div></div>"`;
+exports[`ActionSheet Snap render opened ActionSheet 1`] = `
+<div
+  class="at-action-sheet at-action-sheet--active"
+>
+  <div
+    class="at-action-sheet__overlay"
+  />
+  <div
+    class="at-action-sheet__container"
+  >
+    <div
+      class="at-action-sheet__body"
+    >
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮一
+      </div>
+      <div
+        class="at-action-sheet__item"
+      >
+        按钮二
+      </div>
+    </div>
+  </div>
+</div>
+`;

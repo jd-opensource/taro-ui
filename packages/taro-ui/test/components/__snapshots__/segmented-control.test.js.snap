@@ -1,19 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props className 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control test\\"></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props className 1`] = `
+<div
+  class="at-segmented-control test"
+/>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props color 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control\\"><div style=\\"color:red;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab1</div><div style=\\"color:;font-size:;border-color:;background-color:red;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:;font-size:;border-color:;background-color:red;\\" class=\\"at-segmented-control__item\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props color 1`] = `
+<div
+  class="at-segmented-control"
+>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="color: red; font-size: 28px;"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px; background-color: red;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px; background-color: red;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props current 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control\\"><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab1</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props current 1`] = `
+<div
+  class="at-segmented-control"
+>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="font-size: 28px;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props customStyle 1`] = `"<div style=\\"border-color:;color:red;\\" class=\\"at-segmented-control\\"></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props customStyle 1`] = `
+<div
+  class="at-segmented-control"
+/>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props disabled 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control at-segmented-control--disabled\\"><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab1</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props disabled 1`] = `
+<div
+  class="at-segmented-control at-segmented-control--disabled"
+>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="font-size: 28px;"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props fontSize 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control\\"><div style=\\"color:;font-size:0.64rem;border-color:;background-color:;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab1</div><div style=\\"color:;font-size:0.64rem;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:;font-size:0.64rem;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props fontSize 1`] = `
+<div
+  class="at-segmented-control"
+>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="font-size: 30px;"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 30px;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 30px;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props selectedColor 1`] = `"<div style=\\"border-color:#fff;\\" class=\\"at-segmented-control\\"><div style=\\"color:;font-size:;border-color:#fff;background-color:#fff;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab1</div><div style=\\"color:#fff;font-size:;border-color:#fff;background-color:;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:#fff;font-size:;border-color:#fff;background-color:;\\" class=\\"at-segmented-control__item\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props selectedColor 1`] = `
+<div
+  class="at-segmented-control"
+>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="font-size: 28px; border-color: #fff; background-color: rgb(255, 255, 255);"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="color: rgb(255, 255, 255); font-size: 28px; border-color: #fff;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="color: rgb(255, 255, 255); font-size: 28px; border-color: #fff;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render AtSegmentedControl -- props values 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control\\"><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item at-segmented-control__item--active\\">tab1</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab2</div><div style=\\"color:;font-size:;border-color:;background-color:;\\" class=\\"at-segmented-control__item\\">tab3</div></div>"`;
+exports[`AtSegmentedControl Snap render AtSegmentedControl -- props values 1`] = `
+<div
+  class="at-segmented-control"
+>
+  <div
+    class="at-segmented-control__item at-segmented-control__item--active"
+    style="font-size: 28px;"
+  >
+    tab1
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab2
+  </div>
+  <div
+    class="at-segmented-control__item"
+    style="font-size: 28px;"
+  >
+    tab3
+  </div>
+</div>
+`;
 
-exports[`AtSegmentedControl Snap render initial AtSegmentedControl 1`] = `"<div style=\\"border-color:;\\" class=\\"at-segmented-control\\"></div>"`;
+exports[`AtSegmentedControl Snap render initial AtSegmentedControl 1`] = `
+<div
+  class="at-segmented-control"
+/>
+`;

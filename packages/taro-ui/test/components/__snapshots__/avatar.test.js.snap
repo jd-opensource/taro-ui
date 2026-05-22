@@ -1,13 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar Snap render Avatar -- props circle 1`] = `"<div class=\\"at-avatar at-avatar--normal at-avatar--circle\\"><span class=\\"taro-text at-avatar__text\\"></span></div>"`;
+exports[`Avatar Snap render Avatar -- props circle 1`] = `
+<div
+  class="at-avatar at-avatar--normal at-avatar--circle"
+>
+  <span
+    class="at-avatar__text"
+  />
+</div>
+`;
 
-exports[`Avatar Snap render Avatar -- props image 1`] = `"<div class=\\"at-avatar at-avatar--normal\\"><div class=\\"taro-img at-avatar__img\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"https://jdc.jd.com/img/100\\"/></div></div>"`;
+exports[`Avatar Snap render Avatar -- props image 1`] = `
+<div
+  class="at-avatar at-avatar--normal"
+>
+  <img
+    alt=""
+    class="at-avatar__img"
+    src="https://jdc.jd.com/img/100"
+  />
+</div>
+`;
 
-exports[`Avatar Snap render Avatar -- props size(large)  1`] = `"<div class=\\"at-avatar at-avatar--large\\"><span class=\\"taro-text at-avatar__text\\"></span></div>"`;
+exports[`Avatar Snap render Avatar -- props size(large)  1`] = `
+<div
+  class="at-avatar at-avatar--large"
+>
+  <span
+    class="at-avatar__text"
+  />
+</div>
+`;
 
-exports[`Avatar Snap render Avatar -- props size(normal)  1`] = `"<div class=\\"at-avatar at-avatar--normal\\"><span class=\\"taro-text at-avatar__text\\"></span></div>"`;
+exports[`Avatar Snap render Avatar -- props size(normal)  1`] = `
+<div
+  class="at-avatar at-avatar--normal"
+>
+  <span
+    class="at-avatar__text"
+  />
+</div>
+`;
 
-exports[`Avatar Snap render Avatar -- props size(small)  1`] = `"<div class=\\"at-avatar at-avatar--small\\"><span class=\\"taro-text at-avatar__text\\"></span></div>"`;
+exports[`Avatar Snap render Avatar -- props size(small)  1`] = `
+<div
+  class="at-avatar at-avatar--small"
+>
+  <span
+    class="at-avatar__text"
+  />
+</div>
+`;
 
-exports[`Avatar Snap render Avatar -- props text 1`] = `"<div class=\\"at-avatar at-avatar--normal\\"><span class=\\"taro-text at-avatar__text\\">凹</span></div>"`;
+exports[`Avatar Snap render Avatar -- props text 1`] = `
+<div
+  class="at-avatar at-avatar--normal"
+>
+  <span
+    class="at-avatar__text"
+  >
+    凹
+  </span>
+</div>
+`;
