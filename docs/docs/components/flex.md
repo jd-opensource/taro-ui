@@ -14,7 +14,7 @@
 
 
 ```scss
-@import "~taro-ui/dist/style/components/flex.scss";
+@import "~taro-ui/lib/style/components/flex.scss";
 ```
 ## 一般用法
 

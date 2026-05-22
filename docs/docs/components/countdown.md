@@ -15,7 +15,7 @@ import { AtCountdown } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/countdown.scss";
+@import "~taro-ui/lib/style/components/countdown.scss";
 ```
 ## 一般用法
 

@@ -18,7 +18,7 @@ import { AtModal, AtModalHeader, AtModalContent, AtModalAction } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/modal.scss";
+@import "~taro-ui/lib/style/components/modal.scss";
 ```
 ## 一般用法
 

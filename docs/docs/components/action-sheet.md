@@ -16,7 +16,7 @@ import { AtActionSheet, AtActionSheetItem } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/action-sheet.scss";
+@import "~taro-ui/lib/style/components/action-sheet.scss";
 ```
 ## 一般用法
 

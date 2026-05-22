@@ -15,7 +15,7 @@ import { AtForm } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/form.scss";
+@import "~taro-ui/lib/style/components/form.scss";
 ```
 ## 一般用法
 

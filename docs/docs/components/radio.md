@@ -15,8 +15,8 @@ import { AtRadio } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/radio.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/radio.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 ## 一般用法
 

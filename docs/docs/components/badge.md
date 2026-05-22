@@ -16,7 +16,7 @@ import { AtBadge } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/badge.scss";
+@import "~taro-ui/lib/style/components/badge.scss";
 ```
 ## 用法
 

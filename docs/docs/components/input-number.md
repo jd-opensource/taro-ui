@@ -19,8 +19,8 @@ import { AtInputNumber } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/input-number.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/input-number.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 
 ## 一般用法

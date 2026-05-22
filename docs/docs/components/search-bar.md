@@ -15,9 +15,9 @@ import { AtSearchBar } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/search-bar.scss";
-@import "~taro-ui/dist/style/components/button.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/search-bar.scss";
+@import "~taro-ui/lib/style/components/button.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 ## 一般用法
 

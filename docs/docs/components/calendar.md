@@ -18,7 +18,7 @@ import { AtCalendar } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/calendar.scss";
+@import "~taro-ui/lib/style/components/calendar.scss";
 ```
 ## 一般用法
 

@@ -16,7 +16,7 @@ import { AtAvatar } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/avatar.scss";
+@import "~taro-ui/lib/style/components/avatar.scss";
 ```
 ## 用法
 

@@ -56,13 +56,13 @@ h5: {
 - **方式 1：** 在入口文件中引入 `taro-ui` 所有的样式
   
   ```js
-  import 'taro-ui/dist/style/index.scss' 
+  import 'taro-ui/lib/style/index.scss' 
   ```
 
 - **方式 2：** 在 `app.scss` 样式文件中 `import` 组件样式并按照文档说明使用
   
   ```scss
-  @import '~taro-ui/dist/style/index.scss'; 
+  @import '~taro-ui/lib/style/index.scss'; 
   ```
 
 ### 按需引入样式
@@ -70,7 +70,7 @@ h5: {
 - **方式 1：**  在页面样式或全局样式中 import 需要的组件样式
 
   ```scss
-  @import '~taro-ui/dist/style/components/button.scss';
+  @import '~taro-ui/lib/style/components/button.scss';
   ```
 
 - **方式 2：** 通过 babel 插件按需引入组件
@@ -92,7 +92,7 @@ h5: {
         {
           libraryName: 'taro-ui',
           customName: name => `taro-ui/lib/components/${name.slice(3)}`,
-          customStyleName: name => `taro-ui/dist/style/components/${name.slice(3)}.scss`
+          customStyleName: name => `taro-ui/lib/style/components/${name.slice(3)}.scss`
         },
         'taro-ui'
       ]
@@ -108,7 +108,7 @@ h5: {
 
   // 编译后代码
   import AtButton from 'taro-ui/lib/components/button'
-  import 'taro-ui/dist/style/components/button.scss'
+  import 'taro-ui/lib/style/components/button.scss'
   ```
 
 ## 注意事项
@@ -166,7 +166,7 @@ export default class Index extends Component {
 
 
 ```scss
-@import '~taro-ui/dist/style/index.scss'; // 引入组件样式，仅需引入一次即可
+@import '~taro-ui/lib/style/index.scss'; // 引入组件样式，仅需引入一次即可
 ```
 
 ## 按需引入
@@ -176,7 +176,7 @@ export default class Index extends Component {
 
 
 ```scss
-@import '~taro-ui/dist/style/components/button.scss';
+@import '~taro-ui/lib/style/components/button.scss';
 ```
 
 ## 编译并预览

@@ -15,8 +15,8 @@ import { AtRate } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/rate.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/rate.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 ## 一般用法
 

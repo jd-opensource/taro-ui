@@ -15,7 +15,7 @@ import { AtSegmentedControl } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/segmented-control.scss";
+@import "~taro-ui/lib/style/components/segmented-control.scss";
 ```
 ## 一般用法
 说明：

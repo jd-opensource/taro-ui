@@ -16,7 +16,7 @@ import { AtCard } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/card.scss";
+@import "~taro-ui/lib/style/components/card.scss";
 ```
 ## 一般用法
 

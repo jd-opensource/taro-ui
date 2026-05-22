@@ -16,7 +16,7 @@ import { AtNoticebar } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/noticebar.scss";
+@import "~taro-ui/lib/style/components/noticebar.scss";
 ```
 ## 一般用法
 

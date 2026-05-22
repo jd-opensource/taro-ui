@@ -15,7 +15,7 @@ import { AtRange } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/range.scss";
+@import "~taro-ui/lib/style/components/range.scss";
 ```
 ## 一般用法
 

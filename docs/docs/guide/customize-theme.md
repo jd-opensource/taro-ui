@@ -20,11 +20,11 @@ Taro UI 的组件样式是使用 SCSS 编写的，如果你的项目中也使用
 
 
 ```scss
-/* 改变主题变量，具体变量名可查看 taro-ui/dist/style/variables/default.scss 文件 */
+/* 改变主题变量，具体变量名可查看 taro-ui/lib/style/variables/default.scss 文件 */
 $color-brand: #6190E8;
 
 /* 引入 Taro UI 默认样式 */
-@import "~taro-ui/dist/style/index.scss";
+@import "~taro-ui/lib/style/index.scss";
 ```
 > 覆写的变量，需要在引入 taro ui 默认样式之前定义，[默认主题变量命名](https://github.com/NervJS/taro-ui/blob/dev/src/style/variables/default.scss)
 

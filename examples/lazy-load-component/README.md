@@ -4,7 +4,7 @@
 在页面样式或全局样式中 import 需要的组件样式
 
 ```scss
-@import '~taro-ui/dist/style/components/button.scss';
+@import '~taro-ui/lib/style/components/button.scss';
 ```
 
 ## 方式 2
@@ -27,7 +27,7 @@ npm i babel-plugin-import -D
       {
         libraryName: 'taro-ui',
         customName: name => `taro-ui/lib/components/${name.slice(3)}`,
-        customStyleName: name => `taro-ui/dist/style/components/${name.slice(3)}.scss`
+        customStyleName: name => `taro-ui/lib/style/components/${name.slice(3)}.scss`
       },
       'taro-ui'
     ]
@@ -43,7 +43,7 @@ import { AtButton } from 'taro-ui'
 
 // 编译后代码
 import AtButton from 'taro-ui/lib/components/button'
-import 'taro-ui/dist/style/components/button.scss'
+import 'taro-ui/lib/style/components/button.scss'
 ```
 
 ## 注意事项

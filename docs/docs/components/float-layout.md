@@ -16,7 +16,7 @@ import { AtFloatLayout } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/float-layout.scss";
+@import "~taro-ui/lib/style/components/float-layout.scss";
 ```
 ## 一般用法
 

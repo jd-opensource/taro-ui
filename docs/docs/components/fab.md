@@ -20,7 +20,7 @@ import { AtFab } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/fab.scss";
+@import "~taro-ui/lib/style/components/fab.scss";
 ```
 ## 用法
 

@@ -16,8 +16,8 @@ import { AtActivityIndicator } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/activity-indicator.scss";
-@import '~taro-ui/dist/style/components/loading.scss';
+@import "~taro-ui/lib/style/components/activity-indicator.scss";
+@import '~taro-ui/lib/style/components/loading.scss';
 ```
 ## 一般用法
 

@@ -16,7 +16,7 @@ import { AtTag } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/tag.scss";
+@import "~taro-ui/lib/style/components/tag.scss";
 ```
 ## 用法
 

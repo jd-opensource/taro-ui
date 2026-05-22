@@ -15,7 +15,7 @@ import { AtCurtain } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/curtain.scss";
+@import "~taro-ui/lib/style/components/curtain.scss";
 ```
 ## 一般用法
 

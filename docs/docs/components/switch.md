@@ -15,7 +15,7 @@ import { AtForm, AtSwitch } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/switch.scss";
+@import "~taro-ui/lib/style/components/switch.scss";
 ```
 ## 一般用法
 

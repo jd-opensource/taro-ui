@@ -16,7 +16,7 @@ import { AtSwipeAction } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/swipe-action.scss";
+@import "~taro-ui/lib/style/components/swipe-action.scss";
 ```
 ## 一般用法
 

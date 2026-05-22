@@ -16,8 +16,8 @@ import { AtButton } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/button.scss";
-@import "~taro-ui/dist/style/components/loading.scss";
+@import "~taro-ui/lib/style/components/button.scss";
+@import "~taro-ui/lib/style/components/loading.scss";
 ```
 ## 一般用法
 

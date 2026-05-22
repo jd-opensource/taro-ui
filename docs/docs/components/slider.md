@@ -15,7 +15,7 @@ import { AtSlider } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/slider.scss";
+@import "~taro-ui/lib/style/components/slider.scss";
 ```
 ## 一般用法
 

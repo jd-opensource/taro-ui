@@ -16,7 +16,7 @@ import { AtTabs, AtTabsPane } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/tabs.scss";
+@import "~taro-ui/lib/style/components/tabs.scss";
 ```
 ## 一般用法
 

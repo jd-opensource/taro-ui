@@ -16,7 +16,7 @@ import { AtGrid } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/grid.scss";
+@import "~taro-ui/lib/style/components/grid.scss";
 ```
 ## 一般用法
 

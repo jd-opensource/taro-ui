@@ -17,7 +17,7 @@ import { AtTextarea } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/textarea.scss";
+@import "~taro-ui/lib/style/components/textarea.scss";
 ```
 ## 一般用法
 

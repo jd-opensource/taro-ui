@@ -16,8 +16,8 @@ import { AtList, AtListItem } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/list.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/list.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 ## 一般用法
 

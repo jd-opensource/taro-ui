@@ -15,9 +15,9 @@ import { AtIndexes } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/toast.scss";
-@import "~taro-ui/dist/style/components/indexes.scss";
-@import "~taro-ui/dist/style/components/list.scss";
+@import "~taro-ui/lib/style/components/toast.scss";
+@import "~taro-ui/lib/style/components/indexes.scss";
+@import "~taro-ui/lib/style/components/list.scss";
 ```
 ## 一般用法
 

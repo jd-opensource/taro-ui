@@ -16,8 +16,8 @@ import { AtToast } from "taro-ui"
 
 
 ```scss
-@import "~taro-ui/dist/style/components/toast.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/toast.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 ## 一般用法
 

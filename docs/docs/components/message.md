@@ -15,7 +15,7 @@ import { AtMessage } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/message.scss";
+@import "~taro-ui/lib/style/components/message.scss";
 ```
 ## 一般用法
 

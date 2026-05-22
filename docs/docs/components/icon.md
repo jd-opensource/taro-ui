@@ -22,7 +22,7 @@ import { AtIcon } from 'taro-ui'
 
 
 ```scss
-@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/lib/style/components/icon.scss";
 ```
 **推荐使用新的引入方式，采用传统的类名图标方式即可，例如：**
 

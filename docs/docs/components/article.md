@@ -14,7 +14,7 @@
 
 
 ```scss
-@import "~taro-ui/dist/style/components/article.scss";
+@import "~taro-ui/lib/style/components/article.scss";
 ```
 ## 可用样式类目
 
