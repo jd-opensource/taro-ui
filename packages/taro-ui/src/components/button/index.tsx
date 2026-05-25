@@ -1,11 +1,11 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Button, View } from '@tarojs/components'
 import { ButtonProps } from '@tarojs/components/types/Button'
 import { BaseEventOrig, CommonEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
-import { AtButtonProps, AtButtonState } from '../../../types/button'
+import { AtButtonProps } from '../../../types/button'
 import AtLoading from '../loading/index'
 
 const SIZE_CLASS = {
@@ -18,150 +18,129 @@ const TYPE_CLASS = {
   secondary: 'secondary'
 }
 
-export default class AtButton extends React.Component<
-  AtButtonProps,
-  AtButtonState
-> {
-  public static defaultProps: AtButtonProps
-  public static propTypes: InferProps<AtButtonProps>
+function AtButton({
+  size = 'normal',
+  type,
+  circle = false,
+  full = false,
+  loading = false,
+  disabled = false,
+  customStyle = {},
+  className,
+  children,
+  formType,
+  openType,
+  lang = 'en',
+  sessionFrom = '',
+  sendMessageTitle = '',
+  sendMessagePath = '',
+  sendMessageImg = '',
+  showMessageCard = false,
+  appParameter = '',
+  onClick,
+  onGetUserInfo,
+  onContact,
+  onGetPhoneNumber,
+  onError,
+  onOpenSetting
+}: AtButtonProps): JSX.Element {
+  const isWEB = Taro.getEnv() === Taro.ENV_TYPE.WEB
+  const isWEAPP = Taro.getEnv() === Taro.ENV_TYPE.WEAPP
+  const isALIPAY = Taro.getEnv() === Taro.ENV_TYPE.ALIPAY
 
-  public constructor(props: AtButtonProps) {
-    super(props)
-    this.state = {
-      isWEB: Taro.getEnv() === Taro.ENV_TYPE.WEB,
-      isWEAPP: Taro.getEnv() === Taro.ENV_TYPE.WEAPP,
-      isALIPAY: Taro.getEnv() === Taro.ENV_TYPE.ALIPAY
+  const handleClick = (event: CommonEvent): void => {
+    if (!disabled) {
+      onClick && onClick(event)
     }
   }
 
-  private onClick(event: CommonEvent): void {
-    if (!this.props.disabled) {
-      this.props.onClick && this.props.onClick(event)
-    }
+  const handleGetUserInfo = (event: CommonEvent): void => {
+    onGetUserInfo && onGetUserInfo(event)
   }
 
-  private onGetUserInfo(event: CommonEvent): void {
-    this.props.onGetUserInfo && this.props.onGetUserInfo(event)
-  }
-
-  private onContact(
+  const handleContact = (
     event: BaseEventOrig<ButtonProps.onContactEventDetail>
-  ): void {
-    this.props.onContact && this.props.onContact(event)
+  ): void => {
+    onContact && onContact(event)
   }
 
-  private onGetPhoneNumber(event: CommonEvent): void {
-    this.props.onGetPhoneNumber && this.props.onGetPhoneNumber(event)
+  const handleGetPhoneNumber = (event: CommonEvent): void => {
+    onGetPhoneNumber && onGetPhoneNumber(event)
   }
 
-  private onError(event: CommonEvent): void {
-    this.props.onError && this.props.onError(event)
+  const handleError = (event: CommonEvent): void => {
+    onError && onError(event)
   }
 
-  private onOpenSetting(event: CommonEvent): void {
-    this.props.onOpenSetting && this.props.onOpenSetting(event)
+  const handleOpenSetting = (event: CommonEvent): void => {
+    onOpenSetting && onOpenSetting(event)
   }
 
-  public render(): JSX.Element {
-    const {
-      size = 'normal',
-      type = '',
-      circle,
-      full,
-      loading,
-      disabled,
-      customStyle,
-      formType,
-      openType,
-      lang,
-      sessionFrom,
-      sendMessageTitle,
-      sendMessagePath,
-      sendMessageImg,
-      showMessageCard,
-      appParameter
-    } = this.props
-    const { isWEAPP, isALIPAY, isWEB } = this.state
-    const rootClassName = ['at-button']
-    const classObject = {
-      [`at-button--${SIZE_CLASS[size]}`]: SIZE_CLASS[size],
-      'at-button--disabled': disabled,
-      [`at-button--${type}`]: TYPE_CLASS[type],
-      'at-button--circle': circle,
-      'at-button--full': full
-    }
-    const loadingColor = type === 'primary' ? '#fff' : ''
-    const loadingSize = size === 'small' ? '30' : 0
+  const buttonType = type ?? ''
+  const rootClassName = ['at-button']
+  const classObject = {
+    [`at-button--${SIZE_CLASS[size]}`]: SIZE_CLASS[size],
+    'at-button--disabled': disabled,
+    [`at-button--${buttonType}`]: buttonType
+      ? TYPE_CLASS[buttonType as keyof typeof TYPE_CLASS]
+      : false,
+    'at-button--circle': circle,
+    'at-button--full': full
+  }
+  const loadingColor = type === 'primary' ? '#fff' : ''
+  const loadingSize = size === 'small' ? '30' : 0
 
-    let loadingComponent: JSX.Element | null = null
-    if (loading) {
-      loadingComponent = (
-        <View className='at-button__icon'>
-          <AtLoading color={loadingColor} size={loadingSize} />
-        </View>
-      )
-      rootClassName.push('at-button--icon')
-    }
-
-    const webButton = (
-      <Button
-        className='at-button__wxbutton'
-        lang={lang}
-        formType={formType}
-      ></Button>
-    )
-
-    const button = (
-      <Button
-        className='at-button__wxbutton'
-        formType={formType}
-        openType={openType}
-        lang={lang}
-        sessionFrom={sessionFrom}
-        sendMessageTitle={sendMessageTitle}
-        sendMessagePath={sendMessagePath}
-        sendMessageImg={sendMessageImg}
-        showMessageCard={showMessageCard}
-        appParameter={appParameter}
-        onGetUserInfo={this.onGetUserInfo.bind(this)}
-        onGetPhoneNumber={this.onGetPhoneNumber.bind(this)}
-        onOpenSetting={this.onOpenSetting.bind(this)}
-        onError={this.onError.bind(this)}
-        onContact={this.onContact.bind(this)}
-      ></Button>
-    )
-
-    return (
-      <View
-        className={classNames(rootClassName, classObject, this.props.className)}
-        style={customStyle}
-        onClick={this.onClick.bind(this)}
-      >
-        {isWEB && !disabled && webButton}
-        {isWEAPP && !disabled && button}
-        {isALIPAY && !disabled && button}
-        {loadingComponent}
-        <View className='at-button__text'>{this.props.children}</View>
+  let loadingComponent: JSX.Element | null = null
+  if (loading) {
+    loadingComponent = (
+      <View className='at-button__icon'>
+        <AtLoading color={loadingColor} size={loadingSize} />
       </View>
     )
+    rootClassName.push('at-button--icon')
   }
-}
 
-AtButton.defaultProps = {
-  size: 'normal',
-  circle: false,
-  full: false,
-  loading: false,
-  disabled: false,
-  customStyle: {},
-  // Button props
-  lang: 'en',
-  sessionFrom: '',
-  sendMessageTitle: '',
-  sendMessagePath: '',
-  sendMessageImg: '',
-  showMessageCard: false,
-  appParameter: ''
+  const webButton = (
+    <Button
+      className='at-button__wxbutton'
+      lang={lang}
+      formType={formType}
+    ></Button>
+  )
+
+  const button = (
+    <Button
+      className='at-button__wxbutton'
+      formType={formType}
+      openType={openType}
+      lang={lang}
+      sessionFrom={sessionFrom}
+      sendMessageTitle={sendMessageTitle}
+      sendMessagePath={sendMessagePath}
+      sendMessageImg={sendMessageImg}
+      showMessageCard={showMessageCard}
+      appParameter={appParameter}
+      onGetUserInfo={handleGetUserInfo}
+      onGetPhoneNumber={handleGetPhoneNumber}
+      onOpenSetting={handleOpenSetting}
+      onError={handleError}
+      onContact={handleContact}
+    ></Button>
+  )
+
+  return (
+    <View
+      className={classNames(rootClassName, classObject, className)}
+      style={customStyle}
+      onClick={handleClick}
+    >
+      {isWEB && !disabled && webButton}
+      {isWEAPP && !disabled && button}
+      {isALIPAY && !disabled && button}
+      {loadingComponent}
+      <View className='at-button__text'>{children}</View>
+    </View>
+  )
 }
 
 AtButton.propTypes = {
@@ -200,3 +179,5 @@ AtButton.propTypes = {
   onError: PropTypes.func,
   onOpenSetting: PropTypes.func
 }
+
+export default AtButton
