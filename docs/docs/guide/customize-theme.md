@@ -21,12 +21,25 @@ Taro UI 的组件样式是使用 SCSS 编写的，如果你的项目中也使用
 
 ```scss
 /* 改变主题变量，具体变量名可查看 taro-ui/dist/style/variables/default.scss 文件 */
-$color-brand: #6190E8;
-
-/* 引入 Taro UI 默认样式 */
-@import "~taro-ui/dist/style/index.scss";
+@use '~taro-ui/dist/style/index' with (
+  $color-brand: #6190E8
+);
 ```
-> 覆写的变量，需要在引入 taro ui 默认样式之前定义，[默认主题变量命名](https://github.com/NervJS/taro-ui/blob/dev/src/style/variables/default.scss)
+
+也可单独引用变量与 mixin  barrel：
+
+```scss
+@use '~taro-ui/dist/style/variables' as *;
+@use '~taro-ui/dist/style/mixins' as *;
+```
+
+预设主题（如京东红）：
+
+```scss
+@use '~taro-ui/dist/style/themes/red';
+```
+
+> 变量需通过 `@use ... with (...)` 传入，详见 [默认主题变量命名](https://github.com/NervJS/taro-ui/blob/dev/src/style/variables/default.scss)
 
 之后在项目的入口文件中引入以上的样式文件即可（无需重复引入组件的默认样式）
 

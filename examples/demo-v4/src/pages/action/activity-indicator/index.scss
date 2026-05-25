@@ -1,5 +1,5 @@
-@import "~taro-ui/dist/style/mixins/index.scss";
-@import "~taro-ui/dist/style/variables/default.scss";
+@use 'taro-ui/dist/style/mixins' as *;
+@use 'taro-ui/dist/style/variables' as *;
 
 .activity-indicator-page .panel__content {
   .example-item {

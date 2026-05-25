@@ -1,4 +1,4 @@
-@import "~taro-ui/dist/style/variables/default";
+@use 'taro-ui/dist/style/variables' as *;
 
 .danger {
   color: $color-error;
