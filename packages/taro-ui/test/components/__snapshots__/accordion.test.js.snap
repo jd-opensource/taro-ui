@@ -34,7 +34,7 @@ exports[`AtAccordion Snap render AtAccordion -- props icon 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-FHJLNPBD"
+      id="at-accordion__body-BDFHJLNP"
     >
       <div />
     </div>
@@ -74,7 +74,7 @@ exports[`AtAccordion Snap render AtAccordion -- props note 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-EGIKMOAC"
+      id="at-accordion__body-BDFHJLNP"
     >
       <div />
     </div>
@@ -112,7 +112,7 @@ exports[`AtAccordion Snap render AtAccordion -- props open 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-FHJLNPBD"
+      id="at-accordion__body-BDFHJLNP"
     />
   </div>
 </div>
@@ -150,7 +150,7 @@ exports[`AtAccordion Snap render AtAccordion -- props title 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-FHJLNPBD"
+      id="at-accordion__body-BDFHJLNP"
     />
   </div>
 </div>
@@ -190,7 +190,7 @@ exports[`AtAccordion Snap render AtIcon -- props icon prefixClass 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-FHJLNPAC"
+      id="at-accordion__body-BDFHJLNP"
     >
       <div />
     </div>
@@ -228,7 +228,7 @@ exports[`AtAccordion Snap render initial AtAccordion 1`] = `
   >
     <div
       class="at-accordion__body"
-      id="at-accordion__body-FHJLNPBD"
+      id="at-accordion__body-BDFHJLNP"
     />
   </div>
 </div>

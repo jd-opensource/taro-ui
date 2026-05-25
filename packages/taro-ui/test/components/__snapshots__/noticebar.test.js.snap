@@ -20,7 +20,7 @@ exports[`AtNoticebar Snap render AtNoticebar -- props icon 1`] = `
       <div
         animation="[object Object]"
         class="at-noticebar__content-inner"
-        id="J_iiti"
+        id="J_2n9d"
       >
         这是内容
       </div>
@@ -42,7 +42,7 @@ exports[`AtNoticebar Snap render AtNoticebar -- props moreText & showMore 1`] = 
       <div
         animation="[object Object]"
         class="at-noticebar__content-inner"
-        id="J_fvk5"
+        id="J_2n9d"
       >
         这是内容
       </div>
@@ -71,7 +71,7 @@ exports[`AtNoticebar Snap render AtNoticebar -- props show 1`] = `
       <div
         animation="[object Object]"
         class="at-noticebar__content-inner"
-        id="J_7xs3"
+        id="J_2n9d"
       >
         这是内容
       </div>
@@ -93,7 +93,7 @@ exports[`AtNoticebar Snap render AtNoticebar -- props single 1`] = `
       <div
         animation="[object Object]"
         class="at-noticebar__content-inner"
-        id="J_al1g"
+        id="J_2n9d"
       >
         这是内容
       </div>
@@ -115,7 +115,7 @@ exports[`AtNoticebar Snap render AtNoticebar -- props speed 1`] = `
       <div
         animation="[object Object]"
         class="at-noticebar__content-inner"
-        id="J_d8as"
+        id="J_2n9d"
       >
         这是内容
       </div>

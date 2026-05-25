@@ -1,10 +1,22 @@
 import '@testing-library/jest-dom'
 
-let randomSeed = 0
-jest.spyOn(Math, 'random').mockImplementation(() => {
-  randomSeed += 0.123456789
-  return randomSeed % 1
+const INITIAL_RANDOM_SEED = 0
+
+function createSeededRandom(seed = INITIAL_RANDOM_SEED) {
+  let state = seed
+  return () => {
+    state += 0.123456789
+    return state % 1
+  }
+}
+
+let nextRandom = createSeededRandom()
+
+beforeEach(() => {
+  nextRandom = createSeededRandom()
 })
+
+jest.spyOn(Math, 'random').mockImplementation(() => nextRandom())
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
