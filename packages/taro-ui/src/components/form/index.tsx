@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Form } from '@tarojs/components'
+import { CommonEvent } from '@tarojs/components/types/common'
 import { AtFormProps } from '../../../types/form'
 
 function AtForm({
@@ -12,12 +13,12 @@ function AtForm({
   onReset,
   children
 }: AtFormProps): JSX.Element {
-  const handleSubmit = (): void => {
-    onSubmit && onSubmit(arguments as any)
+  const handleSubmit = (event: CommonEvent): void => {
+    onSubmit && onSubmit(event)
   }
 
-  const handleReset = (): void => {
-    onReset && onReset(arguments as any)
+  const handleReset = (event: CommonEvent): void => {
+    onReset && onReset(event)
   }
 
   const rootCls = classNames('at-form', className)
