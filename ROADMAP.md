@@ -25,7 +25,7 @@
 | **发布时机** | 先完成重构，再发布。不零散发版，CHANGELOG 一次性写清楚 |
 | **Taro v4 策略** | 重构阶段初始化 `demo-v4` 并完成 H5 编译验证；发布时 `peerDependencies` 仍为 `>=3`，v4 为实验性支持；小程序平台兼容性后续逐步验证 |
 | **Monorepo 结构** | `packages/` 只放发布包（`taro-ui`），`examples/` 放 demo，`docs/` 放文档站 |
-| **CSS 预编译** | 随重构一起做，构建时产出 `lib/style/index.css`，消除消费者 Sass warnings |
+| **CSS 预编译** | 随重构一起做，构建时产出 `dist/style/index.css`，消除消费者 Sass warnings |
 
 ---
 
@@ -42,9 +42,9 @@
   - 更新 `pnpm-workspace.yaml`、root scripts、CI paths
   - 文档站路径修复（iframe preview、build-static.js）
 - [ ] **CSS 预编译**
-  - 构建时产出 `lib/style/index.css`
+  - 构建时产出 `dist/style/index.css`
   - `package.json` `"style"` 字段指向 CSS 产物
-  - 保留 `lib/style/index.scss` 供主题覆盖用户
+  - 保留 `dist/style/index.scss` 供主题覆盖用户
 - [ ] **Taro v4 实验性验证**
   - 新建 `examples/demo-v4`（Taro 4.2.x）
   - 验证 `demo-v4` H5 编译通过

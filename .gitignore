@@ -41,6 +41,8 @@ coverage
 
 .vitepress/cache
 .vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/dist
 sessions/
 statuses/
 
