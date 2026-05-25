@@ -71,9 +71,12 @@ const AtSwipeAction = forwardRef<AtSwipeActionInstance, AtSwipeActionProps>(
             setOffsetSize(-maxOffsetSize)
           }
         } else {
-          setOffsetSize(moveXRef.current)
-          setOffsetSize(0)
-          setIsOpened(false)
+          const currentMoveX = moveXRef.current
+          setOffsetSize(currentMoveX)
+          setTimeout(() => {
+            setOffsetSize(0)
+            setIsOpened(false)
+          }, 0)
         }
       },
       [maxOffsetSize]
