@@ -1,150 +1,116 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import { Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
-import { AtAccordionProps, AtAccordionState } from '../../../types/accordion'
+import { AtAccordionProps } from '../../../types/accordion'
 import { delayQuerySelector, uuid } from '../../common/utils'
 
-export default class AtAccordion extends React.Component<
-  AtAccordionProps,
-  AtAccordionState
-> {
-  private isCompleted: boolean
-  private startOpen: boolean
+function AtAccordion({
+  open = false,
+  customStyle = '',
+  className = '',
+  title = '',
+  note = '',
+  icon = { value: '' },
+  hasBorder = true,
+  isAnimation = true,
+  children,
+  onClick
+}: AtAccordionProps): JSX.Element {
+  const isCompletedRef = useRef(true)
+  const [componentId] = useState(() => uuid())
+  const [wrapperHeight, setWrapperHeight] = useState(0)
+  const [startOpen, setStartOpen] = useState(false)
+  const [, setRenderEpoch] = useState(0)
+  const prevOpenRef = useRef(open)
 
-  public static defaultProps: AtAccordionProps
-  public static propTypes: InferProps<AtAccordionProps>
+  const toggleWithAnimation = (): void => {
+    if (!isCompletedRef.current || !isAnimation) return
 
-  public constructor(props: AtAccordionProps) {
-    super(props)
-    this.isCompleted = true
-    this.startOpen = false
-    this.state = {
-      componentId: uuid(),
-      wrapperHeight: 0
-    }
-  }
-
-  private handleClick = (event: CommonEvent): void => {
-    const { open } = this.props
-    if (!this.isCompleted) return
-
-    this.props.onClick && this.props.onClick(!open, event)
-  }
-
-  private toggleWithAnimation(): void {
-    const { open, isAnimation } = this.props
-    const { componentId } = this.state
-    if (!this.isCompleted || !isAnimation) return
-
-    this.isCompleted = false
+    isCompletedRef.current = false
 
     delayQuerySelector(`#at-accordion__body-${componentId}`, 0).then(rect => {
       const height = parseInt(rect[0].height.toString())
       const startHeight = open ? height : 0
       const endHeight = open ? 0 : height
-      this.startOpen = false
-      this.setState(
-        {
-          wrapperHeight: startHeight
-        },
-        () => {
-          setTimeout(() => {
-            this.setState(
-              {
-                wrapperHeight: endHeight
-              },
-              () => {
-                setTimeout(() => {
-                  this.isCompleted = true
-                  this.setState({})
-                }, 700)
-              }
-            )
-          }, 100)
-        }
-      )
+      setStartOpen(false)
+      setWrapperHeight(startHeight)
+      setTimeout(() => {
+        setWrapperHeight(endHeight)
+        setTimeout(() => {
+          isCompletedRef.current = true
+          setRenderEpoch(epoch => epoch + 1)
+        }, 700)
+      }, 100)
     })
   }
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtAccordionProps): void {
-    if (nextProps.open !== this.props.open) {
-      this.startOpen = !!nextProps.open && !!nextProps.isAnimation
-      this.toggleWithAnimation()
+  useLayoutEffect(() => {
+    if (prevOpenRef.current !== open) {
+      setStartOpen(!!open && !!isAnimation)
+      toggleWithAnimation()
+      prevOpenRef.current = open
     }
+  }, [open, isAnimation])
+
+  const handleClick = (event: CommonEvent): void => {
+    if (!isCompletedRef.current) return
+
+    onClick && onClick(!open, event)
   }
 
-  public render(): JSX.Element {
-    const { customStyle, className, title, icon, hasBorder, open, note } =
-      this.props
-    const { wrapperHeight } = this.state
+  const rootCls = classNames('at-accordion', className)
+  const prefixClass = (icon && icon.prefixClass) || 'at-icon'
+  const iconCls = classNames({
+    [prefixClass]: true,
+    [`${prefixClass}-${icon && icon.value}`]: icon && icon.value,
+    'at-accordion__icon': true
+  })
+  const headerCls = classNames('at-accordion__header', {
+    'at-accordion__header--noborder': !hasBorder
+  })
+  const arrowCls = classNames('at-accordion__arrow', {
+    'at-accordion__arrow--folded': !!open
+  })
+  const contentCls = classNames('at-accordion__content', {
+    'at-accordion__content--inactive':
+      (!open && isCompletedRef.current) || startOpen
+  })
+  const iconStyle = {
+    color: (icon && icon.color) || '',
+    fontSize: (icon && `${icon.size}px`) || ''
+  }
+  const contentStyle: { height?: string } = { height: `${wrapperHeight}px` }
 
-    const rootCls = classNames('at-accordion', className)
-    const prefixClass = (icon && icon.prefixClass) || 'at-icon'
-    const iconCls = classNames({
-      [prefixClass]: true,
-      [`${prefixClass}-${icon && icon.value}`]: icon && icon.value,
-      'at-accordion__icon': true
-    })
-    const headerCls = classNames('at-accordion__header', {
-      'at-accordion__header--noborder': !hasBorder
-    })
-    const arrowCls = classNames('at-accordion__arrow', {
-      'at-accordion__arrow--folded': !!open
-    })
-    const contentCls = classNames('at-accordion__content', {
-      'at-accordion__content--inactive':
-        (!open && this.isCompleted) || this.startOpen
-    })
-    const iconStyle = {
-      color: (icon && icon.color) || '',
-      fontSize: (icon && `${icon.size}px`) || ''
-    }
-    const contentStyle = { height: `${wrapperHeight}px` }
+  if (isCompletedRef.current) {
+    contentStyle.height = ''
+  }
 
-    if (this.isCompleted) {
-      contentStyle.height = ''
-    }
-
-    const { componentId } = this.state
-
-    return (
-      <View className={rootCls} style={customStyle}>
-        <View className={headerCls} onClick={this.handleClick}>
-          {icon && icon.value && (
-            <Text className={iconCls} style={iconStyle}></Text>
-          )}
-          <View className='at-accordion__info'>
-            <View className='at-accordion__info__title'>{title}</View>
-            <View className='at-accordion__info__note'>{note}</View>
-          </View>
-          <View className={arrowCls}>
-            <Text className='at-icon at-icon-chevron-down'></Text>
-          </View>
+  return (
+    <View className={rootCls} style={customStyle}>
+      <View className={headerCls} onClick={handleClick}>
+        {icon && icon.value && (
+          <Text className={iconCls} style={iconStyle}></Text>
+        )}
+        <View className='at-accordion__info'>
+          <View className='at-accordion__info__title'>{title}</View>
+          <View className='at-accordion__info__note'>{note}</View>
         </View>
-        <View style={contentStyle} className={contentCls}>
-          <View
-            id={`at-accordion__body-${componentId}`}
-            className='at-accordion__body'
-          >
-            {this.props.children}
-          </View>
+        <View className={arrowCls}>
+          <Text className='at-icon at-icon-chevron-down'></Text>
         </View>
       </View>
-    )
-  }
-}
-
-AtAccordion.defaultProps = {
-  open: false,
-  customStyle: '',
-  className: '',
-  title: '',
-  note: '',
-  icon: { value: '' },
-  hasBorder: true,
-  isAnimation: true
+      <View style={contentStyle} className={contentCls}>
+        <View
+          id={`at-accordion__body-${componentId}`}
+          className='at-accordion__body'
+        >
+          {children}
+        </View>
+      </View>
+    </View>
+  )
 }
 
 AtAccordion.propTypes = {
@@ -158,3 +124,5 @@ AtAccordion.propTypes = {
   hasBorder: PropTypes.bool,
   onClick: PropTypes.func
 }
+
+export default AtAccordion

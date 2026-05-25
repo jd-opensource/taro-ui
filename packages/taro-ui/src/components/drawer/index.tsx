@@ -1,133 +1,137 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
-import { AtDrawerProps, AtDrawerState } from '../../../types/drawer'
+import { AtDrawerProps } from '../../../types/drawer'
 import AtList from '../list/index'
 import AtListItem from '../list/item/index'
 
-export default class AtDrawer extends React.Component<
-  AtDrawerProps,
-  AtDrawerState
-> {
-  public static defaultProps: AtDrawerProps
-  public static propTypes: InferProps<AtDrawerProps>
+function AtDrawer({
+  show = false,
+  mask = true,
+  width = '',
+  right = false,
+  items = [],
+  className,
+  children,
+  onItemClick,
+  onClose
+}: AtDrawerProps): JSX.Element {
+  const [animShow, setAnimShow] = useState(false)
+  const [_show, setShow] = useState(show)
+  const showStateRef = useRef(show)
+  const isMountRef = useRef(true)
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout>>()
+  const showTimerRef = useRef<ReturnType<typeof setTimeout>>()
 
-  public constructor(props: AtDrawerProps) {
-    super(props)
-    this.state = {
-      animShow: false,
-      _show: props.show
+  const onHide = (): void => {
+    setShow(false)
+    onClose && onClose()
+  }
+
+  const animHide = (): void => {
+    setAnimShow(false)
+    if (hideTimerRef.current) {
+      clearTimeout(hideTimerRef.current)
     }
-  }
-
-  public componentDidMount(): void {
-    const { _show } = this.state
-    if (_show) this.animShow()
-  }
-
-  private onItemClick(index: number): void {
-    this.props.onItemClick && this.props.onItemClick(index)
-    this.animHide()
-  }
-
-  private onHide(): void {
-    this.setState({ _show: false }, () => {
-      this.props.onClose && this.props.onClose()
-    })
-  }
-
-  private animHide(): void {
-    this.setState({
-      animShow: false
-    })
-    setTimeout(() => {
-      this.onHide()
+    hideTimerRef.current = setTimeout(() => {
+      onHide()
     }, 300)
   }
 
-  private animShow(): void {
-    this.setState({ _show: true })
-    setTimeout(() => {
-      this.setState({
-        animShow: true
-      })
+  const runAnimShow = (): void => {
+    setShow(true)
+    if (showTimerRef.current) {
+      clearTimeout(showTimerRef.current)
+    }
+    showTimerRef.current = setTimeout(() => {
+      setAnimShow(true)
     }, 200)
   }
 
-  private onMaskClick(): void {
-    this.animHide()
+  useEffect(() => {
+    showStateRef.current = _show
+  }, [_show])
+
+  useEffect(() => {
+    if (isMountRef.current) {
+      isMountRef.current = false
+      if (show) {
+        runAnimShow()
+      }
+      return
+    }
+    if (show !== showStateRef.current) {
+      show ? runAnimShow() : animHide()
+    }
+  }, [show])
+
+  useEffect(() => {
+    return () => {
+      if (hideTimerRef.current) {
+        clearTimeout(hideTimerRef.current)
+      }
+      if (showTimerRef.current) {
+        clearTimeout(showTimerRef.current)
+      }
+    }
+  }, [])
+
+  const onItemClickHandler = (index: number): void => {
+    onItemClick && onItemClick(index)
+    animHide()
   }
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtDrawerProps): void {
-    const { show } = nextProps
-    if (show !== this.state._show) {
-      show ? this.animShow() : this.animHide()
-    }
+  const onMaskClick = (): void => {
+    animHide()
   }
 
-  public render(): JSX.Element {
-    const { mask, width, right, items } = this.props
-    const { animShow, _show } = this.state
-    const rootClassName = ['at-drawer']
+  const maskStyle = {
+    display: mask ? 'block' : 'none',
+    opacity: animShow ? 1 : 0
+  }
+  const listStyle = {
+    width,
+    transition: animShow
+      ? 'all 225ms cubic-bezier(0, 0, 0.2, 1)'
+      : 'all 195ms cubic-bezier(0.4, 0, 0.6, 1)'
+  }
 
-    const maskStyle = {
-      display: mask ? 'block' : 'none',
-      opacity: animShow ? 1 : 0
-    }
-    const listStyle = {
-      width,
-      transition: animShow
-        ? 'all 225ms cubic-bezier(0, 0, 0.2, 1)'
-        : 'all 195ms cubic-bezier(0.4, 0, 0.6, 1)'
-    }
+  const classObject = {
+    'at-drawer--show': animShow,
+    'at-drawer--right': right,
+    'at-drawer--left': !right
+  }
 
-    const classObject = {
-      'at-drawer--show': animShow,
-      'at-drawer--right': right,
-      'at-drawer--left': !right
-    }
-
-    return _show ? (
+  return _show ? (
+    <View className={classNames(['at-drawer'], classObject, className)}>
       <View
-        className={classNames(rootClassName, classObject, this.props.className)}
-      >
-        <View
-          className='at-drawer__mask'
-          style={maskStyle}
-          onClick={this.onMaskClick.bind(this)}
-        ></View>
+        className='at-drawer__mask'
+        style={maskStyle}
+        onClick={onMaskClick}
+      ></View>
 
-        <View className='at-drawer__content' style={listStyle}>
-          {!!items && items.length ? (
-            <AtList>
-              {items.map((name, index) => (
-                <AtListItem
-                  key={`${name}-${index}`}
-                  data-index={index}
-                  onClick={this.onItemClick.bind(this, index)}
-                  title={name}
-                  arrow='right'
-                ></AtListItem>
-              ))}
-            </AtList>
-          ) : (
-            this.props.children
-          )}
-        </View>
+      <View className='at-drawer__content' style={listStyle}>
+        {!!items && items.length ? (
+          <AtList>
+            {items.map((name, index) => (
+              <AtListItem
+                key={`${name}-${index}`}
+                data-index={index}
+                onClick={() => onItemClickHandler(index)}
+                title={name}
+                arrow='right'
+              ></AtListItem>
+            ))}
+          </AtList>
+        ) : (
+          children
+        )}
       </View>
-    ) : (
-      <View></View>
-    )
-  }
-}
-
-AtDrawer.defaultProps = {
-  show: false,
-  mask: true,
-  width: '',
-  right: false,
-  items: []
+    </View>
+  ) : (
+    <View></View>
+  )
 }
 
 AtDrawer.propTypes = {
@@ -138,3 +142,5 @@ AtDrawer.propTypes = {
   onItemClick: PropTypes.func,
   onClose: PropTypes.func
 }
+
+export default AtDrawer

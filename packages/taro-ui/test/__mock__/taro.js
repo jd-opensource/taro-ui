@@ -56,6 +56,8 @@ const taro = {
     once: jest.fn(),
     trigger: jest.fn()
   },
+  useDidShow: jest.fn(),
+  useDidHide: jest.fn(),
   chooseImage: jest.fn(),
   showToast: jest.fn(),
   hideToast: jest.fn(),

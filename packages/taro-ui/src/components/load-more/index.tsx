@@ -1,74 +1,50 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
 import { AtLoadMoreProps } from '../../../types/load-more'
 import AtActivityIndicator from '../activity-indicator/index'
 import AtButton from '../button/index'
 
-export default class AtLoadMore extends React.Component<AtLoadMoreProps> {
-  public static defaultProps: AtLoadMoreProps
-  public static propTypes: InferProps<AtLoadMoreProps>
-
-  private onClick(): void {
-    this.props.onClick && this.props.onClick(arguments as any)
+function AtLoadMore({
+  className = '',
+  customStyle = '',
+  loadingText = '加载中',
+  moreText = '查看更多',
+  status = 'more',
+  moreBtnStyle = '',
+  noMoreTextStyle = '',
+  noMoreText = '没有更多',
+  onClick
+}: AtLoadMoreProps): JSX.Element {
+  const handleClick = (): void => {
+    onClick && onClick(arguments as any)
   }
 
-  public render(): JSX.Element {
-    const {
-      className,
-      customStyle,
-      loadingText,
-      moreText,
-      status,
-      moreBtnStyle,
-      noMoreTextStyle,
-      noMoreText
-    } = this.props
-
-    let component: JSX.Element | null = null
-    if (status === 'loading') {
-      component = <AtActivityIndicator mode='center' content={loadingText} />
-    } else if (status === 'more') {
-      component = (
-        <View className='at-load-more__cnt'>
-          <AtButton
-            full
-            onClick={this.onClick.bind(this)}
-            customStyle={moreBtnStyle}
-          >
-            {moreText}
-          </AtButton>
-        </View>
-      )
-    } else {
-      component = (
-        <Text className='at-load-more__tip' style={noMoreTextStyle}>
-          {noMoreText}
-        </Text>
-      )
-    }
-
-    return (
-      <View
-        className={classNames('at-load-more', className)}
-        style={customStyle}
-      >
-        {component}
+  let component: JSX.Element | null = null
+  if (status === 'loading') {
+    component = <AtActivityIndicator mode='center' content={loadingText} />
+  } else if (status === 'more') {
+    component = (
+      <View className='at-load-more__cnt'>
+        <AtButton full onClick={handleClick} customStyle={moreBtnStyle}>
+          {moreText}
+        </AtButton>
       </View>
     )
+  } else {
+    component = (
+      <Text className='at-load-more__tip' style={noMoreTextStyle}>
+        {noMoreText}
+      </Text>
+    )
   }
-}
 
-AtLoadMore.defaultProps = {
-  customStyle: '',
-  className: '',
-  noMoreTextStyle: '',
-  moreBtnStyle: '',
-  status: 'more',
-  loadingText: '加载中',
-  moreText: '查看更多',
-  noMoreText: '没有更多'
+  return (
+    <View className={classNames('at-load-more', className)} style={customStyle}>
+      {component}
+    </View>
+  )
 }
 
 AtLoadMore.propTypes = {
@@ -82,3 +58,5 @@ AtLoadMore.propTypes = {
   noMoreText: PropTypes.string,
   onClick: PropTypes.func
 }
+
+export default AtLoadMore

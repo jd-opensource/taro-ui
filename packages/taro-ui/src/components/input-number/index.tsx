@@ -1,11 +1,11 @@
 import classNames from 'classnames'
 import _toString from 'lodash/toString'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Input, Text, View } from '@tarojs/components'
 import { CommonEvent, ITouchEvent } from '@tarojs/components/types/common'
 import { AtInputNumberProps, InputError } from '../../../types/input-number'
-import { pxTransform } from '../../common/utils'
+import { noop, pxTransform } from '../../common/utils'
 
 // TODO: Check all types
 
@@ -44,50 +44,42 @@ type ExtendEvent = {
   }
 }
 
-export default class AtInputNumber extends React.Component<AtInputNumberProps> {
-  public static defaultProps: AtInputNumberProps
-  public static propTypes: InferProps<AtInputNumberProps>
-
-  private handleClick(clickType: 'minus' | 'plus', e: CommonEvent): void {
-    const { disabled, value, min = 0, max = 100, step = 1 } = this.props
-    const lowThanMin = clickType === 'minus' && Number(value) <= min
-    const overThanMax = clickType === 'plus' && Number(value) >= max
-    if (lowThanMin || overThanMax || disabled) {
-      const deltaValue = clickType === 'minus' ? -step : step
-      const errorValue = addNum(Number(value), deltaValue)
-      if (disabled) {
-        this.handleError({
-          type: 'DISABLED',
-          errorValue
-        })
-      } else {
-        this.handleError({
-          type: lowThanMin ? 'LOW' : 'OVER',
-          errorValue
-        })
-      }
+function AtInputNumber({
+  customStyle = {},
+  className = '',
+  disabled = false,
+  disabledInput = false,
+  type = 'number',
+  width = 0,
+  min = 0,
+  max = 100,
+  step = 1,
+  size = 'normal',
+  value,
+  onChange = noop,
+  onBlur,
+  onErrorInput
+}: AtInputNumberProps): JSX.Element {
+  const handleError = (errorValue: InputError): void => {
+    if (!onErrorInput) {
       return
     }
-    const deltaValue = clickType === 'minus' ? -step : step
-    let newValue = addNum(Number(value), deltaValue)
-    newValue = Number(this.handleValue(newValue))
-    this.props.onChange(newValue, e)
+    onErrorInput(errorValue)
   }
 
-  private handleValue = (value: string | number): string => {
-    const { max = 100, min = 0 } = this.props
-    let resultValue = value === '' ? min : value
+  const handleValue = (val: string | number): string => {
+    let resultValue = val === '' ? min : val
     // 此处不能使用 Math.max，会是字符串变数字，并丢失 .
     if (Number(resultValue) > max) {
       resultValue = max
-      this.handleError({
+      handleError({
         type: 'OVER',
         errorValue: resultValue
       })
     }
     if (Number(resultValue) < min) {
       resultValue = min
-      this.handleError({
+      handleError({
         type: 'LOW',
         errorValue: resultValue
       })
@@ -95,7 +87,7 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
     if (resultValue && !Number(resultValue)) {
       resultValue = parseFloat(String(resultValue)) || min
 
-      this.handleError({
+      handleError({
         type: 'OVER',
         errorValue: resultValue
       })
@@ -105,102 +97,88 @@ export default class AtInputNumber extends React.Component<AtInputNumberProps> {
     return resultValue
   }
 
-  private handleInput = (e: CommonEvent & ExtendEvent): string => {
-    const { value } = e.target
-    const { disabled } = this.props
+  const handleClick = (clickType: 'minus' | 'plus', e: CommonEvent): void => {
+    const lowThanMin = clickType === 'minus' && Number(value) <= min
+    const overThanMax = clickType === 'plus' && Number(value) >= max
+    if (lowThanMin || overThanMax || disabled) {
+      const deltaValue = clickType === 'minus' ? -step : step
+      const errorValue = addNum(Number(value), deltaValue)
+      if (disabled) {
+        handleError({
+          type: 'DISABLED',
+          errorValue
+        })
+      } else {
+        handleError({
+          type: lowThanMin ? 'LOW' : 'OVER',
+          errorValue
+        })
+      }
+      return
+    }
+    const deltaValue = clickType === 'minus' ? -step : step
+    let newValue = addNum(Number(value), deltaValue)
+    newValue = Number(handleValue(newValue))
+    onChange(newValue, e)
+  }
+
+  const handleInput = (e: CommonEvent & ExtendEvent): string => {
+    const { value: inputVal } = e.target
     if (disabled) return ''
 
-    const newValue = this.handleValue(value)
-    this.props.onChange(Number(newValue), e)
+    const newValue = handleValue(inputVal)
+    onChange(Number(newValue), e)
     return newValue
   }
 
-  private handleBlur = (event: ITouchEvent): void =>
-    this.props.onBlur && this.props.onBlur(event)
+  const handleBlur = (event: ITouchEvent): void => onBlur && onBlur(event)
 
-  private handleError = (errorValue: InputError): void => {
-    if (!this.props.onErrorInput) {
-      return
-    }
-    this.props.onErrorInput(errorValue)
+  const inputStyle = {
+    width: width ? `${pxTransform(width)}` : ''
   }
+  const inputValue =
+    typeof value !== 'undefined' ? Number(handleValue(value)) : null
+  const rootCls = classNames(
+    'at-input-number',
+    {
+      'at-input-number--lg': size === 'large'
+    },
+    className
+  )
+  const minusBtnCls = classNames('at-input-number__btn', {
+    'at-input-number--disabled':
+      (inputValue !== null && inputValue <= min) || disabled
+  })
+  const plusBtnCls = classNames('at-input-number__btn', {
+    'at-input-number--disabled':
+      (inputValue !== null && inputValue >= max) || disabled
+  })
 
-  public render(): JSX.Element {
-    const {
-      customStyle,
-      className,
-      width,
-      disabled,
-      value,
-      type,
-      min = 0,
-      max = 100,
-      size,
-      disabledInput
-    } = this.props
-
-    const inputStyle = {
-      width: width ? `${pxTransform(width)}` : ''
-    }
-    const inputValue =
-      typeof value !== 'undefined' ? Number(this.handleValue(value)) : null
-    const rootCls = classNames(
-      'at-input-number',
-      {
-        'at-input-number--lg': size === 'large'
-      },
-      className
-    )
-    const minusBtnCls = classNames('at-input-number__btn', {
-      'at-input-number--disabled':
-        (inputValue !== null && inputValue <= min) || disabled
-    })
-    const plusBtnCls = classNames('at-input-number__btn', {
-      'at-input-number--disabled':
-        (inputValue !== null && inputValue >= max) || disabled
-    })
-
-    return (
-      <View className={rootCls} style={customStyle}>
-        <View
-          className={minusBtnCls}
-          onClick={this.handleClick.bind(this, 'minus')}
-        >
-          <Text className='at-icon at-icon-subtract at-input-number__btn-subtract'></Text>
-        </View>
-        <Input
-          className='at-input-number__input'
-          style={inputStyle}
-          type={type}
-          value={inputValue !== null ? String(inputValue) : ''}
-          disabled={disabledInput || disabled}
-          onInput={this.handleInput}
-          onBlur={this.handleBlur}
-        />
-        <View
-          className={plusBtnCls}
-          onClick={this.handleClick.bind(this, 'plus')}
-        >
-          <Text className='at-icon at-icon-add at-input-number__btn-add'></Text>
-        </View>
+  return (
+    <View className={rootCls} style={customStyle}>
+      <View
+        className={minusBtnCls}
+        onClick={(e: CommonEvent) => handleClick('minus', e)}
+      >
+        <Text className='at-icon at-icon-subtract at-input-number__btn-subtract'></Text>
       </View>
-    )
-  }
-}
-
-AtInputNumber.defaultProps = {
-  customStyle: {},
-  className: '',
-  disabled: false,
-  disabledInput: false,
-  type: 'number',
-  width: 0,
-  min: 0,
-  max: 100,
-  step: 1,
-  size: 'normal',
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onChange: (): void => {}
+      <Input
+        className='at-input-number__input'
+        style={inputStyle}
+        type={type}
+        value={inputValue !== null ? String(inputValue) : ''}
+        disabled={disabledInput || disabled}
+        onInput={handleInput}
+        onBlur={handleBlur}
+      />
+      <View
+        className={plusBtnCls}
+        onClick={(e: CommonEvent) => handleClick('plus', e)}
+      >
+        <Text className='at-icon at-icon-add at-input-number__btn-add'></Text>
+      </View>
+    </View>
+  )
 }
 
 AtInputNumber.propTypes = {
@@ -219,3 +197,5 @@ AtInputNumber.propTypes = {
   onBlur: PropTypes.func,
   onErrorInput: PropTypes.func
 }
+
+export default AtInputNumber

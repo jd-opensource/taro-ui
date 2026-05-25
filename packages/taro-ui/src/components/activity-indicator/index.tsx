@@ -1,46 +1,37 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
 import { AtActivityIndicatorProps } from '../../../types/activity-indicator'
 import AtLoading from '../loading/index'
 
-export default class AtActivityIndicator extends React.Component<AtActivityIndicatorProps> {
-  public static defaultProps: AtActivityIndicatorProps
-  public static propTypes: InferProps<AtActivityIndicatorProps>
+function AtActivityIndicator({
+  color = '',
+  size = 0,
+  mode = 'normal',
+  content = '',
+  className = '',
+  isOpened = true
+}: AtActivityIndicatorProps): JSX.Element {
+  const rootClass = classNames(
+    'at-activity-indicator',
+    {
+      'at-activity-indicator--center': mode === 'center',
+      'at-activity-indicator--isopened': isOpened
+    },
+    className
+  )
 
-  public render(): JSX.Element {
-    const { color, size, mode, content, isOpened } = this.props
-
-    const rootClass = classNames(
-      'at-activity-indicator',
-      {
-        'at-activity-indicator--center': mode === 'center',
-        'at-activity-indicator--isopened': isOpened
-      },
-      this.props.className
-    )
-
-    return (
-      <View className={rootClass}>
-        <View className='at-activity-indicator__body'>
-          <AtLoading size={size} color={color} />
-        </View>
-        {content && (
-          <Text className='at-activity-indicator__content'>{content}</Text>
-        )}
+  return (
+    <View className={rootClass}>
+      <View className='at-activity-indicator__body'>
+        <AtLoading size={size} color={color} />
       </View>
-    )
-  }
-}
-
-AtActivityIndicator.defaultProps = {
-  size: 0,
-  mode: 'normal',
-  color: '',
-  content: '',
-  className: '',
-  isOpened: true
+      {content && (
+        <Text className='at-activity-indicator__content'>{content}</Text>
+      )}
+    </View>
+  )
 }
 
 AtActivityIndicator.propTypes = {
@@ -51,3 +42,5 @@ AtActivityIndicator.propTypes = {
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   isOpened: PropTypes.bool
 }
+
+export default AtActivityIndicator

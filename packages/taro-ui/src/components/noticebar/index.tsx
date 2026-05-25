@@ -1,84 +1,63 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
-import { AtNoticeBarProps, AtNoticeBarState } from '../../../types/noticebar'
+import { AtNoticeBarProps } from '../../../types/noticebar'
 
-export default class AtNoticebar extends React.Component<
-  AtNoticeBarProps,
-  AtNoticeBarState
-> {
-  public static defaultProps: AtNoticeBarProps
-  public static propTypes: InferProps<AtNoticeBarProps>
+function AtNoticebar({
+  close = false,
+  single = false,
+  marquee = false,
+  speed = 100,
+  moreText = '查看详情',
+  showMore = false,
+  icon = '',
+  customStyle = {},
+  className,
+  children,
+  onClose,
+  onGotoMore
+}: AtNoticeBarProps): JSX.Element | boolean {
+  const [show, setShow] = useState(true)
+  const [animElemId] = useState(
+    () => `J_${Math.ceil(Math.random() * 10e5).toString(36)}`
+  )
+  const [animationData, setAnimationData] = useState<{
+    actions: Record<string, unknown>[]
+  }>({
+    actions: [{}]
+  })
+  const [dura, setDura] = useState(0)
+  const isWEAPP = Taro.getEnv() === Taro.ENV_TYPE.WEAPP
+  const isALIPAY = Taro.getEnv() === Taro.ENV_TYPE.ALIPAY
+  const isWEB = Taro.getEnv() === Taro.ENV_TYPE.WEB
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const animElemIdRef = useRef(animElemId)
 
-  private timeout: ReturnType<typeof setTimeout> | null
-  private interval: ReturnType<typeof setInterval> | null
-
-  public constructor(props: AtNoticeBarProps) {
-    super(props)
-    const animElemId = `J_${Math.ceil(Math.random() * 10e5).toString(36)}`
-    this.state = {
-      show: true,
-      animElemId,
-      animationData: {
-        actions: [{}]
-      },
-      dura: 0,
-      isWEAPP: Taro.getEnv() === Taro.ENV_TYPE.WEAPP,
-      isALIPAY: Taro.getEnv() === Taro.ENV_TYPE.ALIPAY,
-      isWEB: Taro.getEnv() === Taro.ENV_TYPE.WEB
-    }
-  }
-
-  private onClose(event: CommonEvent): void {
-    this.setState({
-      show: false
-    })
-    this.props.onClose && this.props.onClose(event)
-  }
-
-  private onGotoMore(event: CommonEvent): void {
-    this.props.onGotoMore && this.props.onGotoMore(event)
-  }
-
-  public UNSAFE_componentWillReceiveProps(): void {
-    if (!this.timeout) {
-      this.interval && clearInterval(this.interval)
-      this.initAnimation()
-    }
-  }
-
-  public componentDidMount(): void {
-    if (!this.props.marquee) return
-    this.initAnimation()
-  }
-
-  private initAnimation(): void {
-    const { isWEAPP, isALIPAY } = this.state
-    this.timeout = setTimeout(() => {
-      this.timeout = null
-      if (this.state.isWEB) {
-        const { speed = 100 } = this.props
-        const elem = document.querySelector(`.${this.state.animElemId}`)
+  const initAnimation = useCallback((): void => {
+    timeoutRef.current = setTimeout(() => {
+      timeoutRef.current = null
+      if (isWEB) {
+        const elem = document.querySelector(`.${animElemIdRef.current}`)
         if (!elem) return
         const width = elem.getBoundingClientRect().width
-        const dura = width / +speed
-        this.setState({ dura })
+        const animDura = width / +speed
+        setDura(animDura)
       } else if (isWEAPP || isALIPAY) {
         const query = Taro.createSelectorQuery()
         query
-          .select(`.${this.state.animElemId}`)
+          .select(`.${animElemIdRef.current}`)
           .boundingClientRect()
           .exec(res => {
             const queryRes = res[0]
             if (!queryRes) return
             const { width } = queryRes
-            const { speed = 100 } = this.props
-            const dura = width / +speed
+            const animDura = width / +speed
             const animation = Taro.createAnimation({
-              duration: dura * 1000,
+              duration: animDura * 1000,
               timingFunction: 'linear'
             })
             const resetAnimation = Taro.createAnimation({
@@ -91,126 +70,128 @@ export default class AtNoticebar extends React.Component<
             })
             const animBody = (): void => {
               resetOpacityAnimation.opacity(0).step()
-              this.setState({ animationData: resetOpacityAnimation.export() })
+              setAnimationData(resetOpacityAnimation.export())
 
               setTimeout(() => {
                 resetAnimation.translateX(0).step()
-                this.setState({ animationData: resetAnimation.export() })
+                setAnimationData(resetAnimation.export())
               }, 300)
 
               setTimeout(() => {
                 resetOpacityAnimation.opacity(1).step()
-                this.setState({ animationData: resetOpacityAnimation.export() })
+                setAnimationData(resetOpacityAnimation.export())
               }, 600)
 
               setTimeout(() => {
                 animation.translateX(-width).step()
-                this.setState({ animationData: animation.export() })
+                setAnimationData(animation.export())
               }, 900)
             }
             animBody()
-            this.interval = setInterval(animBody, dura * 1000 + 1000)
+            intervalRef.current = setInterval(animBody, animDura * 1000 + 1000)
           })
       }
     }, 1000)
+  }, [isWEB, isWEAPP, isALIPAY, speed])
+
+  useEffect(() => {
+    if (!marquee) return
+    initAnimation()
+  }, [marquee, initAnimation])
+
+  useEffect(() => {
+    if (!timeoutRef.current) {
+      intervalRef.current && clearInterval(intervalRef.current)
+      initAnimation()
+    }
+  }, [
+    children,
+    single,
+    marquee,
+    speed,
+    icon,
+    close,
+    showMore,
+    moreText,
+    className,
+    customStyle,
+    initAnimation
+  ])
+
+  const handleClose = (event: CommonEvent): void => {
+    setShow(false)
+    onClose && onClose(event)
   }
 
-  public render(): JSX.Element | boolean {
-    const {
-      single,
-      icon,
-      marquee,
-      customStyle,
-      className,
-      moreText = '查看详情'
-    } = this.props
-    let { showMore, close } = this.props
-    const { dura, show, animElemId, animationData, isWEAPP, isALIPAY } =
-      this.state
-    const rootClassName = ['at-noticebar']
+  const handleGotoMore = (event: CommonEvent): void => {
+    onGotoMore && onGotoMore(event)
+  }
 
-    if (!single) showMore = false
+  let resolvedShowMore = showMore
+  if (!single) resolvedShowMore = false
 
-    const style = {}
-    const innerClassName = ['at-noticebar__content-inner']
-    if (marquee) {
-      close = false
-      innerClassName.push(animElemId)
-      style['animation-delay'] = '3s'
+  const style: Record<string, string> = {}
+  const innerClassName = ['at-noticebar__content-inner']
+  let resolvedClose = close
+  if (marquee) {
+    resolvedClose = false
+    innerClassName.push(animElemId)
+    style['animation-delay'] = '3s'
 
-      if (dura > 0) {
-        style['animation-duration'] = `${dura}s`
-        style['animation-delay'] = '1s'
-      }
+    if (dura > 0) {
+      style['animation-duration'] = `${dura}s`
+      style['animation-delay'] = '1s'
     }
+  }
 
-    const classObject = {
-      'at-noticebar--marquee': marquee,
-      'at-noticebar--weapp': marquee && (isWEAPP || isALIPAY),
-      'at-noticebar--single': !marquee && single
-    }
+  const classObject = {
+    'at-noticebar--marquee': marquee,
+    'at-noticebar--weapp': marquee && (isWEAPP || isALIPAY),
+    'at-noticebar--single': !marquee && single
+  }
 
-    const iconClass = ['at-icon']
-    if (icon) iconClass.push(`at-icon-${icon}`)
+  const iconClass = ['at-icon']
+  if (icon) iconClass.push(`at-icon-${icon}`)
 
-    return (
-      show && (
-        <View
-          className={classNames(rootClassName, classObject, className)}
-          style={customStyle}
-        >
-          {close && (
-            <View
-              className='at-noticebar__close'
-              onClick={this.onClose.bind(this)}
-            >
-              <Text className='at-icon at-icon-close'></Text>
+  return (
+    show && (
+      <View
+        className={classNames('at-noticebar', classObject, className)}
+        style={customStyle}
+      >
+        {resolvedClose && (
+          <View className='at-noticebar__close' onClick={handleClose}>
+            <Text className='at-icon at-icon-close'></Text>
+          </View>
+        )}
+        <View className='at-noticebar__content'>
+          {icon && (
+            <View className='at-noticebar__content-icon'>
+              <Text className={classNames(iconClass, iconClass)}></Text>
             </View>
           )}
-          <View className='at-noticebar__content'>
-            {icon && (
-              <View className='at-noticebar__content-icon'>
-                {/* start hack 百度小程序 */}
-                <Text className={classNames(iconClass, iconClass)}></Text>
-              </View>
-            )}
-            <View className='at-noticebar__content-text'>
-              <View
-                id={animElemId}
-                animation={animationData}
-                className={classNames(innerClassName)}
-                style={style}
-              >
-                {this.props.children}
-              </View>
+          <View className='at-noticebar__content-text'>
+            <View
+              id={animElemId}
+              animation={animationData}
+              className={classNames(innerClassName)}
+              style={style}
+            >
+              {children}
             </View>
           </View>
-          {showMore && (
-            <View
-              className='at-noticebar__more'
-              onClick={this.onGotoMore.bind(this)}
-            >
-              <Text className='text'>{moreText}</Text>
-              <View className='at-noticebar__more-icon'>
-                <Text className='at-icon at-icon-chevron-right'></Text>
-              </View>
-            </View>
-          )}
         </View>
-      )
+        {resolvedShowMore && (
+          <View className='at-noticebar__more' onClick={handleGotoMore}>
+            <Text className='text'>{moreText}</Text>
+            <View className='at-noticebar__more-icon'>
+              <Text className='at-icon at-icon-chevron-right'></Text>
+            </View>
+          </View>
+        )}
+      </View>
     )
-  }
-}
-
-AtNoticebar.defaultProps = {
-  close: false,
-  single: false,
-  marquee: false,
-  speed: 100,
-  moreText: '查看详情',
-  showMore: false,
-  icon: '',
-  customStyle: {}
+  )
 }
 
 AtNoticebar.propTypes = {
@@ -225,3 +206,5 @@ AtNoticebar.propTypes = {
   onClose: PropTypes.func,
   onGotoMore: PropTypes.func
 }
+
+export default AtNoticebar

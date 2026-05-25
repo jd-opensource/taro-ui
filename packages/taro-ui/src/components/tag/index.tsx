@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
@@ -14,12 +14,19 @@ const TYPE_CLASS = {
   primary: 'primary'
 }
 
-export default class AtTag extends React.Component<AtTagProps> {
-  public static defaultProps: AtTagProps
-  public static propTypes: InferProps<AtTagProps>
-
-  private onClick(event: CommonEvent): void {
-    const { name = '', active = false, disabled, onClick } = this.props
+export default function AtTag({
+  size = 'normal',
+  type = '',
+  name = '',
+  circle = false,
+  disabled = false,
+  active = false,
+  customStyle = {},
+  className,
+  children,
+  onClick
+}: AtTagProps): JSX.Element {
+  const handleClick = (event: CommonEvent): void => {
     if (!disabled) {
       typeof onClick === 'function' &&
         onClick(
@@ -32,45 +39,25 @@ export default class AtTag extends React.Component<AtTagProps> {
     }
   }
 
-  public render(): JSX.Element {
-    const {
-      size = 'normal',
-      type = '',
-      circle = false,
-      disabled = false,
-      active = false,
-      customStyle
-    } = this.props
-    const rootClassName = ['at-tag']
+  const rootClassName = ['at-tag']
 
-    const classObject = {
-      [`at-tag--${SIZE_CLASS[size]}`]: SIZE_CLASS[size],
-      [`at-tag--${type}`]: TYPE_CLASS[type],
-      'at-tag--disabled': disabled,
-      'at-tag--active': active,
-      'at-tag--circle': circle
-    }
-
-    return (
-      <View
-        className={classNames(rootClassName, classObject, this.props.className)}
-        style={customStyle}
-        onClick={this.onClick.bind(this)}
-      >
-        {this.props.children}
-      </View>
-    )
+  const classObject = {
+    [`at-tag--${SIZE_CLASS[size]}`]: SIZE_CLASS[size],
+    [`at-tag--${type}`]: TYPE_CLASS[type],
+    'at-tag--disabled': disabled,
+    'at-tag--active': active,
+    'at-tag--circle': circle
   }
-}
 
-AtTag.defaultProps = {
-  size: 'normal',
-  type: '',
-  name: '',
-  circle: false,
-  active: false,
-  disabled: false,
-  customStyle: {}
+  return (
+    <View
+      className={classNames(rootClassName, classObject, className)}
+      style={customStyle}
+      onClick={handleClick}
+    >
+      {children}
+    </View>
+  )
 }
 
 AtTag.propTypes = {

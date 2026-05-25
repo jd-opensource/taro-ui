@@ -1,59 +1,43 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import { AtBadgeProps } from '../../../types/badge'
 
-export default class AtBadge extends React.Component<AtBadgeProps> {
-  public static defaultProps: AtBadgeProps
-  public static propTypes: InferProps<AtBadgeProps>
-
-  public constructor(props: AtBadgeProps) {
-    super(props)
-    this.state = {}
+function formatValue(
+  value: string | number | undefined,
+  maxValue: number
+): string | number {
+  if (value === '' || value === null || typeof value === 'undefined') return ''
+  const numValue = +value
+  if (Number.isNaN(numValue)) {
+    return value
   }
-
-  private formatValue(
-    value: string | number | undefined,
-    maxValue: number
-  ): string | number {
-    if (value === '' || value === null || typeof value === 'undefined')
-      return ''
-    const numValue = +value
-    if (Number.isNaN(numValue)) {
-      return value
-    }
-    return numValue > maxValue ? `${maxValue}+` : numValue
-  }
-
-  public render(): JSX.Element {
-    const { dot, value, maxValue = 99, customStyle } = this.props
-    const rootClassName = ['at-badge']
-
-    const val = this.formatValue(value, maxValue)
-
-    return (
-      <View
-        className={classNames(rootClassName, this.props.className)}
-        style={customStyle}
-      >
-        {this.props.children}
-        {dot ? (
-          <View className='at-badge__dot'></View>
-        ) : (
-          val !== '' && <View className='at-badge__num'>{val}</View>
-        )}
-      </View>
-    )
-  }
+  return numValue > maxValue ? `${maxValue}+` : numValue
 }
 
-AtBadge.defaultProps = {
-  dot: false,
-  value: '',
-  maxValue: 99,
-  customStyle: {},
-  className: ''
+export default function AtBadge({
+  dot = false,
+  value = '',
+  maxValue = 99,
+  customStyle = {},
+  className = '',
+  children
+}: AtBadgeProps): JSX.Element {
+  const rootClassName = ['at-badge']
+
+  const val = formatValue(value, maxValue)
+
+  return (
+    <View className={classNames(rootClassName, className)} style={customStyle}>
+      {children}
+      {dot ? (
+        <View className='at-badge__dot'></View>
+      ) : (
+        val !== '' && <View className='at-badge__num'>{val}</View>
+      )}
+    </View>
+  )
 }
 
 AtBadge.propTypes = {

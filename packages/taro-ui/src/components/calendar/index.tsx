@@ -1,10 +1,9 @@
 import classnames from 'classnames'
 import dayjs, { Dayjs } from 'dayjs'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import { BaseEventOrig } from '@tarojs/components/types/common'
 import {
-  AtCalendarDefaultProps,
   AtCalendarProps,
   AtCalendarPropsWithDefaults,
   AtCalendarState,
@@ -13,95 +12,29 @@ import {
 import AtCalendarBody from './body/index'
 import AtCalendarController from './controller/index'
 
-const defaultProps: AtCalendarDefaultProps = {
-  validDates: [],
-  marks: [],
-  isSwiper: true,
-  hideArrow: false,
-  isVertical: false,
-  selectedDates: [],
-  isMultiSelect: false,
-  format: 'YYYY-MM-DD',
-  currentDate: Date.now(),
-  monthFormat: 'YYYY年MM月'
-}
-
-export default class AtCalendar extends React.Component<
-  AtCalendarProps,
-  Readonly<AtCalendarState>
-> {
-  static defaultProps: AtCalendarDefaultProps = defaultProps
-
-  public constructor(props: AtCalendarProps) {
-    super(props)
-
-    const { currentDate, isMultiSelect } = props as AtCalendarPropsWithDefaults
-
-    this.state = this.getInitializeState(currentDate, isMultiSelect)
-  }
-
-  public UNSAFE_componentWillReceiveProps(nextProps: AtCalendarProps): void {
-    const { currentDate, isMultiSelect } = nextProps
-    if (!currentDate || currentDate === this.props.currentDate) return
-
-    if (isMultiSelect && this.props.isMultiSelect) {
-      const { start, end } = currentDate as Calendar.SelectedDate
-      const { start: preStart, end: preEnd } = this.props
-        .currentDate as Calendar.SelectedDate
-
-      if (start === preStart && preEnd === end) {
-        return
-      }
-    }
-
-    const stateValue: AtCalendarState = this.getInitializeState(
-      currentDate,
-      isMultiSelect
-    )
-
-    this.setState(stateValue)
-  }
-
-  private getSingleSelectdState = (value: Dayjs): Partial<AtCalendarState> => {
-    const { generateDate } = this.state
-
-    const stateValue: Partial<AtCalendarState> = {
-      selectedDate: this.getSelectedDate(value.valueOf())
-    }
-
-    const dayjsGenerateDate: Dayjs = value.startOf('month')
-    const generateDateValue: number = dayjsGenerateDate.valueOf()
-
-    if (generateDateValue !== generateDate) {
-      this.triggerChangeDate(dayjsGenerateDate)
-      stateValue.generateDate = generateDateValue
-    }
-
-    return stateValue
-  }
-
-  private getMultiSelectedState = (
-    value: Dayjs
-  ): Pick<AtCalendarState, 'selectedDate'> => {
-    const { selectedDate } = this.state
-    const { end, start } = selectedDate
-
-    const valueUnix: number = value.valueOf()
-    const state: Pick<AtCalendarState, 'selectedDate'> = {
-      selectedDate
-    }
-
-    if (end) {
-      state.selectedDate = this.getSelectedDate(valueUnix, 0)
-    } else {
-      state.selectedDate.end = Math.max(valueUnix, +start)
-      state.selectedDate.start = Math.min(valueUnix, +start)
-    }
-
-    return state
-  }
-
-  private getSelectedDate = (
+function AtCalendar(props: AtCalendarProps): JSX.Element {
+  const {
+    validDates = [],
+    marks = [],
+    isSwiper = true,
+    hideArrow = false,
+    isVertical = false,
+    selectedDates = [],
+    isMultiSelect = false,
+    format = 'YYYY-MM-DD',
+    currentDate = Date.now(),
+    monthFormat = 'YYYY年MM月',
+    minDate,
+    maxDate,
+    className,
+    onMonthChange,
+    onClickPreMonth,
+    onClickNextMonth,
+    onDayClick,
+    onSelectDate,
+    onDayLongClick
+  } = props as AtCalendarPropsWithDefaults
+  const getSelectedDate = (
     start: number,
     end?: number
   ): Calendar.SelectedDate => {
@@ -117,15 +50,15 @@ export default class AtCalendar extends React.Component<
     return stateValue
   }
 
-  private getInitializeState(
-    currentDate: Calendar.DateArg | Calendar.SelectedDate,
-    isMultiSelect?: boolean
-  ): AtCalendarState {
+  const getInitializeState = (
+    date: Calendar.DateArg | Calendar.SelectedDate,
+    multiSelect?: boolean
+  ): AtCalendarState => {
     let end: number
     let start: number
     let generateDateValue: number
 
-    if (!currentDate) {
+    if (!date) {
       const dayjsStart = dayjs()
       start = dayjsStart.startOf('day').valueOf()
       generateDateValue = dayjsStart.startOf('month').valueOf()
@@ -137,8 +70,8 @@ export default class AtCalendar extends React.Component<
       }
     }
 
-    if (isMultiSelect) {
-      const { start: cStart, end: cEnd } = currentDate as Calendar.SelectedDate
+    if (multiSelect) {
+      const { start: cStart, end: cEnd } = date as Calendar.SelectedDate
 
       const dayjsStart = dayjs(cStart)
 
@@ -147,7 +80,7 @@ export default class AtCalendar extends React.Component<
 
       end = cEnd ? dayjs(cEnd).startOf('day').valueOf() : start
     } else {
-      const dayjsStart = dayjs(currentDate as Calendar.DateArg)
+      const dayjsStart = dayjs(date as Calendar.DateArg)
 
       start = dayjsStart.startOf('day').valueOf()
       generateDateValue = dayjsStart.startOf('month').valueOf()
@@ -157,73 +90,160 @@ export default class AtCalendar extends React.Component<
 
     return {
       generateDate: generateDateValue,
-      selectedDate: this.getSelectedDate(start, end)
+      selectedDate: getSelectedDate(start, end)
     }
   }
 
-  private triggerChangeDate = (value: Dayjs): void => {
-    const { format } = this.props
+  const [generateDate, setGenerateDate] = useState<number>(
+    () => getInitializeState(currentDate, isMultiSelect).generateDate
+  )
+  const [selectedDate, setSelectedDate] = useState<Calendar.SelectedDate>(
+    () => getInitializeState(currentDate, isMultiSelect).selectedDate
+  )
 
-    if (typeof this.props.onMonthChange !== 'function') return
+  const prevCurrentDateRef = useRef(currentDate)
+  const prevIsMultiSelectRef = useRef(isMultiSelect)
 
-    this.props.onMonthChange(value.format(format))
+  useEffect(() => {
+    if (!currentDate || currentDate === prevCurrentDateRef.current) {
+      prevCurrentDateRef.current = currentDate
+      prevIsMultiSelectRef.current = isMultiSelect
+      return
+    }
+
+    if (isMultiSelect && prevIsMultiSelectRef.current) {
+      const { start, end } = currentDate as Calendar.SelectedDate
+      const { start: preStart, end: preEnd } =
+        prevCurrentDateRef.current as Calendar.SelectedDate
+
+      if (start === preStart && preEnd === end) {
+        prevCurrentDateRef.current = currentDate
+        prevIsMultiSelectRef.current = isMultiSelect
+        return
+      }
+    }
+
+    const stateValue = getInitializeState(currentDate, isMultiSelect)
+
+    setGenerateDate(stateValue.generateDate)
+    setSelectedDate(stateValue.selectedDate)
+    prevCurrentDateRef.current = currentDate
+    prevIsMultiSelectRef.current = isMultiSelect
+  }, [currentDate, isMultiSelect])
+
+  const triggerChangeDate = (value: Dayjs): void => {
+    if (typeof onMonthChange !== 'function') return
+
+    onMonthChange(value.format(format))
   }
 
-  private setMonth = (vectorCount: number): void => {
-    const { format } = this.props
-    const { generateDate } = this.state
-
+  const setMonth = (vectorCount: number): void => {
     const _generateDate: Dayjs = dayjs(generateDate).add(vectorCount, 'month')
-    this.setState({
-      generateDate: _generateDate.valueOf()
-    })
+    const nextGenerateDate = _generateDate.valueOf()
 
-    if (vectorCount && typeof this.props.onMonthChange === 'function') {
-      this.props.onMonthChange(_generateDate.format(format))
+    setGenerateDate(nextGenerateDate)
+
+    if (vectorCount && typeof onMonthChange === 'function') {
+      onMonthChange(_generateDate.format(format))
     }
   }
 
-  private handleClickPreMonth = (isMinMonth?: boolean): void => {
+  const handleClickPreMonth = (isMinMonth?: boolean): void => {
     if (isMinMonth === true) {
       return
     }
 
-    this.setMonth(-1)
+    setMonth(-1)
 
-    if (typeof this.props.onClickPreMonth === 'function') {
-      this.props.onClickPreMonth()
+    if (typeof onClickPreMonth === 'function') {
+      onClickPreMonth()
     }
   }
 
-  private handleClickNextMonth = (isMaxMonth?: boolean): void => {
+  const handleClickNextMonth = (isMaxMonth?: boolean): void => {
     if (isMaxMonth === true) {
       return
     }
 
-    this.setMonth(1)
+    setMonth(1)
 
-    if (typeof this.props.onClickNextMonth === 'function') {
-      this.props.onClickNextMonth()
+    if (typeof onClickNextMonth === 'function') {
+      onClickNextMonth()
     }
   }
 
-  // picker 选择时间改变时触发
-  private handleSelectDate = (e: BaseEventOrig<{ value: string }>): void => {
+  const handleSelectDate = (e: BaseEventOrig<{ value: string }>): void => {
     const { value } = e.detail
 
     const _generateDate: Dayjs = dayjs(value)
     const _generateDateValue: number = _generateDate.valueOf()
 
-    if (this.state.generateDate === _generateDateValue) return
+    if (generateDate === _generateDateValue) return
 
-    this.triggerChangeDate(_generateDate)
-    this.setState({
-      generateDate: _generateDateValue
-    })
+    triggerChangeDate(_generateDate)
+    setGenerateDate(_generateDateValue)
   }
 
-  private handleDayClick = (item: Calendar.Item): void => {
-    const { isMultiSelect } = this.props
+  const notifySelectedDate = (selectDate: Calendar.SelectedDate): void => {
+    if (typeof onSelectDate === 'function') {
+      const info: Calendar.SelectedDate = {
+        start: dayjs(selectDate.start).format(format)
+      }
+
+      if (selectDate.end) {
+        info.end = dayjs(selectDate.end).format(format)
+      }
+
+      onSelectDate({
+        value: info
+      })
+    }
+  }
+
+  const getSingleSelectdState = (
+    value: Dayjs,
+    currentGenerateDate: number
+  ): Partial<AtCalendarState> => {
+    const stateValue: Partial<AtCalendarState> = {
+      selectedDate: getSelectedDate(value.valueOf())
+    }
+
+    const dayjsGenerateDate: Dayjs = value.startOf('month')
+    const generateDateValue: number = dayjsGenerateDate.valueOf()
+
+    if (generateDateValue !== currentGenerateDate) {
+      triggerChangeDate(dayjsGenerateDate)
+      stateValue.generateDate = generateDateValue
+    }
+
+    return stateValue
+  }
+
+  const getMultiSelectedState = (
+    value: Dayjs,
+    currentSelectedDate: Calendar.SelectedDate
+  ): Pick<AtCalendarState, 'selectedDate'> => {
+    const { end, start } = currentSelectedDate
+
+    const valueUnix: number = value.valueOf()
+    const state: Pick<AtCalendarState, 'selectedDate'> = {
+      selectedDate: currentSelectedDate
+    }
+
+    if (end) {
+      state.selectedDate = getSelectedDate(valueUnix, 0)
+    } else {
+      state.selectedDate = {
+        ...currentSelectedDate,
+        end: Math.max(valueUnix, +start),
+        start: Math.min(valueUnix, +start)
+      }
+    }
+
+    return state
+  }
+
+  const handleDayClick = (item: Calendar.Item): void => {
     const { isDisabled, value } = item
 
     if (isDisabled) return
@@ -233,87 +253,59 @@ export default class AtCalendar extends React.Component<
     let stateValue: Partial<AtCalendarState> = {}
 
     if (isMultiSelect) {
-      stateValue = this.getMultiSelectedState(dayjsDate)
+      stateValue = getMultiSelectedState(dayjsDate, selectedDate)
     } else {
-      stateValue = this.getSingleSelectdState(dayjsDate)
+      stateValue = getSingleSelectdState(dayjsDate, generateDate)
     }
 
-    this.setState(stateValue as AtCalendarState, () => {
-      this.handleSelectedDate()
-    })
-
-    if (typeof this.props.onDayClick === 'function') {
-      this.props.onDayClick({ value: item.value })
+    if (stateValue.generateDate != null) {
+      setGenerateDate(stateValue.generateDate)
     }
-  }
+    if (stateValue.selectedDate != null) {
+      setSelectedDate(stateValue.selectedDate)
+      notifySelectedDate(stateValue.selectedDate)
+    }
 
-  private handleSelectedDate = (): void => {
-    const selectDate = this.state.selectedDate
-    if (typeof this.props.onSelectDate === 'function') {
-      const info: Calendar.SelectedDate = {
-        start: dayjs(selectDate.start).format(this.props.format)
-      }
-
-      if (selectDate.end) {
-        info.end = dayjs(selectDate.end).format(this.props.format)
-      }
-
-      this.props.onSelectDate({
-        value: info
-      })
+    if (typeof onDayClick === 'function') {
+      onDayClick({ value: item.value })
     }
   }
 
-  private handleDayLongClick = (item: Calendar.Item): void => {
-    if (typeof this.props.onDayLongClick === 'function') {
-      this.props.onDayLongClick({ value: item.value })
+  const handleDayLongClick = (item: Calendar.Item): void => {
+    if (typeof onDayLongClick === 'function') {
+      onDayLongClick({ value: item.value })
     }
   }
 
-  public render(): JSX.Element {
-    const { generateDate, selectedDate } = this.state
-    const {
-      validDates,
-      marks,
-      format,
-      minDate,
-      maxDate,
-      isSwiper,
-      className,
-      hideArrow,
-      isVertical,
-      monthFormat,
-      selectedDates
-    } = this.props as AtCalendarPropsWithDefaults
-
-    return (
-      <View className={classnames('at-calendar', className)}>
-        <AtCalendarController
-          minDate={minDate}
-          maxDate={maxDate}
-          hideArrow={hideArrow}
-          monthFormat={monthFormat}
-          generateDate={generateDate}
-          onPreMonth={this.handleClickPreMonth}
-          onNextMonth={this.handleClickNextMonth}
-          onSelectDate={this.handleSelectDate}
-        />
-        <AtCalendarBody
-          validDates={validDates}
-          marks={marks}
-          format={format}
-          minDate={minDate}
-          maxDate={maxDate}
-          isSwiper={isSwiper}
-          isVertical={isVertical}
-          selectedDate={selectedDate}
-          selectedDates={selectedDates}
-          generateDate={generateDate}
-          onDayClick={this.handleDayClick}
-          onSwipeMonth={this.setMonth}
-          onLongClick={this.handleDayLongClick}
-        />
-      </View>
-    )
-  }
+  return (
+    <View className={classnames('at-calendar', className)}>
+      <AtCalendarController
+        minDate={minDate}
+        maxDate={maxDate}
+        hideArrow={hideArrow}
+        monthFormat={monthFormat}
+        generateDate={generateDate}
+        onPreMonth={handleClickPreMonth}
+        onNextMonth={handleClickNextMonth}
+        onSelectDate={handleSelectDate}
+      />
+      <AtCalendarBody
+        validDates={validDates}
+        marks={marks}
+        format={format}
+        minDate={minDate}
+        maxDate={maxDate}
+        isSwiper={isSwiper}
+        isVertical={isVertical}
+        selectedDate={selectedDate}
+        selectedDates={selectedDates}
+        generateDate={generateDate}
+        onDayClick={handleDayClick}
+        onSwipeMonth={setMonth}
+        onLongClick={handleDayLongClick}
+      />
+    </View>
+  )
 }
+
+export default AtCalendar

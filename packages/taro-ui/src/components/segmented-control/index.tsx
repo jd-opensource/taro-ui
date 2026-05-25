@@ -1,85 +1,66 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
 import { AtSegmentedControlProps } from '../../../types/segmented-control'
-import { mergeStyle, pxTransform } from '../../common/utils'
+import { mergeStyle, noop, pxTransform } from '../../common/utils'
 
-export default class AtSegmentedControl extends React.Component<AtSegmentedControlProps> {
-  public static defaultProps: AtSegmentedControlProps
-  public static propTypes: InferProps<AtSegmentedControlProps>
-
-  private handleClick(index: number, event: CommonEvent): void {
-    if (this.props.disabled) return
-    this.props.onClick(index, event)
+function AtSegmentedControl({
+  customStyle = '',
+  className = '',
+  disabled = false,
+  values = [],
+  selectedColor = '',
+  current = 0,
+  color = '',
+  fontSize = 28,
+  onClick = noop
+}: AtSegmentedControlProps): JSX.Element {
+  const handleClick = (index: number, event: CommonEvent): void => {
+    if (disabled) return
+    onClick(index, event)
   }
 
-  public render(): JSX.Element {
-    const {
-      customStyle = '',
-      className,
-      disabled,
-      values,
-      selectedColor,
-      current,
-      color,
-      fontSize = 28
-    } = this.props
-
-    const rootStyle = {
-      borderColor: selectedColor
-    }
-    const itemStyle = {
-      color: selectedColor,
-      fontSize: pxTransform(fontSize),
-      borderColor: selectedColor,
-      backgroundColor: color
-    }
-    const selectedItemStyle = {
-      color,
-      fontSize: pxTransform(fontSize),
-      borderColor: selectedColor,
-      backgroundColor: selectedColor
-    }
-    const rootCls = classNames(
-      'at-segmented-control',
-      {
-        'at-segmented-control--disabled': disabled
-      },
-      className
-    )
-
-    return (
-      <View className={rootCls} style={mergeStyle(rootStyle, customStyle)}>
-        {values.map((value, i) => (
-          <View
-            className={classNames('at-segmented-control__item', {
-              'at-segmented-control__item--active': current === i
-            })}
-            style={current === i ? selectedItemStyle : itemStyle}
-            key={value}
-            onClick={this.handleClick.bind(this, i)}
-          >
-            {value}
-          </View>
-        ))}
-      </View>
-    )
+  const rootStyle = {
+    borderColor: selectedColor
   }
-}
+  const itemStyle = {
+    color: selectedColor,
+    fontSize: pxTransform(fontSize),
+    borderColor: selectedColor,
+    backgroundColor: color
+  }
+  const selectedItemStyle = {
+    color,
+    fontSize: pxTransform(fontSize),
+    borderColor: selectedColor,
+    backgroundColor: selectedColor
+  }
+  const rootCls = classNames(
+    'at-segmented-control',
+    {
+      'at-segmented-control--disabled': disabled
+    },
+    className
+  )
 
-AtSegmentedControl.defaultProps = {
-  customStyle: '',
-  className: '',
-  current: 0,
-  color: '',
-  fontSize: 28,
-  disabled: false,
-  selectedColor: '',
-  values: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {}
+  return (
+    <View className={rootCls} style={mergeStyle(rootStyle, customStyle)}>
+      {values.map((value, i) => (
+        <View
+          className={classNames('at-segmented-control__item', {
+            'at-segmented-control__item--active': current === i
+          })}
+          style={current === i ? selectedItemStyle : itemStyle}
+          key={value}
+          onClick={event => handleClick(i, event)}
+        >
+          {value}
+        </View>
+      ))}
+    </View>
+  )
 }
 
 AtSegmentedControl.propTypes = {
@@ -92,3 +73,5 @@ AtSegmentedControl.propTypes = {
   values: PropTypes.array,
   onClick: PropTypes.func
 }
+
+export default AtSegmentedControl

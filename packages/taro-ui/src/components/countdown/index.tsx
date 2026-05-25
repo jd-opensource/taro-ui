@@ -1,8 +1,9 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
-import { AtCountDownProps, AtCountdownState } from '../../../types/countdown'
+import { useDidHide, useDidShow } from '@tarojs/taro'
+import { AtCountDownProps } from '../../../types/countdown'
 import AtCountdownItem from './item'
 
 type TimeObject = {
@@ -26,169 +27,205 @@ const defaultFormat = {
   seconds: '秒'
 }
 
-export default class AtCountdown extends React.Component<
-  AtCountDownProps,
-  AtCountdownState
-> {
-  public static defaultProps: AtCountDownProps
-  public static propTypes: InferProps<AtCountDownProps>
+function AtCountdown({
+  customStyle = '',
+  className = '',
+  format = defaultFormat,
+  isCard = false,
+  isShowDay = false,
+  isShowHour = true,
+  isShowMinute = true,
+  day = 0,
+  hours = 0,
+  minutes = 0,
+  seconds = 0,
+  onTimeUp
+}: AtCountDownProps): JSX.Element {
+  const propsRef = useRef<AtCountDownProps>({
+    customStyle,
+    className,
+    format,
+    isCard,
+    isShowDay,
+    isShowHour,
+    isShowMinute,
+    day,
+    hours,
+    minutes,
+    seconds,
+    onTimeUp
+  })
+  const isMountedRef = useRef(false)
+  const secondsRef = useRef(toSeconds(day, hours, minutes, seconds))
+  const timerRef = useRef<NodeJS.Timeout | number>()
 
-  private seconds: number
-  private timer: NodeJS.Timeout | number | undefined
+  const calculateTime = useCallback((): TimeObject => {
+    let [calcDay, calcHours, calcMinutes, calcSeconds] = [0, 0, 0, 0]
 
-  public constructor(props: AtCountDownProps) {
-    super(props)
-    const { day = 0, hours = 0, minutes = 0, seconds = 0 } = this.props
-    this.seconds = toSeconds(day, hours, minutes, seconds)
-    const {
-      day: _day,
-      hours: _hours,
-      minutes: _minutes,
-      seconds: _seconds
-    } = this.calculateTime()
-
-    this.state = {
-      _day,
-      _hours,
-      _minutes,
-      _seconds
-    }
-  }
-
-  private setTimer(): void {
-    if (!this.timer) this.countdonwn()
-  }
-
-  private clearTimer(): void {
-    if (this.timer) {
-      clearTimeout(this.timer as number)
-      this.timer = 0
-    }
-  }
-
-  private calculateTime(): TimeObject {
-    let [day, hours, minutes, seconds] = [0, 0, 0, 0]
-
-    if (this.seconds > 0) {
-      day = this.props.isShowDay ? Math.floor(this.seconds / (60 * 60 * 24)) : 0
-      hours = this.props.isShowHour
-        ? Math.floor(this.seconds / (60 * 60)) - day * 24
+    if (secondsRef.current > 0) {
+      calcDay = isShowDay ? Math.floor(secondsRef.current / (60 * 60 * 24)) : 0
+      calcHours = isShowHour
+        ? Math.floor(secondsRef.current / (60 * 60)) - calcDay * 24
         : 0
-      minutes = this.props.isShowMinute
-        ? Math.floor(this.seconds / 60) - day * 24 * 60 - hours * 60
+      calcMinutes = isShowMinute
+        ? Math.floor(secondsRef.current / 60) -
+          calcDay * 24 * 60 -
+          calcHours * 60
         : 0
-      seconds =
-        Math.floor(this.seconds) -
-        day * 24 * 60 * 60 -
-        hours * 60 * 60 -
-        minutes * 60
+      calcSeconds =
+        Math.floor(secondsRef.current) -
+        calcDay * 24 * 60 * 60 -
+        calcHours * 60 * 60 -
+        calcMinutes * 60
     }
     return {
-      day,
-      hours,
-      minutes,
-      seconds
+      day: calcDay,
+      hours: calcHours,
+      minutes: calcMinutes,
+      seconds: calcSeconds
     }
-  }
+  }, [isShowDay, isShowHour, isShowMinute])
 
-  private countdonwn(): void {
-    const { day, hours, minutes, seconds } = this.calculateTime()
+  const initialTime = calculateTime()
+  const [_day, setDay] = useState(initialTime.day)
+  const [_hours, setHours] = useState(initialTime.hours)
+  const [_minutes, setMinutes] = useState(initialTime.minutes)
+  const [_seconds, setSeconds] = useState(initialTime.seconds)
 
-    this.setState({
-      _day: day,
-      _hours: hours,
-      _minutes: minutes,
-      _seconds: seconds
-    })
-    this.seconds--
+  const clearTimer = useCallback((): void => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current as number)
+      timerRef.current = 0
+    }
+  }, [])
 
-    if (this.seconds < 0) {
-      this.clearTimer()
-      this.props.onTimeUp && this.props.onTimeUp()
+  const countdown = useCallback((): void => {
+    const {
+      day: calcDay,
+      hours: calcHours,
+      minutes: calcMinutes,
+      seconds: calcSeconds
+    } = calculateTime()
+
+    setDay(calcDay)
+    setHours(calcHours)
+    setMinutes(calcMinutes)
+    setSeconds(calcSeconds)
+    secondsRef.current--
+
+    if (secondsRef.current < 0) {
+      clearTimer()
+      onTimeUp && onTimeUp()
       return
     }
 
-    this.timer = setTimeout(() => {
-      this.countdonwn()
+    timerRef.current = setTimeout(() => {
+      countdown()
     }, 1000)
-  }
+  }, [calculateTime, clearTimer, onTimeUp])
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtCountDownProps): void {
-    if (JSON.stringify(this.props) === JSON.stringify(nextProps)) return
+  const setTimer = useCallback((): void => {
+    if (!timerRef.current) countdown()
+  }, [countdown])
 
-    const { day = 0, hours = 0, minutes = 0, seconds = 0 } = nextProps
-    this.seconds = toSeconds(day, hours, minutes, seconds)
-    this.clearTimer()
-    this.setTimer()
-  }
-
-  public componentDidMount(): void {
-    this.setTimer()
-  }
-
-  public componentWillUnmount(): void {
-    this.clearTimer()
-  }
-
-  public componentDidHide(): void {
-    this.clearTimer()
-  }
-
-  public componentDidShow(): void {
-    this.setTimer()
-  }
-
-  public render(): JSX.Element {
-    const {
-      className,
+  useEffect(() => {
+    propsRef.current = {
       customStyle,
-      format = defaultFormat,
+      className,
+      format,
       isCard,
       isShowDay,
       isShowHour,
-      isShowMinute
-    } = this.props
+      isShowMinute,
+      day,
+      hours,
+      minutes,
+      seconds,
+      onTimeUp
+    }
+  })
 
-    const { _day, _hours, _minutes, _seconds } = this.state
+  useEffect(() => {
+    const nextProps = {
+      customStyle,
+      className,
+      format,
+      isCard,
+      isShowDay,
+      isShowHour,
+      isShowMinute,
+      day,
+      hours,
+      minutes,
+      seconds,
+      onTimeUp
+    }
+    if (!isMountedRef.current) {
+      isMountedRef.current = true
+      propsRef.current = nextProps
+      return
+    }
+    if (JSON.stringify(propsRef.current) === JSON.stringify(nextProps)) return
 
-    return (
-      <View
-        className={classNames(
-          {
-            'at-countdown': true,
-            'at-countdown--card': isCard
-          },
-          className
-        )}
-        style={customStyle}
-      >
-        {isShowDay && (
-          <AtCountdownItem num={_day} separator={format?.day || '天'} />
-        )}
-        {isShowHour && (
-          <AtCountdownItem num={_hours} separator={format?.hours || ''} />
-        )}
-        {isShowMinute && (
-          <AtCountdownItem num={_minutes} separator={format?.minutes || ''} />
-        )}
-        <AtCountdownItem num={_seconds} separator={format?.seconds || ''} />
-      </View>
-    )
-  }
-}
+    propsRef.current = nextProps
+    secondsRef.current = toSeconds(day, hours, minutes, seconds)
+    clearTimer()
+    setTimer()
+  }, [
+    customStyle,
+    className,
+    format,
+    isCard,
+    isShowDay,
+    isShowHour,
+    isShowMinute,
+    day,
+    hours,
+    minutes,
+    seconds,
+    onTimeUp,
+    clearTimer,
+    setTimer
+  ])
 
-AtCountdown.defaultProps = {
-  customStyle: '',
-  className: '',
-  isCard: false,
-  isShowDay: false,
-  isShowHour: true,
-  isShowMinute: true,
-  format: defaultFormat,
-  day: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0
+  useEffect(() => {
+    setTimer()
+    return () => {
+      clearTimer()
+    }
+  }, [setTimer, clearTimer])
+
+  useDidHide(() => {
+    clearTimer()
+  })
+
+  useDidShow(() => {
+    setTimer()
+  })
+
+  return (
+    <View
+      className={classNames(
+        {
+          'at-countdown': true,
+          'at-countdown--card': isCard
+        },
+        className
+      )}
+      style={customStyle}
+    >
+      {isShowDay && (
+        <AtCountdownItem num={_day} separator={format?.day || '天'} />
+      )}
+      {isShowHour && (
+        <AtCountdownItem num={_hours} separator={format?.hours || ''} />
+      )}
+      {isShowMinute && (
+        <AtCountdownItem num={_minutes} separator={format?.minutes || ''} />
+      )}
+      <AtCountdownItem num={_seconds} separator={format?.seconds || ''} />
+    </View>
+  )
 }
 
 AtCountdown.propTypes = {
@@ -205,3 +242,5 @@ AtCountdown.propTypes = {
   seconds: PropTypes.number,
   onTimeUp: PropTypes.func
 }
+
+export default AtCountdown

@@ -10,10 +10,21 @@
 
 ## 迁移状态
 
-| 状态 | 组件 |
+| 状态 | 说明 |
 |------|------|
-| 已完成 | `loading`、`button` |
-| 待迁移 | 其余 `src/components/**/index.tsx` 中仍为 `class` 的组件（约 60+） |
+| **已完成** | `packages/taro-ui/src/components` 下全部 **58** 个组件入口（含子组件）均已改为 Function 组件 |
+| 验证 | `pnpm run build:ui` + `cd packages/taro-ui && pnpm test`（**354** 项测试、**314** 快照） |
+
+`src/components` 内已无 `export default class`。`src/common/component.tsx` 中的 `AtComponent` 基类仍保留（无组件继承，仅对外 export）。
+
+### 分阶段记录（历史）
+
+| 阶段 | 范围 |
+|------|------|
+| PR-1 | 展示类：`divider`、`tag`、`badge`、`progress`、`icon`、`card`、`steps`、`timeline`、`curtain`、`load-more`、`activity-indicator`、`segmented-control`、`form`、`list`、`flex`、`tabs-pane`、`grid`、`rate`、`radio`、`checkbox`、`switch`、`fab`、`nav-bar` 及 modal/action-sheet/countdown/swipe-action 子组件、`avatar` |
+| PR-2 | `input`（`useRef` 保存 `inputClearing`）、`textarea`、`input-number`、`image-picker` |
+| PR-3 | `modal`、`action-sheet`、`accordion`、`drawer`、`float-layout`、`pagination`、`tabs`、`slider`、`range`、`search-bar`、`tab-bar`、`toast`、`message`、`indexes`、`swipe-action`、`noticebar`、`countdown` |
+| PR-4 | `calendar` 子树：`ui/day-list`、`ui/date-list`、`controller`、`body`、`index` |
 
 ## 基本步骤
 

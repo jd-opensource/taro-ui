@@ -268,6 +268,9 @@ function isJSXElement(props, propName, componentName) {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+function noop(): void {}
+
 export {
   delay,
   delayQuerySelector,
@@ -280,5 +283,6 @@ export {
   delayGetClientRect,
   delayGetScrollOffset,
   mergeStyle,
-  isJSXElement
+  isJSXElement,
+  noop
 }
