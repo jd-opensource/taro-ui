@@ -18,11 +18,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x]
     steps:
       - name: 安装 JS 环境
         uses: sxzz/workflows/setup-js@main
         with:
-          node-version: '24.x'
+          node-version: ${{ matrix.node-version }}
       - name: 构建 Taro UI
         run: pnpm --filter taro-ui build
       - name: 测试 Taro UI
