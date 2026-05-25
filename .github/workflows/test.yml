@@ -39,7 +39,7 @@ jobs:
       - run: pnpm install
 
       - name: update
-        run: pnpm test:update
+        run: pnpm --filter taro-ui test:update
 
       - name: test
-        run: pnpm test
+        run: pnpm --filter taro-ui test
