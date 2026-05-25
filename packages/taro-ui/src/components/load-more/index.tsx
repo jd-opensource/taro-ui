@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
+import { CommonEvent } from '@tarojs/components/types/common'
 import { AtLoadMoreProps } from '../../../types/load-more'
 import AtActivityIndicator from '../activity-indicator/index'
 import AtButton from '../button/index'
@@ -17,8 +18,8 @@ function AtLoadMore({
   noMoreText = '没有更多',
   onClick
 }: AtLoadMoreProps): JSX.Element {
-  const handleClick = (): void => {
-    onClick && onClick(arguments as any)
+  const handleClick = (event: CommonEvent): void => {
+    onClick && onClick(event)
   }
 
   let component: JSX.Element | null = null
