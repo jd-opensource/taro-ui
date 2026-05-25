@@ -14,7 +14,8 @@
       "import": "./dist/index.esm.js"
     },
     "./dist/*": "./dist/*",
-    "./dist/style/index.css": "./dist/style/index.css"
+    "./dist/style/index.css": "./dist/style/index.css",
+    "./lib/*": "./dist/*"
   },
   "sideEffects": [
     "*.scss",
