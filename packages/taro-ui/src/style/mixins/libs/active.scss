@@ -1,6 +1,9 @@
 /**
  * 点击态
  */
+
+@use '../../variables/default' as *;
+
 @mixin active {
   transition: background-color 0.3s;
 

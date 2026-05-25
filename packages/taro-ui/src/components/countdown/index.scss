@@ -1,5 +1,5 @@
-@import "../../style/theme/default.scss";
-@import "../../style/mixins/index.scss";
+@use '../../style/variables/default' as *;
+@use '../../style/mixins/index' as *;
 
 @font-face {
   font-family: countDownFont;

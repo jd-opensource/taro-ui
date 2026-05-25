@@ -51,7 +51,7 @@
     "dev": "tsup --watch",
     "build": "node config/iconsMaker.js && tsup && node config/copy-assets.js && pnpm run build:dts && pnpm run build:css",
     "build:dts": "tsc --project tsconfig.build.json --emitDeclarationOnly",
-    "build:css": "node -e \"require('fs').cpSync('src/style', 'dist/style', {recursive:true, force:true})\" && sass --silence-deprecation=import --silence-deprecation=slash-div src/style/index.scss dist/style/index.css",
+    "build:css": "node -e \"require('fs').cpSync('src/style', 'dist/style', {recursive:true, force:true})\" && sass src/style/index.scss dist/style/index.css",
     "lint": "eslint ./src --fix",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
     "lint:style-fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",

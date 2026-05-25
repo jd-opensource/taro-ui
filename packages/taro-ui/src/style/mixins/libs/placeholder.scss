@@ -1,6 +1,9 @@
 /**
  * 设置placeholder 颜色
  */
+
+@use '../../variables/default' as *;
+
 @mixin placeholder($color: $color-grey-3) {
   @at-root .placeholder {
     color: $color;

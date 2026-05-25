@@ -1,5 +1,5 @@
-@import '../variables/default.scss';
-@import '../mixins/index.scss';
+@use '../variables/default' as *;
+@use '../mixins/index' as *;
 
 $component: '.at-textarea';
 $at-textarea-input-height: $at-textarea-font-size * 4;

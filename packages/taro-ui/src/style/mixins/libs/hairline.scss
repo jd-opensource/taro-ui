@@ -2,6 +2,8 @@
  * 默认主题下 $color-border-light
  */
 
+@use '../../variables/default' as *;
+
 @mixin hairline-common() {
   content: '';
   position: absolute;
