@@ -19,6 +19,25 @@ exports[`AtTextarea Snap render AtTextarea -- props className 1`] = `
 </div>
 `;
 
+exports[`AtTextarea Snap render AtTextarea -- props count 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
+
 exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `
 <div
   class="at-textarea at-textarea--WEB"
@@ -38,7 +57,7 @@ exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `
 </div>
 `;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 1`] = `
+exports[`AtTextarea Snap render AtTextarea -- props height 1`] = `
 <div
   class="at-textarea at-textarea--WEB"
 >
@@ -57,7 +76,26 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 1`] = `
 </div>
 `;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 2`] = `
+exports[`AtTextarea Snap render AtTextarea -- props maxLength 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="300"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    300
+  </div>
+</div>
+`;
+
+exports[`AtTextarea Snap render AtTextarea -- props placeholder 1`] = `
 <div
   class="at-textarea at-textarea--WEB"
 >
@@ -65,44 +103,6 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 2`] = `
     class="at-textarea__textarea"
     maxlength="200"
     placeholder="test"
-  />
-  <div
-    class="at-textarea__counter"
-  >
-    0
-    /
-    200
-  </div>
-</div>
-`;
-
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 3`] = `
-<div
-  class="at-textarea at-textarea--WEB"
->
-  <textarea
-    class="at-textarea__textarea"
-    maxlength="200"
-    placeholder=""
-  />
-  <div
-    class="at-textarea__counter"
-  >
-    0
-    /
-    200
-  </div>
-</div>
-`;
-
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 4`] = `
-<div
-  class="at-textarea at-textarea--WEB"
->
-  <textarea
-    class="at-textarea__textarea"
-    maxlength="200"
-    placeholder=""
   />
   <div
     class="at-textarea__counter"

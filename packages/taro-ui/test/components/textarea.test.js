@@ -27,26 +27,26 @@ describe('AtTextarea Snap', () => {
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
+  it('render AtTextarea -- props maxLength', () => {
     const { container: componetContainer } = render(
-      <AtTextarea maxlength='300' />
+      <AtTextarea maxLength={300} />
     )
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
+  it('render AtTextarea -- props placeholder', () => {
     const { container: componetContainer } = render(
       <AtTextarea placeholder='test' />
     )
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
+  it('render AtTextarea -- props count', () => {
     const { container: componetContainer } = render(<AtTextarea count />)
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
+  it('render AtTextarea -- props height', () => {
     const { container: componetContainer } = render(
       <AtTextarea height={3000} />
     )
