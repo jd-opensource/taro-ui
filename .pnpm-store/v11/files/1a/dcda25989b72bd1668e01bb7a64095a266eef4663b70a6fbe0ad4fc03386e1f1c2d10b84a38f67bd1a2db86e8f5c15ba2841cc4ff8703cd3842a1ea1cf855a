@@ -1,0 +1,301 @@
+{
+  "hoistPattern": [
+    "*"
+  ],
+  "included": {
+    "dependencies": true,
+    "devDependencies": true,
+    "optionalDependencies": true
+  },
+  "injectedDeps": {},
+  "layoutVersion": 5,
+  "hoistedLocations": {
+    "v8-compile-cache@2.4.0": [
+      "node_modules/v8-compile-cache"
+    ],
+    "node-gyp@11.5.0": [
+      "node_modules/node-gyp"
+    ],
+    "tar@7.5.12": [
+      "node_modules/tar"
+    ],
+    "proc-log@5.0.0": [
+      "node_modules/proc-log"
+    ],
+    "which@5.0.0": [
+      "node_modules/which"
+    ],
+    "graceful-fs@4.2.11": [
+      "node_modules/graceful-fs"
+    ],
+    "exponential-backoff@3.1.3": [
+      "node_modules/exponential-backoff"
+    ],
+    "env-paths@2.2.1": [
+      "node_modules/env-paths"
+    ],
+    "semver@7.7.4": [
+      "node_modules/semver"
+    ],
+    "nopt@8.1.0": [
+      "node_modules/nopt"
+    ],
+    "make-fetch-happen@14.0.3": [
+      "node_modules/make-fetch-happen"
+    ],
+    "tinyglobby@0.2.15": [
+      "node_modules/tinyglobby"
+    ],
+    "yallist@5.0.0": [
+      "node_modules/yallist"
+    ],
+    "minizlib@3.1.0": [
+      "node_modules/minizlib"
+    ],
+    "minipass@7.1.3": [
+      "node_modules/minipass"
+    ],
+    "@isaacs/fs-minipass@4.0.1": [
+      "node_modules/@isaacs/fs-minipass"
+    ],
+    "chownr@3.0.0": [
+      "node_modules/chownr"
+    ],
+    "isexe@3.1.1": [
+      "node_modules/isexe"
+    ],
+    "abbrev@3.0.1": [
+      "node_modules/abbrev"
+    ],
+    "negotiator@1.0.0": [
+      "node_modules/negotiator"
+    ],
+    "ssri@12.0.0": [
+      "node_modules/ssri"
+    ],
+    "minipass@3.3.6": [
+      "node_modules/minipass-flush/node_modules/minipass",
+      "node_modules/minipass-pipeline/node_modules/minipass",
+      "node_modules/minipass-sized/node_modules/minipass"
+    ],
+    "yallist@4.0.0": [
+      "node_modules/minipass-flush/node_modules/yallist",
+      "node_modules/minipass-pipeline/node_modules/yallist",
+      "node_modules/minipass-sized/node_modules/yallist"
+    ],
+    "cacache@19.0.1": [
+      "node_modules/cacache"
+    ],
+    "minipass-fetch@4.0.1": [
+      "node_modules/minipass-fetch"
+    ],
+    "promise-retry@2.0.1": [
+      "node_modules/promise-retry"
+    ],
+    "@npmcli/agent@3.0.0": [
+      "node_modules/@npmcli/agent"
+    ],
+    "http-cache-semantics@4.2.0": [
+      "node_modules/http-cache-semantics"
+    ],
+    "picomatch@4.0.3": [
+      "node_modules/picomatch"
+    ],
+    "fdir@6.5.0(picomatch@4.0.3)": [
+      "node_modules/fdir"
+    ],
+    "minipass-collect@2.0.1": [
+      "node_modules/minipass-collect"
+    ],
+    "p-map@7.0.4": [
+      "node_modules/p-map"
+    ],
+    "unique-filename@4.0.0": [
+      "node_modules/unique-filename"
+    ],
+    "fs-minipass@3.0.3": [
+      "node_modules/fs-minipass"
+    ],
+    "lru-cache@10.4.3": [
+      "node_modules/lru-cache"
+    ],
+    "glob@10.5.0": [
+      "node_modules/glob"
+    ],
+    "@npmcli/fs@4.0.0": [
+      "node_modules/@npmcli/fs"
+    ],
+    "encoding@0.1.13": [
+      "node_modules/encoding"
+    ],
+    "retry@0.12.0": [
+      "node_modules/retry"
+    ],
+    "err-code@2.0.3": [
+      "node_modules/err-code"
+    ],
+    "agent-base@7.1.4": [
+      "node_modules/agent-base"
+    ],
+    "http-proxy-agent@7.0.2": [
+      "node_modules/http-proxy-agent"
+    ],
+    "https-proxy-agent@7.0.6": [
+      "node_modules/https-proxy-agent"
+    ],
+    "socks-proxy-agent@8.0.5": [
+      "node_modules/socks-proxy-agent"
+    ],
+    "unique-slug@5.0.0": [
+      "node_modules/unique-slug"
+    ],
+    "path-scurry@1.11.1": [
+      "node_modules/path-scurry"
+    ],
+    "package-json-from-dist@1.0.1": [
+      "node_modules/package-json-from-dist"
+    ],
+    "minimatch@9.0.9": [
+      "node_modules/minimatch"
+    ],
+    "foreground-child@3.3.1": [
+      "node_modules/foreground-child"
+    ],
+    "jackspeak@3.4.3": [
+      "node_modules/jackspeak"
+    ],
+    "iconv-lite@0.6.3": [
+      "node_modules/iconv-lite"
+    ],
+    "debug@4.4.3": [
+      "node_modules/debug"
+    ],
+    "socks@2.8.7": [
+      "node_modules/socks"
+    ],
+    "imurmurhash@0.1.4": [
+      "node_modules/imurmurhash"
+    ],
+    "brace-expansion@2.0.2": [
+      "node_modules/brace-expansion"
+    ],
+    "signal-exit@4.1.0": [
+      "node_modules/signal-exit"
+    ],
+    "which@2.0.2": [
+      "node_modules/cross-spawn/node_modules/which"
+    ],
+    "isexe@2.0.0": [
+      "node_modules/cross-spawn/node_modules/isexe"
+    ],
+    "@isaacs/cliui@8.0.2": [
+      "node_modules/@isaacs/cliui"
+    ],
+    "@pkgjs/parseargs@0.11.0": [
+      "node_modules/@pkgjs/parseargs"
+    ],
+    "safer-buffer@2.1.2": [
+      "node_modules/safer-buffer"
+    ],
+    "ms@2.1.3": [
+      "node_modules/ms"
+    ],
+    "smart-buffer@4.2.0": [
+      "node_modules/smart-buffer"
+    ],
+    "ip-address@10.1.0": [
+      "node_modules/ip-address"
+    ],
+    "balanced-match@1.0.2": [
+      "node_modules/balanced-match"
+    ],
+    "shebang-command@2.0.0": [
+      "node_modules/shebang-command"
+    ],
+    "path-key@3.1.1": [
+      "node_modules/path-key"
+    ],
+    "wrap-ansi@8.1.0": [
+      "node_modules/wrap-ansi"
+    ],
+    "strip-ansi@6.0.1": [
+      "node_modules/wrap-ansi-cjs/node_modules/strip-ansi",
+      "node_modules/string-width-cjs/node_modules/strip-ansi",
+      "node_modules/strip-ansi-cjs"
+    ],
+    "string-width@4.2.3": [
+      "node_modules/wrap-ansi-cjs/node_modules/string-width",
+      "node_modules/string-width-cjs"
+    ],
+    "ansi-styles@4.3.0": [
+      "node_modules/wrap-ansi-cjs/node_modules/ansi-styles"
+    ],
+    "ansi-regex@5.0.1": [
+      "node_modules/wrap-ansi-cjs/node_modules/ansi-regex",
+      "node_modules/string-width-cjs/node_modules/ansi-regex",
+      "node_modules/strip-ansi-cjs/node_modules/ansi-regex"
+    ],
+    "emoji-regex@8.0.0": [
+      "node_modules/wrap-ansi-cjs/node_modules/emoji-regex",
+      "node_modules/string-width-cjs/node_modules/emoji-regex"
+    ],
+    "string-width@5.1.2": [
+      "node_modules/string-width"
+    ],
+    "strip-ansi@7.2.0": [
+      "node_modules/strip-ansi"
+    ],
+    "shebang-regex@3.0.0": [
+      "node_modules/shebang-regex"
+    ],
+    "ansi-styles@6.2.3": [
+      "node_modules/ansi-styles"
+    ],
+    "is-fullwidth-code-point@3.0.0": [
+      "node_modules/is-fullwidth-code-point"
+    ],
+    "color-convert@2.0.1": [
+      "node_modules/color-convert"
+    ],
+    "emoji-regex@9.2.2": [
+      "node_modules/emoji-regex"
+    ],
+    "eastasianwidth@0.2.0": [
+      "node_modules/eastasianwidth"
+    ],
+    "ansi-regex@6.2.2": [
+      "node_modules/ansi-regex"
+    ],
+    "color-name@1.1.4": [
+      "node_modules/color-name"
+    ],
+    "minipass-flush@1.0.5": [
+      "node_modules/minipass-flush"
+    ],
+    "minipass-pipeline@1.2.4": [
+      "node_modules/minipass-pipeline"
+    ],
+    "minipass-sized@1.0.3": [
+      "node_modules/minipass-sized"
+    ],
+    "cross-spawn@7.0.6": [
+      "node_modules/cross-spawn"
+    ],
+    "wrap-ansi@7.0.0": [
+      "node_modules/wrap-ansi-cjs"
+    ]
+  },
+  "nodeLinker": "hoisted",
+  "packageManager": "pnpm@10.32.1",
+  "pendingBuilds": [],
+  "publicHoistPattern": [],
+  "prunedAt": "Tue, 24 Mar 2026 16:40:49 GMT",
+  "registries": {
+    "default": "https://registry.npmjs.org/",
+    "@jsr": "https://npm.jsr.io/"
+  },
+  "skipped": [],
+  "storeDir": "/home/runner/setup-pnpm/node_modules/.bin/store/v10",
+  "virtualStoreDir": ".pnpm",
+  "virtualStoreDirMaxLength": 120
+}
