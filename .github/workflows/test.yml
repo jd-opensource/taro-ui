@@ -19,12 +19,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup JS
+      - name: 安装 JS 环境
         uses: sxzz/workflows/setup-js@main
         with:
           node-version: '24.x'
-      - name: Build Taro UI
+      - name: 构建 Taro UI
         run: pnpm --filter taro-ui build
-
-      - name: Test Taro UI
+      - name: 测试 Taro UI
         run: pnpm --filter taro-ui test
