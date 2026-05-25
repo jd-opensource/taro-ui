@@ -16,7 +16,7 @@ exports[`AtFab Snap render AtFab -- props className 1`] = `
 </div>
 `;
 
-exports[`AtFab Snap render AtFab -- size 50 1`] = `
+exports[`AtFab Snap render AtFab -- props size small 1`] = `
 <div
   class="at-fab at-fab--small"
 >
