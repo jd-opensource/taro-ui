@@ -137,51 +137,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props customStyle 1`] = `
 
 exports[`AtSearchBar Snap render AtSearchBar -- props disabled 1`] = `
 <div
-  class="at-search-bar at-search-bar--fixed"
->
-  <div
-    class="at-search-bar__input-cnt"
-  >
-    <div
-      class="at-search-bar__placeholder-wrap"
-      style="flex-grow: 1;"
-    >
-      <span
-        class="at-icon at-icon-search"
-      />
-      <span
-        class="at-search-bar__placeholder"
-        style="visibility: visible;"
-      >
-        搜索
-      </span>
-    </div>
-    <input
-      class="at-search-bar__input"
-      maxlength="140"
-      type="text"
-      value=""
-    />
-    <div
-      class="at-search-bar__clear"
-      style="display: none;"
-    >
-      <span
-        class="at-icon at-icon-close-circle"
-      />
-    </div>
-  </div>
-  <div
-    class="at-search-bar__action"
-    style="opacity: 0; margin-right: -59px;"
-  >
-    搜索
-  </div>
-</div>
-`;
-
-exports[`AtSearchBar Snap render AtSearchBar -- props disabled 2`] = `
-<div
   class="at-search-bar"
 >
   <div
@@ -204,6 +159,51 @@ exports[`AtSearchBar Snap render AtSearchBar -- props disabled 2`] = `
     <input
       class="at-search-bar__input"
       disabled=""
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
+
+exports[`AtSearchBar Snap render AtSearchBar -- props fixed 1`] = `
+<div
+  class="at-search-bar at-search-bar--fixed"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
       maxlength="140"
       type="text"
       value=""
@@ -314,7 +314,7 @@ exports[`AtSearchBar Snap render AtSearchBar -- props inputType number 1`] = `
 </div>
 `;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props maxlength 1`] = `
+exports[`AtSearchBar Snap render AtSearchBar -- props maxLength 1`] = `
 <div
   class="at-search-bar"
 >
@@ -337,7 +337,7 @@ exports[`AtSearchBar Snap render AtSearchBar -- props maxlength 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      maxlength="140"
+      maxlength="120"
       type="text"
       value=""
     />

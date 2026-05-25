@@ -36,14 +36,14 @@ describe('AtSearchBar Snap', () => {
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtSearchBar -- props maxlength', () => {
+  it('render AtSearchBar -- props maxLength', () => {
     const { container: componetContainer } = render(
-      <AtSearchBar maxlength={120} />
+      <AtSearchBar maxLength={120} />
     )
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtSearchBar -- props disabled', () => {
+  it('render AtSearchBar -- props fixed', () => {
     const { container: componetContainer } = render(<AtSearchBar fixed />)
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
