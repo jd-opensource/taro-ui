@@ -229,6 +229,7 @@ exports[`Grid Snap render image Grid 1`] = `
           >
             <span
               class="at-icon at-icon-bookmark"
+              style="color: red; font-size: 30px;"
             />
           </div>
           <span
@@ -373,6 +374,7 @@ exports[`Grid Snap render no border of image Grid 1`] = `
           >
             <span
               class="at-icon at-icon-bookmark"
+              style="color: red; font-size: 30px;"
             />
           </div>
           <span
@@ -711,6 +713,7 @@ exports[`Grid Snap render rect image Grid 1`] = `
           >
             <span
               class="at-icon at-icon-bookmark"
+              style="color: red; font-size: 30px;"
             />
           </div>
           <span

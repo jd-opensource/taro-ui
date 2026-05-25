@@ -46,6 +46,7 @@ exports[`AtDivider Snap render AtDivider -- props content 1`] = `
 exports[`AtDivider Snap render AtDivider -- props customStyle 1`] = `
 <div
   class="at-divider"
+  style="color: red;"
 >
   <div
     class="at-divider__content"
@@ -87,6 +88,7 @@ exports[`AtDivider Snap render AtDivider -- props fontSize 1`] = `
 exports[`AtDivider Snap render AtDivider -- props height 1`] = `
 <div
   class="at-divider"
+  style="height: 120px;"
 >
   <div
     class="at-divider__content"

@@ -351,6 +351,7 @@ exports[`List Snap render completed List 1`] = `
       >
         <span
           class="at-icon at-icon-calendar"
+          style="color: rgb(120, 164, 250); font-size: 25px;"
         />
       </div>
       <div

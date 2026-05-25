@@ -39,6 +39,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props className 1`] = `
 exports[`AtImagePicker Snap render AtImagePicker -- props customStyle 1`] = `
 <div
   class="at-image-picker"
+  style="color: red;"
 >
   <div
     class="at-image-picker__flex-box"

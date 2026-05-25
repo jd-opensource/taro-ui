@@ -3,6 +3,7 @@
 exports[`AtTabBar Snap render AtTabBar -- props backgroundColor 1`] = `
 <div
   class="at-tab-bar"
+  style="background-color: red;"
 />
 `;
 
@@ -282,6 +283,7 @@ exports[`AtTabBar Snap render AtTabBar -- props current 1`] = `
 exports[`AtTabBar Snap render AtTabBar -- props customStyle 1`] = `
 <div
   class="at-tab-bar"
+  style="color: red;"
 />
 `;
 

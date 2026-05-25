@@ -93,6 +93,7 @@ exports[`AtSearchBar Snap render AtSearchBar -- props className 1`] = `
 exports[`AtSearchBar Snap render AtSearchBar -- props customStyle 1`] = `
 <div
   class="at-search-bar"
+  style="color: red;"
 >
   <div
     class="at-search-bar__input-cnt"

@@ -9,6 +9,7 @@ exports[`AtTabsPane Snap render AtTabsPane -- props className 1`] = `
 exports[`AtTabsPane Snap render AtTabsPane -- props customStyle 1`] = `
 <div
   class="at-tabs-pane at-tabs-pane--active"
+  style="color: red;"
 />
 `;
 

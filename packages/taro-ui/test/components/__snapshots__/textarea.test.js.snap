@@ -41,6 +41,7 @@ exports[`AtTextarea Snap render AtTextarea -- props count 1`] = `
 exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `
 <div
   class="at-textarea at-textarea--WEB"
+  style="color: red;"
 >
   <textarea
     class="at-textarea__textarea"
@@ -65,6 +66,7 @@ exports[`AtTextarea Snap render AtTextarea -- props height 1`] = `
     class="at-textarea__textarea"
     maxlength="200"
     placeholder=""
+    style="height: 3000px;"
   />
   <div
     class="at-textarea__counter"

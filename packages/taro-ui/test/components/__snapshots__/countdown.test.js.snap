@@ -204,6 +204,7 @@ exports[`AtCountDown Snap render AtCountDown -- props className 1`] = `
 exports[`AtCountDown Snap render AtCountDown -- props className 2`] = `
 <div
   class="at-countdown"
+  style="color: red;"
 >
   <div
     class="at-countdown__item"

@@ -59,6 +59,7 @@ exports[`AtSegmentedControl Snap render AtSegmentedControl -- props current 1`] 
 exports[`AtSegmentedControl Snap render AtSegmentedControl -- props customStyle 1`] = `
 <div
   class="at-segmented-control"
+  style="color: red;"
 />
 `;
 
@@ -115,6 +116,7 @@ exports[`AtSegmentedControl Snap render AtSegmentedControl -- props fontSize 1`]
 exports[`AtSegmentedControl Snap render AtSegmentedControl -- props selectedColor 1`] = `
 <div
   class="at-segmented-control"
+  style="border-color: #fff;"
 >
   <div
     class="at-segmented-control__item at-segmented-control__item--active"

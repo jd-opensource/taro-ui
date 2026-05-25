@@ -9,6 +9,7 @@ exports[`AtMessage Snap render AtMessage -- props className 1`] = `
 exports[`AtMessage Snap render AtMessage -- props customStyle 1`] = `
 <div
   class="at-message at-message--hidden at-message--info"
+  style="color: red;"
 />
 `;
 

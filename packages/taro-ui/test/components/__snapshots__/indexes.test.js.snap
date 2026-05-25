@@ -80,6 +80,7 @@ exports[`AtIndexes Snap render AtIndexes -- props className 1`] = `
 exports[`AtIndexes Snap render AtIndexes -- props customStyle 1`] = `
 <div
   class="at-indexes"
+  style="color: red;"
 >
   <div
     class="at-indexes__menu"

@@ -59,6 +59,7 @@ exports[`AtCurtain Snap render AtCurtain -- props closeBtnPosition 2`] = `
 exports[`AtCurtain Snap render AtCurtain -- props customStyle 1`] = `
 <div
   class="at-curtain at-curtain--closed"
+  style="color: red;"
 >
   <div
     class="at-curtain__container"

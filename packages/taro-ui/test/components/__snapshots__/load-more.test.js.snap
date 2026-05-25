@@ -27,6 +27,7 @@ exports[`AtLoadMore Snap render AtLoadMore -- props className 1`] = `
 exports[`AtLoadMore Snap render AtLoadMore -- props customStyle 1`] = `
 <div
   class="at-load-more"
+  style="color: red;"
 >
   <div
     class="at-load-more__cnt"
@@ -90,6 +91,7 @@ exports[`AtLoadMore Snap render AtLoadMore -- props moreBtnStyle 1`] = `
   >
     <div
       class="at-button at-button--normal at-button--full"
+      style="color: red;"
     >
       <button
         class="at-button__wxbutton"

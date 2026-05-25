@@ -119,6 +119,7 @@ exports[`AtTabs Snap render AtTabs -- props current 1`] = `
 exports[`AtTabs Snap render AtTabs -- props customStyle 1`] = `
 <div
   class="at-tabs at-tabs--horizontal at-tabs--WEB"
+  style="color: red;"
 >
   <div
     class="at-tabs__header"
@@ -139,6 +140,7 @@ exports[`AtTabs Snap render AtTabs -- props customStyle 1`] = `
 exports[`AtTabs Snap render AtTabs -- props height 1`] = `
 <div
   class="at-tabs at-tabs--vertical at-tabs--WEB"
+  style="height: 300px;"
 >
   <div
     class="at-tabs__header"

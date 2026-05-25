@@ -103,6 +103,7 @@ exports[`AtSteps Snap render AtSteps -- props current 1`] = `
 exports[`AtSteps Snap render AtSteps -- props customStyle 1`] = `
 <div
   class="at-steps"
+  style="color: red;"
 />
 `;
 

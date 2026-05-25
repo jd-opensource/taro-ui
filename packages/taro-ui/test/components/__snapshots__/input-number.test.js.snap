@@ -29,6 +29,7 @@ exports[`AtInputNumber Snap render AtInputNumber -- props className 1`] = `
 exports[`AtInputNumber Snap render AtInputNumber -- props customStyle 1`] = `
 <div
   class="at-input-number"
+  style="color: red;"
 >
   <div
     class="at-input-number__btn"

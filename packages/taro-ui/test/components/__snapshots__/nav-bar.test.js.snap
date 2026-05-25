@@ -60,6 +60,7 @@ exports[`AtNavBar Snap render AtNavBar -- props color 1`] = `
 exports[`AtNavBar Snap render AtNavBar -- props customStyle 1`] = `
 <div
   class="at-nav-bar"
+  style="color: red;"
 >
   <div
     class="at-nav-bar__left-view"
@@ -120,6 +121,7 @@ exports[`AtNavBar Snap render AtNavBar -- props leftIconType 1`] = `
   >
     <span
       class="at-icon at-icon-test"
+      style="font-size: 48px;"
     />
     <span
       class="at-nav-bar__text"
@@ -150,6 +152,7 @@ exports[`AtNavBar Snap render AtNavBar -- props leftIconType 2`] = `
   >
     <span
       class="at-icon at-icon-test"
+      style="color: red; font-size: 72px;"
     />
     <span
       class="at-nav-bar__text"
@@ -254,6 +257,7 @@ exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 1`] = `
     >
       <span
         class="at-icon at-icon-test"
+        style="font-size: 48px;"
       />
     </div>
   </div>
@@ -285,6 +289,7 @@ exports[`AtNavBar Snap render AtNavBar -- props rightFirstIconType 2`] = `
     >
       <span
         class="at-icon at-icon-test"
+        style="color: red; font-size: 72px;"
       />
     </div>
   </div>
@@ -313,6 +318,7 @@ exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 1`] = `
     >
       <span
         class="at-icon at-icon-test"
+        style="font-size: 48px;"
       />
     </div>
     <div
@@ -344,6 +350,7 @@ exports[`AtNavBar Snap render AtNavBar -- props rightSecondIconType 2`] = `
     >
       <span
         class="at-icon at-icon-test"
+        style="color: red; font-size: 72px;"
       />
     </div>
     <div

@@ -1,10 +1,58 @@
 const React = require('react')
 
-function normalizeStyle(style) {
-  if (!style || typeof style === 'string') {
+function toCamelCase(prop) {
+  return prop.replace(/-([a-z])/g, (_, char) => char.toUpperCase())
+}
+
+function parseStyleString(style) {
+  const trimmed = style.trim()
+  if (!trimmed) {
     return undefined
   }
-  return style
+
+  const result = {}
+
+  trimmed.split(';').forEach(declaration => {
+    const colonIndex = declaration.indexOf(':')
+    if (colonIndex === -1) {
+      return
+    }
+
+    const prop = declaration.slice(0, colonIndex).trim()
+    const value = declaration.slice(colonIndex + 1).trim()
+
+    if (prop && value) {
+      result[toCamelCase(prop)] = value
+    }
+  })
+
+  return Object.keys(result).length ? result : undefined
+}
+
+function normalizeStyle(style) {
+  if (!style) {
+    return undefined
+  }
+
+  if (typeof style === 'string') {
+    return parseStyleString(style)
+  }
+
+  if (typeof style === 'object') {
+    return style
+  }
+
+  return undefined
+}
+
+function applyNormalizedStyle(domProps) {
+  const normalizedStyle = normalizeStyle(domProps.style)
+
+  if (normalizedStyle !== undefined) {
+    domProps.style = normalizedStyle
+  } else {
+    delete domProps.style
+  }
 }
 
 const TARO_PROPS = new Set([
@@ -162,13 +210,7 @@ function createHostComponent(tag, options = {}) {
   const Comp = React.forwardRef(function HostComponent(props, ref) {
     const { children, ...rest } = props
     const domProps = sanitizeDomProps(rest, options)
-    const normalizedStyle = normalizeStyle(domProps.style)
-
-    if (normalizedStyle !== undefined) {
-      domProps.style = normalizedStyle
-    } else {
-      delete domProps.style
-    }
+    applyNormalizedStyle(domProps)
 
     if (options.input) {
       domProps.type = domProps.type || (tag === 'textarea' ? undefined : 'text')
@@ -185,6 +227,7 @@ const Text = createHostComponent('span')
 const Button = createHostComponent('button')
 const Image = ({ src, className, style, alt, ...rest }) => {
   const domProps = sanitizeDomProps({ src, className, style, alt, ...rest })
+  applyNormalizedStyle(domProps)
   return React.createElement('img', domProps)
 }
 const Input = createHostComponent('input', { input: true })
@@ -205,6 +248,7 @@ function Switch({ checked, onChange, className, onClick, disabled, ...rest }) {
     { className, checked: !!checked, disabled, ...rest },
     { input: true }
   )
+  applyNormalizedStyle(domProps)
 
   const emitChange = (nextChecked, nativeEvent) => {
     if (onChange) {
