@@ -22,17 +22,11 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [18.x]
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - name: Setup JS
+        uses: sxzz/workflows/setup-js@main
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
 
       - run: pnpm start
 
