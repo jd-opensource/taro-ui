@@ -23,11 +23,11 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - name: 安装 JS 环境
+      - name: Setup JS
         uses: sxzz/workflows/setup-js@main
         with:
           node-version: ${{ matrix.node-version }}
-      - name: 构建 Taro UI
+      - name: Build Taro UI
         run: pnpm --filter taro-ui build
-      - name: 测试 Taro UI
+      - name: Test Taro UI
         run: pnpm --filter taro-ui test
