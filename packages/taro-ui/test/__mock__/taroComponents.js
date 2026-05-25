@@ -244,8 +244,9 @@ const Label = createHostComponent('label')
 const OpenData = createHostComponent('div')
 
 function Switch({ checked, onChange, className, onClick, disabled, ...rest }) {
+  const isChecked = !!checked
   const domProps = sanitizeDomProps(
-    { className, checked: !!checked, disabled, ...rest },
+    { className, checked: isChecked, disabled, ...rest },
     { input: true }
   )
   applyNormalizedStyle(domProps)
@@ -263,12 +264,21 @@ function Switch({ checked, onChange, className, onClick, disabled, ...rest }) {
     ...domProps,
     type: 'checkbox',
     onChange: event => {
+      if (disabled) {
+        return
+      }
       emitChange(event.target.checked, event)
     },
     onClick: event => {
       if (onClick) {
         onClick(event)
       }
+      if (disabled) {
+        return
+      }
+      // fireEvent.click in jsdom does not reliably toggle checkbox / fire change
+      event.preventDefault()
+      emitChange(!isChecked, event)
     }
   })
 }
