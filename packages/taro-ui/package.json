@@ -13,9 +13,18 @@
       "require": "./dist/index.js",
       "import": "./dist/index.esm.js"
     },
-    "./dist/*": "./dist/*",
+    "./dist/components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "require": "./dist/components/*/index.js",
+      "import": "./dist/components/*/index.js"
+    },
+    "./lib/components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "require": "./dist/components/*/index.js",
+      "import": "./dist/components/*/index.js"
+    },
     "./dist/style/index.css": "./dist/style/index.css",
-    "./lib/*": "./dist/*"
+    "./dist/*": "./dist/*"
   },
   "sideEffects": [
     "*.scss",
