@@ -29,7 +29,7 @@ jobs:
       - name: Setup JS
         uses: sxzz/workflows/setup-js@main
         with:
-          fetch-all: true
+          node-version: '24.x'
 
       - name: build
         run: pnpm build
