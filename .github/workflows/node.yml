@@ -24,7 +24,7 @@ jobs:
         node-version: [18.x]
     steps:
       - name: Setup JS
-        uses: sxzz/workflows/setup-js@main
+        uses: sxzz/workflows/setup-js@866f46ed892502b45a58ba4de02987123ccf8e17
         with:
           node-version: ${{ matrix.node-version }}
 
