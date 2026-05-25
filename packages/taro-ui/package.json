@@ -2,25 +2,43 @@
   "name": "taro-ui",
   "version": "3.3.2",
   "description": "UI KIT for Taro",
-  "module": "lib/index.js",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "style": "dist/style/index.css",
   "source": "src/index.ts",
   "react-native": "rn/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js"
+    },
+    "./dist/components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "require": "./dist/components/*/index.js",
+      "import": "./dist/components/*/index.js"
+    },
+    "./lib/components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "require": "./dist/components/*/index.js",
+      "import": "./dist/components/*/index.js"
+    },
+    "./dist/style/index.css": "./dist/style/index.css",
+    "./dist/*": "./dist/*"
+  },
   "sideEffects": [
     "*.scss",
     "*.css"
   ],
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "keywords": [
     "taro",
     "taro-ui",
     "ui"
   ],
   "files": [
-    "lib",
-    "rn",
-    "dist"
+    "dist",
+    "rn"
   ],
   "author": "O2Team <aotu.io>",
   "homepage": "https://jd-opensource.github.io/taro-ui/#/",
@@ -32,13 +50,12 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "node config/iconsMaker.js && tsup && node config/copy-assets.js && pnpm run build:dts && pnpm run build:css",
-    "build:lib": "tsup && pnpm run build:dts",
     "build:dts": "tsc --project tsconfig.build.json --emitDeclarationOnly",
     "build:css": "node -e \"require('fs').cpSync('src/style', 'dist/style', {recursive:true, force:true})\" && sass --silence-deprecation=import --silence-deprecation=slash-div src/style/index.scss dist/style/index.css",
     "lint": "eslint ./src --fix",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
     "lint:style-fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
-    "pretest": "pnpm run build:lib",
+    "pretest": "pnpm run build",
     "test": "cross-env NODE_ENV=test pnpm exec jest --coverage",
     "test:ci": "pnpm run test",
     "test:update": "cross-env NODE_ENV=test pnpm exec jest --updateSnapshot",

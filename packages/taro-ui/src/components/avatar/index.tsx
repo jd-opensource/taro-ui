@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes, { InferProps } from 'prop-types'
 import React from 'react'
 import { Image, Text, View } from '@tarojs/components'
+import * as TaroComponents from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { AtAvatarProps, AtAvatarState } from '../../../types/avatar'
 
@@ -44,8 +45,8 @@ export default class AtAvatar extends React.Component<
       this.state.isWEAPP &&
       Taro.canIUse('open-data')
     ) {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const OpenData = require('@tarojs/components').OpenData
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const OpenData = (TaroComponents as any).OpenData
       elem = <OpenData type={openData.type}></OpenData>
     } else if (image) {
       elem = <Image className='at-avatar__img' src={image} />

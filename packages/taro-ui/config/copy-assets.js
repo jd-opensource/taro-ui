@@ -15,4 +15,4 @@ function copyAssets(srcDir, dstDir) {
   }
 }
 
-copyAssets('src', 'lib')
+copyAssets('src', 'dist')

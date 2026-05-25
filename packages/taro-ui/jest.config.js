@@ -10,10 +10,11 @@ module.exports = {
   },
   transformIgnorePatterns: ['/node_modules/(?!(@tarojs)/)'],
   moduleNameMapper: {
+    '^(\\.\\./)+lib/(.*)$': '<rootDir>/dist/$2',
     '@tarojs/taro': '<rootDir>/test/__mock__/taro.js',
     '@tarojs/components': '<rootDir>/test/__mock__/taroComponents.js',
     '\\.(css|less|sass|scss)$': '<rootDir>/test/__mock__/styleMock.js',
     '\\.json$': '<rootDir>/test/__mock__/jsonMock.js'
   },
-  collectCoverageFrom: ['lib/components/**/*.{js,jsx}', '!lib/**/*.d.ts']
+  collectCoverageFrom: ['dist/components/**/*.{js,jsx}', '!dist/**/*.d.ts']
 }
