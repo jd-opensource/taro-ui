@@ -4,17 +4,17 @@ exports[`SwipeAction Snap render options -- isOpened 1`] = `
 <div
   class="at-swipe-action swipe-action--test"
   id="swipeAction-FHJLNPBD"
-  style="width: 0px;"
+  style="width: 375px;"
 >
   <div
     class="at-swipe-action__area"
-    style="width: 0px;"
+    style="width: 375px;"
   >
     <div
       class="at-swipe-action__content"
-      damping="50"
       direction="horizontal"
-      style="width: 0px;"
+      disabled=""
+      style="width: 375px;"
       x="0"
     >
       <div
@@ -57,17 +57,17 @@ exports[`SwipeAction Snap render options 1`] = `
 <div
   class="at-swipe-action swipe-action--test"
   id="swipeAction-FHJLNPBD"
-  style="width: 0px;"
+  style="width: 375px;"
 >
   <div
     class="at-swipe-action__area"
-    style="width: 0px;"
+    style="width: 375px;"
   >
     <div
       class="at-swipe-action__content"
-      damping="50"
       direction="horizontal"
-      style="width: 0px;"
+      disabled=""
+      style="width: 375px;"
       x="0"
     >
       <div

@@ -6,12 +6,8 @@ exports[`AtTextarea Snap render AtTextarea -- props className 1`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -29,12 +25,8 @@ exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -52,12 +44,8 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 1`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -75,12 +63,8 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 2`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder="test"
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -98,12 +82,8 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 3`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -121,12 +101,8 @@ exports[`AtTextarea Snap render AtTextarea -- props maxlength 4`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"
@@ -144,12 +120,8 @@ exports[`AtTextarea Snap render AtTextarea -- props value 1`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   >
     test
   </textarea>
@@ -169,12 +141,8 @@ exports[`AtTextarea Snap render initial AtTextarea 1`] = `
 >
   <textarea
     class="at-textarea__textarea"
-    cursorspacing="100"
     maxlength="200"
     placeholder=""
-    placeholderclass="placeholder"
-    selectionend="-1"
-    selectionstart="-1"
   />
   <div
     class="at-textarea__counter"

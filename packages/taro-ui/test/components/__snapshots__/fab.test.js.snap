@@ -18,7 +18,7 @@ exports[`AtFab Snap render AtFab -- props className 1`] = `
 
 exports[`AtFab Snap render AtFab -- size 50 1`] = `
 <div
-  class="at-fab at-fab--50"
+  class="at-fab at-fab--small"
 >
   按钮
 </div>

@@ -33,9 +33,7 @@ exports[`Toast Snap render opened  Toast -- props image 1`] = `
         class="toast-body-content__img"
       >
         <img
-          alt=""
           class="toast-body-content__img-item"
-          mode="scaleToFill"
           src="http://storage.360buyimg.com/mtd/home/group-21533885306540.png"
         />
       </div>

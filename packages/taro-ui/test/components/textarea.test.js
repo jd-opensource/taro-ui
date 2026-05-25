@@ -42,7 +42,7 @@ describe('AtTextarea Snap', () => {
   })
 
   it('render AtTextarea -- props maxlength', () => {
-    const { container: componetContainer } = render(<AtTextarea count={3000} />)
+    const { container: componetContainer } = render(<AtTextarea count />)
     expect(componetContainer.firstChild).toMatchSnapshot()
   })
 

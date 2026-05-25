@@ -46,19 +46,19 @@ describe('AtIndexes Snap', () => {
             name: '阿里'
           },
           {
-            name: '阿拉善'
+            name: '阿拉善左旗'
           },
           {
-            name: '阿拉善'
+            name: '阿拉善右旗'
           },
           {
-            name: '阿拉善'
+            name: '阿拉善盟'
           },
           {
-            name: '阿拉善'
+            name: '阿拉善高新区'
           },
           {
-            name: '阿拉善'
+            name: '阿拉善经济开发区'
           }
         ]
       },

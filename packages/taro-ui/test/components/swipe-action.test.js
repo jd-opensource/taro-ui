@@ -22,7 +22,7 @@ const OPTIONS = [
 ]
 
 describe('SwipeAction Snap', () => {
-  it('render options', () => {
+  it('render options', async () => {
     const { container } = render(
       <AtSwipeAction
         disabled
@@ -34,10 +34,13 @@ describe('SwipeAction Snap', () => {
       </AtSwipeAction>
     )
 
+    await waitFor(() => {
+      expect(queryByClass(container, 'at-swipe-action')).toBeTruthy()
+    })
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  it('render options -- isOpened', () => {
+  it('render options -- isOpened', async () => {
     const { container } = render(
       <AtSwipeAction
         isOpened
@@ -49,6 +52,10 @@ describe('SwipeAction Snap', () => {
         <View className='normal'>AtSwipeAction 一般使用场景</View>
       </AtSwipeAction>
     )
+
+    await waitFor(() => {
+      expect(queryByClass(container, 'at-swipe-action')).toBeTruthy()
+    })
     expect(container.firstChild).toMatchSnapshot()
   })
 })

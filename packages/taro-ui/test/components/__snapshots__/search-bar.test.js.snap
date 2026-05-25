@@ -23,7 +23,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props actionName 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -69,7 +68,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props className 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -115,7 +113,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props customStyle 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -161,7 +158,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props disabled 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -207,7 +203,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props disabled 2`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       disabled=""
       maxlength="140"
       type="text"
@@ -252,7 +247,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props focus 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -298,7 +292,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props inputType number 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="number"
       value=""
@@ -344,7 +337,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props maxlength 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -390,7 +382,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props placeholder 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -436,7 +427,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props showActionButton 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""
@@ -482,7 +472,6 @@ exports[`AtSearchBar Snap render AtSearchBar -- props value 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value="value"
@@ -528,7 +517,6 @@ exports[`AtSearchBar Snap render initial AtSearchBar 1`] = `
     </div>
     <input
       class="at-search-bar__input"
-      confirmtype="search"
       maxlength="140"
       type="text"
       value=""

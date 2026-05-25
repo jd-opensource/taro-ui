@@ -15,7 +15,7 @@ describe('AtFab Snap', () => {
   })
 
   it('render AtFab -- size 50', () => {
-    const { container } = render(<AtFab size={50}>按钮</AtFab>)
+    const { container } = render(<AtFab size='small'>按钮</AtFab>)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

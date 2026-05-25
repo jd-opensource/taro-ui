@@ -57,7 +57,7 @@ describe('AtTabBar Snap', () => {
 
   it('render AtTabBar -- props current', () => {
     const { container: componetContainer } = render(
-      <AtTabBar current='2' tabList={tabList} />
+      <AtTabBar current={2} tabList={tabList} />
     )
     expect(componetContainer.firstChild).toMatchSnapshot()
   })

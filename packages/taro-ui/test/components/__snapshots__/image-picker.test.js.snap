@@ -89,9 +89,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props files 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -106,9 +104,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props files 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg"
         />
       </div>
@@ -123,9 +119,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props files 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -140,9 +134,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props files 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -161,9 +153,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props files 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -211,9 +201,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props length 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -228,9 +216,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props length 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg"
         />
       </div>
@@ -245,9 +231,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props length 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -262,9 +246,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props length 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -279,9 +261,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props length 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -339,9 +319,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props mode 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="top"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -356,9 +334,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props mode 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="top"
           src="https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg"
         />
       </div>
@@ -373,9 +349,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props mode 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="top"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -390,9 +364,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props mode 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="top"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -411,9 +383,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props mode 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="top"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -497,9 +467,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props showAddBtn 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -514,9 +482,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props showAddBtn 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg"
         />
       </div>
@@ -531,9 +497,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props showAddBtn 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -548,9 +512,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props showAddBtn 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>
@@ -569,9 +531,7 @@ exports[`AtImagePicker Snap render AtImagePicker -- props showAddBtn 1`] = `
           class="at-image-picker__remove-btn"
         />
         <img
-          alt=""
           class="at-image-picker__preview-img"
-          mode="aspectFill"
           src="https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg"
         />
       </div>

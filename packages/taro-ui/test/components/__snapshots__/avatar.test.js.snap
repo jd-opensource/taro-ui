@@ -15,7 +15,6 @@ exports[`Avatar Snap render Avatar -- props image 1`] = `
   class="at-avatar at-avatar--normal"
 >
   <img
-    alt=""
     class="at-avatar__img"
     src="https://jdc.jd.com/img/100"
   />

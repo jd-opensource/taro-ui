@@ -191,9 +191,6 @@ exports[`AtTabs Snap render AtTabs -- props scroll 1`] = `
   <div
     class="at-tabs__header"
     id="tabs-AOTU2018"
-    scrollintoview=""
-    scrollleft="0"
-    scrolltop="0"
   >
     <div
       class="at-tabs__item at-tabs__item--active"
@@ -290,9 +287,6 @@ exports[`AtTabs Snap render AtTabs -- props tabDirection 1`] = `
   <div
     class="at-tabs__header"
     id="tabs-AOTU2018"
-    scrollintoview=""
-    scrollleft="0"
-    scrolltop="0"
   >
     <div
       class="at-tabs__item at-tabs__item--active"

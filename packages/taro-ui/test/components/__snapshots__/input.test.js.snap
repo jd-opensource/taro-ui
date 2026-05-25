@@ -12,16 +12,10 @@ exports[`AtInput Snap render AtInput -- init 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -44,16 +38,10 @@ exports[`AtInput Snap render AtInput -- props border 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -76,16 +64,10 @@ exports[`AtInput Snap render AtInput -- props clear 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -108,17 +90,11 @@ exports[`AtInput Snap render AtInput -- props disabled 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       disabled=""
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -141,17 +117,11 @@ exports[`AtInput Snap render AtInput -- props editable 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       disabled=""
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -174,16 +144,10 @@ exports[`AtInput Snap render AtInput -- props error 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -213,16 +177,10 @@ exports[`AtInput Snap render AtInput -- props maxlength 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -245,16 +203,10 @@ exports[`AtInput Snap render AtInput -- props name 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id="name"
       maxlength="140"
       name="name"
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -277,16 +229,10 @@ exports[`AtInput Snap render AtInput -- props name 2`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder="placeholder"
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -309,16 +255,10 @@ exports[`AtInput Snap render AtInput -- props required 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -341,16 +281,10 @@ exports[`AtInput Snap render AtInput -- props style 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -379,16 +313,10 @@ exports[`AtInput Snap render AtInput -- props title 1`] = `
     </label>
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value=""
     />
@@ -411,16 +339,10 @@ exports[`AtInput Snap render AtInput -- props type(digit) 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="digit"
       value=""
     />
@@ -443,16 +365,10 @@ exports[`AtInput Snap render AtInput -- props type(idcard) 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="idcard"
       value=""
     />
@@ -475,16 +391,10 @@ exports[`AtInput Snap render AtInput -- props type(number) 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="number"
       value=""
     />
@@ -507,17 +417,11 @@ exports[`AtInput Snap render AtInput -- props type(password) 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
-      type="text"
+      type="password"
       value=""
     />
     <div
@@ -539,16 +443,10 @@ exports[`AtInput Snap render AtInput -- props type(phone) 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="11"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="number"
       value=""
     />
@@ -571,16 +469,10 @@ exports[`AtInput Snap render AtInput -- props value 1`] = `
     />
     <input
       class="at-input__input"
-      confirmtype="done"
-      cursorspacing="50"
       id=""
       maxlength="140"
       name=""
       placeholder=""
-      placeholderclass="placeholder"
-      placeholderstyle=""
-      selectionend="-1"
-      selectionstart="-1"
       type="text"
       value="value"
     />
