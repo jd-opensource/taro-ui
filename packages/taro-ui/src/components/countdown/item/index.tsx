@@ -1,36 +1,29 @@
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
 import { AtCountdownItemProps } from '../../../../types/countdown'
 
-export default class AtCountdownItem extends React.Component<AtCountdownItemProps> {
-  public static defaultProps: AtCountdownItemProps
-  public static propTypes: InferProps<AtCountdownItemProps>
-
-  private formatNum(num: number): string {
-    return num <= 9 ? `0${num}` : `${num}`
-  }
-
-  public render(): JSX.Element {
-    const { num, separator } = this.props
-
-    return (
-      <View className='at-countdown__item'>
-        <View className='at-countdown__time-box'>
-          <Text className='at-countdown__time'>{this.formatNum(num)}</Text>
-        </View>
-        <Text className='at-countdown__separator'>{separator}</Text>
-      </View>
-    )
-  }
+function formatNum(num: number): string {
+  return num <= 9 ? `0${num}` : `${num}`
 }
 
-AtCountdownItem.defaultProps = {
-  num: 0,
-  separator: ':'
+function AtCountdownItem({
+  num = 0,
+  separator = ':'
+}: AtCountdownItemProps): JSX.Element {
+  return (
+    <View className='at-countdown__item'>
+      <View className='at-countdown__time-box'>
+        <Text className='at-countdown__time'>{formatNum(num)}</Text>
+      </View>
+      <Text className='at-countdown__separator'>{separator}</Text>
+    </View>
+  )
 }
 
 AtCountdownItem.propTypes = {
   num: PropTypes.number.isRequired,
   separator: PropTypes.string
 }
+
+export default AtCountdownItem

@@ -1,98 +1,74 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
-import Taro from '@tarojs/taro'
-import { AtMessageProps, AtMessageState } from '../../../types/message'
+import Taro, { useDidHide, useDidShow } from '@tarojs/taro'
+import { AtMessageProps } from '../../../types/message'
 
-export default class AtMessage extends React.Component<
-  AtMessageProps,
-  AtMessageState
-> {
-  public static defaultProps: AtMessageProps
-  public static propTypes: InferProps<AtMessageProps>
+function AtMessage({
+  customStyle = '',
+  className = ''
+}: AtMessageProps): JSX.Element {
+  const [_isOpened, setIsOpened] = useState(false)
+  const [_message, setMessage] = useState('')
+  const [_type, setType] = useState('info')
+  const durationRef = useRef(3000)
+  const timerRef = useRef<NodeJS.Timeout | number | null>(null)
 
-  private _timer: NodeJS.Timeout | number | null
-
-  public constructor(props: AtMessageProps) {
-    super(props)
-    this.state = {
-      _isOpened: false,
-      _message: '',
-      _type: 'info',
-      _duration: 3000
-    }
-    this._timer = null
-  }
-
-  private bindMessageListener(): void {
+  const bindMessageListener = useCallback((): void => {
     Taro.eventCenter.on('atMessage', (options = {}) => {
       const { message, type, duration } = options
-      const newState = {
-        _isOpened: true,
-        _message: message,
-        _type: type,
-        _duration: duration || this.state._duration
-      }
-      this.setState(newState, () => {
-        clearTimeout(this._timer as number)
-        this._timer = setTimeout(() => {
-          this.setState({
-            _isOpened: false
-          })
-        }, this.state._duration)
-      })
+      const newDuration = duration || durationRef.current
+      durationRef.current = newDuration
+      setIsOpened(true)
+      setMessage(message)
+      setType(type)
+      clearTimeout(timerRef.current as number)
+      timerRef.current = setTimeout(() => {
+        setIsOpened(false)
+      }, newDuration)
     })
-    // 绑定函数
     Taro.atMessage = Taro.eventCenter.trigger.bind(
       Taro.eventCenter,
       'atMessage'
     )
-  }
+  }, [])
 
-  public componentDidShow(): void {
-    this.bindMessageListener()
-  }
+  useEffect(() => {
+    bindMessageListener()
+    return () => {
+      Taro.eventCenter.off('atMessage')
+    }
+  }, [bindMessageListener])
 
-  public componentDidMount(): void {
-    this.bindMessageListener()
-  }
+  useDidShow(() => {
+    bindMessageListener()
+  })
 
-  public componentDidHide(): void {
+  useDidHide(() => {
     Taro.eventCenter.off('atMessage')
-  }
+  })
 
-  public componentWillUnmount(): void {
-    Taro.eventCenter.off('atMessage')
-  }
+  const rootCls = classNames(
+    {
+      'at-message': true,
+      'at-message--show': _isOpened,
+      'at-message--hidden': !_isOpened
+    },
+    `at-message--${_type}`,
+    className
+  )
 
-  public render(): JSX.Element {
-    const { className, customStyle } = this.props
-    const { _message, _isOpened, _type } = this.state
-    const rootCls = classNames(
-      {
-        'at-message': true,
-        'at-message--show': _isOpened,
-        'at-message--hidden': !_isOpened
-      },
-      `at-message--${_type}`,
-      className
-    )
-
-    return (
-      <View className={rootCls} style={customStyle}>
-        {_message}
-      </View>
-    )
-  }
-}
-
-AtMessage.defaultProps = {
-  customStyle: '',
-  className: ''
+  return (
+    <View className={rootCls} style={customStyle}>
+      {_message}
+    </View>
+  )
 }
 
 AtMessage.propTypes = {
   customStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string])
 }
+
+export default AtMessage

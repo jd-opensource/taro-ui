@@ -1,66 +1,70 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef, useState } from 'react'
 import { ScrollView, View } from '@tarojs/components'
 import { CommonEvent, ITouchEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
-import { AtTabsProps, AtTabsState } from '../../../types/tabs'
+import { AtTabsProps } from '../../../types/tabs'
 import { isTest, mergeStyle, uuid } from '../../common/utils'
 
 const ENV = Taro.getEnv()
 const MIN_DISTANCE = 100
 const MAX_INTERVAL = 10
 
-export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
-  public static defaultProps: AtTabsProps
-  public static propTypes: InferProps<AtTabsProps>
+function AtTabs({
+  customStyle = '',
+  className = '',
+  tabDirection = 'horizontal',
+  height = '',
+  current = 0,
+  swipeable = true,
+  scroll = false,
+  animated = true,
+  tabList = [],
+  onClick,
+  children
+}: AtTabsProps): JSX.Element {
+  const tabIdRef = useRef(isTest() ? 'tabs-AOTU2018' : uuid())
+  const touchDotRef = useRef(0)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const intervalRef = useRef(0)
+  const isMovingRef = useRef(false)
+  const tabHeaderRef = useRef<any>(null)
 
-  private _tabId: string
-  private _touchDot: number
-  private _timer: ReturnType<typeof setInterval> | null
-  private _interval: number
-  private _isMoving: boolean
-  private tabHeaderRef: any
+  const [scrollState, setScrollState] = useState({
+    _scrollLeft: 0,
+    _scrollTop: 0,
+    _scrollIntoView: ''
+  })
 
-  public constructor(props: AtTabsProps) {
-    super(props)
-    this.state = {
-      _scrollLeft: 0,
-      _scrollTop: 0,
-      _scrollIntoView: ''
+  const getTabHeaderRef = (): void => {
+    if (ENV === Taro.ENV_TYPE.WEB) {
+      tabHeaderRef.current = document.getElementById(tabIdRef.current)
     }
-    this._tabId = isTest() ? 'tabs-AOTU2018' : uuid()
-    // 触摸时的原点
-    this._touchDot = 0
-    // 定时器
-    this._timer = null
-    // 滑动时间间隔
-    this._interval = 0
-    // 是否已经在滑动
-    this._isMoving = false
   }
 
-  private updateState = (idx: number): void => {
-    if (this.props.scroll) {
-      // 标签栏滚动
+  const updateState = (idx: number): void => {
+    if (scroll) {
       switch (ENV) {
         case Taro.ENV_TYPE.WEAPP:
         case Taro.ENV_TYPE.ALIPAY:
         case Taro.ENV_TYPE.SWAN: {
           const index = Math.max(idx - 1, 0)
-          this.setState({
-            _scrollIntoView: `tab${this._tabId}${index}`
-          })
+          setScrollState(prev => ({
+            ...prev,
+            _scrollIntoView: `tab${tabIdRef.current}${index}`
+          }))
           break
         }
         case Taro.ENV_TYPE.WEB: {
           const index = Math.max(idx - 1, 0)
-          const prevTabItem = this.tabHeaderRef.children[index]
+          const prevTabItem = tabHeaderRef.current?.children[index]
           prevTabItem &&
-            this.setState({
+            setScrollState(prev => ({
+              ...prev,
               _scrollTop: prevTabItem.offsetTop,
               _scrollLeft: prevTabItem.offsetLeft
-            })
+            }))
           break
         }
         default: {
@@ -71,188 +75,158 @@ export default class AtTabs extends React.Component<AtTabsProps, AtTabsState> {
     }
   }
 
-  private handleClick(index: number, event: CommonEvent): void {
-    this.props.onClick(index, event)
+  const handleClick = (index: number, event: CommonEvent): void => {
+    onClick && onClick(index, event)
   }
 
-  private handleTouchStart(e: ITouchEvent): void {
-    const { swipeable, tabDirection } = this.props
+  const handleTouchStart = (e: ITouchEvent): void => {
     if (!swipeable || tabDirection === 'vertical') return
-    // 获取触摸时的原点
-    this._touchDot = e.touches[0].pageX
-    // 使用js计时器记录时间
-    this._timer = setInterval(() => {
-      this._interval++
+    touchDotRef.current = e.touches[0].pageX
+    timerRef.current = setInterval(() => {
+      intervalRef.current++
     }, 100)
   }
 
-  private handleTouchMove(e: ITouchEvent): void {
-    const { swipeable, tabDirection, current, tabList } = this.props
+  const handleTouchMove = (e: ITouchEvent): void => {
     if (!swipeable || tabDirection === 'vertical') return
 
     const touchMove = e.touches[0].pageX
-    const moveDistance = touchMove - this._touchDot
+    const moveDistance = touchMove - touchDotRef.current
     const maxIndex = tabList.length
 
     if (
-      !this._isMoving &&
-      this._interval < MAX_INTERVAL &&
-      this._touchDot > 20
+      !isMovingRef.current &&
+      intervalRef.current < MAX_INTERVAL &&
+      touchDotRef.current > 20
     ) {
-      // 向左滑动
       if (current + 1 < maxIndex && moveDistance <= -MIN_DISTANCE) {
-        this._isMoving = true
-        this.handleClick(current + 1, e)
-
-        // 向右滑动
+        isMovingRef.current = true
+        handleClick(current + 1, e)
       } else if (current - 1 >= 0 && moveDistance >= MIN_DISTANCE) {
-        this._isMoving = true
-        this.handleClick(current - 1, e)
+        isMovingRef.current = true
+        handleClick(current - 1, e)
       }
     }
   }
 
-  private handleTouchEnd(): void {
-    const { swipeable, tabDirection } = this.props
+  const handleTouchEnd = (): void => {
     if (!swipeable || tabDirection === 'vertical') return
 
-    this._timer && clearInterval(this._timer)
-    this._interval = 0
-    this._isMoving = false
+    timerRef.current && clearInterval(timerRef.current)
+    intervalRef.current = 0
+    isMovingRef.current = false
   }
 
-  private getTabHeaderRef(): void {
-    if (ENV === Taro.ENV_TYPE.WEB) {
-      this.tabHeaderRef = document.getElementById(this._tabId)
+  useEffect(() => {
+    getTabHeaderRef()
+    updateState(current)
+    return () => {
+      tabHeaderRef.current = null
     }
+    // componentDidMount / componentWillUnmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const prevScrollRef = useRef(scroll)
+  const prevCurrentRef = useRef(current)
+  const isMountRef = useRef(true)
+  useEffect(() => {
+    if (isMountRef.current) {
+      isMountRef.current = false
+      return
+    }
+    if (scroll !== prevScrollRef.current) {
+      getTabHeaderRef()
+      prevScrollRef.current = scroll
+    }
+    if (current !== prevCurrentRef.current) {
+      updateState(current)
+      prevCurrentRef.current = current
+    }
+  }, [scroll, current])
+
+  const { _scrollLeft, _scrollTop, _scrollIntoView } = scrollState
+
+  const heightStyle = { height }
+  const underlineStyle = {
+    height: tabDirection === 'vertical' ? `${tabList.length * 100}%` : '1PX',
+    width: tabDirection === 'horizontal' ? `${tabList.length * 100}%` : '1PX'
+  }
+  const bodyStyle: React.CSSProperties = {}
+  let transformStyle = `translate3d(0px, -${current * 100}%, 0px)`
+  if (tabDirection === 'horizontal') {
+    transformStyle = `translate3d(-${current * 100}%, 0px, 0px)`
+  }
+  Object.assign(bodyStyle, {
+    transform: transformStyle
+  })
+  if (!animated) {
+    bodyStyle.transition = 'unset'
   }
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtTabsProps): void {
-    if (nextProps.scroll !== this.props.scroll) {
-      this.getTabHeaderRef()
-    }
-    if (nextProps.current !== this.props.current) {
-      this.updateState(nextProps.current)
-    }
-  }
-
-  public componentDidMount(): void {
-    this.getTabHeaderRef()
-    this.updateState(this.props.current)
-  }
-
-  public componentWillUnmount(): void {
-    this.tabHeaderRef = null
-  }
-
-  public render(): JSX.Element {
-    const {
-      customStyle = '',
-      className,
-      height,
-      tabDirection,
-      animated,
-      tabList,
-      scroll,
-      current
-    } = this.props
-    const { _scrollLeft, _scrollTop, _scrollIntoView } = this.state
-
-    const heightStyle = { height }
-    const underlineStyle = {
-      height: tabDirection === 'vertical' ? `${tabList.length * 100}%` : '1PX',
-      width: tabDirection === 'horizontal' ? `${tabList.length * 100}%` : '1PX'
-    }
-    const bodyStyle: React.CSSProperties = {}
-    let transformStyle = `translate3d(0px, -${current * 100}%, 0px)`
-    if (tabDirection === 'horizontal') {
-      transformStyle = `translate3d(-${current * 100}%, 0px, 0px)`
-    }
-    Object.assign(bodyStyle, {
-      transform: transformStyle
+  const tabItems = tabList.map((item, idx) => {
+    const itemCls = classNames({
+      'at-tabs__item': true,
+      'at-tabs__item--active': current === idx
     })
-    if (!animated) {
-      bodyStyle.transition = 'unset'
-    }
-
-    const tabItems = tabList.map((item, idx) => {
-      const itemCls = classNames({
-        'at-tabs__item': true,
-        'at-tabs__item--active': current === idx
-      })
-
-      return (
-        <View
-          className={itemCls}
-          id={`tab${this._tabId}${idx}`}
-          key={`at-tabs-item-${idx}`}
-          onClick={this.handleClick.bind(this, idx)}
-        >
-          {item.title}
-          <View className='at-tabs__item-underline'></View>
-        </View>
-      )
-    })
-    const rootCls = classNames(
-      {
-        'at-tabs': true,
-        'at-tabs--scroll': scroll,
-        [`at-tabs--${tabDirection}`]: true,
-        [`at-tabs--${ENV}`]: true
-      },
-      className
-    )
-    const scrollX = tabDirection === 'horizontal'
-    const scrollY = tabDirection === 'vertical'
 
     return (
-      <View className={rootCls} style={mergeStyle(heightStyle, customStyle)}>
-        {scroll ? (
-          <ScrollView
-            id={this._tabId}
-            className='at-tabs__header'
-            style={heightStyle}
-            scrollX={scrollX}
-            scrollY={scrollY}
-            scrollWithAnimation
-            scrollLeft={_scrollLeft}
-            scrollTop={_scrollTop}
-            scrollIntoView={_scrollIntoView}
-          >
-            {tabItems}
-          </ScrollView>
-        ) : (
-          <View id={this._tabId} className='at-tabs__header'>
-            {tabItems}
-          </View>
-        )}
-        <View
-          className='at-tabs__body'
-          onTouchStart={this.handleTouchStart.bind(this)}
-          onTouchEnd={this.handleTouchEnd.bind(this)}
-          onTouchMove={this.handleTouchMove.bind(this)}
-          style={mergeStyle(bodyStyle, heightStyle)}
-        >
-          <View className='at-tabs__underline' style={underlineStyle}></View>
-          {this.props.children}
-        </View>
+      <View
+        className={itemCls}
+        id={`tab${tabIdRef.current}${idx}`}
+        key={`at-tabs-item-${idx}`}
+        onClick={(event: CommonEvent) => handleClick(idx, event)}
+      >
+        {item.title}
+        <View className='at-tabs__item-underline'></View>
       </View>
     )
-  }
-}
+  })
+  const rootCls = classNames(
+    {
+      'at-tabs': true,
+      'at-tabs--scroll': scroll,
+      [`at-tabs--${tabDirection}`]: true,
+      [`at-tabs--${ENV}`]: true
+    },
+    className
+  )
+  const scrollX = tabDirection === 'horizontal'
+  const scrollY = tabDirection === 'vertical'
 
-AtTabs.defaultProps = {
-  customStyle: '',
-  className: '',
-  tabDirection: 'horizontal',
-  height: '',
-  current: 0,
-  swipeable: true,
-  scroll: false,
-  animated: true,
-  tabList: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {}
+  return (
+    <View className={rootCls} style={mergeStyle(heightStyle, customStyle)}>
+      {scroll ? (
+        <ScrollView
+          id={tabIdRef.current}
+          className='at-tabs__header'
+          style={heightStyle}
+          scrollX={scrollX}
+          scrollY={scrollY}
+          scrollWithAnimation
+          scrollLeft={_scrollLeft}
+          scrollTop={_scrollTop}
+          scrollIntoView={_scrollIntoView}
+        >
+          {tabItems}
+        </ScrollView>
+      ) : (
+        <View id={tabIdRef.current} className='at-tabs__header'>
+          {tabItems}
+        </View>
+      )}
+      <View
+        className='at-tabs__body'
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchMove={handleTouchMove}
+        style={mergeStyle(bodyStyle, heightStyle)}
+      >
+        <View className='at-tabs__underline' style={underlineStyle}></View>
+        {children}
+      </View>
+    </View>
+  )
 }
 
 AtTabs.propTypes = {
@@ -267,3 +241,5 @@ AtTabs.propTypes = {
   tabList: PropTypes.array,
   onClick: PropTypes.func
 }
+
+export default AtTabs

@@ -1,33 +1,31 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
 import { AtFabProps } from '../../../types/fab'
 
-export default class AtFab extends React.Component<AtFabProps> {
-  public static defaultProps: AtFabProps
-  public static propTypes: InferProps<AtFabProps>
-
-  private onClick(e: CommonEvent): void {
-    if (typeof this.props.onClick === 'function') {
-      this.props.onClick(e)
+function AtFab({
+  size = 'normal',
+  className,
+  children,
+  onClick
+}: AtFabProps): JSX.Element {
+  const handleClick = (e: CommonEvent): void => {
+    if (typeof onClick === 'function') {
+      onClick(e)
     }
   }
 
-  public render(): JSX.Element {
-    const { size, className, children } = this.props
+  const rootClass = classNames('at-fab', className, {
+    [`at-fab--${size}`]: size
+  })
 
-    const rootClass = classNames('at-fab', className, {
-      [`at-fab--${size}`]: size
-    })
-
-    return (
-      <View className={rootClass} onClick={this.onClick.bind(this)}>
-        {children}
-      </View>
-    )
-  }
+  return (
+    <View className={rootClass} onClick={handleClick}>
+      {children}
+    </View>
+  )
 }
 
 AtFab.propTypes = {
@@ -35,6 +33,4 @@ AtFab.propTypes = {
   onClick: PropTypes.func
 }
 
-AtFab.defaultProps = {
-  size: 'normal'
-}
+export default AtFab

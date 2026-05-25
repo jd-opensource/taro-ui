@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { ScrollView, View } from '@tarojs/components'
 import { CommonEvent, ITouchEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
@@ -17,134 +17,105 @@ import AtToast from '../toast/index'
 
 const ENV = Taro.getEnv()
 
-export default class AtIndexes extends React.Component<
-  AtIndexesProps,
-  AtIndexesState
-> {
-  public static defaultProps: AtIndexesProps
-  public static propTypes: InferProps<AtIndexesProps>
+function AtIndexes({
+  customStyle = '',
+  className = '',
+  animation = false,
+  topKey = 'Top',
+  isVibrate = true,
+  isShowToast = true,
+  list = [],
+  onClick,
+  onScrollIntoView,
+  children
+}: AtIndexesProps): JSX.Element {
+  const [_scrollIntoView, setScrollIntoView] = useState('')
+  const [_scrollTop, setScrollTop] = useState(0)
+  const [_tipText, setTipText] = useState('')
+  const [_isShowToast, setIsShowToast] = useState(false)
+  const isWEB = Taro.getEnv() === Taro.ENV_TYPE.WEB
+  const [currentIndex, setCurrentIndex] = useState(-1)
 
-  private menuHeight: number
-  private startTop: number
-  private itemHeight: number
-  private currentIndex: number
-  private listId: string
-  private timeoutTimer: NodeJS.Timeout | number | undefined
-  private listRef: any
-  private indexMap: { key: string; startHeight: number; endHeight: number }[]
+  const menuHeightRef = useRef(0)
+  const startTopRef = useRef(0)
+  const itemHeightRef = useRef(0)
+  const touchCurrentIndexRef = useRef(-1)
+  const [listId] = useState(() =>
+    isTest() ? 'indexes-list-AOTU2018' : `list-${uuid()}`
+  )
+  const timeoutTimerRef = useRef<NodeJS.Timeout | number>()
+  const listRef = useRef<HTMLElement | null>(null)
+  const indexMapRef = useRef<
+    { key: string; startHeight: number; endHeight: number }[]
+  >([])
 
-  public constructor(props: AtIndexesProps) {
-    super(props)
-    this.state = {
-      _scrollIntoView: '',
-      _scrollTop: 0,
-      _tipText: '',
-      _isShowToast: false,
-      isWEB: Taro.getEnv() === Taro.ENV_TYPE.WEB,
-      currentIndex: -1
-    }
-    // 右侧导航高度
-    this.menuHeight = 0
-    // 右侧导航距离顶部高度
-    this.startTop = 0
-    // 右侧导航元素高度
-    this.itemHeight = 0
-    // 当前索引
-    this.currentIndex = -1
-    this.listId = isTest() ? 'indexes-list-AOTU2018' : `list-${uuid()}`
-    this.indexMap = []
-  }
+  const updateState = useCallback(
+    (state: Partial<AtIndexesState>): void => {
+      const {
+        _scrollIntoView: nextScrollIntoView,
+        _tipText: nextTipText,
+        _scrollTop: nextScrollTop
+      } = state
+      setScrollIntoView(nextScrollIntoView!)
+      setTipText(nextTipText!)
+      setScrollTop(nextScrollTop!)
+      setIsShowToast(isShowToast!)
 
-  private handleClick = (item: Item): void => {
-    this.props.onClick && this.props.onClick(item)
-  }
+      clearTimeout(timeoutTimerRef.current as number)
+      timeoutTimerRef.current = setTimeout(() => {
+        setTipText('')
+        setIsShowToast(false)
+      }, 3000)
 
-  private handleTouchMove = (event: ITouchEvent): void => {
-    event.stopPropagation()
-    event.preventDefault()
-
-    const { list } = this.props
-    const pageY = event.touches[0].pageY
-    const index = Math.floor((pageY - this.startTop) / this.itemHeight)
-
-    if (index >= 0 && index <= list.length && this.currentIndex !== index) {
-      this.currentIndex = index
-      const key = index > 0 ? list[index - 1].key : 'top'
-      const touchView = `at-indexes__list-${key}`
-      this.jumpTarget(touchView, index)
-    }
-  }
-
-  private handleTouchEnd = (): void => {
-    this.currentIndex = -1
-  }
-
-  private jumpTarget(_scrollIntoView: string, idx: number): void {
-    const { topKey = 'Top', list } = this.props
-    const _tipText = idx === 0 ? topKey : list[idx - 1].key
-
-    if (ENV === Taro.ENV_TYPE.WEB) {
-      delayQuerySelector('.at-indexes', 0).then(rect => {
-        const targetOffsetTop = this.listRef.children[idx].offsetTop
-        const _scrollTop = targetOffsetTop - rect[0].top
-        this.updateState({
-          _scrollTop,
-          _scrollIntoView,
-          _tipText
-        })
-      })
-      return
-    }
-
-    this.updateState({
-      _scrollIntoView,
-      _tipText
-    })
-  }
-
-  private __jumpTarget(key: string): void {
-    const { list } = this.props
-    // const index = _findIndex(list, ['key', key])
-    const index = list.findIndex(item => item.key === key)
-    const targetView = `at-indexes__list-${key}`
-    this.jumpTarget(targetView, index + 1)
-  }
-
-  private updateState(state: Partial<AtIndexesState>): void {
-    const { isShowToast, isVibrate } = this.props
-    const { _scrollIntoView, _tipText, _scrollTop } = state
-    // TODO: Fix dirty hack
-    /* eslint-disable @typescript-eslint/no-non-null-assertion */
-    this.setState(
-      {
-        _scrollIntoView: _scrollIntoView!,
-        _tipText: _tipText!,
-        _scrollTop: _scrollTop!,
-        _isShowToast: isShowToast!
-      },
-      /* eslint-enable @typescript-eslint/no-non-null-assertion */
-      () => {
-        clearTimeout(this.timeoutTimer as number)
-        this.timeoutTimer = setTimeout(() => {
-          this.setState({
-            _tipText: '',
-            _isShowToast: false
-          })
-        }, 3000)
+      if (isVibrate) {
+        Taro.vibrateShort()
       }
-    )
+    },
+    [isShowToast, isVibrate]
+  )
 
-    if (isVibrate) {
-      Taro.vibrateShort()
-    }
-  }
+  const jumpTarget = useCallback(
+    (_scrollIntoViewTarget: string, idx: number): void => {
+      const _tipTextValue = idx === 0 ? topKey : list[idx - 1].key
 
-  private async initData(): Promise<void> {
+      if (ENV === Taro.ENV_TYPE.WEB) {
+        delayQuerySelector('.at-indexes', 0).then(rect => {
+          const targetOffsetTop = (
+            listRef.current!.children[idx] as HTMLElement
+          ).offsetTop
+          const _scrollTopValue = targetOffsetTop - rect[0].top
+          updateState({
+            _scrollTop: _scrollTopValue,
+            _scrollIntoView: _scrollIntoViewTarget,
+            _tipText: _tipTextValue
+          })
+        })
+        return
+      }
+
+      updateState({
+        _scrollIntoView: _scrollIntoViewTarget,
+        _tipText: _tipTextValue
+      })
+    },
+    [list, topKey, updateState]
+  )
+
+  const jumpTargetByKey = useCallback(
+    (key: string): void => {
+      const index = list.findIndex(item => item.key === key)
+      const targetView = `at-indexes__list-${key}`
+      jumpTarget(targetView, index + 1)
+    },
+    [list, jumpTarget]
+  )
+
+  const initData = useCallback(async (): Promise<void> => {
     delayQuerySelector('.at-indexes__menu').then(rect => {
-      const len = this.props.list.length
-      this.menuHeight = rect[0].height
-      this.startTop = rect[0].top
-      this.itemHeight = Math.floor(this.menuHeight / (len + 1))
+      const len = list.length
+      menuHeightRef.current = rect[0].height
+      startTopRef.current = rect[0].top
+      itemHeightRef.current = Math.floor(menuHeightRef.current / (len + 1))
     })
 
     const headerHeight =
@@ -154,18 +125,18 @@ export default class AtIndexes extends React.Component<
     const titleHeight =
       (await delayQuerySelector('.at-indexes__list-title'))?.[0].height || 0
 
-    this.indexMap = []
-    this.props.list.forEach((dataList, i) => {
+    indexMapRef.current = []
+    list.forEach((dataList, i) => {
       if (i === 0) {
-        this.indexMap.push({
+        indexMapRef.current.push({
           key: dataList.key,
           startHeight: headerHeight,
           endHeight:
             dataList.items.length * itemHeight + headerHeight + titleHeight
         })
       } else {
-        const prev = this.indexMap[i - 1]
-        this.indexMap.push({
+        const prev = indexMapRef.current[i - 1]
+        indexMapRef.current.push({
           key: dataList.key,
           startHeight: prev.endHeight,
           endHeight:
@@ -173,138 +144,151 @@ export default class AtIndexes extends React.Component<
         })
       }
     })
-  }
+  }, [list])
 
-  private handleScroll(e: CommonEvent): void {
-    if (e && e.detail) {
-      const scrollTop = e.detail.scrollTop
-
-      this.setState({
-        _scrollTop: scrollTop
-      })
-
-      this.getAnchorIndex(scrollTop)
-    }
-  }
-
-  // 根据滚动高度，判断当前应该显示的索引值
-  private getAnchorIndex(scrollTop: number) {
-    const index = this.indexMap.findIndex(item => {
+  const getAnchorIndex = useCallback((scrollTop: number): void => {
+    const index = indexMapRef.current.findIndex(item => {
       return scrollTop >= item.startHeight && scrollTop < item.endHeight
     })
 
-    this.setState({
-      currentIndex: index
-    })
+    setCurrentIndex(index)
+  }, [])
+
+  const handleClick = (item: Item): void => {
+    onClick && onClick(item)
   }
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtIndexesProps): void {
-    if (nextProps.list.length !== this.props.list.length) {
-      this.initData()
+  const handleTouchMove = (event: ITouchEvent): void => {
+    event.stopPropagation()
+    event.preventDefault()
+
+    const pageY = event.touches[0].pageY
+    const index = Math.floor(
+      (pageY - startTopRef.current) / itemHeightRef.current
+    )
+
+    if (
+      index >= 0 &&
+      index <= list.length &&
+      touchCurrentIndexRef.current !== index
+    ) {
+      touchCurrentIndexRef.current = index
+      const key = index > 0 ? list[index - 1].key : 'top'
+      const touchView = `at-indexes__list-${key}`
+      jumpTarget(touchView, index)
     }
   }
 
-  public componentDidMount(): void {
+  const handleTouchEnd = (): void => {
+    touchCurrentIndexRef.current = -1
+  }
+
+  const handleScroll = (e: CommonEvent): void => {
+    if (e && e.detail) {
+      const scrollTop = e.detail.scrollTop
+
+      setScrollTop(scrollTop)
+
+      getAnchorIndex(scrollTop)
+    }
+  }
+
+  useEffect(() => {
+    onScrollIntoView && onScrollIntoView(jumpTargetByKey)
+  }, [onScrollIntoView, jumpTargetByKey])
+
+  const listLengthRef = useRef(list.length)
+
+  useEffect(() => {
     if (ENV === Taro.ENV_TYPE.WEB) {
-      this.listRef = document.getElementById(this.listId)
+      listRef.current = document.getElementById(listId)
     }
-    this.initData()
-  }
+    initData()
+  }, [listId, initData])
 
-  public UNSAFE_componentWillMount(): void {
-    this.props.onScrollIntoView &&
-      this.props.onScrollIntoView(this.__jumpTarget.bind(this))
-  }
+  useEffect(() => {
+    if (listLengthRef.current === list.length) return
+    listLengthRef.current = list.length
+    initData()
+  }, [list.length, initData])
 
-  public render(): JSX.Element {
-    const { className, customStyle, animation, topKey, list } = this.props
-    const {
-      _scrollTop,
-      _scrollIntoView,
-      _tipText,
-      _isShowToast,
-      isWEB,
-      currentIndex
-    } = this.state
+  const toastStyle = { minWidth: pxTransform(100) }
+  const rootCls = classNames('at-indexes', className)
 
-    const toastStyle = { minWidth: pxTransform(100) }
-    const rootCls = classNames('at-indexes', className)
-
-    const menuList = list.map((dataList, i) => {
-      const { key } = dataList
-      const targetView = `at-indexes__list-${key}`
-      return (
-        <View
-          className={classNames('at-indexes__menu-item', {
-            'at-indexes__menu-item--active': currentIndex === i
-          })}
-          key={key}
-          onClick={this.jumpTarget.bind(this, targetView, i + 1)}
-        >
-          {key}
-        </View>
-      )
-    })
-
-    const indexesList = list.map(dataList => (
-      <View
-        id={`at-indexes__list-${dataList.key}`}
-        className='at-indexes__list'
-        key={dataList.key}
-      >
-        <View className='at-indexes__list-title'>{dataList.title}</View>
-        <AtList>
-          {dataList.items &&
-            dataList.items.map(item => (
-              <AtListItem
-                key={item.name}
-                title={item.name}
-                onClick={this.handleClick.bind(this, item)}
-              />
-            ))}
-        </AtList>
-      </View>
-    ))
-
+  const menuList = list.map((dataList, i) => {
+    const { key } = dataList
+    const targetView = `at-indexes__list-${key}`
     return (
-      <View className={rootCls} style={customStyle}>
-        <AtToast
-          customStyle={toastStyle}
-          isOpened={_isShowToast}
-          text={_tipText}
-          duration={2000}
-        />
-        <View
-          className='at-indexes__menu'
-          onTouchMove={this.handleTouchMove}
-          onTouchEnd={this.handleTouchEnd}
-        >
-          <View
-            className='at-indexes__menu-item'
-            onClick={this.jumpTarget.bind(this, 'at-indexes__top', 0)}
-          >
-            {topKey}
-          </View>
-          {menuList}
-        </View>
-        <ScrollView
-          className='at-indexes__body'
-          id={this.listId}
-          scrollY
-          scrollWithAnimation={animation}
-          // eslint-disable-next-line no-undefined
-          scrollTop={isWEB ? _scrollTop : undefined}
-          scrollIntoView={!isWEB ? _scrollIntoView : ''}
-          onScroll={this.handleScroll.bind(this)}
-        >
-          <View className='at-indexes__content' id='at-indexes__top'>
-            {this.props.children}
-          </View>
-          {indexesList}
-        </ScrollView>
+      <View
+        className={classNames('at-indexes__menu-item', {
+          'at-indexes__menu-item--active': currentIndex === i
+        })}
+        key={key}
+        onClick={(): void => jumpTarget(targetView, i + 1)}
+      >
+        {key}
       </View>
     )
-  }
+  })
+
+  const indexesList = list.map(dataList => (
+    <View
+      id={`at-indexes__list-${dataList.key}`}
+      className='at-indexes__list'
+      key={dataList.key}
+    >
+      <View className='at-indexes__list-title'>{dataList.title}</View>
+      <AtList>
+        {dataList.items &&
+          dataList.items.map(item => (
+            <AtListItem
+              key={item.name}
+              title={item.name}
+              onClick={(): void => handleClick(item)}
+            />
+          ))}
+      </AtList>
+    </View>
+  ))
+
+  return (
+    <View className={rootCls} style={customStyle}>
+      <AtToast
+        customStyle={toastStyle}
+        isOpened={_isShowToast}
+        text={_tipText}
+        duration={2000}
+      />
+      <View
+        className='at-indexes__menu'
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <View
+          className='at-indexes__menu-item'
+          onClick={(): void => jumpTarget('at-indexes__top', 0)}
+        >
+          {topKey}
+        </View>
+        {menuList}
+      </View>
+      <ScrollView
+        className='at-indexes__body'
+        id={listId}
+        scrollY
+        scrollWithAnimation={animation}
+        // eslint-disable-next-line no-undefined
+        scrollTop={isWEB ? _scrollTop : undefined}
+        scrollIntoView={!isWEB ? _scrollIntoView : ''}
+        onScroll={handleScroll}
+      >
+        <View className='at-indexes__content' id='at-indexes__top'>
+          {children}
+        </View>
+        {indexesList}
+      </ScrollView>
+    </View>
+  )
 }
 
 AtIndexes.propTypes = {
@@ -319,12 +303,4 @@ AtIndexes.propTypes = {
   onScrollIntoView: PropTypes.func
 }
 
-AtIndexes.defaultProps = {
-  customStyle: '',
-  className: '',
-  animation: false,
-  topKey: 'Top',
-  isVibrate: true,
-  isShowToast: true,
-  list: []
-}
+export default AtIndexes

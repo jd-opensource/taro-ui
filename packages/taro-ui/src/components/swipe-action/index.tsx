@@ -1,6 +1,13 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState
+} from 'react'
 import Taro from '@tarojs/taro'
 import { Text, View, MovableArea, MovableView } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
@@ -12,158 +19,159 @@ import {
 import { uuid, delayGetClientRect } from '../../common/utils'
 import AtSwipeActionOptions from './options/index'
 
-export default class AtSwipeAction extends React.Component<
-  AtSwipeActionProps,
-  AtSwipeActionState
-> {
-  public static defaultProps: AtSwipeActionProps
-  public static propTypes: InferProps<AtSwipeActionProps>
+export type AtSwipeActionInstance = {
+  state: AtSwipeActionState
+  onChange: (e: { detail: { x: number } }) => void
+  onTouchEnd: (e: CommonEvent) => void
+}
 
-  private moveX: number
+const AtSwipeAction = forwardRef<AtSwipeActionInstance, AtSwipeActionProps>(
+  function AtSwipeAction(
+    {
+      options = [],
+      isOpened = false,
+      disabled = false,
+      autoClose = false,
+      className,
+      children,
+      onClick,
+      onOpened,
+      onClosed
+    },
+    ref
+  ): JSX.Element {
+    const [componentId] = useState(() => uuid())
+    const [offsetSize, setOffsetSize] = useState(0)
+    const [_isOpened, setIsOpened] = useState(!!isOpened)
+    const [eleWidth, setEleWidth] = useState(0)
+    const [maxOffsetSize, setMaxOffsetSize] = useState(0)
+    const moveXRef = useRef(offsetSize)
 
-  public constructor(props: AtSwipeActionProps) {
-    super(props)
-    const { isOpened } = props
-    this.state = {
-      componentId: uuid(),
-      // eslint-disable-next-line no-extra-boolean-cast
-      offsetSize: 0,
-      _isOpened: !!isOpened,
+    const getMaxOffsetSize = useCallback(async (): Promise<void> => {
+      const actionOptionsRect = await delayGetClientRect({
+        selectorStr: `#swipeActionOptions-${componentId}`
+      })
+
+      setMaxOffsetSize(actionOptionsRect[0].width)
+    }, [componentId])
+
+    const getAreaWidth = useCallback(async (): Promise<void> => {
+      const systemInfo = await Taro.getSystemInfo()
+      setEleWidth(systemInfo.windowWidth)
+    }, [])
+
+    const _reset = useCallback(
+      (opened: boolean): void => {
+        if (opened) {
+          if (process.env.TARO_ENV === 'jd') {
+            setIsOpened(true)
+            setOffsetSize(-maxOffsetSize + 0.01)
+          } else {
+            setIsOpened(true)
+            setOffsetSize(-maxOffsetSize)
+          }
+        } else {
+          const currentMoveX = moveXRef.current
+          setIsOpened(false)
+          setOffsetSize(currentMoveX)
+          setTimeout(() => {
+            setOffsetSize(0)
+          }, 0)
+        }
+      },
+      [maxOffsetSize]
+    )
+
+    useEffect(() => {
+      getAreaWidth()
+    }, [getAreaWidth])
+
+    useEffect(() => {
+      if (eleWidth > 0) {
+        getMaxOffsetSize()
+      }
+    }, [eleWidth, getMaxOffsetSize])
+
+    const isOpenedPropRef = useRef(isOpened)
+    useEffect(() => {
+      if (isOpenedPropRef.current === isOpened) return
+      isOpenedPropRef.current = isOpened
+      if (isOpened !== _isOpened) {
+        moveXRef.current = isOpened ? 0 : maxOffsetSize
+        _reset(!!isOpened)
+      }
+    }, [isOpened, _isOpened, maxOffsetSize, _reset])
+
+    const handleOpened = (event: CommonEvent): void => {
+      if (typeof onOpened === 'function') {
+        onOpened(event)
+      }
+    }
+
+    const handleClosed = (event: CommonEvent): void => {
+      if (typeof onClosed === 'function') {
+        onClosed(event)
+      }
+    }
+
+    const handleClick = (
+      item: SwipeActionOption,
+      index: number,
+      event: CommonEvent
+    ): void => {
+      if (typeof onClick === 'function') {
+        onClick(item, index, event)
+      }
+      if (autoClose) {
+        _reset(false)
+        handleClosed(event)
+      }
+    }
+
+    const onTouchEnd = (e: CommonEvent): void => {
+      if (Math.abs(moveXRef.current) < maxOffsetSize / 2) {
+        _reset(false)
+        handleClosed(e)
+      } else {
+        _reset(true)
+        handleOpened(e)
+      }
+    }
+
+    const onChange = (e: { detail: { x: number } }): void => {
+      moveXRef.current = e.detail.x
+    }
+
+    const stateRef = useRef<AtSwipeActionState>({
+      componentId,
+      offsetSize,
+      _isOpened,
       needAnimation: false,
-      eleWidth: 0,
-      maxOffsetSize: 0
-    }
-    this.moveX = this.state.offsetSize
-  }
-
-  public componentDidMount(): void {
-    this.getAreaWidth()
-  }
-
-  // 当 eleWidth 发生变化时，需要重新计算 maxOffsetSize
-  public componentDidUpdate(_, prevState: AtSwipeActionState): void {
-    const { eleWidth } = this.state
-    if (prevState.eleWidth !== eleWidth) {
-      this.getMaxOffsetSize()
-    }
-  }
-
-  public UNSAFE_componentWillReceiveProps(nextProps: AtSwipeActionProps): void {
-    const { isOpened } = nextProps
-    const { _isOpened, maxOffsetSize } = this.state
-
-    if (isOpened !== _isOpened) {
-      this.moveX = isOpened ? 0 : maxOffsetSize
-      this._reset(!!isOpened) // TODO: Check behavior
-    }
-  }
-
-  /**
-   * 获取滑动区域宽度
-   */
-  private async getAreaWidth(): Promise<void> {
-    const systemInfo = await Taro.getSystemInfo()
-    this.setState({
-      eleWidth: systemInfo.windowWidth
-    })
-  }
-
-  /**
-   * 获取最大偏移量
-   */
-  private async getMaxOffsetSize(): Promise<void> {
-    const { componentId } = this.state
-
-    const actionOptionsRect = await delayGetClientRect({
-      selectorStr: `#swipeActionOptions-${componentId}`
-    })
-
-    const maxOffsetSize = actionOptionsRect[0].width
-
-    this.setState({
+      eleWidth,
       maxOffsetSize
     })
-  }
+    stateRef.current = {
+      componentId,
+      offsetSize,
+      _isOpened,
+      needAnimation: false,
+      eleWidth,
+      maxOffsetSize
+    }
 
-  private _reset(isOpened: boolean): void {
-    if (isOpened) {
-      const { maxOffsetSize } = this.state
-      if (process.env.TARO_ENV === 'jd') {
-        this.setState({
-          _isOpened: true,
-          offsetSize: -maxOffsetSize + 0.01
-        })
-      } else {
-        this.setState({
-          _isOpened: true,
-          offsetSize: -maxOffsetSize
-        })
-      }
-    } else {
-      this.setState(
-        {
-          offsetSize: this.moveX
+    useImperativeHandle(
+      ref,
+      () => ({
+        get state() {
+          return stateRef.current
         },
-        () => {
-          this.setState({
-            offsetSize: 0,
-            _isOpened: false
-          })
-        }
-      )
-    }
-  }
+        onChange,
+        onTouchEnd
+      }),
+      [onChange, onTouchEnd]
+    )
 
-  private handleOpened = (event: CommonEvent): void => {
-    const { onOpened } = this.props
-    if (typeof onOpened === 'function') {
-      onOpened(event)
-    }
-  }
-
-  private handleClosed = (event: CommonEvent): void => {
-    const { onClosed } = this.props
-    if (typeof onClosed === 'function') {
-      onClosed(event)
-    }
-  }
-
-  private handleClick = (
-    item: SwipeActionOption,
-    index: number,
-    event: CommonEvent
-  ): void => {
-    const { onClick, autoClose } = this.props
-
-    if (typeof onClick === 'function') {
-      onClick(item, index, event)
-    }
-    if (autoClose) {
-      this._reset(false) // TODO: Check behavior
-      this.handleClosed(event)
-    }
-  }
-
-  onTouchEnd = e => {
-    const { maxOffsetSize } = this.state
-    if (Math.abs(this.moveX) < maxOffsetSize / 2) {
-      this._reset(false)
-      this.handleClosed(e)
-    } else {
-      this._reset(true)
-      this.handleOpened(e)
-    }
-  }
-
-  onChange = e => {
-    this.moveX = e.detail.x
-  }
-
-  public render(): JSX.Element {
-    const { componentId, maxOffsetSize, eleWidth, offsetSize } = this.state
-
-    const { options, disabled } = this.props
-    const rootClass = classNames('at-swipe-action', this.props.className)
+    const rootClass = classNames('at-swipe-action', className)
 
     return (
       <View
@@ -184,14 +192,14 @@ export default class AtSwipeAction extends React.Component<
             direction='horizontal'
             damping={50}
             x={offsetSize}
-            onTouchEnd={this.onTouchEnd}
-            onChange={this.onChange}
+            onTouchEnd={onTouchEnd}
+            onChange={onChange}
             disabled={disabled}
             style={{
               width: `${eleWidth + maxOffsetSize}px`
             }}
           >
-            {this.props.children}
+            {children}
             {Array.isArray(options) && options.length > 0 ? (
               <AtSwipeActionOptions
                 options={options}
@@ -204,7 +212,7 @@ export default class AtSwipeAction extends React.Component<
                   <View
                     key={`${item.text}-${key}`}
                     style={item.style}
-                    onClick={(e): void => this.handleClick(item, key, e)}
+                    onClick={(e): void => handleClick(item, key, e)}
                     className={classNames(
                       'at-swipe-action__option',
                       item.className
@@ -220,18 +228,10 @@ export default class AtSwipeAction extends React.Component<
       </View>
     )
   }
-}
+)
 
-AtSwipeAction.defaultProps = {
-  options: [],
-  isOpened: false,
-  disabled: false,
-  autoClose: false,
-  maxDistance: 0,
-  areaWidth: 0
-}
-
-AtSwipeAction.propTypes = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+;(AtSwipeAction as any).propTypes = {
   isOpened: PropTypes.bool,
   disabled: PropTypes.bool,
   autoClose: PropTypes.bool,
@@ -251,3 +251,5 @@ AtSwipeAction.propTypes = {
   onOpened: PropTypes.func,
   onClosed: PropTypes.func
 }
+
+export default AtSwipeAction

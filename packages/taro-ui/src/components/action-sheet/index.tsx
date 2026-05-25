@@ -1,103 +1,85 @@
 import classNames from 'classnames'
-import PropTypes, { InferProps } from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
-import {
-  AtActionSheetProps,
-  AtActionSheetState
-} from '../../../types/action-sheet'
+import { AtActionSheetProps } from '../../../types/action-sheet'
 import AtActionSheetBody from './body/index'
 import AtActionSheetFooter from './footer/index'
 import AtActionSheetHeader from './header/index'
 
-export default class AtActionSheet extends React.Component<
-  AtActionSheetProps,
-  AtActionSheetState
-> {
-  public static defaultProps: AtActionSheetProps
-  public static propTypes: InferProps<AtActionSheetProps>
+function AtActionSheet({
+  title = '',
+  cancelText = '',
+  isOpened = false,
+  className,
+  children,
+  onClose,
+  onCancel
+}: AtActionSheetProps): JSX.Element {
+  const [_isOpened, setIsOpened] = useState(isOpened)
+  const prevIsOpenedPropRef = useRef(isOpened)
 
-  public constructor(props: AtActionSheetProps) {
-    super(props)
-    const { isOpened } = props
-
-    this.state = {
-      _isOpened: isOpened
+  const handleClose = (): void => {
+    if (typeof onClose === 'function') {
+      onClose()
     }
   }
 
-  public UNSAFE_componentWillReceiveProps(nextProps: AtActionSheetProps): void {
-    const { isOpened } = nextProps
-    if (isOpened !== this.state._isOpened) {
-      this.setState({
-        _isOpened: isOpened
+  useEffect(() => {
+    if (prevIsOpenedPropRef.current !== isOpened) {
+      setIsOpened(prev => {
+        if (isOpened !== prev) {
+          if (!isOpened) {
+            handleClose()
+          }
+          return isOpened
+        }
+        return prev
       })
-
-      !isOpened && this.handleClose()
+      prevIsOpenedPropRef.current = isOpened
     }
+  }, [isOpened])
+
+  const close = (): void => {
+    setIsOpened(false)
+    handleClose()
   }
 
-  private handleClose = (): void => {
-    if (typeof this.props.onClose === 'function') {
-      this.props.onClose()
+  const handleCancel = (): void => {
+    if (typeof onCancel === 'function') {
+      return onCancel()
     }
+    close()
   }
 
-  private handleCancel = (): void => {
-    if (typeof this.props.onCancel === 'function') {
-      return this.props.onCancel()
-    }
-    this.close()
-  }
-
-  private close = (): void => {
-    this.setState(
-      {
-        _isOpened: false
-      },
-      this.handleClose
-    )
-  }
-
-  private handleTouchMove = (e: CommonEvent): void => {
+  const handleTouchMove = (e: CommonEvent): void => {
     e.stopPropagation()
     e.preventDefault()
   }
 
-  public render(): JSX.Element {
-    const { title, cancelText, className } = this.props
-    const { _isOpened } = this.state
+  const rootClass = classNames(
+    'at-action-sheet',
+    {
+      'at-action-sheet--active': _isOpened
+    },
+    className
+  )
 
-    const rootClass = classNames(
-      'at-action-sheet',
-      {
-        'at-action-sheet--active': _isOpened
-      },
-      className
-    )
-
-    return (
-      <View className={rootClass} onTouchMove={this.handleTouchMove}>
-        <View onClick={this.close} className='at-action-sheet__overlay' />
-        <View className='at-action-sheet__container'>
-          {title && <AtActionSheetHeader>{title}</AtActionSheetHeader>}
-          <AtActionSheetBody>{this.props.children}</AtActionSheetBody>
-          {cancelText && (
-            <AtActionSheetFooter onClick={this.handleCancel}>
-              {cancelText}
-            </AtActionSheetFooter>
-          )}
-        </View>
+  return (
+    <View className={rootClass} onTouchMove={handleTouchMove}>
+      <View onClick={close} className='at-action-sheet__overlay' />
+      <View className='at-action-sheet__container'>
+        {title && <AtActionSheetHeader>{title}</AtActionSheetHeader>}
+        <AtActionSheetBody>{children}</AtActionSheetBody>
+        {cancelText && (
+          <AtActionSheetFooter onClick={handleCancel}>
+            {cancelText}
+          </AtActionSheetFooter>
+        )}
       </View>
-    )
-  }
-}
-
-AtActionSheet.defaultProps = {
-  title: '',
-  cancelText: '',
-  isOpened: false
+    </View>
+  )
 }
 
 AtActionSheet.propTypes = {
@@ -107,3 +89,5 @@ AtActionSheet.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   cancelText: PropTypes.string
 }
+
+export default AtActionSheet
