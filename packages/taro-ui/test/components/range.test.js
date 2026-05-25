@@ -38,7 +38,7 @@ describe('AtRange Snap', () => {
 
   it('render AtRange -- props trackStyle', () => {
     const { container: componetContainer } = render(
-      <AtRange railStyle='color:red;' />
+      <AtRange trackStyle='color:red;' />
     )
     expect(componetContainer.firstChild).toMatchSnapshot()
   })

@@ -41,8 +41,5 @@ jobs:
       - name: build
         run: pnpm build
 
-      - name: update
-        run: pnpm --filter taro-ui test:update
-
       - name: test
         run: pnpm --filter taro-ui test

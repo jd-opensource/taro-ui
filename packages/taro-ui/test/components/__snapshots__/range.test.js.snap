@@ -193,11 +193,10 @@ exports[`AtRange Snap render AtRange -- props trackStyle 1`] = `
   >
     <div
       class="at-range__rail"
-      style="color: red;"
     />
     <div
       class="at-range__track"
-      style="left: 0%; width: 0%;"
+      style="left: 0%; width: 0%; color: red;"
     />
     <div
       class="at-range__slider"
