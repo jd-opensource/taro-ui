@@ -48,7 +48,7 @@
     "test": "cross-env NODE_ENV=test && jest --coverage",
     "test:ci": "pnpm run build:h5 && pnpm run test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "clean": "rimraf .temp dist coverage"
+    "clean": "rimraf .temp dist lib coverage"
   },
   "dependencies": {
     "classnames": "^2.2.6",
