@@ -23,6 +23,9 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Setup JS
         uses: sxzz/workflows/setup-js@866f46ed892502b45a58ba4de02987123ccf8e17
         with:
@@ -33,11 +36,27 @@ jobs:
       - name: build
         run: pnpm build
 
-      - name: build
-        run: pnpm build:demo
+  demos:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: demo
+            cmd: pnpm build:demo
+          - name: demo-v4-h5
+            cmd: pnpm --filter demo-v4 run build:h5
+          - name: demo-v5-weapp
+            cmd: pnpm --filter demo-v5 run build:weapp
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: build:demoV4:h5
-        run: pnpm --filter demo-v4 run build:h5
+      - name: Setup JS
+        uses: sxzz/workflows/setup-js@866f46ed892502b45a58ba4de02987123ccf8e17
+        with:
+          node-version: 18.x
 
-      - name: build:demoV4:weapp
-        run: pnpm --filter demo-v4 run build:weapp
+      - name: Run demo build
+        run: ${{ matrix.cmd }}
