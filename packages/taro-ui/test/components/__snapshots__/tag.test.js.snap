@@ -1,13 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtTag Snap render AtNoticebar -- props active 1`] = `"<div class=\\"at-tag at-tag--normal at-tag--active\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props active 1`] = `
+<div
+  class="at-tag at-tag--normal at-tag--active"
+>
+  标签
+</div>
+`;
 
-exports[`AtTag Snap render AtNoticebar -- props circle 1`] = `"<div class=\\"at-tag at-tag--normal at-tag--circle\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props circle 1`] = `
+<div
+  class="at-tag at-tag--normal at-tag--circle"
+>
+  标签
+</div>
+`;
 
-exports[`AtTag Snap render AtNoticebar -- props disabled 1`] = `"<div class=\\"at-tag at-tag--normal at-tag--disabled\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props disabled 1`] = `
+<div
+  class="at-tag at-tag--normal at-tag--disabled"
+>
+  标签
+</div>
+`;
 
-exports[`AtTag Snap render AtNoticebar -- props name 1`] = `"<div class=\\"at-tag at-tag--normal\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props name 1`] = `
+<div
+  class="at-tag at-tag--normal"
+>
+  标签
+</div>
+`;
 
-exports[`AtTag Snap render AtNoticebar -- props size 1`] = `"<div class=\\"at-tag at-tag--small\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props size 1`] = `
+<div
+  class="at-tag at-tag--small"
+>
+  标签
+</div>
+`;
 
-exports[`AtTag Snap render AtNoticebar -- props type 1`] = `"<div class=\\"at-tag at-tag--normal at-tag--primary\\">标签</div>"`;
+exports[`AtTag Snap render AtNoticebar -- props type 1`] = `
+<div
+  class="at-tag at-tag--normal at-tag--primary"
+>
+  标签
+</div>
+`;

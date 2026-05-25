@@ -1,25 +1,541 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtSearchBar Snap render AtSearchBar -- props actionName 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-171px;\\" class=\\"at-search-bar__action\\">actionName</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props actionName 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -171px;"
+  >
+    actionName
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props className 1`] = `"<div class=\\"at-search-bar test\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props className 1`] = `
+<div
+  class="at-search-bar test"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props customStyle 1`] = `
+<div
+  class="at-search-bar"
+  style="color: red;"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props disabled 1`] = `"<div class=\\"at-search-bar at-search-bar--fixed\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props disabled 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      disabled=""
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props disabled 2`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" disabled maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props fixed 1`] = `
+<div
+  class="at-search-bar at-search-bar--fixed"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props focus 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:0;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\"></span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" autofocus type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:1;margin-right:0;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props focus 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 0;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      />
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 1; margin-right: 0px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props inputType number 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props inputType number 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="number"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props maxlength 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props maxLength 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="120"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props placeholder 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">placeholder</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props placeholder 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        placeholder
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props showActionButton 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:1;margin-right:0;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props showActionButton 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 1; margin-right: 0px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render AtSearchBar -- props value 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:0;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:hidden;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"value\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:flex;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:1;margin-right:0;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render AtSearchBar -- props value 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 0;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: hidden;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value="value"
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: flex;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 1; margin-right: 0px;"
+  >
+    搜索
+  </div>
+</div>
+`;
 
-exports[`AtSearchBar Snap render initial AtSearchBar 1`] = `"<div class=\\"at-search-bar\\"><div class=\\"at-search-bar__input-cnt\\"><div style=\\"flex-grow:1;\\" class=\\"at-search-bar__placeholder-wrap\\"><span class=\\"taro-text at-icon at-icon-search\\"></span><span style=\\"visibility:visible;\\" class=\\"taro-text at-search-bar__placeholder\\">搜索</span></div><input confirmType=\\"search\\" value=\\"\\" maxLength=\\"140\\" class=\\"weui-input at-search-bar__input\\" maxlength=\\"140\\" type=\\"search\\"/><div style=\\"display:none;\\" class=\\"at-search-bar__clear\\"><span class=\\"taro-text at-icon at-icon-close-circle\\"></span></div></div><div style=\\"opacity:0;margin-right:-59px;\\" class=\\"at-search-bar__action\\">搜索</div></div>"`;
+exports[`AtSearchBar Snap render initial AtSearchBar 1`] = `
+<div
+  class="at-search-bar"
+>
+  <div
+    class="at-search-bar__input-cnt"
+  >
+    <div
+      class="at-search-bar__placeholder-wrap"
+      style="flex-grow: 1;"
+    >
+      <span
+        class="at-icon at-icon-search"
+      />
+      <span
+        class="at-search-bar__placeholder"
+        style="visibility: visible;"
+      >
+        搜索
+      </span>
+    </div>
+    <input
+      class="at-search-bar__input"
+      maxlength="140"
+      type="text"
+      value=""
+    />
+    <div
+      class="at-search-bar__clear"
+      style="display: none;"
+    >
+      <span
+        class="at-icon at-icon-close-circle"
+      />
+    </div>
+  </div>
+  <div
+    class="at-search-bar__action"
+    style="opacity: 0; margin-right: -59px;"
+  >
+    搜索
+  </div>
+</div>
+`;

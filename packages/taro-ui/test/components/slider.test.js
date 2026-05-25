@@ -1,60 +1,60 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtSlider from '../../.temp/components/slider/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtSlider from '../../lib/components/slider/index'
 
 describe('AtSlider Snap', () => {
   it('render initial AtSlider', () => {
-    const component = renderToString(<AtSlider />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props value', () => {
-    const component = renderToString(<AtSlider value={50} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider value={50} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props step', () => {
-    const component = renderToString(<AtSlider step={1} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider step={1} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props min', () => {
-    const component = renderToString(<AtSlider min={50} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider min={50} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props max', () => {
-    const component = renderToString(<AtSlider max={200} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider max={200} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props disabled', () => {
-    const component = renderToString(<AtSlider disabled />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider disabled />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props activeColor', () => {
-    const component = renderToString(<AtSlider activeColor='#4285F4' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider activeColor='#4285F4' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props backgroundColor', () => {
-    const component = renderToString(<AtSlider backgroundColor='#BDBDBD' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider backgroundColor='#BDBDBD' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props blockColor', () => {
-    const component = renderToString(<AtSlider blockColor='#4285F4' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider blockColor='#4285F4' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props blockSize', () => {
-    const component = renderToString(<AtSlider blockSize={24} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider blockSize={24} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSlider -- props showValue', () => {
-    const component = renderToString(<AtSlider showValue />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtSlider showValue />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

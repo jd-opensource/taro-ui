@@ -1,15 +1,15 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtForm from '../../.temp/components/form/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtForm from '../../lib/components/form/index'
 
 describe('AtForm Snap', () => {
   it('render initial AtForm', () => {
-    const component = renderToString(<AtForm />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtForm />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtForm -- props reportSubmit', () => {
-    const component = renderToString(<AtForm reportSubmit />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtForm reportSubmit />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -1,6 +1,6 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtImagePicker from '../../.temp/components/image-picker/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtImagePicker from '../../lib/components/image-picker/index'
 
 describe('AtImagePicker Snap', () => {
   const files = [
@@ -26,50 +26,50 @@ describe('AtImagePicker Snap', () => {
     }
   ]
   it('render initial AtImagePicker', () => {
-    const component = renderToString(<AtImagePicker isTest />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtImagePicker isTest />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props className', () => {
-    const component = renderToString(<AtImagePicker isTest className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtImagePicker isTest className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props customStyle', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtImagePicker isTest customStyle='color: red' />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props files', () => {
-    const component = renderToString(<AtImagePicker isTest files={files} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtImagePicker isTest files={files} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props length', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtImagePicker isTest length={5} files={files} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props mode', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtImagePicker isTest mode='top' files={files} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props showAddBtn', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtImagePicker isTest showAddBtn={false} files={files} />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtImagePicker -- props multiple', () => {
-    const component = renderToString(<AtImagePicker isTest multiple />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtImagePicker isTest multiple />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

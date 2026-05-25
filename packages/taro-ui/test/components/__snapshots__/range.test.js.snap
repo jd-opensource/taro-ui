@@ -1,21 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtRange Snap render AtRange -- props className 1`] = `"<div class=\\"at-range test\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props className 1`] = `
+<div
+  class="at-range test"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props customStyle 1`] = `
+<div
+  class="at-range"
+  style="color: red;"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props disabled 1`] = `"<div class=\\"at-range at-range--disabled\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props disabled 1`] = `
+<div
+  class="at-range at-range--disabled"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props max 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props max 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 20%; width: 40%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 20%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 60%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props min 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props min 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 22%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 22%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props railStyle 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div style=\\"color:red;\\" class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props railStyle 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+      style="color: red;"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props sliderStyle 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;color:red;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;color:red;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props sliderStyle 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%; color: red;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%; color: red;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props trackStyle 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div style=\\"color:red;\\" class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props trackStyle 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%; color: red;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render AtRange -- props value 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render AtRange -- props value 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 30%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 30%;"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRange Snap render initial AtRange 1`] = `"<div class=\\"at-range\\"><div style=\\"height:;\\" class=\\"at-range__container\\"><div class=\\"at-range__rail\\"></div><div style=\\"left:0%;width:0%;\\" class=\\"at-range__track\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div><div style=\\"width:;height:;margin-left:;left:0%;\\" class=\\"at-range__slider\\"></div></div></div>"`;
+exports[`AtRange Snap render initial AtRange 1`] = `
+<div
+  class="at-range"
+>
+  <div
+    class="at-range__container"
+  >
+    <div
+      class="at-range__rail"
+    />
+    <div
+      class="at-range__track"
+      style="left: 0%; width: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+    <div
+      class="at-range__slider"
+      style="left: 0%;"
+    />
+  </div>
+</div>
+`;

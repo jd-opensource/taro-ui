@@ -1,7 +1,7 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtRadio from '../../.temp/components/radio/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtRadio from '../../lib/components/radio/index'
 
 const options = [
   { label: '单选项一', value: 'option1' },
@@ -11,36 +11,36 @@ const options = [
 
 describe('AtRadio Snap', () => {
   it('render AtRadio', () => {
-    const componet = renderToString(<AtRadio options={options} />)
-    expect(componet).toMatchSnapshot()
+    const { container } = render(<AtRadio options={options} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('AtRadio Event', () => {
   it('AtRadio onClick', () => {
     const onItemClick = jest.fn()
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtRadio value='option2' options={options} onClick={onItemClick} />
     )
-    const items = findDOMNode(component, 'at-radio').querySelectorAll(
+    const items = queryByClass(container, 'at-radio').querySelectorAll(
       '.at-radio__option'
     )
     const item0 = items[0]
-    Simulate.click(item0)
+    fireEvent.click(item0)
     expect(onItemClick).toBeCalled()
     expect(onItemClick.mock.calls[0][0]).toBe('option1')
   })
 
   it('AtRadio onClick disabled, onClick not to be called', () => {
     const onItemClick = jest.fn()
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtRadio value='option2' options={options} onClick={onItemClick} />
     )
-    const items = findDOMNode(component, 'at-radio').querySelectorAll(
+    const items = queryByClass(container, 'at-radio').querySelectorAll(
       '.at-radio__option'
     )
     const item2 = items[2]
-    Simulate.click(item2)
+    fireEvent.click(item2)
     expect(onItemClick).not.toBeCalled()
   })
 })

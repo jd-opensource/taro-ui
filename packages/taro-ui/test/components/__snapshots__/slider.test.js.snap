@@ -1,23 +1,205 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtSlider Snap render AtSlider -- props activeColor 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#4285F4;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props activeColor 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props backgroundColor 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#BDBDBD;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props backgroundColor 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props blockColor 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#4285F4;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props blockColor 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props blockSize 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:24px;height:24px;background-color:#ffffff;margin-top:-12px;margin-left:-12px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props blockSize 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props disabled 1`] = `"<div class=\\"at-slider at-slider--disabled\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props disabled 1`] = `
+<div
+  class="at-slider at-slider--disabled"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      disabled=""
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props max 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props max 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="200"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props min 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:100%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:100%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"50\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props min 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="50"
+      step="1"
+      type="text"
+      value="50"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props showValue 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div><div class=\\"at-slider__text\\">0</div></div>"`;
+exports[`AtSlider Snap render AtSlider -- props showValue 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+  <div
+    class="at-slider__text"
+  >
+    0
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props step 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props step 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render AtSlider -- props value 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:50%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:50%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"50\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render AtSlider -- props value 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="50"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtSlider Snap render initial AtSlider 1`] = `"<div class=\\"at-slider\\"><div class=\\"at-slider__inner\\"><div class=\\"weui-slider-box\\"><div class=\\"weui-slider\\"><div class=\\"weui-slider__inner\\" style=\\"background-color:#e9e9e9;\\"><div style=\\"width:0%;background-color:#6190e8;\\" class=\\"weui-slider__track\\"></div><div style=\\"left:0%;width:28px;height:28px;background-color:#ffffff;margin-top:-14px;margin-left:-14px;\\" class=\\"weui-slider__handler\\"></div><input type=\\"hidden\\" name=\\"\\" value=\\"0\\"/></div></div>undefined</div></div>undefined</div>"`;
+exports[`AtSlider Snap render initial AtSlider 1`] = `
+<div
+  class="at-slider"
+>
+  <div
+    class="at-slider__inner"
+  >
+    <input
+      max="100"
+      min="0"
+      step="1"
+      type="text"
+      value="0"
+    />
+  </div>
+</div>
+`;

@@ -216,17 +216,33 @@
     },
     {
       "files": [
-        "packages/**/test/**/*.test.js",
+        "packages/**/test/**/*.js",
         "packages/**/test/**/test.js"
       ],
+      "parser": "@babel/eslint-parser",
+      "parserOptions": {
+        "ecmaVersion": 2017,
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "babelOptions": {
+          "configFile": "./packages/taro-ui/babel.config.json",
+          "rootMode": "upward"
+        }
+      },
+      "env": {
+        "jest": true
+      },
       "rules": {
         "taro/no-stateless-component": "off",
         "react/react-in-jsx-scope": "off",
         "react/no-find-dom-node": "off",
+        "react/prop-types": "off",
+        "no-undefined": "off",
         "no-unused-vars": [
           "error",
           {
-            "varsIgnorePattern": "Nerv"
+            "varsIgnorePattern": "React"
           }
         ]
       }

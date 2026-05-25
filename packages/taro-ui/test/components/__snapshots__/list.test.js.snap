@@ -1,5 +1,530 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List Snap render completed List -- no border 1`] = `"<div class=\\"at-list at-list--no-border\\"><div class=\\"at-list__item at-list__item--no-border\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefinedundefined</div></div></div><div class=\\"at-list__item at-list__item--no-border\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefinedundefined</div></div></div></div>"`;
+exports[`List Snap render completed List -- no border 1`] = `
+<div
+  class="at-list at-list--no-border"
+>
+  <div
+    class="at-list__item at-list__item--no-border"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      />
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--no-border"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`List Snap render completed List 1`] = `"<div class=\\"at-list\\"><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefinedundefined</div></div></div><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item at-list__item--multiple\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div><div class=\\"item-content__info-note\\">描述信息</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefinedundefined</div></div></div><div class=\\"at-list__item at-list__item--disabled\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">禁用状态</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__info\\">详细信息</div>undefinedundefined</div></div></div><div class=\\"at-list__item at-list__item--multiple\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div><div class=\\"item-content__info-note\\">描述信息</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__info\\">详细信息</div>undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item at-list__item--multiple\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字标题文字标题文字标题文字标题文字</div><div class=\\"item-content__info-note\\">描述信息</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__info\\">详细信息详细信息详细信息详细信息</div>undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item at-list__item--thumb at-list__item--multiple\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-thumb item-thumb\\"><div class=\\"taro-img item-thumb__info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png\\"/></div></div><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div><div class=\\"item-content__info-note\\">描述信息</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__info\\">详细信息</div>undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item at-list__item--thumb at-list__item--multiple\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-thumb item-thumb\\"><div class=\\"taro-img item-thumb__info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png\\"/></div></div><div class=\\"at-list__item-icon item-icon\\"><span style=\\"color:#78A4FA;font-size:25px;\\" class=\\"taro-text at-icon at-icon-calendar\\"></span></div><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div><div class=\\"item-content__info-note\\">描述信息</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__info\\">详细信息</div>undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__switch\\"><input color=\\"#6190E8\\" class=\\"weui-switch\\" type=\\"checkbox\\"/></div>undefined</div></div></div><div class=\\"at-list__item at-list__item--disabled\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__switch\\"><input color=\\"#6190E8\\" disabled class=\\"weui-switch\\" type=\\"checkbox\\"/></div>undefined</div></div></div><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__switch\\"><input color=\\"#6190E8\\" class=\\"weui-switch\\" checked type=\\"checkbox\\" style=\\"border-color:#6190E8;background-color:#6190E8;\\"/></div>undefined</div></div></div><div class=\\"at-list__item at-list__item--disabled\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">标题文字</div></div></div><div class=\\"at-list__item-extra item-extra\\"><div class=\\"item-extra__switch\\"><input color=\\"#6190E8\\" disabled class=\\"weui-switch\\" checked type=\\"checkbox\\" style=\\"border-color:#6190E8;background-color:#6190E8;\\"/></div>undefined</div></div></div></div>"`;
+exports[`List Snap render completed List 1`] = `
+<div
+  class="at-list"
+>
+  <div
+    class="at-list__item"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      />
+    </div>
+  </div>
+  <div
+    class="at-list__item"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--multiple"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+          <div
+            class="item-content__info-note"
+          >
+            描述信息
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      />
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--disabled"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            禁用状态
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__info"
+        >
+          详细信息
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--multiple"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+          <div
+            class="item-content__info-note"
+          >
+            描述信息
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__info"
+        >
+          详细信息
+        </div>
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--multiple"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字标题文字标题文字标题文字标题文字
+          </div>
+          <div
+            class="item-content__info-note"
+          >
+            描述信息
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__info"
+        >
+          详细信息详细信息详细信息详细信息
+        </div>
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--thumb at-list__item--multiple"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-thumb item-thumb"
+      >
+        <img
+          class="item-thumb__info"
+          src="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
+        />
+      </div>
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+          <div
+            class="item-content__info-note"
+          >
+            描述信息
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__info"
+        >
+          详细信息
+        </div>
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--thumb at-list__item--multiple"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-icon item-icon"
+      >
+        <span
+          class="at-icon at-icon-calendar"
+          style="color: rgb(120, 164, 250); font-size: 25px;"
+        />
+      </div>
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+          <div
+            class="item-content__info-note"
+          >
+            描述信息
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__info"
+        >
+          详细信息
+        </div>
+        <div
+          class="item-extra__icon"
+        >
+          <span
+            class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__switch"
+        >
+          <input
+            color="#6190E8"
+            type="checkbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--disabled"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__switch"
+        >
+          <input
+            color="#6190E8"
+            disabled=""
+            type="checkbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__switch"
+        >
+          <input
+            checked=""
+            color="#6190E8"
+            type="checkbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-list__item at-list__item--disabled"
+  >
+    <div
+      class="at-list__item-container"
+    >
+      <div
+        class="at-list__item-content item-content"
+      >
+        <div
+          class="item-content__info"
+        >
+          <div
+            class="item-content__info-title"
+          >
+            标题文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item-extra item-extra"
+      >
+        <div
+          class="item-extra__switch"
+        >
+          <input
+            checked=""
+            color="#6190E8"
+            disabled=""
+            type="checkbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

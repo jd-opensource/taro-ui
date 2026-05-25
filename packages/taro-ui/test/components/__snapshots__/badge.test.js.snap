@@ -1,7 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtBadge Snap render AtBadge -- props dot 1`] = `"<div class=\\"at-badge\\"><div class=\\"at-button at-button--icon at-button--normal\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefined<div class=\\"at-button__icon\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><div class=\\"at-button__text\\">按钮文字</div></div><div class=\\"at-badge__dot\\"></div></div>"`;
+exports[`AtBadge Snap render AtBadge -- props dot 1`] = `
+<div
+  class="at-badge"
+>
+  <div
+    class="at-button at-button--icon at-button--normal"
+  >
+    <button
+      class="at-button__wxbutton"
+      lang="en"
+    />
+    <div
+      class="at-button__icon"
+    >
+      <div
+        class="at-loading"
+      >
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+      </div>
+    </div>
+    <div
+      class="at-button__text"
+    >
+      按钮文字
+    </div>
+  </div>
+  <div
+    class="at-badge__dot"
+  />
+</div>
+`;
 
-exports[`AtBadge Snap render AtBadge -- props maxValue 1`] = `"<div class=\\"at-badge\\"><div class=\\"at-button at-button--icon at-button--normal\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefined<div class=\\"at-button__icon\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><div class=\\"at-button__text\\">按钮文字</div></div><div class=\\"at-badge__num\\">9+</div></div>"`;
+exports[`AtBadge Snap render AtBadge -- props maxValue 1`] = `
+<div
+  class="at-badge"
+>
+  <div
+    class="at-button at-button--icon at-button--normal"
+  >
+    <button
+      class="at-button__wxbutton"
+      lang="en"
+    />
+    <div
+      class="at-button__icon"
+    >
+      <div
+        class="at-loading"
+      >
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+      </div>
+    </div>
+    <div
+      class="at-button__text"
+    >
+      按钮文字
+    </div>
+  </div>
+  <div
+    class="at-badge__num"
+  >
+    9+
+  </div>
+</div>
+`;
 
-exports[`AtBadge Snap render AtBadge -- props value 1`] = `"<div class=\\"at-badge\\"><div class=\\"at-button at-button--icon at-button--normal\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefined<div class=\\"at-button__icon\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><div class=\\"at-button__text\\">按钮文字</div></div><div class=\\"at-badge__num\\">3</div></div>"`;
+exports[`AtBadge Snap render AtBadge -- props value 1`] = `
+<div
+  class="at-badge"
+>
+  <div
+    class="at-button at-button--icon at-button--normal"
+  >
+    <button
+      class="at-button__wxbutton"
+      lang="en"
+    />
+    <div
+      class="at-button__icon"
+    >
+      <div
+        class="at-loading"
+      >
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+      </div>
+    </div>
+    <div
+      class="at-button__text"
+    >
+      按钮文字
+    </div>
+  </div>
+  <div
+    class="at-badge__num"
+  >
+    3
+  </div>
+</div>
+`;

@@ -1,13 +1,227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card Snap render Card -- props extra  1`] = `"<div class=\\"at-card\\"><div class=\\"at-card__header\\"><div class=\\"at-card__header-thumb\\"><div class=\\"taro-img at-card__header-thumb-info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png\\"/></div></div>undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span><span class=\\"taro-text at-card__header-extra\\">额外信息</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div><div class=\\"at-card__content-note\\">小Tips</div></div></div>"`;
+exports[`Card Snap render Card -- props extra  1`] = `
+<div
+  class="at-card"
+>
+  <div
+    class="at-card__header"
+  >
+    <div
+      class="at-card__header-thumb"
+    >
+      <img
+        class="at-card__header-thumb-info"
+        src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      />
+    </div>
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+    <div
+      class="at-card__header-extra"
+    >
+      额外信息
+    </div>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+    <div
+      class="at-card__content-note"
+    >
+      小Tips
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Card Snap render Card -- props extraStyle  1`] = `"<div class=\\"at-card at-card--full\\"><div class=\\"at-card__header\\"><div class=\\"at-card__header-thumb\\"><div class=\\"taro-img at-card__header-thumb-info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png\\"/></div></div>undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span><span style=\\"font-size:12px;max-width:200px;\\" class=\\"taro-text at-card__header-extra\\">额外信息</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div><div class=\\"at-card__content-note\\">小Tips</div></div></div>"`;
+exports[`Card Snap render Card -- props extraStyle  1`] = `
+<div
+  class="at-card at-card--full"
+>
+  <div
+    class="at-card__header"
+  >
+    <div
+      class="at-card__header-thumb"
+    >
+      <img
+        class="at-card__header-thumb-info"
+        src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      />
+    </div>
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+    <div
+      class="at-card__header-extra"
+      style="font-size: 12px; max-width: 200px;"
+    >
+      额外信息
+    </div>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+    <div
+      class="at-card__content-note"
+    >
+      小Tips
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Card Snap render Card -- props isFull  1`] = `"<div class=\\"at-card at-card--full\\"><div class=\\"at-card__header\\"><div class=\\"at-card__header-thumb\\"><div class=\\"taro-img at-card__header-thumb-info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png\\"/></div></div>undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span><span class=\\"taro-text at-card__header-extra\\">额外信息</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div><div class=\\"at-card__content-note\\">小Tips</div></div></div>"`;
+exports[`Card Snap render Card -- props isFull  1`] = `
+<div
+  class="at-card at-card--full"
+>
+  <div
+    class="at-card__header"
+  >
+    <div
+      class="at-card__header-thumb"
+    >
+      <img
+        class="at-card__header-thumb-info"
+        src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      />
+    </div>
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+    <div
+      class="at-card__header-extra"
+    >
+      额外信息
+    </div>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+    <div
+      class="at-card__content-note"
+    >
+      小Tips
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Card Snap render Card -- props note 1`] = `"<div class=\\"at-card\\"><div class=\\"at-card__header\\"><div class=\\"at-card__header-thumb\\"><div class=\\"taro-img at-card__header-thumb-info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png\\"/></div></div>undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div><div class=\\"at-card__content-note\\">小Tips</div></div></div>"`;
+exports[`Card Snap render Card -- props note 1`] = `
+<div
+  class="at-card"
+>
+  <div
+    class="at-card__header"
+  >
+    <div
+      class="at-card__header-thumb"
+    >
+      <img
+        class="at-card__header-thumb-info"
+        src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      />
+    </div>
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+    <div
+      class="at-card__content-note"
+    >
+      小Tips
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Card Snap render Card -- props thumb 1`] = `"<div class=\\"at-card\\"><div class=\\"at-card__header\\"><div class=\\"at-card__header-thumb\\"><div class=\\"taro-img at-card__header-thumb-info\\"><img class=\\"taro-img__mode-scaletofill\\" src=\\"http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png\\"/></div></div>undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div></div></div>"`;
+exports[`Card Snap render Card -- props thumb 1`] = `
+<div
+  class="at-card"
+>
+  <div
+    class="at-card__header"
+  >
+    <div
+      class="at-card__header-thumb"
+    >
+      <img
+        class="at-card__header-thumb-info"
+        src="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      />
+    </div>
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Card Snap render initial Card 1`] = `"<div class=\\"at-card\\"><div class=\\"at-card__header\\">undefined<span class=\\"taro-text at-card__header-title\\">这是个标题</span></div><div class=\\"at-card__content\\"><div class=\\"at-card__content-info\\">这也是内容区 可以随意定义功能</div></div></div>"`;
+exports[`Card Snap render initial Card 1`] = `
+<div
+  class="at-card"
+>
+  <div
+    class="at-card__header"
+  >
+    <span
+      class="at-card__header-title"
+    >
+      这是个标题
+    </span>
+  </div>
+  <div
+    class="at-card__content"
+  >
+    <div
+      class="at-card__content-info"
+    >
+      这也是内容区 可以随意定义功能
+    </div>
+  </div>
+</div>
+`;

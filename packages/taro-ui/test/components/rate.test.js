@@ -1,40 +1,42 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtRate from '../../.temp/components/rate/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtRate from '../../lib/components/rate/index'
 
 describe('AtRate Snap', () => {
   it('render initial AtRate', () => {
-    const componet = renderToString(<AtRate isTest />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate isTest />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props customStyle', () => {
-    const componet = renderToString(<AtRate customStyle='color:red;' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtRate customStyle='color:red;' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props className', () => {
-    const componet = renderToString(<AtRate className='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate className='test' />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props size', () => {
-    const componet = renderToString(<AtRate size='10' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate size='10' />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props value', () => {
-    const componet = renderToString(<AtRate value='2' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate value={2} />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props max', () => {
-    const componet = renderToString(<AtRate max='10' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate max={10} />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtRate -- props margin', () => {
-    const componet = renderToString(<AtRate margin='10' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtRate margin={10} />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 })

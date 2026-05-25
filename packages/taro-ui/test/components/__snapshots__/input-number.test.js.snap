@@ -1,21 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtInputNumber Snap render AtInputNumber -- props className 1`] = `"<div class=\\"at-input-number test\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props className 1`] = `
+<div
+  class="at-input-number test"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props customStyle 1`] = `
+<div
+  class="at-input-number"
+  style="color: red;"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props disabled 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn at-input-number--disabled\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" disabled type=\\"number\\"/><div class=\\"at-input-number__btn at-input-number--disabled\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props disabled 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn at-input-number--disabled"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    disabled=""
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn at-input-number--disabled"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props disabledInput 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" disabled type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props disabledInput 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    disabled=""
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props size 1`] = `"<div class=\\"at-input-number at-input-number--lg\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props size 1`] = `
+<div
+  class="at-input-number at-input-number--lg"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props type=digit 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props type=digit 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="digit"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props type=number 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props type=number 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props value 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"2\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props value 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value="2"
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render AtInputNumber -- props width 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:4.2667rem;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render AtInputNumber -- props width 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    style="width: 200px;"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtInputNumber Snap render initial AtInputNumber 1`] = `"<div class=\\"at-input-number\\"><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-subtract at-input-number__btn-subtract\\"></span></div><input style=\\"width:;\\" value=\\"1\\" class=\\"weui-input at-input-number__input\\" type=\\"number\\"/><div class=\\"at-input-number__btn\\"><span class=\\"taro-text at-icon at-icon-add at-input-number__btn-add\\"></span></div></div>"`;
+exports[`AtInputNumber Snap render initial AtInputNumber 1`] = `
+<div
+  class="at-input-number"
+>
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-subtract at-input-number__btn-subtract"
+    />
+  </div>
+  <input
+    class="at-input-number__input"
+    type="number"
+    value=""
+  />
+  <div
+    class="at-input-number__btn"
+  >
+    <span
+      class="at-icon at-icon-add at-input-number__btn-add"
+    />
+  </div>
+</div>
+`;

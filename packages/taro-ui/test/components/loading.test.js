@@ -1,20 +1,20 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtLoading from '../../.temp/components/loading/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtLoading from '../../lib/components/loading/index'
 
 describe('AtLoading Snap', () => {
   it('render initial AtLoading', () => {
-    const component = renderToString(<AtLoading />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtLoading />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtLoading -- props size', () => {
-    const component = renderToString(<AtLoading size={15} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtLoading size={15} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtLoading -- props color', () => {
-    const component = renderToString(<AtLoading color='#fff' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtLoading color='#fff' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

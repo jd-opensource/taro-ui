@@ -1,11 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtTabsPane Snap render AtTabsPane -- props className 1`] = `"<div class=\\"at-tabs-pane at-tabs-pane--active test\\"></div>"`;
+exports[`AtTabsPane Snap render AtTabsPane -- props className 1`] = `
+<div
+  class="at-tabs-pane at-tabs-pane--active test"
+/>
+`;
 
-exports[`AtTabsPane Snap render AtTabsPane -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-tabs-pane at-tabs-pane--active\\"></div>"`;
+exports[`AtTabsPane Snap render AtTabsPane -- props customStyle 1`] = `
+<div
+  class="at-tabs-pane at-tabs-pane--active"
+  style="color: red;"
+/>
+`;
 
-exports[`AtTabsPane Snap render AtTabsPane -- props index current 1`] = `"<div class=\\"at-tabs-pane at-tabs-pane--active\\"></div>"`;
+exports[`AtTabsPane Snap render AtTabsPane -- props index current 1`] = `
+<div
+  class="at-tabs-pane at-tabs-pane--active"
+/>
+`;
 
-exports[`AtTabsPane Snap render AtTabsPane -- props index current 2`] = `"<div class=\\"at-tabs-pane at-tabs-pane--inactive\\"></div>"`;
+exports[`AtTabsPane Snap render AtTabsPane -- props index current 2`] = `
+<div
+  class="at-tabs-pane at-tabs-pane--inactive"
+/>
+`;
 
-exports[`AtTabsPane Snap render initial AtTabs 1`] = `"<div class=\\"at-tabs-pane at-tabs-pane--active\\">test</div>"`;
+exports[`AtTabsPane Snap render initial AtTabs 1`] = `
+<div
+  class="at-tabs-pane at-tabs-pane--active"
+>
+  test
+</div>
+`;

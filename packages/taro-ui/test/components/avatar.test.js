@@ -1,37 +1,37 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtAvatar from '../../.temp/components/avatar/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtAvatar from '../../lib/components/avatar/index'
 
 describe('Avatar Snap', () => {
   it('render Avatar -- props size(large) ', () => {
-    const component = renderToString(<AtAvatar size='large' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtAvatar size='large' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render Avatar -- props size(normal) ', () => {
-    const component = renderToString(<AtAvatar size='normal' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtAvatar size='normal' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render Avatar -- props size(small) ', () => {
-    const component = renderToString(<AtAvatar size='small' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtAvatar size='small' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render Avatar -- props circle', () => {
-    const component = renderToString(<AtAvatar circle />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtAvatar circle />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render Avatar -- props image', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtAvatar image='https://jdc.jd.com/img/100' />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render Avatar -- props text', () => {
-    const component = renderToString(<AtAvatar text='凹凸实验室' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtAvatar text='凹凸实验室' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

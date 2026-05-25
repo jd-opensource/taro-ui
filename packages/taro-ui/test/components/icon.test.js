@@ -1,44 +1,44 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtIcon from '../../.temp/components/icon/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtIcon from '../../lib/components/icon/index'
 
 describe('AtIcon Snap', () => {
   it('render initial AtIcon', () => {
-    const component = renderToString(<AtIcon />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props value', () => {
-    const component = renderToString(<AtIcon value='star' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon value='star' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props color', () => {
-    const component = renderToString(<AtIcon color='#fff' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon color='#fff' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props size', () => {
-    const component = renderToString(<AtIcon size='14' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon size='14' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props prefixClass', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtIcon prefixClass='prefixClass' value='star' />
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props customStyle', () => {
-    const component = renderToString(<AtIcon customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtIcon -- props className', () => {
-    const component = renderToString(<AtIcon className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtIcon className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
@@ -46,10 +46,10 @@ describe('AtIcon Event', () => {
   it('AtIcon onClick', () => {
     const onClick = jest.fn()
 
-    const component = renderIntoDocument(<AtIcon onClick={onClick} />)
-    const componentDom = findDOMNode(component, 'at-icon')
+    const { container } = render(<AtIcon onClick={onClick} />)
+    const componentDom = queryByClass(container, 'at-icon')
 
-    Simulate.click(componentDom)
+    fireEvent.click(componentDom)
     expect(onClick).toBeCalled()
   })
 })

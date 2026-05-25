@@ -1,7 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtLoading Snap render AtLoading -- props color 1`] = `"<div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:1px solid #fff;border-color:#fff transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:1px solid #fff;border-color:#fff transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:1px solid #fff;border-color:#fff transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div></div>"`;
+exports[`AtLoading Snap render AtLoading -- props color 1`] = `
+<div
+  class="at-loading"
+>
+  <div
+    class="at-loading__ring"
+    style="border: 1px solid #fff; border-color: #fff transparent transparent transparent;"
+  />
+  <div
+    class="at-loading__ring"
+    style="border: 1px solid #fff; border-color: #fff transparent transparent transparent;"
+  />
+  <div
+    class="at-loading__ring"
+    style="border: 1px solid #fff; border-color: #fff transparent transparent transparent;"
+  />
+</div>
+`;
 
-exports[`AtLoading Snap render AtLoading -- props size 1`] = `"<div style=\\"width:0.32rem;height:0.32rem;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:0.32rem;height:0.32rem;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:0.32rem;height:0.32rem;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:0.32rem;height:0.32rem;\\" class=\\"at-loading__ring\\"></div></div>"`;
+exports[`AtLoading Snap render AtLoading -- props size 1`] = `
+<div
+  class="at-loading"
+  style="width: 15px; height: 15px;"
+>
+  <div
+    class="at-loading__ring"
+    style="width: 15px; height: 15px;"
+  />
+  <div
+    class="at-loading__ring"
+    style="width: 15px; height: 15px;"
+  />
+  <div
+    class="at-loading__ring"
+    style="width: 15px; height: 15px;"
+  />
+</div>
+`;
 
-exports[`AtLoading Snap render initial AtLoading 1`] = `"<div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div>"`;
+exports[`AtLoading Snap render initial AtLoading 1`] = `
+<div
+  class="at-loading"
+>
+  <div
+    class="at-loading__ring"
+  />
+  <div
+    class="at-loading__ring"
+  />
+  <div
+    class="at-loading__ring"
+  />
+</div>
+`;

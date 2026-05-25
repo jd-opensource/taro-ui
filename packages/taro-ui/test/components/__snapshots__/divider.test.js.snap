@@ -1,19 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtDivider Snap render AtDivider -- props childen 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\">test</div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props childen 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+  >
+    test
+  </div>
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props className 1`] = `"<div style=\\"height:;\\" class=\\"at-divider test\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props className 1`] = `
+<div
+  class="at-divider test"
+>
+  <div
+    class="at-divider__content"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props content 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\">content</div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props content 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+  >
+    content
+  </div>
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props customStyle 1`] = `"<div style=\\"height:;color:red;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props customStyle 1`] = `
+<div
+  class="at-divider"
+  style="color: red;"
+>
+  <div
+    class="at-divider__content"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props fontColor 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:#fff;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props fontColor 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+    style="color: rgb(255, 255, 255);"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props fontSize 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:1.1947rem;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props fontSize 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+    style="font-size: 56px;"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props height 1`] = `"<div style=\\"height:2.56rem;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props height 1`] = `
+<div
+  class="at-divider"
+  style="height: 120px;"
+>
+  <div
+    class="at-divider__content"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render AtDivider -- props lineColor 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:#fff;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render AtDivider -- props lineColor 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+  />
+  <div
+    class="at-divider__line"
+    style="background-color: rgb(255, 255, 255);"
+  />
+</div>
+`;
 
-exports[`AtDivider Snap render initial AtDivider 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\"></div><div style=\\"background-color:;\\" class=\\"at-divider__line\\"></div></div>"`;
+exports[`AtDivider Snap render initial AtDivider 1`] = `
+<div
+  class="at-divider"
+>
+  <div
+    class="at-divider__content"
+  />
+  <div
+    class="at-divider__line"
+  />
+</div>
+`;

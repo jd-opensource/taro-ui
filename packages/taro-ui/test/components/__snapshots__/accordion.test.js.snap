@@ -1,13 +1,235 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtAccordion Snap render AtAccordion -- props icon 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><span style=\\"color:red;font-size:undefinedpx;\\" class=\\"taro-text at-icon at-icon-chevron-down at-accordion__icon\\"></span><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\"></div><div class=\\"at-accordion__info__note\\"></div></div><div class=\\"at-accordion__arrow\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content at-accordion__content--inactive\\"><div class=\\"at-accordion__body\\"><div class=\\"\\"></div></div></div></div>"`;
+exports[`AtAccordion Snap render AtAccordion -- props icon 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <span
+      class="at-icon at-icon-chevron-down at-accordion__icon"
+      style="color: red;"
+    />
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      />
+      <div
+        class="at-accordion__info__note"
+      />
+    </div>
+    <div
+      class="at-accordion__arrow"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content at-accordion__content--inactive"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtAccordion Snap render AtAccordion -- props note 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\"></div><div class=\\"at-accordion__info__note\\">note</div></div><div class=\\"at-accordion__arrow\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content at-accordion__content--inactive\\"><div class=\\"at-accordion__body\\"><div class=\\"\\"></div></div></div></div>"`;
+exports[`AtAccordion Snap render AtAccordion -- props note 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      />
+      <div
+        class="at-accordion__info__note"
+      >
+        note
+      </div>
+    </div>
+    <div
+      class="at-accordion__arrow"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content at-accordion__content--inactive"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtAccordion Snap render AtAccordion -- props open 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\"></div><div class=\\"at-accordion__info__note\\"></div></div><div class=\\"at-accordion__arrow at-accordion__arrow--folded\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content\\"><div class=\\"at-accordion__body\\"></div></div></div>"`;
+exports[`AtAccordion Snap render AtAccordion -- props open 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      />
+      <div
+        class="at-accordion__info__note"
+      />
+    </div>
+    <div
+      class="at-accordion__arrow at-accordion__arrow--folded"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtAccordion Snap render AtAccordion -- props title 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\">title</div><div class=\\"at-accordion__info__note\\"></div></div><div class=\\"at-accordion__arrow\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content at-accordion__content--inactive\\"><div class=\\"at-accordion__body\\"></div></div></div>"`;
+exports[`AtAccordion Snap render AtAccordion -- props title 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      >
+        title
+      </div>
+      <div
+        class="at-accordion__info__note"
+      />
+    </div>
+    <div
+      class="at-accordion__arrow"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content at-accordion__content--inactive"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtAccordion Snap render AtIcon -- props icon prefixClass 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><span style=\\"color:red;font-size:undefinedpx;\\" class=\\"taro-text prefixClass prefixClass-star at-accordion__icon\\"></span><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\"></div><div class=\\"at-accordion__info__note\\"></div></div><div class=\\"at-accordion__arrow\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content at-accordion__content--inactive\\"><div class=\\"at-accordion__body\\"><div class=\\"\\"></div></div></div></div>"`;
+exports[`AtAccordion Snap render AtIcon -- props icon prefixClass 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <span
+      class="prefixClass prefixClass-star at-accordion__icon"
+      style="color: red;"
+    />
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      />
+      <div
+        class="at-accordion__info__note"
+      />
+    </div>
+    <div
+      class="at-accordion__arrow"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content at-accordion__content--inactive"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtAccordion Snap render initial AtAccordion 1`] = `"<div class=\\"at-accordion\\"><div class=\\"at-accordion__header\\"><div class=\\"at-accordion__info\\"><div class=\\"at-accordion__info__title\\"></div><div class=\\"at-accordion__info__note\\"></div></div><div class=\\"at-accordion__arrow\\"><span class=\\"taro-text at-icon at-icon-chevron-down\\"></span></div></div><div style=\\"height:;\\" class=\\"at-accordion__content at-accordion__content--inactive\\"><div class=\\"at-accordion__body\\"></div></div></div>"`;
+exports[`AtAccordion Snap render initial AtAccordion 1`] = `
+<div
+  class="at-accordion"
+>
+  <div
+    class="at-accordion__header"
+  >
+    <div
+      class="at-accordion__info"
+    >
+      <div
+        class="at-accordion__info__title"
+      />
+      <div
+        class="at-accordion__info__note"
+      />
+    </div>
+    <div
+      class="at-accordion__arrow"
+    >
+      <span
+        class="at-icon at-icon-chevron-down"
+      />
+    </div>
+  </div>
+  <div
+    class="at-accordion__content at-accordion__content--inactive"
+  >
+    <div
+      class="at-accordion__body"
+      id="at-accordion__body-BDFHJLNP"
+    />
+  </div>
+</div>
+`;

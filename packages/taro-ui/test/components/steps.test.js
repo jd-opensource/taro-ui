@@ -1,6 +1,6 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtSteps from '../../.temp/components/steps/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtSteps from '../../lib/components/steps/index'
 
 describe('AtSteps Snap', () => {
   const items1 = [
@@ -54,29 +54,35 @@ describe('AtSteps Snap', () => {
   ]
 
   it('render initial AtSteps', () => {
-    const componet = renderToString(<AtSteps />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtSteps />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtSteps -- props customStyle', () => {
-    const componet = renderToString(<AtSteps customStyle='color:red;' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtSteps customStyle='color:red;' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtSteps -- props className', () => {
-    const componet = renderToString(<AtSteps className='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtSteps className='test' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtSteps -- props items', () => {
-    const componet1 = renderToString(<AtSteps items={items1} />)
-    expect(componet1).toMatchSnapshot()
-    const componet2 = renderToString(<AtSteps items={items2} />)
-    expect(componet2).toMatchSnapshot()
+    const { container: componet1Container } = render(<AtSteps items={items1} />)
+    expect(componet1Container.firstChild).toMatchSnapshot()
+    const { container: componet2Container } = render(<AtSteps items={items2} />)
+    expect(componet2Container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSteps -- props current', () => {
-    const componet1 = renderToString(<AtSteps items={items1} current={1} />)
-    expect(componet1).toMatchSnapshot()
+    const { container: componet1Container } = render(
+      <AtSteps items={items1} current={1} />
+    )
+    expect(componet1Container.firstChild).toMatchSnapshot()
   })
 })

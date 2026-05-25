@@ -1,0 +1,45 @@
+name: Test CI
+
+on:
+  push:
+    branches:
+      - next
+      - feat/**
+  pull_request:
+    branches:
+      - next
+
+permissions:
+  contents: read # to fetch code (actions/checkout)
+
+env:
+  NODE_OPTIONS: --openssl-legacy-provider
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - name: build
+        run: pnpm build
+
+      - name: test
+        run: pnpm --filter taro-ui test
