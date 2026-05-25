@@ -2,8 +2,8 @@
   "name": "taro-ui",
   "version": "3.3.2",
   "description": "UI KIT for Taro",
-  "module": "lib/index.js",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "style": "dist/style/index.css",
   "source": "src/index.ts",
   "react-native": "rn/index.ts",
@@ -11,16 +11,15 @@
     "*.scss",
     "*.css"
   ],
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "keywords": [
     "taro",
     "taro-ui",
     "ui"
   ],
   "files": [
-    "lib",
-    "rn",
-    "dist"
+    "dist",
+    "rn"
   ],
   "author": "O2Team <aotu.io>",
   "homepage": "https://jd-opensource.github.io/taro-ui/#/",
@@ -41,7 +40,7 @@
     "test": "cross-env NODE_ENV=test && jest --coverage",
     "test:ci": "pnpm run build:h5 && pnpm run test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "clean": "rimraf .temp dist lib coverage"
+    "clean": "rimraf .temp dist coverage"
   },
   "dependencies": {
     "classnames": "^2.2.6",
