@@ -25,15 +25,15 @@ function AtAccordion({
   const [, setRenderEpoch] = useState(0)
   const prevOpenRef = useRef(open)
 
-  const toggleWithAnimation = (): void => {
+  const toggleWithAnimation = (wasOpen: boolean): void => {
     if (!isCompletedRef.current || !isAnimation) return
 
     isCompletedRef.current = false
 
     delayQuerySelector(`#at-accordion__body-${componentId}`, 0).then(rect => {
       const height = parseInt(rect[0].height.toString())
-      const startHeight = open ? height : 0
-      const endHeight = open ? 0 : height
+      const startHeight = wasOpen ? height : 0
+      const endHeight = wasOpen ? 0 : height
       setStartOpen(false)
       setWrapperHeight(startHeight)
       setTimeout(() => {
@@ -49,7 +49,7 @@ function AtAccordion({
   useLayoutEffect(() => {
     if (prevOpenRef.current !== open) {
       setStartOpen(!!open && !!isAnimation)
-      toggleWithAnimation()
+      toggleWithAnimation(prevOpenRef.current)
       prevOpenRef.current = open
     }
   }, [open, isAnimation])
