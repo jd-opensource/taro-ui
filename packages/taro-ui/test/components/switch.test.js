@@ -1,51 +1,53 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtSwitch from '../../.temp/components/switch/index'
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtSwitch from '../../lib/components/switch/index'
 
 describe('AtRate Snap', () => {
   it('render initial AtSwitch', () => {
-    const componet = renderToString(<AtSwitch />)
-    expect(componet).toMatchSnapshot()
+    const { container } = render(<AtSwitch />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSwitch -- props title', () => {
-    const componet = renderToString(<AtSwitch title='开启中' />)
-    expect(componet).toMatchSnapshot()
+    const { container } = render(<AtSwitch title='开启中' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSwitch -- props checked', () => {
-    const componet = renderToString(<AtSwitch title='开启中' checked />)
-    expect(componet).toMatchSnapshot()
+    const { container } = render(<AtSwitch title='开启中' checked />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSwitch -- props border', () => {
-    const componet = renderToString(<AtSwitch title='开启中' border={false} />)
-    expect(componet).toMatchSnapshot()
+    const { container } = render(<AtSwitch title='开启中' border={false} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtSwitch -- props disabled', () => {
-    const componet1 = renderToString(
+    const { container: container1 } = render(
       <AtSwitch title='开启中' checked disabled />
     )
-    expect(componet1).toMatchSnapshot()
-    const componet2 = renderToString(<AtSwitch title='开启中' disabled />)
-    expect(componet2).toMatchSnapshot()
+    expect(container1.firstChild).toMatchSnapshot()
+    const { container: container2 } = render(
+      <AtSwitch title='开启中' disabled />
+    )
+    expect(container2.firstChild).toMatchSnapshot()
   })
 })
 
 describe('AtSwitch Event', () => {
   it('AtSwitch onChange', () => {
     const onItemClick = jest.fn()
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtSwitch title='开启中' checked onChange={onItemClick} />
     )
-    const items = findDOMNode(component, 'at-switch').querySelectorAll(
+    const items = queryByClass(container, 'at-switch').querySelectorAll(
       '.at-switch__switch'
     )
     const item0 = items[0]
-    Simulate.click(item0)
+    fireEvent.click(item0)
     expect(onItemClick).toBeCalled()
-    expect(onItemClick.mock.calls[0][0].value).toBeFalsy()
+    expect(onItemClick.mock.calls[0][0]).toBeFalsy()
   })
 })

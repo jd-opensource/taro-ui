@@ -1,5 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SwipeAction Snap render options -- isOpened 1`] = `"<div id=\\"swipeAction-tabs-AOTU2018\\" class=\\"at-swipe-action swipe-action--test\\"><div class=\\"at-swipe-action__content animtion\\"><div class=\\"normal\\">AtSwipeAction 一般使用场景</div></div><div id=\\"swipeActionOptions-tabs-AOTU2018\\" class=\\"at-swipe-action__options\\"><div style=\\"background-color:#6190E8;\\" class=\\"at-swipe-action__option cancel\\"><span class=\\"taro-text option__text\\">取消</span></div><div style=\\"background-color:#FF4949;\\" class=\\"at-swipe-action__option confirm\\"><span class=\\"taro-text option__text\\">确认</span></div></div></div>"`;
+exports[`SwipeAction Snap render options -- isOpened 1`] = `
+<div
+  class="at-swipe-action swipe-action--test"
+  id="swipeAction-BDFHJLNP"
+  style="width: 375px;"
+>
+  <div
+    class="at-swipe-action__area"
+    style="width: 375px;"
+  >
+    <div
+      class="at-swipe-action__content"
+      direction="horizontal"
+      disabled=""
+      style="width: 375px;"
+      x="0"
+    >
+      <div
+        class="normal"
+      >
+        AtSwipeAction 一般使用场景
+      </div>
+      <div
+        class="at-swipe-action__options"
+        id="swipeActionOptions-BDFHJLNP"
+        style="opacity: 0;"
+      >
+        <div
+          class="at-swipe-action__option cancel"
+          style="background-color: rgb(97, 144, 232);"
+        >
+          <span
+            class="option__text"
+          >
+            取消
+          </span>
+        </div>
+        <div
+          class="at-swipe-action__option confirm"
+          style="background-color: rgb(255, 73, 73);"
+        >
+          <span
+            class="option__text"
+          >
+            确认
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`SwipeAction Snap render options 1`] = `"<div id=\\"swipeAction-tabs-AOTU2018\\" class=\\"at-swipe-action swipe-action--test\\"><div class=\\"at-swipe-action__content animtion\\"><div class=\\"normal\\">AtSwipeAction 一般使用场景</div></div><div id=\\"swipeActionOptions-tabs-AOTU2018\\" class=\\"at-swipe-action__options\\"><div style=\\"background-color:#6190E8;\\" class=\\"at-swipe-action__option cancel\\"><span class=\\"taro-text option__text\\">取消</span></div><div style=\\"background-color:#FF4949;\\" class=\\"at-swipe-action__option confirm\\"><span class=\\"taro-text option__text\\">确认</span></div></div></div>"`;
+exports[`SwipeAction Snap render options 1`] = `
+<div
+  class="at-swipe-action swipe-action--test"
+  id="swipeAction-BDFHJLNP"
+  style="width: 375px;"
+>
+  <div
+    class="at-swipe-action__area"
+    style="width: 375px;"
+  >
+    <div
+      class="at-swipe-action__content"
+      direction="horizontal"
+      disabled=""
+      style="width: 375px;"
+      x="0"
+    >
+      <div
+        class="normal"
+      >
+        AtSwipeAction 一般使用场景
+      </div>
+      <div
+        class="at-swipe-action__options"
+        id="swipeActionOptions-BDFHJLNP"
+        style="opacity: 0;"
+      >
+        <div
+          class="at-swipe-action__option cancel"
+          style="background-color: rgb(97, 144, 232);"
+        >
+          <span
+            class="option__text"
+          >
+            取消
+          </span>
+        </div>
+        <div
+          class="at-swipe-action__option confirm"
+          style="background-color: rgb(255, 73, 73);"
+        >
+          <span
+            class="option__text"
+          >
+            确认
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

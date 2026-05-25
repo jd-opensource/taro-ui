@@ -1,11 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtNoticebar Snap render AtNoticebar -- props icon 1`] = `"<div class=\\"at-noticebar\\">undefined<div class=\\"at-noticebar__content\\"><div class=\\"at-noticebar__content-icon\\"><span class=\\"taro-text at-icon at-icon-volume-plus at-icon at-icon-volume-plus\\"></span></div><div class=\\"at-noticebar__content-text\\"><div class=\\"at-noticebar__content-inner\\">这是内容</div></div></div>undefined</div>"`;
+exports[`AtNoticebar Snap render AtNoticebar -- props icon 1`] = `
+<div
+  class="at-noticebar"
+>
+  <div
+    class="at-noticebar__content"
+  >
+    <div
+      class="at-noticebar__content-icon"
+    >
+      <span
+        class="at-icon at-icon-volume-plus at-icon at-icon-volume-plus"
+      />
+    </div>
+    <div
+      class="at-noticebar__content-text"
+    >
+      <div
+        animation="[object Object]"
+        class="at-noticebar__content-inner"
+        id="J_2n9d"
+      >
+        这是内容
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNoticebar Snap render AtNoticebar -- props moreText & showMore 1`] = `"<div class=\\"at-noticebar\\">undefined<div class=\\"at-noticebar__content\\"><div class=\\"at-noticebar__content-text\\"><div class=\\"at-noticebar__content-inner\\">这是内容</div></div></div>undefined</div>"`;
+exports[`AtNoticebar Snap render AtNoticebar -- props moreText & showMore 1`] = `
+<div
+  class="at-noticebar"
+>
+  <div
+    class="at-noticebar__content"
+  >
+    <div
+      class="at-noticebar__content-text"
+    >
+      <div
+        animation="[object Object]"
+        class="at-noticebar__content-inner"
+        id="J_2n9d"
+      >
+        这是内容
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNoticebar Snap render AtNoticebar -- props show 1`] = `"<div class=\\"at-noticebar\\"><div class=\\"at-noticebar__close\\"><span class=\\"taro-text at-icon at-icon-close\\"></span></div><div class=\\"at-noticebar__content\\"><div class=\\"at-noticebar__content-text\\"><div class=\\"at-noticebar__content-inner\\">这是内容</div></div></div>undefined</div>"`;
+exports[`AtNoticebar Snap render AtNoticebar -- props show 1`] = `
+<div
+  class="at-noticebar"
+>
+  <div
+    class="at-noticebar__close"
+  >
+    <span
+      class="at-icon at-icon-close"
+    />
+  </div>
+  <div
+    class="at-noticebar__content"
+  >
+    <div
+      class="at-noticebar__content-text"
+    >
+      <div
+        animation="[object Object]"
+        class="at-noticebar__content-inner"
+        id="J_2n9d"
+      >
+        这是内容
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNoticebar Snap render AtNoticebar -- props single 1`] = `"<div class=\\"at-noticebar at-noticebar--single\\">undefined<div class=\\"at-noticebar__content\\"><div class=\\"at-noticebar__content-text\\"><div class=\\"at-noticebar__content-inner\\">这是内容</div></div></div>undefined</div>"`;
+exports[`AtNoticebar Snap render AtNoticebar -- props single 1`] = `
+<div
+  class="at-noticebar at-noticebar--single"
+>
+  <div
+    class="at-noticebar__content"
+  >
+    <div
+      class="at-noticebar__content-text"
+    >
+      <div
+        animation="[object Object]"
+        class="at-noticebar__content-inner"
+        id="J_2n9d"
+      >
+        这是内容
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtNoticebar Snap render AtNoticebar -- props speed 1`] = `"<div class=\\"at-noticebar\\">undefined<div class=\\"at-noticebar__content\\"><div class=\\"at-noticebar__content-text\\"><div class=\\"at-noticebar__content-inner\\">这是内容</div></div></div>undefined</div>"`;
+exports[`AtNoticebar Snap render AtNoticebar -- props speed 1`] = `
+<div
+  class="at-noticebar"
+>
+  <div
+    class="at-noticebar__content"
+  >
+    <div
+      class="at-noticebar__content-text"
+    >
+      <div
+        animation="[object Object]"
+        class="at-noticebar__content-inner"
+        id="J_2n9d"
+      >
+        这是内容
+      </div>
+    </div>
+  </div>
+</div>
+`;

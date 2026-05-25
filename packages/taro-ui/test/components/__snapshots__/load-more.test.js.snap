@@ -1,23 +1,261 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtLoadMore Snap render AtLoadMore -- props className 1`] = `"<div class=\\"at-load-more test\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props className 1`] = `
+<div
+  class="at-load-more test"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props customStyle 1`] = `
+<div
+  class="at-load-more"
+  style="color: red;"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props loadingText  1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-activity-indicator at-activity-indicator--center at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><span class=\\"taro-text at-activity-indicator__content\\">loadingText</span></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props loadingText  1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-activity-indicator at-activity-indicator--center at-activity-indicator--isopened"
+  >
+    <div
+      class="at-activity-indicator__body"
+    >
+      <div
+        class="at-loading"
+      >
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+      </div>
+    </div>
+    <span
+      class="at-activity-indicator__content"
+    >
+      loadingText
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props moreBtnStyle 1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div style=\\"color:red\\" class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props moreBtnStyle 1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+      style="color: red;"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props moreText  1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">moreText</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props moreText  1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        moreText
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props noMoreText  1`] = `"<div class=\\"at-load-more\\"><span class=\\"taro-text at-load-more__tip\\">noMoreText</span></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props noMoreText  1`] = `
+<div
+  class="at-load-more"
+>
+  <span
+    class="at-load-more__tip"
+  >
+    noMoreText
+  </span>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props noMoreTextStyle 1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props noMoreTextStyle 1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props status === loading 1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-activity-indicator at-activity-indicator--center at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div><span class=\\"taro-text at-activity-indicator__content\\">加载中</span></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props status === loading 1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-activity-indicator at-activity-indicator--center at-activity-indicator--isopened"
+  >
+    <div
+      class="at-activity-indicator__body"
+    >
+      <div
+        class="at-loading"
+      >
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+        <div
+          class="at-loading__ring"
+        />
+      </div>
+    </div>
+    <span
+      class="at-activity-indicator__content"
+    >
+      加载中
+    </span>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props status === more 1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props status === more 1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtLoadMore Snap render AtLoadMore -- props status === noMore 1`] = `"<div class=\\"at-load-more\\"><span class=\\"taro-text at-load-more__tip\\">没有更多</span></div>"`;
+exports[`AtLoadMore Snap render AtLoadMore -- props status === noMore 1`] = `
+<div
+  class="at-load-more"
+>
+  <span
+    class="at-load-more__tip"
+  >
+    没有更多
+  </span>
+</div>
+`;
 
-exports[`AtLoadMore Snap render initial AtLoadMore 1`] = `"<div class=\\"at-load-more\\"><div class=\\"at-load-more__cnt\\"><div class=\\"at-button at-button--normal at-button--full\\"><button class=\\"at-button__wxbutton\\" lang=\\"en\\">undefined</button>undefinedundefinedundefined<div class=\\"at-button__text\\">查看更多</div></div></div></div>"`;
+exports[`AtLoadMore Snap render initial AtLoadMore 1`] = `
+<div
+  class="at-load-more"
+>
+  <div
+    class="at-load-more__cnt"
+  >
+    <div
+      class="at-button at-button--normal at-button--full"
+    >
+      <button
+        class="at-button__wxbutton"
+        lang="en"
+      />
+      <div
+        class="at-button__text"
+      >
+        查看更多
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,7 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FloatLayout Snap render FloatLayout -- props note 1`] = `"<div class=\\"at-float-layout at-float-layout--active\\"><div class=\\"at-float-layout__overlay\\"></div><div class=\\"at-float-layout__container layout\\"><div class=\\"layout-header\\"><span class=\\"taro-text layout-header__title\\">这是个标题</span><div class=\\"layout-header__btn-close\\"></div></div><div class=\\"layout-body\\"><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y layout-body__content\\">这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写</div></div></div></div>"`;
+exports[`FloatLayout Snap render FloatLayout -- props note 1`] = `
+<div
+  class="at-float-layout at-float-layout--active"
+>
+  <div
+    class="at-float-layout__overlay"
+  />
+  <div
+    class="at-float-layout__container layout"
+  >
+    <div
+      class="layout-header"
+    >
+      <span
+        class="layout-header__title"
+      >
+        这是个标题
+      </span>
+      <div
+        class="layout-header__btn-close"
+      />
+    </div>
+    <div
+      class="layout-body"
+    >
+      <div
+        class="layout-body__content"
+      >
+        这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`FloatLayout Snap render initial FloatLayout 1`] = `"<div class=\\"at-float-layout\\"><div class=\\"at-float-layout__overlay\\"></div><div class=\\"at-float-layout__container layout\\">undefined<div class=\\"layout-body\\"><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y layout-body__content\\">这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写</div></div></div></div>"`;
+exports[`FloatLayout Snap render initial FloatLayout 1`] = `
+<div
+  class="at-float-layout"
+>
+  <div
+    class="at-float-layout__overlay"
+  />
+  <div
+    class="at-float-layout__container layout"
+  >
+    <div
+      class="layout-body"
+    >
+      <div
+        class="layout-body__content"
+      >
+        这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`FloatLayout Snap render opened FloatLayout 1`] = `"<div class=\\"at-float-layout at-float-layout--active\\"><div class=\\"at-float-layout__overlay\\"></div><div class=\\"at-float-layout__container layout\\">undefined<div class=\\"layout-body\\"><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y layout-body__content\\">这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写</div></div></div></div>"`;
+exports[`FloatLayout Snap render opened FloatLayout 1`] = `
+<div
+  class="at-float-layout at-float-layout--active"
+>
+  <div
+    class="at-float-layout__overlay"
+  />
+  <div
+    class="at-float-layout__container layout"
+  >
+    <div
+      class="layout-body"
+    >
+      <div
+        class="layout-body__content"
+      >
+        这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写
+      </div>
+    </div>
+  </div>
+</div>
+`;

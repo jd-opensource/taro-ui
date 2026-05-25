@@ -1,17 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtTextarea Snap render AtTextarea -- props className 1`] = `"<div class=\\"at-textarea at-textarea--WEB test\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props className 1`] = `
+<div
+  class="at-textarea at-textarea--WEB test"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `"<div style=\\"color:red;\\" class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props count 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 1`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props customStyle 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+  style="color: red;"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 2`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"test\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props height 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+    style="height: 3000px;"
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 3`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props maxLength 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="300"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    300
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props maxlength 4`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea style=\\"height:64rem\\" placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props placeholder 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder="test"
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render AtTextarea -- props value 1`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"test\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">4/200</div></div>"`;
+exports[`AtTextarea Snap render AtTextarea -- props value 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  >
+    test
+  </textarea>
+  <div
+    class="at-textarea__counter"
+  >
+    4
+    /
+    200
+  </div>
+</div>
+`;
 
-exports[`AtTextarea Snap render initial AtTextarea 1`] = `"<div class=\\"at-textarea at-textarea--WEB\\"><textarea placeholderClass=\\"placeholder\\" cursorSpacing=\\"100\\" value=\\"\\" selectionStart=\\"-1\\" selectionEnd=\\"-1\\" class=\\"at-textarea__textarea\\" placeholder=\\"\\" maxlength=\\"200\\"></textarea><div class=\\"at-textarea__counter\\">0/200</div></div>"`;
+exports[`AtTextarea Snap render initial AtTextarea 1`] = `
+<div
+  class="at-textarea at-textarea--WEB"
+>
+  <textarea
+    class="at-textarea__textarea"
+    maxlength="200"
+    placeholder=""
+  />
+  <div
+    class="at-textarea__counter"
+  >
+    0
+    /
+    200
+  </div>
+</div>
+`;

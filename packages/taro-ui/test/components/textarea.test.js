@@ -1,45 +1,55 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtTextarea from '../../.temp/components/textarea/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtTextarea from '../../lib/components/textarea/index'
 
 describe('AtTextarea Snap', () => {
   it('render initial AtTextarea', () => {
-    const componet = renderToString(<AtTextarea />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTextarea />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTextarea -- props customStyle', () => {
-    const componet = renderToString(<AtTextarea customStyle='color:red;' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTextarea customStyle='color:red;' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTextarea -- props className', () => {
-    const componet = renderToString(<AtTextarea className='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTextarea className='test' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTextarea -- props value', () => {
-    const componet = renderToString(<AtTextarea value='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTextarea value='test' />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
-    const componet = renderToString(<AtTextarea maxlength='300' />)
-    expect(componet).toMatchSnapshot()
+  it('render AtTextarea -- props maxLength', () => {
+    const { container: componetContainer } = render(
+      <AtTextarea maxLength={300} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
-    const componet = renderToString(<AtTextarea placeholder='test' />)
-    expect(componet).toMatchSnapshot()
+  it('render AtTextarea -- props placeholder', () => {
+    const { container: componetContainer } = render(
+      <AtTextarea placeholder='test' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
-    const componet = renderToString(<AtTextarea count={3000} />)
-    expect(componet).toMatchSnapshot()
+  it('render AtTextarea -- props count', () => {
+    const { container: componetContainer } = render(<AtTextarea count />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
-  it('render AtTextarea -- props maxlength', () => {
-    const componet = renderToString(<AtTextarea height={3000} />)
-    expect(componet).toMatchSnapshot()
+  it('render AtTextarea -- props height', () => {
+    const { container: componetContainer } = render(
+      <AtTextarea height={3000} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 })

@@ -1,95 +1,95 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtInput from '../../.temp/components/input/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtInput from '../../lib/components/input/index'
 
 describe('AtInput Snap', () => {
   it('render AtInput -- init', () => {
-    const component = renderToString(<AtInput />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props style', () => {
-    const component = renderToString(<AtInput style='border:none;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput style='border:none;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props value', () => {
-    const component = renderToString(<AtInput value='value' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput value='value' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props name', () => {
-    const component = renderToString(<AtInput name='name' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput name='name' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props name', () => {
-    const component = renderToString(<AtInput placeholder='placeholder' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput placeholder='placeholder' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props title', () => {
-    const component = renderToString(<AtInput title='title' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput title='title' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props maxlength', () => {
-    const component = renderToString(<AtInput maxlength='10' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput maxlength='10' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props type(number)', () => {
-    const component = renderToString(<AtInput type='number' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput type='number' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props type(password)', () => {
-    const component = renderToString(<AtInput type='password' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput type='password' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props type(idcard)', () => {
-    const component = renderToString(<AtInput type='idcard' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput type='idcard' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props type(digit)', () => {
-    const component = renderToString(<AtInput type='digit' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput type='digit' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props type(phone)', () => {
-    const component = renderToString(<AtInput type='phone' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput type='phone' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props disabled', () => {
-    const component = renderToString(<AtInput disabled />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput disabled />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props border', () => {
-    const component = renderToString(<AtInput border={false} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput border={false} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props editable', () => {
-    const component = renderToString(<AtInput editable={false} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput editable={false} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props error', () => {
-    const component = renderToString(<AtInput error />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput error />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props clear', () => {
-    const component = renderToString(<AtInput clear />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput clear />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInput -- props required', () => {
-    const component = renderToString(<AtInput required />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInput required />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

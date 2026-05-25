@@ -1,13 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtRate Snap render AtSwitch -- props border 1`] = `"<div class=\\"at-switch at-switch--without-border\\"><div class=\\"at-switch__title\\">开启中</div><div class=\\"at-switch__container\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" type=\\"checkbox\\"/></div></div>"`;
+exports[`AtRate Snap render AtSwitch -- props border 1`] = `
+<div
+  class="at-switch at-switch--without-border"
+>
+  <div
+    class="at-switch__title"
+  >
+    开启中
+  </div>
+  <div
+    class="at-switch__container"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtSwitch -- props checked 1`] = `"<div class=\\"at-switch\\"><div class=\\"at-switch__title\\">开启中</div><div class=\\"at-switch__container\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" checked type=\\"checkbox\\" style=\\"border-color:#6190e8;background-color:#6190e8;\\"/></div></div>"`;
+exports[`AtRate Snap render AtSwitch -- props checked 1`] = `
+<div
+  class="at-switch"
+>
+  <div
+    class="at-switch__title"
+  >
+    开启中
+  </div>
+  <div
+    class="at-switch__container"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      checked=""
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtSwitch -- props disabled 1`] = `"<div class=\\"at-switch\\"><div class=\\"at-switch__title\\">开启中</div><div class=\\"at-switch__container at-switch--disabled\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" checked type=\\"checkbox\\" style=\\"border-color:#6190e8;background-color:#6190e8;\\"/></div></div>"`;
+exports[`AtRate Snap render AtSwitch -- props disabled 1`] = `
+<div
+  class="at-switch"
+>
+  <div
+    class="at-switch__title"
+  >
+    开启中
+  </div>
+  <div
+    class="at-switch__container at-switch--disabled"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      checked=""
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtSwitch -- props disabled 2`] = `"<div class=\\"at-switch\\"><div class=\\"at-switch__title\\">开启中</div><div class=\\"at-switch__container at-switch--disabled\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" type=\\"checkbox\\"/></div></div>"`;
+exports[`AtRate Snap render AtSwitch -- props disabled 2`] = `
+<div
+  class="at-switch"
+>
+  <div
+    class="at-switch__title"
+  >
+    开启中
+  </div>
+  <div
+    class="at-switch__container at-switch--disabled"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render AtSwitch -- props title 1`] = `"<div class=\\"at-switch\\"><div class=\\"at-switch__title\\">开启中</div><div class=\\"at-switch__container\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" type=\\"checkbox\\"/></div></div>"`;
+exports[`AtRate Snap render AtSwitch -- props title 1`] = `
+<div
+  class="at-switch"
+>
+  <div
+    class="at-switch__title"
+  >
+    开启中
+  </div>
+  <div
+    class="at-switch__container"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
 
-exports[`AtRate Snap render initial AtSwitch 1`] = `"<div class=\\"at-switch\\"><div class=\\"at-switch__title\\"></div><div class=\\"at-switch__container\\"><div class=\\"at-switch__mask\\"></div><input color=\\"#6190e8\\" class=\\"weui-switch at-switch__switch\\" type=\\"checkbox\\"/></div></div>"`;
+exports[`AtRate Snap render initial AtSwitch 1`] = `
+<div
+  class="at-switch"
+>
+  <div
+    class="at-switch__title"
+  />
+  <div
+    class="at-switch__container"
+  >
+    <div
+      class="at-switch__mask"
+    />
+    <input
+      class="at-switch__switch"
+      color="#6190e8"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;

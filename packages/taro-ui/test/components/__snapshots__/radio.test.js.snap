@@ -1,3 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtRadio Snap render AtRadio 1`] = `"<div class=\\"at-radio\\"><div class=\\"at-radio__option\\"><div class=\\"at-radio__option-wrap\\"><div class=\\"at-radio__option-container\\"><div class=\\"at-radio__title\\">单选项一</div><div class=\\"at-radio__icon\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div></div>undefined</div></div><div class=\\"at-radio__option\\"><div class=\\"at-radio__option-wrap\\"><div class=\\"at-radio__option-container\\"><div class=\\"at-radio__title\\">单选项二</div><div class=\\"at-radio__icon\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div></div><div class=\\"at-radio__desc\\">单选项描述二</div></div></div><div class=\\"at-radio__option at-radio__option--disabled\\"><div class=\\"at-radio__option-wrap\\"><div class=\\"at-radio__option-container\\"><div class=\\"at-radio__title\\">单选项三</div><div class=\\"at-radio__icon\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div></div><div class=\\"at-radio__desc\\">单选项描述三</div></div></div></div>"`;
+exports[`AtRadio Snap render AtRadio 1`] = `
+<div
+  class="at-radio"
+>
+  <div
+    class="at-radio__option"
+  >
+    <div
+      class="at-radio__option-wrap"
+    >
+      <div
+        class="at-radio__option-container"
+      >
+        <div
+          class="at-radio__title"
+        >
+          单选项一
+        </div>
+        <div
+          class="at-radio__icon"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-radio__option"
+  >
+    <div
+      class="at-radio__option-wrap"
+    >
+      <div
+        class="at-radio__option-container"
+      >
+        <div
+          class="at-radio__title"
+        >
+          单选项二
+        </div>
+        <div
+          class="at-radio__icon"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+      </div>
+      <div
+        class="at-radio__desc"
+      >
+        单选项描述二
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-radio__option at-radio__option--disabled"
+  >
+    <div
+      class="at-radio__option-wrap"
+    >
+      <div
+        class="at-radio__option-container"
+      >
+        <div
+          class="at-radio__title"
+        >
+          单选项三
+        </div>
+        <div
+          class="at-radio__icon"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+      </div>
+      <div
+        class="at-radio__desc"
+      >
+        单选项描述三
+      </div>
+    </div>
+  </div>
+</div>
+`;

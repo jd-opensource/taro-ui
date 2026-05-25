@@ -1,63 +1,63 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtNoticebar from '../../.temp/components/noticebar/index'
+import React from 'react'
+import { render, fireEvent, waitFor } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtNoticebar from '../../lib/components/noticebar/index'
 
 describe('AtNoticebar Snap', () => {
   it('render AtNoticebar -- props show', () => {
-    const component = renderToString(<AtNoticebar close>这是内容</AtNoticebar>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNoticebar close>这是内容</AtNoticebar>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props single', () => {
-    const component = renderToString(<AtNoticebar single>这是内容</AtNoticebar>)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtNoticebar single>这是内容</AtNoticebar>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props speed', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNoticebar speed={200}>这是内容</AtNoticebar>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props moreText & showMore', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNoticebar showMore moreText='查看更多'>
         这是内容
       </AtNoticebar>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtNoticebar -- props icon', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtNoticebar icon='volume-plus'>这是内容</AtNoticebar>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('AtNoticebar Event', () => {
-  it('AtNoticebar onClose', () => {
+  it('AtNoticebar onClose', async () => {
     const onClose = jest.fn()
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtNoticebar icon='volume-plus' onClose={onClose} close>
         这是内容
       </AtNoticebar>
     )
-    const dom = findDOMNode(component, 'at-noticebar').querySelector(
+    const dom = queryByClass(container, 'at-noticebar').querySelector(
       '.at-noticebar__close'
     )
-    Simulate.click(dom)
-    process.nextTick(() => {
+    fireEvent.click(dom)
+    await waitFor(() => {
       expect(onClose).toBeCalled()
     })
   })
 
-  it('AtNoticebar onGotoMore', () => {
+  it('AtNoticebar onGotoMore', async () => {
     const onGotoMore = jest.fn()
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtNoticebar
         icon='volume-plus'
         onGotoMore={onGotoMore}
@@ -68,11 +68,11 @@ describe('AtNoticebar Event', () => {
         这是内容
       </AtNoticebar>
     )
-    const dom = findDOMNode(component, 'at-noticebar').querySelector(
+    const dom = queryByClass(container, 'at-noticebar').querySelector(
       '.at-noticebar__more'
     )
-    Simulate.click(dom)
-    process.nextTick(() => {
+    fireEvent.click(dom)
+    await waitFor(() => {
       expect(onGotoMore).toBeCalled()
     })
   })

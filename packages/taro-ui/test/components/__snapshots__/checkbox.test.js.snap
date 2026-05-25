@@ -1,7 +1,243 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtCheckbox Snap render AtCheckbox -- props options 1`] = `"<div class=\\"at-checkbox\\"><div class=\\"at-checkbox__option\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">iPhone X</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div><div class=\\"at-checkbox__option\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">HUAWEI P20</div></div>undefined</div></div><div class=\\"at-checkbox__option at-checkbox__option--disabled\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">OPPO Find X</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div><div class=\\"at-checkbox__option at-checkbox__option--disabled\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">vivo NEX</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div></div>"`;
+exports[`AtCheckbox Snap render AtCheckbox -- props options 1`] = `
+<div
+  class="at-checkbox"
+>
+  <div
+    class="at-checkbox__option"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          iPhone X
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          HUAWEI P20
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option at-checkbox__option--disabled"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          OPPO Find X
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option at-checkbox__option--disabled"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          vivo NEX
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtCheckbox Snap render AtCheckbox -- props selectedList 1`] = `"<div class=\\"at-checkbox\\"><div class=\\"at-checkbox__option\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">iPhone X</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div><div class=\\"at-checkbox__option at-checkbox__option--selected\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">HUAWEI P20</div></div>undefined</div></div><div class=\\"at-checkbox__option at-checkbox__option--disabled\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">OPPO Find X</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div><div class=\\"at-checkbox__option at-checkbox__option--disabled\\"><div class=\\"at-checkbox__option-wrap\\"><div class=\\"at-checkbox__option-cnt\\"><div class=\\"at-checkbox__icon-cnt\\"><span class=\\"taro-text at-icon at-icon-check\\"></span></div><div class=\\"at-checkbox__title\\">vivo NEX</div></div><div class=\\"at-checkbox__desc\\">部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。</div></div></div></div>"`;
+exports[`AtCheckbox Snap render AtCheckbox -- props selectedList 1`] = `
+<div
+  class="at-checkbox"
+>
+  <div
+    class="at-checkbox__option"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          iPhone X
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option at-checkbox__option--selected"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          HUAWEI P20
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option at-checkbox__option--disabled"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          OPPO Find X
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+  <div
+    class="at-checkbox__option at-checkbox__option--disabled"
+  >
+    <div
+      class="at-checkbox__option-wrap"
+    >
+      <div
+        class="at-checkbox__option-cnt"
+      >
+        <div
+          class="at-checkbox__icon-cnt"
+        >
+          <span
+            class="at-icon at-icon-check"
+          />
+        </div>
+        <div
+          class="at-checkbox__title"
+        >
+          vivo NEX
+        </div>
+      </div>
+      <div
+        class="at-checkbox__desc"
+      >
+        部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtCheckbox Snap render initial AtCheckbox 1`] = `"<div class=\\"at-checkbox\\"></div>"`;
+exports[`AtCheckbox Snap render initial AtCheckbox 1`] = `
+<div
+  class="at-checkbox"
+/>
+`;

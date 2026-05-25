@@ -1,40 +1,42 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtCurtain from '../../.temp/components/curtain/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtCurtain from '../../lib/components/curtain/index'
 
 describe('AtCurtain Snap', () => {
   it('render initial AtCurtain', () => {
-    const component = renderToString(<AtCurtain />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCurtain />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCurtain -- props className', () => {
-    const component = renderToString(<AtCurtain className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCurtain className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCurtain -- props customStyle', () => {
-    const component = renderToString(<AtCurtain customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtCurtain customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCurtain -- props isOpened', () => {
-    const component0 = renderToString(<AtCurtain isOpened> test </AtCurtain>)
-    expect(component0).toMatchSnapshot()
-    const component1 = renderToString(
+    const { container: component0Container } = render(
+      <AtCurtain isOpened> test </AtCurtain>
+    )
+    expect(component0Container.firstChild).toMatchSnapshot()
+    const { container: component1Container } = render(
       <AtCurtain isOpened={false}> test </AtCurtain>
     )
-    expect(component1).toMatchSnapshot()
+    expect(component1Container.firstChild).toMatchSnapshot()
   })
 
   it('render AtCurtain -- props closeBtnPosition', () => {
-    const component0 = renderToString(
+    const { container: component0Container } = render(
       <AtCurtain closeBtnPosition='top'> test </AtCurtain>
     )
-    expect(component0).toMatchSnapshot()
-    const component1 = renderToString(
+    expect(component0Container.firstChild).toMatchSnapshot()
+    const { container: component1Container } = render(
       <AtCurtain closeBtnPosition='bottoms'> test </AtCurtain>
     )
-    expect(component1).toMatchSnapshot()
+    expect(component1Container.firstChild).toMatchSnapshot()
   })
 })

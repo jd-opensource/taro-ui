@@ -1,6 +1,6 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtTabs from '../../.temp/components/tabs/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtTabs from '../../lib/components/tabs/index'
 
 describe('AtTabs Snap', () => {
   const tabList = [
@@ -10,58 +10,68 @@ describe('AtTabs Snap', () => {
   ]
 
   it('render initial AtTabs', () => {
-    const componet = renderToString(<AtTabs />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTabs />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props customStyle', () => {
-    const componet = renderToString(<AtTabs customStyle='color:red;' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabs customStyle='color:red;' />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props className', () => {
-    const componet = renderToString(<AtTabs className='test' />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(<AtTabs className='test' />)
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props tabList', () => {
-    const componet = renderToString(<AtTabs tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabs tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props current', () => {
-    const componet = renderToString(<AtTabs current={2} tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabs current={2} tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props swipeable', () => {
-    const componet = renderToString(<AtTabs swipeable tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabs swipeable tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props scroll', () => {
-    const componet = renderToString(<AtTabs scroll tabList={tabList} />)
-    expect(componet).toMatchSnapshot()
+    const { container: componetContainer } = render(
+      <AtTabs scroll tabList={tabList} />
+    )
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props tabDirection', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabs scroll tabDirection='vertical' tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props animated', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabs animated={false} tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 
   it('render AtTabs -- props height', () => {
-    const componet = renderToString(
+    const { container: componetContainer } = render(
       <AtTabs height='300px' tabDirection='vertical' tabList={tabList} />
     )
-    expect(componet).toMatchSnapshot()
+    expect(componetContainer.firstChild).toMatchSnapshot()
   })
 })

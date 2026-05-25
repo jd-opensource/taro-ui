@@ -1,55 +1,55 @@
-import Nerv from 'nervjs'
-import { renderToString } from 'nerv-server'
-import AtInputNumber from '../../.temp/components/input-number/index'
+import React from 'react'
+import { render } from '@testing-library/react'
+import AtInputNumber from '../../lib/components/input-number/index'
 
 describe('AtInputNumber Snap', () => {
   it('render initial AtInputNumber', () => {
-    const component = renderToString(<AtInputNumber />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props customStyle', () => {
-    const component = renderToString(<AtInputNumber customStyle='color:red;' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber customStyle='color:red;' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props className', () => {
-    const component = renderToString(<AtInputNumber className='test' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber className='test' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props type=number', () => {
-    const component = renderToString(<AtInputNumber type='number' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber type='number' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props type=digit', () => {
-    const component = renderToString(<AtInputNumber type='digit' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber type='digit' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props disabled', () => {
-    const component = renderToString(<AtInputNumber disabled />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber disabled />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props disabledInput', () => {
-    const component = renderToString(<AtInputNumber disabledInput />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber disabledInput />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props value', () => {
-    const component = renderToString(<AtInputNumber value={2} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber value={2} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props width', () => {
-    const component = renderToString(<AtInputNumber width={200} />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber width={200} />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render AtInputNumber -- props size', () => {
-    const component = renderToString(<AtInputNumber size='large' />)
-    expect(component).toMatchSnapshot()
+    const { container } = render(<AtInputNumber size='large' />)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

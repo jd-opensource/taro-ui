@@ -1,17 +1,196 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Progress Snap render Progress -- props color  1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:1px solid #FF4949;border-color:#FF4949 transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:1px solid #FF4949;border-color:#FF4949 transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:1px solid #FF4949;border-color:#FF4949 transparent transparent transparent;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props color  1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+        style="border: 1px solid #ff4949; border-color: #ff4949 transparent transparent transparent;"
+      />
+      <div
+        class="at-loading__ring"
+        style="border: 1px solid #ff4949; border-color: #ff4949 transparent transparent transparent;"
+      />
+      <div
+        class="at-loading__ring"
+        style="border: 1px solid #ff4949; border-color: #ff4949 transparent transparent transparent;"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props isHidePercent 1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props isHidePercent 1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props percent 1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props percent 1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props status(error)  1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props status(error)  1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props status(progress)  1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props status(progress)  1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props status(success)  1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props status(success)  1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render Progress -- props strokeWidth  1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render Progress -- props strokeWidth  1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Progress Snap render initial Progress 1`] = `"<div class=\\"at-activity-indicator at-activity-indicator--isopened\\"><div class=\\"at-activity-indicator__body\\"><div style=\\"width:;height:;\\" class=\\"at-loading\\"><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div><div style=\\"border:;border-color:;width:;height:;\\" class=\\"at-loading__ring\\"></div></div></div></div>"`;
+exports[`Progress Snap render initial Progress 1`] = `
+<div
+  class="at-activity-indicator at-activity-indicator--isopened"
+>
+  <div
+    class="at-activity-indicator__body"
+  >
+    <div
+      class="at-loading"
+    >
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+      <div
+        class="at-loading__ring"
+      />
+    </div>
+  </div>
+</div>
+`;

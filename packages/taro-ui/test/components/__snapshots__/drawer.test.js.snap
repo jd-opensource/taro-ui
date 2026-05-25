@@ -1,9 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AtDrawer Snap render AtDrawer -- props items 1`] = `"<div class=\\"at-drawer at-drawer--left\\"><div style=\\"display:block;opacity:0;\\" class=\\"at-drawer__mask\\"></div><div style=\\"width:;transition:all 195ms cubic-bezier(0.4, 0, 0.6, 1);\\" class=\\"at-drawer__content\\"><div class=\\"at-list\\"><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">菜单1</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div><div class=\\"at-list__item\\"><div class=\\"at-list__item-container\\"><div class=\\"at-list__item-content item-content\\"><div class=\\"item-content__info\\"><div class=\\"item-content__info-title\\">菜单2</div></div></div><div class=\\"at-list__item-extra item-extra\\">undefined<div class=\\"item-extra__icon\\"><span class=\\"taro-text at-icon item-extra__icon-arrow at-icon-chevron-right\\"></span></div></div></div></div></div></div></div>"`;
+exports[`AtDrawer Snap render AtDrawer -- props items 1`] = `
+<div
+  class="at-drawer at-drawer--left"
+>
+  <div
+    class="at-drawer__mask"
+    style="display: block; opacity: 0;"
+  />
+  <div
+    class="at-drawer__content"
+    style="transition: all 195ms cubic-bezier(0.4, 0, 0.6, 1);"
+  >
+    <div
+      class="at-list"
+    >
+      <div
+        class="at-list__item"
+      >
+        <div
+          class="at-list__item-container"
+        >
+          <div
+            class="at-list__item-content item-content"
+          >
+            <div
+              class="item-content__info"
+            >
+              <div
+                class="item-content__info-title"
+              >
+                菜单1
+              </div>
+            </div>
+          </div>
+          <div
+            class="at-list__item-extra item-extra"
+          >
+            <div
+              class="item-extra__icon"
+            >
+              <span
+                class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="at-list__item"
+      >
+        <div
+          class="at-list__item-container"
+        >
+          <div
+            class="at-list__item-content item-content"
+          >
+            <div
+              class="item-content__info"
+            >
+              <div
+                class="item-content__info-title"
+              >
+                菜单2
+              </div>
+            </div>
+          </div>
+          <div
+            class="at-list__item-extra item-extra"
+          >
+            <div
+              class="item-extra__icon"
+            >
+              <span
+                class="at-icon item-extra__icon-arrow at-icon-chevron-right"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`AtDrawer Snap render AtDrawer -- props mask 1`] = `"<div class=\\"at-drawer at-drawer--left\\"><div style=\\"display:none;opacity:0;\\" class=\\"at-drawer__mask\\"></div><div style=\\"width:;transition:all 195ms cubic-bezier(0.4, 0, 0.6, 1);\\" class=\\"at-drawer__content\\"></div></div>"`;
+exports[`AtDrawer Snap render AtDrawer -- props mask 1`] = `
+<div
+  class="at-drawer at-drawer--left"
+>
+  <div
+    class="at-drawer__mask"
+    style="display: none; opacity: 0;"
+  />
+  <div
+    class="at-drawer__content"
+    style="transition: all 195ms cubic-bezier(0.4, 0, 0.6, 1);"
+  />
+</div>
+`;
 
-exports[`AtDrawer Snap render AtDrawer -- props show 1`] = `"<div class=\\"at-drawer at-drawer--left\\"><div style=\\"display:block;opacity:0;\\" class=\\"at-drawer__mask\\"></div><div style=\\"width:;transition:all 195ms cubic-bezier(0.4, 0, 0.6, 1);\\" class=\\"at-drawer__content\\"></div></div>"`;
+exports[`AtDrawer Snap render AtDrawer -- props show 1`] = `
+<div
+  class="at-drawer at-drawer--left"
+>
+  <div
+    class="at-drawer__mask"
+    style="display: block; opacity: 0;"
+  />
+  <div
+    class="at-drawer__content"
+    style="transition: all 195ms cubic-bezier(0.4, 0, 0.6, 1);"
+  />
+</div>
+`;
 
-exports[`AtDrawer Snap render AtDrawer -- props width 1`] = `"<div class=\\"at-drawer at-drawer--left\\"><div style=\\"display:block;opacity:0;\\" class=\\"at-drawer__mask\\"></div><div style=\\"width:50%;transition:all 195ms cubic-bezier(0.4, 0, 0.6, 1);\\" class=\\"at-drawer__content\\"></div></div>"`;
+exports[`AtDrawer Snap render AtDrawer -- props width 1`] = `
+<div
+  class="at-drawer at-drawer--left"
+>
+  <div
+    class="at-drawer__mask"
+    style="display: block; opacity: 0;"
+  />
+  <div
+    class="at-drawer__content"
+    style="width: 50%; transition: all 195ms cubic-bezier(0.4, 0, 0.6, 1);"
+  />
+</div>
+`;

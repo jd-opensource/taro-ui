@@ -1,11 +1,188 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal Snap render initial Modal 1`] = `"<div class=\\"at-modal\\"><div class=\\"at-modal__overlay\\"></div><div class=\\"at-modal__container\\"><div class=\\"at-modal__header\\">标题</div><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y at-modal__content\\">这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室</div><div class=\\"at-modal__footer\\"><div class=\\"at-modal__action\\"><button class=\\"weui-btn weui-btn_default\\">undefined取消</button><button class=\\"weui-btn weui-btn_default\\">undefined确定</button></div></div></div></div>"`;
+exports[`Modal Snap render initial Modal 1`] = `
+<div
+  class="at-modal"
+>
+  <div
+    class="at-modal__overlay"
+  />
+  <div
+    class="at-modal__container"
+  >
+    <div
+      class="at-modal__header"
+    >
+      标题
+    </div>
+    <div
+      class="at-modal__content"
+    >
+      这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室
+    </div>
+    <div
+      class="at-modal__footer"
+    >
+      <div
+        class="at-modal__action"
+      >
+        <button>
+          取消
+        </button>
+        <button>
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Modal Snap render opened  Modal -- simple 1`] = `"<div class=\\"at-modal at-modal--active\\"><div class=\\"at-modal__overlay\\"></div><div class=\\"at-modal__container\\"><div class=\\"at-modal__header\\"><span class=\\"taro-text\\">标题</span></div><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y at-modal__content\\"><div class=\\"content-simple\\"><span class=\\"taro-text\\">欢迎加入京东凹凸实验室\\\\n\\\\r欢迎加入京东凹凸实验室</span></div></div><div class=\\"at-modal__footer at-modal__footer--simple\\"><div class=\\"at-modal__action\\"><button class=\\"weui-btn weui-btn_default\\">undefined取消</button><button class=\\"weui-btn weui-btn_default\\">undefined确认</button></div></div></div></div>"`;
+exports[`Modal Snap render opened  Modal -- simple 1`] = `
+<div
+  class="at-modal at-modal--active"
+>
+  <div
+    class="at-modal__overlay"
+  />
+  <div
+    class="at-modal__container"
+  >
+    <div
+      class="at-modal__header"
+    >
+      <span>
+        标题
+      </span>
+    </div>
+    <div
+      class="at-modal__content"
+    >
+      <div
+        class="content-simple"
+      >
+        <span>
+          欢迎加入京东凹凸实验室
+          <br />
+          欢迎加入京东凹凸实验室
+        </span>
+      </div>
+    </div>
+    <div
+      class="at-modal__footer at-modal__footer--simple"
+    >
+      <div
+        class="at-modal__action"
+      >
+        <button>
+          取消
+        </button>
+        <button>
+          确认
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Modal Snap render opened Modal -- not header 1`] = `"<div class=\\"at-modal at-modal--active\\"><div class=\\"at-modal__overlay\\"></div><div class=\\"at-modal__container\\"><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y at-modal__content\\">这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室</div><div class=\\"at-modal__footer\\"><div class=\\"at-modal__action\\"><button class=\\"weui-btn weui-btn_default\\">undefined取消</button><button class=\\"weui-btn weui-btn_default\\">undefined确定</button></div></div></div></div>"`;
+exports[`Modal Snap render opened Modal -- not header 1`] = `
+<div
+  class="at-modal at-modal--active"
+>
+  <div
+    class="at-modal__overlay"
+  />
+  <div
+    class="at-modal__container"
+  >
+    <div
+      class="at-modal__content"
+    >
+      这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室
+    </div>
+    <div
+      class="at-modal__footer"
+    >
+      <div
+        class="at-modal__action"
+      >
+        <button>
+          取消
+        </button>
+        <button>
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Modal Snap render opened Modal -- single button 1`] = `"<div class=\\"at-modal at-modal--active\\"><div class=\\"at-modal__overlay\\"></div><div class=\\"at-modal__container\\"><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y at-modal__content\\">这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室</div><div class=\\"at-modal__footer\\"><div class=\\"at-modal__action\\"><button class=\\"weui-btn weui-btn_default\\">undefined确定</button></div></div></div></div>"`;
+exports[`Modal Snap render opened Modal -- single button 1`] = `
+<div
+  class="at-modal at-modal--active"
+>
+  <div
+    class="at-modal__overlay"
+  />
+  <div
+    class="at-modal__container"
+  >
+    <div
+      class="at-modal__content"
+    >
+      这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室
+    </div>
+    <div
+      class="at-modal__footer"
+    >
+      <div
+        class="at-modal__action"
+      >
+        <button>
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`Modal Snap render opened Modal 1`] = `"<div class=\\"at-modal at-modal--active\\"><div class=\\"at-modal__overlay\\"></div><div class=\\"at-modal__container\\"><div class=\\"at-modal__header\\">标题</div><div scrollY class=\\"taro-scroll taro-scroll-view__scroll-y at-modal__content\\">这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室</div><div class=\\"at-modal__footer\\"><div class=\\"at-modal__action\\"><button class=\\"weui-btn weui-btn_default\\">undefined取消</button><button class=\\"weui-btn weui-btn_default\\">undefined确定</button></div></div></div></div>"`;
+exports[`Modal Snap render opened Modal 1`] = `
+<div
+  class="at-modal at-modal--active"
+>
+  <div
+    class="at-modal__overlay"
+  />
+  <div
+    class="at-modal__container"
+  >
+    <div
+      class="at-modal__header"
+    >
+      标题
+    </div>
+    <div
+      class="at-modal__content"
+    >
+      这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室 这里是正文内容，欢迎加入京东凹凸实验室
+    </div>
+    <div
+      class="at-modal__footer"
+    >
+      <div
+        class="at-modal__action"
+      >
+        <button>
+          取消
+        </button>
+        <button>
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

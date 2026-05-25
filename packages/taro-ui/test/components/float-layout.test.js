@@ -1,59 +1,59 @@
-import Nerv, { findDOMNode } from 'nervjs'
-import { renderToString } from 'nerv-server'
-import { Simulate, renderIntoDocument } from 'nerv-test-utils'
-import AtFloatLayout from '../../.temp/components/float-layout/index'
+import React from 'react'
+import { render, fireEvent, waitFor } from '@testing-library/react'
+import { queryByClass } from '../utils'
+import AtFloatLayout from '../../lib/components/float-layout/index'
 
 describe('FloatLayout Snap', () => {
   it('render initial FloatLayout', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtFloatLayout>
         这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写
       </AtFloatLayout>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render opened FloatLayout', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtFloatLayout isOpened>
         这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写
       </AtFloatLayout>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render FloatLayout -- props note', () => {
-    const component = renderToString(
+    const { container } = render(
       <AtFloatLayout isOpened title='这是个标题'>
         这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写
       </AtFloatLayout>
     )
-    expect(component).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('FloatLayout Behavior ', () => {
-  it('FloatLayout onClose', () => {
+  it('FloatLayout onClose', async () => {
     const onClose = jest.fn()
 
-    const component = renderIntoDocument(
+    const { container } = render(
       <AtFloatLayout isOpened title='这是个标题' onClose={onClose}>
         这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写这是内容区 随你怎么写这是内容区 随你怎么写这是内容区
         随你怎么写
       </AtFloatLayout>
     )
-    const componentDom = findDOMNode(component, 'at-float-layout')
+    const componentDom = queryByClass(container, 'at-float-layout')
     const overlayDom = componentDom.querySelector('.at-float-layout__overlay')
 
-    Simulate.click(overlayDom)
-    process.nextTick(() => {
+    fireEvent.click(overlayDom)
+    await waitFor(() => {
       expect(onClose).toBeCalled()
     })
   })
