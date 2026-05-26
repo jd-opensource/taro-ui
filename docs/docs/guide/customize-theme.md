@@ -39,7 +39,7 @@ Taro UI 的组件样式是使用 SCSS 编写的，如果你的项目中也使用
 @use '~taro-ui/dist/style/themes/red';
 ```
 
-> 变量需通过 `@use ... with (...)` 传入，详见 [默认主题变量命名](https://github.com/NervJS/taro-ui/blob/dev/src/style/variables/default.scss)
+> 变量需通过 `@use ... with (...)` 传入，详见 [默认主题变量命名](https://github.com/jd-opensource/taro-ui/blob/next/packages/taro-ui/src/style/variables/default.scss)
 
 之后在项目的入口文件中引入以上的样式文件即可（无需重复引入组件的默认样式）
 
