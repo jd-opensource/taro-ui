@@ -68,7 +68,7 @@ Taro UI 正在积极恢复维护中，当前重点完成 Monorepo 重构、CSS �
 
 ## 贡献
 
-如果你在使用 `Taro UI` 时遇到问题，或者有好的建议，欢迎给我们提 `Issue` 或 `Pull Request`。在开始之前，请阅读 [贡献指南](https://github.com/jd-opensource/taro-ui/blob/master/.github/CONTRIBUTING.md)
+如果你在使用 `Taro UI` 时遇到问题，或者有好的建议，欢迎给我们提 `Issue` 或 `Pull Request`。在开始之前，请阅读 [贡献指南](./.github/CONTRIBUTING.md)
 
 ## License
 
