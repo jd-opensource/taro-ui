@@ -35,22 +35,22 @@
 
 > **目标**：完成内部重构和兼容性验证，为发布做准备。不做发布。
 
-- [ ] **Monorepo 重构**
+- [x] **Monorepo 重构**
   - `packages/taro-ui-demo` → `examples/demo`
   - `packages/taro-ui-demo-rn` → `examples/demo-rn`
   - `packages/taro-ui-docs` → `docs/`
   - 更新 `pnpm-workspace.yaml`、root scripts、CI paths
   - 文档站路径修复（iframe preview、build-static.js）
-- [ ] **CSS 预编译**
+- [x] **CSS 预编译**
   - 构建时产出 `dist/style/index.css`
   - `package.json` `"style"` 字段指向 CSS 产物
   - 保留 `dist/style/index.scss` 供主题覆盖用户
-- [ ] **Taro v4 实验性验证**
+- [x] **Taro v4 实验性验证**
   - 新建 `examples/demo-v4`（Taro 4.2.x）
   - 验证 `demo-v4` H5 编译通过
   - 验证 `demo-v4` weapp 编译通过
   - 不阻塞发布：如 v4 有兼容性问题，发布时声明"实验性支持"
-- [ ] **清理**
+- [x] **清理**
   - 删除过时的 `examples/about-sass-version`
   - 更新 `examples/lazy-load-component` 依赖
 
