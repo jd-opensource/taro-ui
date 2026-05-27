@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import { AtLoadMoreProps } from '../../../types/load-more'
 import AtActivityIndicator from '../activity-indicator/index'
 import AtButton from '../button/index'
@@ -10,33 +11,39 @@ import AtButton from '../button/index'
 function AtLoadMore({
   className = '',
   customStyle = '',
-  loadingText = '加载中',
-  moreText = '查看更多',
+  loadingText,
+  moreText,
   status = 'more',
   moreBtnStyle = '',
   noMoreTextStyle = '',
-  noMoreText = '没有更多',
+  noMoreText,
   onClick
 }: AtLoadMoreProps): JSX.Element {
+  const locale = useComponentLocale('LoadMore')
+  const resolvedLoadingText = loadingText ?? locale.loadingText
+  const resolvedMoreText = moreText ?? locale.moreText
+  const resolvedNoMoreText = noMoreText ?? locale.noMoreText
   const handleClick = (event: CommonEvent): void => {
     onClick && onClick(event)
   }
 
   let component: JSX.Element | null = null
   if (status === 'loading') {
-    component = <AtActivityIndicator mode='center' content={loadingText} />
+    component = (
+      <AtActivityIndicator mode='center' content={resolvedLoadingText} />
+    )
   } else if (status === 'more') {
     component = (
       <View className='at-load-more__cnt'>
         <AtButton full onClick={handleClick} customStyle={moreBtnStyle}>
-          {moreText}
+          {resolvedMoreText}
         </AtButton>
       </View>
     )
   } else {
     component = (
       <Text className='at-load-more__tip' style={noMoreTextStyle}>
-        {noMoreText}
+        {resolvedNoMoreText}
       </Text>
     )
   }

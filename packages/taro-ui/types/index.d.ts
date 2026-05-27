@@ -1,5 +1,5 @@
 import { ComponentClass } from 'react'
-import { Props } from '../src/components/calendar/interface'
+import { AtCalendarProps } from './calendar'
 
 export { default as AtActionSheet, AtActionSheetItem } from './action-sheet'
 export { default as AtActivityIndicator } from './activity-indicator'
@@ -47,8 +47,15 @@ export { default as AtImagePicker } from './image-picker'
 export { default as AtIndexes } from './indexes'
 export { default as AtRange } from './range'
 export { default as AtFloatButton } from './float-button'
+export { default as ConfigProvider } from './config-provider'
+export type { Locale, PartialLocale } from './locale'
 
-export declare const AtCalendar: ComponentClass<Props>
+import { Locale } from './locale'
+
+export declare const zhCN: Locale
+export declare const enUS: Locale
+
+export declare const AtCalendar: ComponentClass<AtCalendarProps>
 
 export declare const AtModalHeader: ComponentClass
 export declare const AtModalAction: ComponentClass

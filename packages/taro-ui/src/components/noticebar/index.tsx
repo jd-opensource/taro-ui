@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
 import Taro from '@tarojs/taro'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import { AtNoticeBarProps } from '../../../types/noticebar'
 
 function AtNoticebar({
@@ -11,7 +12,7 @@ function AtNoticebar({
   single = false,
   marquee = false,
   speed = 100,
-  moreText = '查看详情',
+  moreText,
   showMore = false,
   icon = '',
   customStyle = {},
@@ -20,6 +21,8 @@ function AtNoticebar({
   onClose,
   onGotoMore
 }: AtNoticeBarProps): JSX.Element | boolean {
+  const locale = useComponentLocale('NoticeBar')
+  const resolvedMoreText = moreText ?? locale.moreText
   const [show, setShow] = useState(true)
   const [animElemId] = useState(
     () => `J_${Math.ceil(Math.random() * 10e5).toString(36)}`
@@ -112,7 +115,7 @@ function AtNoticebar({
     icon,
     close,
     showMore,
-    moreText,
+    resolvedMoreText,
     className,
     customStyle,
     initAnimation
@@ -183,7 +186,7 @@ function AtNoticebar({
         </View>
         {resolvedShowMore && (
           <View className='at-noticebar__more' onClick={handleGotoMore}>
-            <Text className='text'>{moreText}</Text>
+            <Text className='text'>{resolvedMoreText}</Text>
             <View className='at-noticebar__more-icon'>
               <Text className='at-icon at-icon-chevron-right'></Text>
             </View>

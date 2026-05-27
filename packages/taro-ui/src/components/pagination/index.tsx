@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import { Text, View } from '@tarojs/components'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import { AtPaginationProps } from '../../../types/pagination'
 import AtButton from '../button/index'
 
@@ -25,6 +26,7 @@ function AtPagination({
   className,
   onPageChange
 }: AtPaginationProps): JSX.Element {
+  const locale = useComponentLocale('Pagination')
   const initialMaxPage = getMaxPage(Math.ceil(total / pageSize))
   const [currentPage, setCurrentPage] = useState(current || 1)
   const [maxPage, setMaxPage] = useState(initialMaxPage)
@@ -86,7 +88,7 @@ function AtPagination({
         )}
         {!icon && (
           <AtButton onClick={onPrev} size='small' disabled={prevDisabled}>
-            上一页
+            {locale.prev}
           </AtButton>
         )}
       </View>
@@ -102,7 +104,7 @@ function AtPagination({
         )}
         {!icon && (
           <AtButton onClick={onNext} size='small' disabled={nextDisabled}>
-            下一页
+            {locale.next}
           </AtButton>
         )}
       </View>

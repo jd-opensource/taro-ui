@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import { useDidHide, useDidShow } from '@tarojs/taro'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import { AtCountDownProps } from '../../../types/countdown'
 import AtCountdownItem from './item'
 
@@ -20,17 +21,10 @@ const toSeconds = (
   seconds: number
 ): number => day * 60 * 60 * 24 + hours * 60 * 60 + minutes * 60 + seconds
 
-const defaultFormat = {
-  day: '天',
-  hours: '时',
-  minutes: '分',
-  seconds: '秒'
-}
-
 function AtCountdown({
   customStyle = '',
   className = '',
-  format = defaultFormat,
+  format,
   isCard = false,
   isShowDay = false,
   isShowHour = true,
@@ -41,10 +35,17 @@ function AtCountdown({
   seconds = 0,
   onTimeUp
 }: AtCountDownProps): JSX.Element {
+  const locale = useComponentLocale('Countdown')
+  const mergedFormat = {
+    day: format?.day ?? locale.day,
+    hours: format?.hours ?? locale.hours,
+    minutes: format?.minutes ?? locale.minutes,
+    seconds: format?.seconds ?? locale.seconds
+  }
   const propsRef = useRef<AtCountDownProps>({
     customStyle,
     className,
-    format,
+    format: mergedFormat,
     isCard,
     isShowDay,
     isShowHour,
@@ -132,7 +133,7 @@ function AtCountdown({
     propsRef.current = {
       customStyle,
       className,
-      format,
+      format: mergedFormat,
       isCard,
       isShowDay,
       isShowHour,
@@ -149,7 +150,7 @@ function AtCountdown({
     const nextProps = {
       customStyle,
       className,
-      format,
+      format: mergedFormat,
       isCard,
       isShowDay,
       isShowHour,
@@ -174,7 +175,7 @@ function AtCountdown({
   }, [
     customStyle,
     className,
-    format,
+    mergedFormat,
     isCard,
     isShowDay,
     isShowHour,
@@ -214,16 +215,14 @@ function AtCountdown({
       )}
       style={customStyle}
     >
-      {isShowDay && (
-        <AtCountdownItem num={_day} separator={format?.day || '天'} />
-      )}
+      {isShowDay && <AtCountdownItem num={_day} separator={mergedFormat.day} />}
       {isShowHour && (
-        <AtCountdownItem num={_hours} separator={format?.hours || ''} />
+        <AtCountdownItem num={_hours} separator={mergedFormat.hours} />
       )}
       {isShowMinute && (
-        <AtCountdownItem num={_minutes} separator={format?.minutes || ''} />
+        <AtCountdownItem num={_minutes} separator={mergedFormat.minutes} />
       )}
-      <AtCountdownItem num={_seconds} separator={format?.seconds || ''} />
+      <AtCountdownItem num={_seconds} separator={mergedFormat.seconds} />
     </View>
   )
 }

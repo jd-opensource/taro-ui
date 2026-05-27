@@ -11,6 +11,7 @@ module.exports = {
   transformIgnorePatterns: ['/node_modules/(?!(@tarojs)/)'],
   moduleNameMapper: {
     '^(\\.\\./)+lib/(.*)$': '<rootDir>/dist/$2',
+    '^(\\.\\./)+dist/(.*)$': '<rootDir>/dist/$2',
     '@tarojs/taro': '<rootDir>/test/__mock__/taro.js',
     '@tarojs/components': '<rootDir>/test/__mock__/taroComponents.js',
     '\\.(css|less|sass|scss)$': '<rootDir>/test/__mock__/styleMock.js',

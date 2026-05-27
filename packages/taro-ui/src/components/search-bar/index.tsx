@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import { Input, Text, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import { AtSearchBarProps } from '../../../types/search-bar'
 
 type ExtendEvent = {
@@ -13,13 +14,13 @@ type ExtendEvent = {
 
 function AtSearchBar({
   value = '',
-  placeholder = '搜索',
+  placeholder,
   maxLength = 140,
   fixed = false,
   focus = false,
   disabled = false,
   showActionButton = false,
-  actionName = '搜索',
+  actionName,
   inputType = 'text',
   className,
   customStyle,
@@ -31,6 +32,9 @@ function AtSearchBar({
   onActionClick,
   onClear
 }: AtSearchBarProps): JSX.Element {
+  const locale = useComponentLocale('SearchBar')
+  const resolvedPlaceholder = placeholder ?? locale.placeholder
+  const resolvedActionName = actionName ?? locale.actionName
   const [isFocus, setIsFocus] = useState(!!focus)
 
   useEffect(() => {
@@ -85,7 +89,7 @@ function AtSearchBar({
     placeholderWrapStyle.flexGrow = 1
     actionStyle.opacity = 0
     actionStyle.marginRight = `-${
-      (actionName.length + 1) * fontSize + fontSize / 2 + 10
+      (resolvedActionName.length + 1) * fontSize + fontSize / 2 + 10
     }px`
   }
   if (showActionButton) {
@@ -109,7 +113,7 @@ function AtSearchBar({
         >
           <Text className='at-icon at-icon-search'></Text>
           <Text className='at-search-bar__placeholder' style={placeholderStyle}>
-            {isFocus ? '' : placeholder}
+            {isFocus ? '' : resolvedPlaceholder}
           </Text>
         </View>
         <Input
@@ -140,7 +144,7 @@ function AtSearchBar({
         style={actionStyle}
         onClick={handleActionClick}
       >
-        {actionName}
+        {resolvedActionName}
       </View>
     </View>
   )
