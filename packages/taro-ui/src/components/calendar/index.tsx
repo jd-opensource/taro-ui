@@ -9,10 +9,12 @@ import {
   AtCalendarState,
   Calendar
 } from '../../../types/calendar'
+import { useComponentLocale } from '../../hooks/useComponentLocale'
 import AtCalendarBody from './body/index'
 import AtCalendarController from './controller/index'
 
 function AtCalendar(props: AtCalendarProps): JSX.Element {
+  const calendarLocale = useComponentLocale('Calendar')
   const {
     validDates = [],
     marks = [],
@@ -23,7 +25,7 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
     isMultiSelect = false,
     format = 'YYYY-MM-DD',
     currentDate = Date.now(),
-    monthFormat = 'YYYY年MM月',
+    monthFormat,
     minDate,
     maxDate,
     className,
@@ -34,6 +36,7 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
     onSelectDate,
     onDayLongClick
   } = props as AtCalendarPropsWithDefaults
+  const resolvedMonthFormat = monthFormat ?? calendarLocale.monthFormat
   const getSelectedDate = (
     start: number,
     end?: number
@@ -283,7 +286,7 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
         minDate={minDate}
         maxDate={maxDate}
         hideArrow={hideArrow}
-        monthFormat={monthFormat}
+        monthFormat={resolvedMonthFormat}
         generateDate={generateDate}
         onPreMonth={handleClickPreMonth}
         onNextMonth={handleClickNextMonth}

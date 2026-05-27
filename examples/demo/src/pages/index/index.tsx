@@ -71,7 +71,7 @@ export default class Index extends React.Component<{}, IndexState> {
         {
           id: 'Advanced',
           title: '高阶组件',
-          content: '包含日历等',
+          content: '包含日历、国际化等',
           icon: iconHOC
         }
       ]

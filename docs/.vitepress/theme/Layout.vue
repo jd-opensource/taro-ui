@@ -19,7 +19,8 @@ const nameToRoute: Record<string, string> = {
     'segmented-control': 'segmentedcontrol',
     'load-more': 'loadmore',
     'activity-indicator': 'activityindicator',
-    'action-sheet': 'actionsheet'
+    'action-sheet': 'actionsheet',
+    'config-provider': 'configprovider'
 }
 
 const demoPath = computed(() => {

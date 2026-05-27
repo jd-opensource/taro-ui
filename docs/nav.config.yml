@@ -129,3 +129,5 @@ components:
         items:
           - title: 日历
             name: Calendar
+          - title: 国际化
+            name: ConfigProvider

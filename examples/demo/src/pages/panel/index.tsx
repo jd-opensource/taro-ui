@@ -285,6 +285,10 @@ export default class PanelBasic extends React.Component<
           {
             id: 'Calendar',
             name: '日历'
+          },
+          {
+            id: 'Config-Provider',
+            name: '国际化'
           }
         ]
       },

@@ -46,5 +46,6 @@ export default {
   tabs: 'navigation/tabs',
   indexes: 'navigation/indexes',
   calendar: 'advanced/calendar',
+  configprovider: 'advanced/config-provider',
   form: 'form/form'
 }

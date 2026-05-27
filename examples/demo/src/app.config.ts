@@ -7,6 +7,7 @@ export default {
     'pages/basic/color/index',
     'pages/basic/typo/index',
     'pages/advanced/calendar/index',
+    'pages/advanced/config-provider/index',
     'pages/theme/index'
   ],
   subpackages: [
