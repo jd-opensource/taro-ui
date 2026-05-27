@@ -25,11 +25,6 @@ const nameToRoute: Record<string, string> = {
 
 const demoPath = computed(() => {
     const path = route.path
-    const guideMatch = path.match(/\/guide\/([\w-]+)/)
-    if (guideMatch) {
-        const routeMap: Record<string, string> = pageRoute
-        return routeMap[guideMatch[1].toLowerCase()] || ''
-    }
     const match = path.match(/\/components\/([\w-]+)/)
     if (!match) return ''
     const fileName = match[1].toLowerCase()

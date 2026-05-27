@@ -62,7 +62,6 @@ export default defineConfig({
                         { text: '介绍', link: '/guide/introduction' },
                         { text: '快速上手', link: '/guide/quickstart' },
                         { text: '自定义主题', link: '/guide/customize-theme' },
-                        { text: '国际化', link: '/guide/i18n' },
                         { text: '常见问题', link: '/guide/questions' },
                         { text: '更新日志', link: '/guide/changelog' },
                         { text: '设计资源', link: '/guide/resource' }
@@ -152,7 +151,7 @@ export default defineConfig({
                     text: '高阶组件',
                     items: [
                         { text: '日历', link: '/components/calendar' },
-                        { text: '全局配置', link: '/components/config-provider' }
+                        { text: '国际化', link: '/components/config-provider' }
                     ]
                 }
             ]
