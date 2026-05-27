@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import { useDidHide, useDidShow } from '@tarojs/taro'
 import { useComponentLocale } from '../../hooks/useComponentLocale'
@@ -36,12 +36,24 @@ function AtCountdown({
   onTimeUp
 }: AtCountDownProps): JSX.Element {
   const locale = useComponentLocale('Countdown')
-  const mergedFormat = {
-    day: format?.day ?? locale.day,
-    hours: format?.hours ?? locale.hours,
-    minutes: format?.minutes ?? locale.minutes,
-    seconds: format?.seconds ?? locale.seconds
-  }
+  const mergedFormat = useMemo(
+    () => ({
+      day: format?.day ?? locale.day,
+      hours: format?.hours ?? locale.hours,
+      minutes: format?.minutes ?? locale.minutes,
+      seconds: format?.seconds ?? locale.seconds
+    }),
+    [
+      format?.day,
+      format?.hours,
+      format?.minutes,
+      format?.seconds,
+      locale.day,
+      locale.hours,
+      locale.minutes,
+      locale.seconds
+    ]
+  )
   const propsRef = useRef<AtCountDownProps>({
     customStyle,
     className,
