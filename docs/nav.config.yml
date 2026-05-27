@@ -129,3 +129,5 @@ components:
         items:
           - title: 日历
             name: Calendar
+          - title: 全局配置
+            name: ConfigProvider

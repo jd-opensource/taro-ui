@@ -151,7 +151,8 @@ export default defineConfig({
                 {
                     text: '高阶组件',
                     items: [
-                        { text: '日历', link: '/components/calendar' }
+                        { text: '日历', link: '/components/calendar' },
+                        { text: '全局配置', link: '/components/config-provider' }
                     ]
                 }
             ]

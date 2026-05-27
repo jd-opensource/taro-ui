@@ -19,11 +19,17 @@ const nameToRoute: Record<string, string> = {
     'segmented-control': 'segmentedcontrol',
     'load-more': 'loadmore',
     'activity-indicator': 'activityindicator',
-    'action-sheet': 'actionsheet'
+    'action-sheet': 'actionsheet',
+    'config-provider': 'configprovider'
 }
 
 const demoPath = computed(() => {
     const path = route.path
+    const guideMatch = path.match(/\/guide\/([\w-]+)/)
+    if (guideMatch) {
+        const routeMap: Record<string, string> = pageRoute
+        return routeMap[guideMatch[1].toLowerCase()] || ''
+    }
     const match = path.match(/\/components\/([\w-]+)/)
     if (!match) return ''
     const fileName = match[1].toLowerCase()
