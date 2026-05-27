@@ -12,17 +12,17 @@ export interface FormatObject {
    * 格式化分割符号：小时
    * @default '时'
    */
-  hours: string
+  hours?: string
   /**
    * 格式化分割符号：分钟
    * @default '分'
    */
-  minutes: string
+  minutes?: string
   /**
    * 格式化分割符号：秒
    * @default '秒'
    */
-  seconds: string
+  seconds?: string
 }
 
 export interface AtCountDownProps extends AtComponent {
@@ -47,7 +47,7 @@ export interface AtCountDownProps extends AtComponent {
    */
   isShowMinute?: boolean
   /**
-   * 格式化分割符号
+   * 格式化分割符号；未指定的字段将回退到 locale 默认值
    * @default { day: '天', hours: '时', minutes: '分', seconds: '秒' }
    */
   format?: FormatObject
@@ -74,7 +74,7 @@ export interface AtCountDownProps extends AtComponent {
   /**
    * 倒计时时间到，执行的回调函数
    */
-  onTimeUp?: Function
+  onTimeUp?: () => void
 }
 
 export interface AtCountdownState {
