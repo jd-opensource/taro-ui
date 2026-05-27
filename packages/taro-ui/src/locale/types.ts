@@ -29,7 +29,9 @@ export interface Locale {
 }
 
 export type PartialLocale = {
-  [K in keyof Locale]?: Locale[K] extends object
+  [K in keyof Locale]?: Locale[K] extends any[]
+    ? Locale[K]
+    : Locale[K] extends object
     ? { [P in keyof Locale[K]]?: Locale[K][P] }
     : Locale[K]
 }
