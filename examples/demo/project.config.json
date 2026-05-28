@@ -1,30 +1,30 @@
 {
-    "miniprogramRoot": "dist/",
-    "projectname": "taro-ui-demo",
-    "description": "Taro UI demo",
-    "appid": "wx7a42c5ab005bd5c8",
-    "setting": {
-        "urlCheck": true,
-        "es6": false,
-        "postcss": false,
-        "minified": false,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "condition": false
+  "miniprogramRoot": "dist/",
+  "projectname": "taro-ui-demo",
+  "description": "Taro UI demo",
+  "appid": "wx7a42c5ab005bd5c8",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "compileType": "miniprogram",
-    "libVersion": "2.31.0",
-    "srcMiniprogramRoot": "dist/",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
-    },
-    "condition": {}
+    "condition": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.31.0",
+  "srcMiniprogramRoot": "dist/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 4
+  },
+  "condition": {}
 }

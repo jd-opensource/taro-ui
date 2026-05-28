@@ -11,7 +11,7 @@ const INIT_STATE: ToastPageState = {
   text: '',
   duration: 3000,
   hasMask: false,
-  isOpened: false,
+  isOpened: false
 }
 
 interface ToastPageState {
@@ -26,7 +26,7 @@ interface ToastPageState {
 
 export default class ToastPage extends React.Component<{}, ToastPageState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -46,7 +46,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
 
   private handleClose = (): void => {
     this.setState({
-      isOpened: false,
+      isOpened: false
     })
   }
 
@@ -68,7 +68,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
               <View className='panel__content--example-item'>
                 <AtButton
                   onClick={this.handleClick.bind(this, {
-                    text: '文本内容',
+                    text: '文本内容'
                   })}
                 >
                   文本 Toast
@@ -78,7 +78,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                 <AtButton
                   onClick={this.handleClick.bind(this, {
                     text: '文本内容',
-                    icon: 'analytics',
+                    icon: 'analytics'
                   })}
                 >
                   文本 + ICON
@@ -95,7 +95,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                   onClick={this.handleClick.bind(this, {
                     text: '凹凸实验室',
                     image:
-                      'https://storage.360buyimg.com/mtd/home/group-21533885306540.png',
+                      'https://storage.360buyimg.com/mtd/home/group-21533885306540.png'
                   })}
                 >
                   自定义图片 Toast
@@ -111,7 +111,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                 <AtButton
                   onClick={this.handleClick.bind(this, {
                     text: '透明遮罩层的作用在于不可点击下面的元素',
-                    hasMask: true,
+                    hasMask: true
                   })}
                 >
                   添加遮罩层 Toast
@@ -128,7 +128,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                   onClick={this.handleClick.bind(this, {
                     text: '错误提示',
                     hasMask: true,
-                    status: 'error',
+                    status: 'error'
                   })}
                 >
                   错误提示 Toast
@@ -145,7 +145,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                   onClick={this.handleClick.bind(this, {
                     text: '正确提示',
                     hasMask: true,
-                    status: 'success',
+                    status: 'success'
                   })}
                 >
                   正确提示 Toast
@@ -162,7 +162,7 @@ export default class ToastPage extends React.Component<{}, ToastPageState> {
                   onClick={this.handleClick.bind(this, {
                     text: '正在加载…',
                     hasMask: true,
-                    status: 'loading',
+                    status: 'loading'
                   })}
                 >
                   加载中 Toast

@@ -41,7 +41,7 @@ $at-curtain-btn-size: 56px;
     bottom: -($at-curtain-btn-size + 24px);
     align-items: center;
     justify-content: center;
-    border: 2PX solid $at-curtain-btn-color;
+    border: 2px solid $at-curtain-btn-color;
     border-radius: 50%;
     box-sizing: border-box;
     z-index: $zindex-curtain;
@@ -54,8 +54,8 @@ $at-curtain-btn-size: 56px;
       left: 50%;
       display: inline-block;
       width: 34px;
-      height: 2PX;
-      border-radius: 1PX;
+      height: 2px;
+      border-radius: 1px;
       background: $at-curtain-btn-color;
     }
 

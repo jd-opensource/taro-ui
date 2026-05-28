@@ -25,15 +25,15 @@ export default class AtSegmentedControl extends React.Component<AtSegmentedContr
       selectedColor,
       current,
       color,
-      fontSize = 28,
+      fontSize = 28
     } = this.props
 
     const rootStyle: Record<string, string> = {}
     const itemStyle: Record<string, string> = {
-      fontSize: Taro.pxTransform(fontSize),
+      fontSize: Taro.pxTransform(fontSize)
     }
     const selectedItemStyle: Record<string, string> = {
-      fontSize: Taro.pxTransform(fontSize),
+      fontSize: Taro.pxTransform(fontSize)
     }
 
     if (selectedColor) {
@@ -55,9 +55,9 @@ export default class AtSegmentedControl extends React.Component<AtSegmentedContr
     const rootCls = classNames(
       'at-segmented-control',
       {
-        'at-segmented-control--disabled': disabled,
+        'at-segmented-control--disabled': disabled
       },
-      className,
+      className
     )
 
     return (
@@ -66,7 +66,7 @@ export default class AtSegmentedControl extends React.Component<AtSegmentedContr
           <View
             className={classNames('at-segmented-control__item', {
               'at-segmented-control__item--active': current === i,
-              'at-segmented-control__item--plus': i > 0,
+              'at-segmented-control__item--plus': i > 0
             })}
             style={current === i ? selectedItemStyle : itemStyle}
             key={value}
@@ -90,7 +90,7 @@ AtSegmentedControl.defaultProps = {
   selectedColor: '',
   values: [],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {},
+  onClick: (): void => {}
 }
 
 AtSegmentedControl.propTypes = {
@@ -101,5 +101,5 @@ AtSegmentedControl.propTypes = {
   fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   values: PropTypes.array,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }

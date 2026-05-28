@@ -15,9 +15,6 @@
  *     background-color: #664a20;
  *   }
  */
-@function shade(
-  $color,
-  $percent
-) {
+@function shade($color, $percent) {
   @return mix(#000, $color, $percent);
 }

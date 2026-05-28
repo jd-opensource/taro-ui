@@ -10,19 +10,17 @@
 
 在 Taro 文件中引入组件
 
-
 ```js
-import { AtCalendar } from "taro-ui"
+import { AtCalendar } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/calendar.scss";
+@import '~taro-ui/dist/style/components/calendar.scss';
 ```
+
 ## 一般用法
-
-
 
 ```html
 <AtCalendar />
@@ -30,15 +28,11 @@ import { AtCalendar } from "taro-ui"
 
 ## 跳转到指定日期
 
-
-
 ```html
 <AtCalendar currentDate="2018/11/11" />
 ```
 
 ## 指定最小日期和最大日期
-
-
 
 ```html
 <AtCalendar minDate="2018/1/1" maxDate="2018/10/1" />
@@ -46,15 +40,11 @@ import { AtCalendar } from "taro-ui"
 
 ## 标记时间
 
-
-
 ```html
 <AtCalendar marks={ [ { value: '2018/11/11' } ] } />
 ```
 
 ## 禁止滑动
-
-
 
 ```html
 <AtCalendar isSwiper="{false}" />
@@ -62,15 +52,11 @@ import { AtCalendar } from "taro-ui"
 
 ## 垂直滑动
 
-
-
 ```html
 <AtCalendar isVertical />
 ```
 
 ## 范围选择
-
-
 
 ```html
 <AtCalendar isMultiSelect currentDate={{start: '2018/10/28', end:
@@ -78,8 +64,6 @@ import { AtCalendar } from "taro-ui"
 ```
 
 ## 有效时间组
-
-
 
 ```html
 <AtCalendar validDates={ [ { value: '2020/01/01' } ] } />
@@ -96,19 +80,19 @@ interface SelectDate {
 }
 ```
 
-| 参数          | 说明           | 类型                            | 默认值       |
-| ------------- | -------------- | ------------------------------- | ------------ |
-| currentDate   | 当前的时间     | `DateArg | SelectDate`          | `Date.now()` |
-| minDate       | 最小的可选时间 | `DateArg`                       | -            |
-| maxDate       | 最大的可选时间 | `DateArg`                       | -            |
-| isSwiper      | 是否可以滑动   | `boolean`                       | `true`       |
-| marks         | 需要标记的时间 | `Array<{'{ value: DateArg }'}>` | `[]`         |
-| validDates    | 需要标记的有效时间 | `Array<{'{ value: DateArg }'}>` | `[]`      |
-| format        | 日期格式       | `string`                        | `YYYY-MM-DD` |
-| monthFormat   | 月份格式       | `string`                        | `YYYY年MM月` |
-| hideArrow     | 是否隐藏箭头   | `boolean`                       | `false`      |
-| isVertical    | 是否垂直滑动   | `boolean`                       | `false`      |
-| isMultiSelect | 是否范围选择   | `boolean`                       | `false`      |
+| 参数          | 说明               | 类型                            | 默认值       |
+| ------------- | ------------------ | ------------------------------- | ------------ | ------------ |
+| currentDate   | 当前的时间         | `DateArg                        | SelectDate`  | `Date.now()` |
+| minDate       | 最小的可选时间     | `DateArg`                       | -            |
+| maxDate       | 最大的可选时间     | `DateArg`                       | -            |
+| isSwiper      | 是否可以滑动       | `boolean`                       | `true`       |
+| marks         | 需要标记的时间     | `Array<{'{ value: DateArg }'}>` | `[]`         |
+| validDates    | 需要标记的有效时间 | `Array<{'{ value: DateArg }'}>` | `[]`         |
+| format        | 日期格式           | `string`                        | `YYYY-MM-DD` |
+| monthFormat   | 月份格式           | `string`                        | `YYYY年MM月` |
+| hideArrow     | 是否隐藏箭头       | `boolean`                       | `false`      |
+| isVertical    | 是否垂直滑动       | `boolean`                       | `false`      |
+| isMultiSelect | 是否范围选择       | `boolean`                       | `false`      |
 
 ## AtCalendar 事件
 
@@ -119,4 +103,4 @@ interface SelectDate {
 | onDayClick       | 点击日期时候触发             | `(item: {'{ value: string }'}) => void` | -      |
 | onDayLongClick   | 长按日期时触发               | `(item: {'{ value: string }'}) => void` | -      |
 | onMonthChange    | 月份改变时触发               | `(value: string) => void`               | -      |
-| onSelectDate     | 选中日期时候触发             | `(value: SelectDate) => void`               | -      |
+| onSelectDate     | 选中日期时候触发             | `(value: SelectDate) => void`           | -      |

@@ -73,15 +73,8 @@ export default class AtAccordion extends React.Component<
   }
 
   public render(): JSX.Element {
-    const {
-      customStyle,
-      className,
-      title,
-      icon,
-      hasBorder,
-      open,
-      note
-    } = this.props
+    const { customStyle, className, title, icon, hasBorder, open, note } =
+      this.props
     const { wrapperHeight } = this.state
 
     const rootCls = classNames('at-accordion', className)

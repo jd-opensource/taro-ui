@@ -10,7 +10,7 @@ $at-segmented-control-min-width: 120px;
   width: 100%;
   border-radius: $border-radius-md;
   overflow: hidden;
-  @include border-thin($color: $at-segmented-control-color, $width: 1PX);
+  @include border-thin($color: $at-segmented-control-color, $width: 1px);
 
   /* elements */
   &__item {
@@ -29,7 +29,10 @@ $at-segmented-control-min-width: 120px;
     }
 
     &--plus {
-      @include border-thin-left($color: $at-segmented-control-color, $width: 1PX);
+      @include border-thin-left(
+        $color: $at-segmented-control-color,
+        $width: 1px
+      );
     }
   }
 

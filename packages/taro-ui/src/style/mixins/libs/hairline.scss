@@ -10,10 +10,7 @@
   pointer-events: none;
 }
 
-@mixin hairline-base(
-  $color: $color-border-light,
-  $style: solid
-) {
+@mixin hairline-base($color: $color-border-light, $style: solid) {
   @include hairline-common();
 
   top: -50%;
@@ -27,7 +24,7 @@
 @mixin hairline-surround(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX
+  $width: 1px
 ) {
   position: relative;
 
@@ -38,11 +35,7 @@
   }
 }
 
-@mixin hairline-top(
-  $color: $color-border-light,
-  $style: solid,
-  $width: 1PX
-) {
+@mixin hairline-top($color: $color-border-light, $style: solid, $width: 1px) {
   position: relative;
 
   &::after {
@@ -55,7 +48,7 @@
 @mixin hairline-bottom(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX
+  $width: 1px
 ) {
   position: relative;
 
@@ -66,11 +59,7 @@
   }
 }
 
-@mixin hairline-left(
-  $color: $color-border-light,
-  $style: solid,
-  $width: 1PX
-) {
+@mixin hairline-left($color: $color-border-light, $style: solid, $width: 1px) {
   position: relative;
 
   &::after {
@@ -80,11 +69,7 @@
   }
 }
 
-@mixin hairline-right(
-  $color: $color-border-light,
-  $style: solid,
-  $width: 1PX
-) {
+@mixin hairline-right($color: $color-border-light, $style: solid, $width: 1px) {
   position: relative;
 
   &::after {
@@ -97,7 +82,7 @@
 @mixin hairline-top-bottom(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX
+  $width: 1px
 ) {
   position: relative;
 
@@ -112,7 +97,7 @@
 @mixin hairline-bottom-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX,
+  $width: 1px,
   $left: 0
 ) {
   position: relative;
@@ -132,7 +117,7 @@
 @mixin hairline-top-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX,
+  $width: 1px,
   $left: 0
 ) {
   position: relative;
@@ -152,7 +137,7 @@
 @mixin hairline-left-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX,
+  $width: 1px,
   $top: 0
 ) {
   position: relative;
@@ -172,7 +157,7 @@
 @mixin hairline-right-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1PX,
+  $width: 1px,
   $top: 0
 ) {
   position: relative;

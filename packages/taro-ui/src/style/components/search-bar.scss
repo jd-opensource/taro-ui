@@ -1,12 +1,12 @@
-@use "sass:math";
+@use 'sass:math';
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
-$at-search-bar-font-size: 14PX;
-$at-search-bar-input-height: 30PX;
-$at-search-bar-input-padding: 25PX;
-$at-search-bar-btn-padding: 10PX;
-$at-search-bar-placeholder-padding: 12PX;
+$at-search-bar-font-size: 14px;
+$at-search-bar-input-height: 30px;
+$at-search-bar-input-padding: 25px;
+$at-search-bar-btn-padding: 10px;
+$at-search-bar-placeholder-padding: 12px;
 $at-search-bar-input-bg-color: $color-bg-grey;
 $at-search-bar-input-color: $color-black-0;
 $at-search-bar-placholder-color: $color-grey-2;
@@ -98,13 +98,13 @@ $at-search-bar-placholder-color: $color-grey-2;
   &__action {
     flex: none;
     display: block;
-    margin-left: 10PX;
+    margin-left: 10px;
     padding: 0 $at-search-bar-btn-padding;
     height: $at-search-bar-input-height;
     color: $at-search-bar-btn-color;
     font-size: $at-search-bar-font-size;
     line-height: $at-search-bar-input-height;
-    border-radius: 4PX;
+    border-radius: 4px;
     background-color: $at-search-bar-btn-bg-color;
     transition: margin-right 0.3s, opacity 0.3s;
     opacity: 0;

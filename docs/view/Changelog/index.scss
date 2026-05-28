@@ -1,18 +1,18 @@
 /* Timeline */
-$timeline-dot-color            : #78A4FA;
-$timeline-dot-color-success    : #13CE66;
-$timeline-dot-color-error      : #FF4949;
-$timeline-dot-color-warning    : #FFC82C;
+$timeline-dot-color: #78a4fa;
+$timeline-dot-color-success: #13ce66;
+$timeline-dot-color-error: #ff4949;
+$timeline-dot-color-warning: #ffc82c;
 
-$timeline-dot-bg-color         : #fff;
+$timeline-dot-bg-color: #fff;
 
-$timeline-dot-size             : 12px;
-$timeline-custom-dot-size      : 20px;
-$timeline-custom-dot-font-size : 16px;
+$timeline-dot-size: 12px;
+$timeline-custom-dot-size: 20px;
+$timeline-custom-dot-font-size: 16px;
 
-$timeline-line-color           : #ECECEC;
-$timeline-item-last-min-height : 48px;
-$timeline-text-font-size       : 12px;
+$timeline-line-color: #ececec;
+$timeline-item-last-min-height: 48px;
+$timeline-text-font-size: 12px;
 
 .at-timeline {
   /* element */
@@ -127,14 +127,14 @@ $timeline-text-font-size       : 12px;
     margin: 0 4px;
     font-size: 0.9em;
     vertical-align: middle;
-    border: 1px solid #ECECEC;
+    border: 1px solid #ececec;
     border-radius: 2px;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
   }
 
   .head {
     margin-bottom: 16px;
-    color: #4F7DE2;
+    color: #4f7de2;
     font-size: 16px;
     font-weight: bold;
   }

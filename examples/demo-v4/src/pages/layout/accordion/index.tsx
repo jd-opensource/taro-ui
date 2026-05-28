@@ -50,10 +50,7 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   open={value1}
                 >
                   <AtList hasBorder={false}>
-                    <AtListItem
-                      title='标题文字'
-                      thumb={iconDemo1}
-                    />
+                    <AtListItem title='标题文字' thumb={iconDemo1} />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
@@ -67,10 +64,7 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   onClick={this.onClick.bind(this, 'value2')}
                 >
                   <AtList hasBorder={false}>
-                    <AtListItem
-                      title='标题文字'
-                      thumb={iconDemo1}
-                    />
+                    <AtListItem title='标题文字' thumb={iconDemo1} />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
@@ -99,10 +93,7 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   onClick={this.onClick.bind(this, 'value3')}
                 >
                   <AtList hasBorder={false}>
-                    <AtListItem
-                      title='标题文字'
-                      thumb={iconDemo1}
-                    />
+                    <AtListItem title='标题文字' thumb={iconDemo1} />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'
@@ -127,10 +118,7 @@ export default class CardPage extends React.Component<{}, CardPageState> {
                   onClick={this.onClick.bind(this, 'value4')}
                 >
                   <AtList hasBorder={false}>
-                    <AtListItem
-                      title='标题文字'
-                      thumb={iconDemo1}
-                    />
+                    <AtListItem title='标题文字' thumb={iconDemo1} />
                     <AtListItem
                       title='标题文字'
                       note='描述信息'

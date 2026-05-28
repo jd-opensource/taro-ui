@@ -5,7 +5,7 @@ import {
   AtModal,
   AtModalAction,
   AtModalContent,
-  AtModalHeader,
+  AtModalHeader
 } from 'taro-ui'
 import { Button, View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
@@ -19,7 +19,7 @@ interface ModalPageState {
 
 export default class ModalPage extends React.Component<{}, ModalPageState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -29,34 +29,34 @@ export default class ModalPage extends React.Component<{}, ModalPageState> {
       isOpened2: false,
       isOpened3: false,
       isOpened4: false,
-      isOpened5: false,
+      isOpened5: false
     }
   }
 
   private handleClick = (type: string): void => {
     this.setState({
-      [`isOpened${type}`]: true,
+      [`isOpened${type}`]: true
     })
   }
 
   private closeModal = (type: string, msg: string): void => {
     this.setState({
-      [`isOpened${type}`]: false,
+      [`isOpened${type}`]: false
     })
     Taro.showToast({
       icon: 'none',
-      title: msg,
+      title: msg
     })
   }
 
   private closeModalConfirm = (type: string, msg: string): void => {
     this.setState({
-      [`isOpened${type}`]: false,
+      [`isOpened${type}`]: false
     })
 
     Taro.showToast({
       icon: 'none',
-      title: msg,
+      title: msg
     })
   }
 

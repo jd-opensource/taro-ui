@@ -38,7 +38,9 @@ class Sidebar extends React.Component {
       <nav className='at-nav'>
         {items.map(item => (
           <div key={item.title}>
-            <h2 className={classnames('at-nav__title', { darktext })}>{item.title}</h2>
+            <h2 className={classnames('at-nav__title', { darktext })}>
+              {item.title}
+            </h2>
             <ul className='at-nav__items'>
               {item.items &&
                 item.items.map((navItem, index) => (
@@ -66,12 +68,10 @@ class Sidebar extends React.Component {
                       {group.title}
                       <i
                         className={classnames('icon', {
-                          'icon-chevron-down': !this.state.currentOpenMenu.includes(
-                            idx
-                          ),
-                          'icon-chevron-up': this.state.currentOpenMenu.includes(
-                            idx
-                          )
+                          'icon-chevron-down':
+                            !this.state.currentOpenMenu.includes(idx),
+                          'icon-chevron-up':
+                            this.state.currentOpenMenu.includes(idx)
                         })}
                       />
                     </a>
@@ -83,13 +83,17 @@ class Sidebar extends React.Component {
                         {group.items.map(navItem => (
                           <li className='at-nav__child-item' key={navItem.name}>
                             <NavLink
-                              className={classnames('at-nav__component', { darktext })}
+                              className={classnames('at-nav__component', {
+                                darktext
+                              })}
                               activeClassName='router-link-exact-active router-link-active'
                               to={`/docs/${navItem.name.toLowerCase()}`}
                               replace
                             >
                               {navItem.name}
-                              <span className={classnames('', { darktext })}>{navItem.title}</span>
+                              <span className={classnames('', { darktext })}>
+                                {navItem.title}
+                              </span>
                             </NavLink>
                           </li>
                         ))}

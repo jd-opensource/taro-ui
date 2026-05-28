@@ -17,7 +17,7 @@ export default class ActionSheetPage extends React.Component<
   ActionSheetPageState
 > {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -25,23 +25,23 @@ export default class ActionSheetPage extends React.Component<
     this.state = {
       isOpened1: false,
       isOpened2: false,
-      isOpened3: false,
+      isOpened3: false
     }
   }
 
   private handleClick = (type: string): void => {
     this.setState({
-      [`isOpened${type}`]: true,
+      [`isOpened${type}`]: true
     })
   }
 
   private handleClose = (name: string): void => {
     this.setState({
-      [`isOpened${name}`]: false,
+      [`isOpened${name}`]: false
     })
     Taro.showToast({
       title: `第 ${name} 个Action Sheet已经关闭`,
-      icon: 'none',
+      icon: 'none'
     })
   }
 
@@ -52,7 +52,7 @@ export default class ActionSheetPage extends React.Component<
   private showToast = (name: string): void => {
     Taro.showToast({
       icon: 'none',
-      title: name,
+      title: name
     })
   }
 

@@ -9,7 +9,7 @@
   margin-left: $spacing-h-xl;
 
   /* 修复底线隐藏问题 */
-  margin-bottom: 1PX;
+  margin-bottom: 1px;
   @include hairline-bottom();
 
   &__overlay {
@@ -92,7 +92,7 @@
     }
 
     &-alert {
-      color: #FF4949;
+      color: #ff4949;
       font-size: $at-input-font-size;
     }
   }

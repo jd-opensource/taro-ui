@@ -102,7 +102,12 @@ export default class ConfigProviderPage extends React.Component<
             <View className='panel'>
               <View className='panel__title'>AtPagination</View>
               <View className='panel__content no-padding'>
-                <AtPagination total={50} pageSize={10} current={1} icon={false} />
+                <AtPagination
+                  total={50}
+                  pageSize={10}
+                  current={1}
+                  icon={false}
+                />
               </View>
             </View>
 

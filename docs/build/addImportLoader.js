@@ -58,7 +58,6 @@ md = md({
   })
 
 const formatModule = (imports, js, jsx, state, method) => {
-
   const moduleText = `
     ${imports}
 
@@ -180,11 +179,11 @@ module.exports = function (source) {
   })
 
   // md 处理过后的字符串含有 class 和 style ，需要再次处理给到react
-  const htmlStyleToReactStyle = (htmlStyle) => {
+  const htmlStyleToReactStyle = htmlStyle => {
     const reactStyle = {}
 
     const stylePairs = htmlStyle.split(';')
-    stylePairs.forEach((stylePair) => {
+    stylePairs.forEach(stylePair => {
       if (stylePair) {
         const [key, value] = stylePair.split(':')
         if (key && value) {

@@ -26,7 +26,7 @@ export default class AtToast extends React.Component<
     }
     this._timer = null
     this.state = {
-      _isOpened: isOpened,
+      _isOpened: isOpened
     }
   }
 
@@ -55,9 +55,9 @@ export default class AtToast extends React.Component<
     if (_isOpened) {
       this.setState(
         {
-          _isOpened: false,
+          _isOpened: false
         },
-        this.handleClose, // TODO: Fix dirty hack
+        this.handleClose // TODO: Fix dirty hack
       )
       this.clearTimmer()
       this.toast.update(null)
@@ -134,18 +134,18 @@ export default class AtToast extends React.Component<
 
     const bodyClass = classNames('toast-body', {
       // 'at-toast__body--custom-image': image,
-      'toast-body--text': !realImg && !icon,
+      'toast-body--text': !realImg && !icon
       // [`at-toast__body--${status}`]: !!status
     })
 
     const iconClass = classNames('at-icon', 'toast-body-content__icon')
 
     const rootClass = classNames('at-toast', this.props.className, {
-      'at-toast--no-mask': !hasMask,
+      'at-toast--no-mask': !hasMask
     })
 
     const textClass = classNames('toast-body-content__info', {
-      'toast-body-content__info-no-margin': !realImg && !icon,
+      'toast-body-content__info-no-margin': !realImg && !icon
     })
 
     const rootStyle: any = {}
@@ -192,7 +192,7 @@ export default class AtToast extends React.Component<
 
 AtToast.defaultProps = {
   duration: 3000,
-  isOpened: false,
+  isOpened: false
 }
 
 AtToast.propTypes = {
@@ -204,5 +204,5 @@ AtToast.propTypes = {
   duration: PropTypes.number,
   status: PropTypes.oneOf(['', 'error', 'loading', 'success']),
   onClick: PropTypes.func,
-  onClose: PropTypes.func,
+  onClose: PropTypes.func
 }

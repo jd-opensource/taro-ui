@@ -23,23 +23,23 @@
     position: absolute;
     width: $at-loading-size;
     height: $at-loading-size;
-    margin: 1PX;
-    border-width: 1PX;
+    margin: 1px;
+    border-width: 1px;
     border-style: solid;
     border-color: $at-loading-color transparent transparent transparent;
     border-radius: 50%;
-   //  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    //  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 
     &:nth-child(1) {
-     //  animation-delay: -0.45s;
+      //  animation-delay: -0.45s;
     }
 
     &:nth-child(2) {
-     //  animation-delay: -0.3s;
+      //  animation-delay: -0.3s;
     }
 
     &:nth-child(3) {
-     //  animation-delay: -0.15s;
+      //  animation-delay: -0.15s;
     }
   }
 }

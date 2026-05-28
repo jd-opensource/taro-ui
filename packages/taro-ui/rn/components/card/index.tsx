@@ -22,9 +22,9 @@ export default class AtCard extends React.Component<AtCardProps> {
     const rootClass = classNames(
       'at-card',
       {
-        'at-card--full': isFull,
+        'at-card--full': isFull
       },
-      this.props.className,
+      this.props.className
     )
     // const iconClass = classNames({
     //   'at-icon': true,
@@ -81,7 +81,7 @@ AtCard.defaultProps = {
   thumb: '',
   title: '',
   extra: '',
-  extraStyle: {},
+  extraStyle: {}
 }
 
 AtCard.propTypes = {
@@ -93,5 +93,5 @@ AtCard.propTypes = {
   icon: PropTypes.object,
   onClick: PropTypes.func,
   renderIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  extraStyle: PropTypes.object, // 自定义extra样式
+  extraStyle: PropTypes.object // 自定义extra样式
 }

@@ -73,7 +73,6 @@
       color: $at-noticebar-btn-close-color;
       font-size: $at-noticebar-btn-close-size;
     }
-
   }
 
   &__more {
@@ -86,7 +85,6 @@
       font-size: $at-noticebar-font-size;
       color: $color-grey-2;
     }
-
 
     &-icon {
       display: inline-block;
@@ -101,11 +99,9 @@
     }
   }
 
-
   /* modifiers */
   &--single {
     display: flex;
     justify-content: space-between;
   }
-
 }

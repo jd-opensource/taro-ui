@@ -14,16 +14,16 @@ import IconList from '../../.vitepress/theme/components/IconList.vue'
 
 在 Taro 文件中引入组件
 
-
 ```js
 import { AtIcon } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/icon.scss";
+@import '~taro-ui/dist/style/components/icon.scss';
 ```
+
 **推荐使用新的引入方式，采用传统的类名图标方式即可，例如：**
 
 ```js
@@ -32,10 +32,8 @@ import { AtIcon } from 'taro-ui'
 
 ## 一般用法
 
-
-
 ```html
-<AtIcon value='clock' size='30' color='#F00'></AtIcon>
+<AtIcon value="clock" size="30" color="#F00"></AtIcon>
 ```
 
 ## 使用第三方字体图标库
@@ -43,8 +41,6 @@ import { AtIcon } from 'taro-ui'
 可自行下载 [Ionicons](https://ionicons.com/) 或 [Font Awesome](http://fontawesome.dashgame.com/) 等字体图标库，并按照以下步骤自行扩展字体图标库。（拓展字体图标库，并不影响原有图标的使用）
 
 ### 步骤一：配置 postcss 小程序端样式引用本地资源内联
-
-
 
 ```js
 /* config/dev.js */
@@ -102,15 +98,15 @@ module.exports = {
 
 ### 步骤二：编写字体图标库 css (以下代码为 demo，请自行参考第三方库按照下面方式引入)
 
-
-
 ```css
 /* icon.scss */
 @font-face {
   font-family: 'FontAwesome';
   /* 自行安装第三方字体图标库 */
   src: url('./assets/fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('./assets/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('./assets/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('./assets/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+  src: url('./assets/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('./assets/fonts/fontawesome-webfont.woff?v=4.7.0')
+      format('woff'),
+    url('./assets/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -128,13 +124,11 @@ module.exports = {
 }
 
 .fa-clock:before {
-  content: "\f00c";
+  content: '\f00c';
 }
 ```
 
 ### 步骤三：在 app.js 中全局引入 icon.scss
-
-
 
 ```js
 /* app.js */
@@ -145,10 +139,7 @@ import './icon.scss'
 
 在开发者工具 `设置-项目设置-调试基础库` 设置版本 `2.2.3` 以上
 
-
 ### 步骤五：使用 `AtIcon`
-
-
 
 ```js
 <AtIcon prefixClass='fa' value='clock' size='30' color='#F00'></AtIcon>
@@ -156,12 +147,12 @@ import './icon.scss'
 
 ## Icon 参数
 
-| 参数  | 说明     | 类型   | 可选值                | 默认值 |
-|:------|:---------|:-------|:----------------------|:-------|
-| prefixClass | className 前缀，用于第三方字体图标库，比如想使用'fa fa-clock' 的图标，则 传入`prefixClass='fa' value='clock'` | String | - | 'at-icon' |
-| value | 图标图案 | String | 参考下表 | - |
-| size  | 图标大小 | String / Number | 大于10的整数 | 24 |
-| color | 图标颜色 | String | 可被CSS支持的颜色单位 | - |
+| 参数        | 说明                                                                                                          | 类型            | 可选值                  | 默认值    |
+| :---------- | :------------------------------------------------------------------------------------------------------------ | :-------------- | :---------------------- | :-------- |
+| prefixClass | className 前缀，用于第三方字体图标库，比如想使用'fa fa-clock' 的图标，则 传入`prefixClass='fa' value='clock'` | String          | -                       | 'at-icon' |
+| value       | 图标图案                                                                                                      | String          | 参考下表                | -         |
+| size        | 图标大小                                                                                                      | String / Number | 大于 10 的整数          | 24        |
+| color       | 图标颜色                                                                                                      | String          | 可被 CSS 支持的颜色单位 | -         |
 
 ## 图标示例
 
@@ -169,7 +160,7 @@ import './icon.scss'
 
 <div>
   <IconList type='main'></IconList>
-</div> 
+</div>
 
 ### 文件
 

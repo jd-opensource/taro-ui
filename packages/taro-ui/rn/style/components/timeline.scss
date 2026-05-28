@@ -38,9 +38,8 @@
     border-radius: math.div($at-timeline-dot-size, 2);
     background: $at-timeline-dot-color;
     z-index: 1;
-    border: 1PX solid transparent;
+    border: 1px solid transparent;
     border-color: $at-timeline-dot-border-color;
-
 
     &--green {
       border-color: $color-success;
@@ -82,8 +81,7 @@
     bottom: -1 * math.div($at-timeline-dot-size, 2);
     left: math.div($at-timeline-dot-size, 2) - 2px;
     border-left-color: $at-timeline-line-color;
-    border-left-width: 1PX;
+    border-left-width: 1px;
     border-style: solid;
   }
-
 }

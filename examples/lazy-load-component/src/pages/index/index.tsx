@@ -1,19 +1,18 @@
 import { Component, PropsWithChildren } from 'react'
 import { View } from '@tarojs/components'
-import { AtSwipeAction } from 'taro-ui';
+import { AtSwipeAction } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component<PropsWithChildren> {
+  componentWillMount() {}
 
-  componentWillMount() { }
+  componentDidMount() {}
 
-  componentDidMount() { }
+  componentWillUnmount() {}
 
-  componentWillUnmount() { }
+  componentDidShow() {}
 
-  componentDidShow() { }
-
-  componentDidHide() { }
+  componentDidHide() {}
 
   render() {
     return (
@@ -22,10 +21,13 @@ export default class Index extends Component<PropsWithChildren> {
           <AtSwipeAction
             key={index}
             options={[
-              { text: '收藏', style: { backgroundColor: '#ffc20e', justifyContent: 'center' } }
+              {
+                text: '收藏',
+                style: { backgroundColor: '#ffc20e', justifyContent: 'center' }
+              }
             ]}
           >
-            <View className="item">Item{index + 1}</View>
+            <View className='item'>Item{index + 1}</View>
           </AtSwipeAction>
         ))}
       </View>

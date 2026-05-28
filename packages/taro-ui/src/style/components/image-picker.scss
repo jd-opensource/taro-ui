@@ -45,7 +45,7 @@
     align-items: center;
     font-size: 0;
     box-sizing: border-box;
-    @include border-thin($width: 1PX);
+    @include border-thin($width: 1px);
 
     .add-bar {
       position: absolute;
@@ -53,8 +53,8 @@
       left: 50%;
       display: inline-block;
       width: 60px;
-      height: 2PX;
-      border-radius: 1PX;
+      height: 2px;
+      border-radius: 1px;
       background: $at-image-picker-btn-add-color;
 
       &:nth-child(1) {
@@ -72,11 +72,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 6PX;
-    right: 6PX;
+    top: 6px;
+    right: 6px;
     z-index: 2;
-    width: 18PX;
-    height: 18PX;
+    width: 18px;
+    height: 18px;
     font-size: 0;
     border-radius: 50%;
     overflow: hidden;
@@ -92,9 +92,9 @@
       top: 50%;
       left: 50%;
       display: inline-block;
-      width: 10PX;
-      height: 1PX;
-      border-radius: 1PX;
+      width: 10px;
+      height: 1px;
+      border-radius: 1px;
       background: $at-image-picker-btn-remove-color;
     }
 

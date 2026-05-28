@@ -1,4 +1,4 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 import { CommonEventFunction } from '@tarojs/components/types/common'
 
 import AtComponent from './base'
@@ -14,7 +14,13 @@ export interface AtCurtainProps extends AtComponent {
    * 'top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'
    * @default 'bottom'
    */
-  closeBtnPosition?: 'top' | 'top-left' | 'top-right' | 'bottom' | 'bottom-left' | 'bottom-right'
+  closeBtnPosition?:
+    | 'top'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right'
   /**
    * 点击关闭按钮触发事件
    */

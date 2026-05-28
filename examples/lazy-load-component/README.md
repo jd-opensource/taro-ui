@@ -1,6 +1,7 @@
 # 按需引入样式
 
 ## 方式 1
+
 在页面样式或全局样式中 import 需要的组件样式
 
 ```scss
@@ -8,6 +9,7 @@
 ```
 
 ## 方式 2
+
 通过 babel 插件按需引入组件
 
 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 是一款 babel 插件，它会在编译过程中将 import 语句自动转换为按需引入的方式。
@@ -47,6 +49,7 @@ import 'taro-ui/dist/style/components/button.scss'
 ```
 
 ## 注意事项
+
 在 taro3.5 之后的版本中，在开启 `prebundle` (默认开启)的情况下，会导致 taro-ui 所引用的 @taro/components 组件没有被打进最终的 bundle 中，导致页面表现异常。
 
 为了解决上述问题，可以手动将 taro-ui 排除在 prebundle 列表之外。在 taro 项目的 `config/index.js` 中新增如下配置项：
@@ -60,6 +63,6 @@ module.exports = {
     prebundle: {
       exclude: ['taro-ui']
     }
-  },
+  }
 }
 ```

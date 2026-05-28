@@ -12,14 +12,15 @@ class PageHeader extends React.Component {
     super(...args)
     this.state = {
       toggle: true,
-      mode: 'light',
+      mode: 'light'
     }
   }
 
   componentDidMount() {
     const _mode = localStorage.getItem('mode')
-    const style = localStorage.getItem('dark-style');
-    const isCurrentStyle = style && ~style.indexOf(DARK_KEY_SINGLE) && !~style.indexOf('<style')
+    const style = localStorage.getItem('dark-style')
+    const isCurrentStyle =
+      style && ~style.indexOf(DARK_KEY_SINGLE) && !~style.indexOf('<style')
 
     if (_mode) {
       this.setState({
@@ -27,14 +28,14 @@ class PageHeader extends React.Component {
       })
 
       if (_mode === 'dark' && isCurrentStyle) {
-        const styleTag = document.createElement('style');
-        styleTag.type = 'text/css';
-        styleTag.innerHTML = style;
-        document.head.appendChild(styleTag);
+        const styleTag = document.createElement('style')
+        styleTag.type = 'text/css'
+        styleTag.innerHTML = style
+        document.head.appendChild(styleTag)
       }
     }
   }
-  
+
   toggleMenu() {
     const _toggle = this.state.toggle
     this.setState({
@@ -51,37 +52,44 @@ class PageHeader extends React.Component {
     const _mode = this.state.mode
     const modeVal = _mode === 'light' ? 'dark' : 'light'
     const { handleMode } = this.props
-    const styles = Array.from(document.querySelectorAll('style'));
-    const style = localStorage.getItem('dark-style');
-    const isCurrentStyle = style && ~style.indexOf(DARK_KEY_SINGLE) && !~style.indexOf('<style')
+    const styles = Array.from(document.querySelectorAll('style'))
+    const style = localStorage.getItem('dark-style')
+    const isCurrentStyle =
+      style && ~style.indexOf(DARK_KEY_SINGLE) && !~style.indexOf('<style')
 
     if (modeVal === 'light') {
       styles.forEach(style => {
         if (~style.outerHTML.indexOf(DARK_KEY_SINGLE)) {
-          const newStyle = style.outerHTML.replace(/<style>/g, '').replace(/<\/style>/g, '').replace(/<style type="text\/css">/, '')
+          const newStyle = style.outerHTML
+            .replace(/<style>/g, '')
+            .replace(/<\/style>/g, '')
+            .replace(/<style type="text\/css">/, '')
           localStorage.setItem('dark-style', newStyle)
           style.remove()
         }
-      });
+      })
     }
 
     if (modeVal === 'dark' && isCurrentStyle) {
-      const styleTag = document.createElement('style');
-      styleTag.type = 'text/css';
-      styleTag.innerHTML = style;
-      document.head.appendChild(styleTag);
+      const styleTag = document.createElement('style')
+      styleTag.type = 'text/css'
+      styleTag.innerHTML = style
+      document.head.appendChild(styleTag)
     }
 
     if (modeVal === 'dark' && !isCurrentStyle) {
-      require('../../assets/style/dark.scss');
+      require('../../assets/style/dark.scss')
     }
 
-    this.setState({
-      mode: modeVal,
-    }, () => {
-      localStorage.setItem('mode', modeVal)
-      handleMode && handleMode()
-    })
+    this.setState(
+      {
+        mode: modeVal
+      },
+      () => {
+        localStorage.setItem('mode', modeVal)
+        handleMode && handleMode()
+      }
+    )
   }
 
   render() {
@@ -139,25 +147,25 @@ class PageHeader extends React.Component {
                 </a>
               </li>
               <li>
-                <a 
-                  href='https://aotu.io/' 
-                  target='__blank' 
+                <a
+                  href='https://aotu.io/'
+                  target='__blank'
                   className={classnames('', { darktext })}
                 >
                   关于我们
                 </a>
               </li>
-              {
-                themeMode && <li>
+              {themeMode && (
+                <li>
                   <a onClick={this.handleChange.bind(this)}>
-                    {
-                      mode === 'light'
-                        ? <img className="nav-icon" src={darkImg} />
-                        : <img className="nav-icon" src={lightImg} />
-                    }
+                    {mode === 'light' ? (
+                      <img className='nav-icon' src={darkImg} />
+                    ) : (
+                      <img className='nav-icon' src={lightImg} />
+                    )}
                   </a>
                 </li>
-              }
+              )}
             </ul>
           </div>
         </div>

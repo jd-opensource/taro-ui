@@ -3,7 +3,7 @@ name: 🐛 Bug Report
 about: 创建一个错误报告，请通过 https://nervjs.github.io/taro-ui-issue-helper/ 提交
 ---
 
-<!--- 
+<!---
 🎉建议通过 https://nervjs.github.io/taro-ui-issue-helper/ 网页提交 issue
 
 如果是提交 bug，请搜索文档和 issue，确认以下事项：
@@ -21,9 +21,11 @@ about: 创建一个错误报告，请通过 https://nervjs.github.io/taro-ui-iss
 --->
 
 **问题描述**
+
 <!--- 问题描述：站在其它人的角度尽可能清晰地、简洁地把问题描述清楚 --->
 
 **复现步骤**
+
 <!--- 复现问题的步骤 --->
 <!---
 1. Go to '...'
@@ -39,12 +41,15 @@ about: 创建一个错误报告，请通过 https://nervjs.github.io/taro-ui-iss
 ```
 
 **期望行为**
+
 <!--- 这里请用简洁清晰的语言描述你期望的行为 --->
 
 **报错信息**
+
 <!--- 这里请贴上你的**完整**报错截图或文字 --->
 
 **系统信息**
+
 <!--- Taro v1.2 及以上版本已添加 `taro info` 命令，方便大家查看系统及依赖信息，运行该命令后将结果贴下面即可 --->
 
 <!--- 例子：
@@ -54,5 +59,6 @@ about: 创建一个错误报告，请通过 https://nervjs.github.io/taro-ui-iss
 --->
 
 **补充信息**
+
 <!--- 可选 --->
 <!--- 根据你的调查研究，出现这个问题的原因可能在哪里？ --->

@@ -1,31 +1,31 @@
 {
-    "miniprogramRoot": "dist/",
-    "projectname": "taro-ui-sass",
-    "description": "",
-    "appid": "wx7a42c5ab005bd5c8",
-    "setting": {
-        "urlCheck": true,
-        "es6": false,
-        "enhance": false,
-        "compileHotReLoad": false,
-        "postcss": false,
-        "minified": false,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        }
-    },
-    "compileType": "miniprogram",
-    "libVersion": "3.2.4",
-    "srcMiniprogramRoot": "dist/",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "condition": {},
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
+  "miniprogramRoot": "dist/",
+  "projectname": "taro-ui-sass",
+  "description": "",
+  "appid": "wx7a42c5ab005bd5c8",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.2.4",
+  "srcMiniprogramRoot": "dist/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 4
+  }
 }

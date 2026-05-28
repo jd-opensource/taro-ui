@@ -1,10 +1,10 @@
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
-$at-nav-bar-spacing-v: 9PX;
-$at-nav-bar-spacing-h: 5PX;
-$at-nav-bar-font-size: 18PX;
-$at-nav-bar-back-font-size: 16PX;
+$at-nav-bar-spacing-v: 9px;
+$at-nav-bar-spacing-h: 5px;
+$at-nav-bar-font-size: 18px;
+$at-nav-bar-back-font-size: 16px;
 
 .at-nav-bar {
   display: flex;
@@ -92,9 +92,9 @@ $at-nav-bar-back-font-size: 16PX;
     // }
 
     &--hide {
-     //  visibility: hidden;
-     opacity: 0;
-     height: 0
+      //  visibility: hidden;
+      opacity: 0;
+      height: 0;
     }
   }
 

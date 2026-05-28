@@ -1,4 +1,4 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 import { CommonEventFunction } from '@tarojs/components/types/common'
 
 import AtComponent from './base'
@@ -7,11 +7,11 @@ export interface AtLoadMoreProps extends AtComponent {
   /**
    * noMore 状态显示文案样式
    */
-  noMoreTextStyle?: string | React.CSSProperties,
+  noMoreTextStyle?: string | React.CSSProperties
   /**
    * more 状态按钮样式
    */
-  moreBtnStyle?: string | React.CSSProperties,
+  moreBtnStyle?: string | React.CSSProperties
   /**
    * 组件状态，more 状态显示查看更多按钮，loading 状态显示加载状态，noMore 显示无更多数据
    * @default 'more'

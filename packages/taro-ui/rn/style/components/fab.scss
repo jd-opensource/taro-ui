@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
@@ -27,12 +27,9 @@
     font-size: $at-fab-icon-size;
   }
 
-
-
   /* modifiers */
   &--small {
     width: $at-fab-size-sm;
     height: $at-fab-size-sm;
   }
 }
-

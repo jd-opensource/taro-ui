@@ -12,7 +12,6 @@ export default class AvatarPage extends React.Component {
   }
 
   public render(): JSX.Element {
-
     return (
       <View className='page'>
         {/* S Header */}

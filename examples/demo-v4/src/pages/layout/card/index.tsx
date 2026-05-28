@@ -39,10 +39,7 @@ export default class CardPage extends React.Component {
             <View className='panel__title'>带缩略图的卡片</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
-                <AtCard
-                  title='这是个标题'
-                  thumb={iconDemo3}
-                >
+                <AtCard title='这是个标题' thumb={iconDemo3}>
                   这也是内容区 可以随意定义功能
                 </AtCard>
               </View>
@@ -89,11 +86,7 @@ export default class CardPage extends React.Component {
             <View className='panel__title'>带小信息的卡片</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
-                <AtCard
-                  note='小Tips'
-                  title='这是个标题'
-                  thumb={iconDemo3}
-                >
+                <AtCard note='小Tips' title='这是个标题' thumb={iconDemo3}>
                   这也是内容区 可以随意定义功能
                 </AtCard>
               </View>

@@ -17,7 +17,7 @@ interface PageFormState {
 
 export default class PageForm extends React.Component<{}, PageFormState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -25,7 +25,7 @@ export default class PageForm extends React.Component<{}, PageFormState> {
     this.state = {
       value1: '',
       value2: '',
-      value3: [],
+      value3: []
       // text: '',
       // isOpened: false
     }
@@ -33,7 +33,7 @@ export default class PageForm extends React.Component<{}, PageFormState> {
 
   private handleChange(stateName: string, value: any): void {
     this.setState({
-      [stateName]: value,
+      [stateName]: value
     })
   }
 
@@ -70,7 +70,7 @@ export default class PageForm extends React.Component<{}, PageFormState> {
       // text: `表单已被重置`,
       value1: '',
       value2: '',
-      value3: [],
+      value3: []
     })
     this.closeToast()
   }
@@ -111,7 +111,7 @@ export default class PageForm extends React.Component<{}, PageFormState> {
                   <AtCheckbox
                     options={[
                       { label: 'iPhone X', value: 'iPhone X' },
-                      { label: 'HUAWEI P20', value: 'HUAWEI P20' },
+                      { label: 'HUAWEI P20', value: 'HUAWEI P20' }
                     ]}
                     selectedList={this.state.value3}
                     onChange={this.handleChange.bind(this, 'value3')}

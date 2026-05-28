@@ -18,51 +18,51 @@ interface IndexState {
 
 export default class Index extends React.Component<{}, IndexState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public state: IndexState = {
     selector: ['中国', '美国', '巴西', '日本'],
     multiSelector: [
       ['饭', '粥', '粉'],
-      ['猪肉', '牛肉'],
+      ['猪肉', '牛肉']
     ],
     selectorValue: 0,
     mulitSelectorValues: [0, 1],
     timeSel: '06:18',
     dateSel: '2018-06-18',
     isAlipay: false,
-    width: 0,
+    width: 0
   }
 
   public componentDidMount(): void {
     const env = Taro.getEnv()
     this.setState({
-      isAlipay: env === Taro.ENV_TYPE.ALIPAY,
+      isAlipay: env === Taro.ENV_TYPE.ALIPAY
     })
   }
 
   private handleChange = (e: CommonEvent): void => {
     this.setState({
-      selectorValue: e.detail.value,
+      selectorValue: e.detail.value
     })
   }
 
   private handleMulitChange = (e: CommonEvent): void => {
     this.setState({
-      mulitSelectorValues: e.detail.value,
+      mulitSelectorValues: e.detail.value
     })
   }
 
   private handleTimeChange = (e: CommonEvent): void => {
     this.setState({
-      timeSel: e.detail.value,
+      timeSel: e.detail.value
     })
   }
 
   private handleDateChange = (e: CommonEvent): void => {
     this.setState({
-      dateSel: e.detail.value,
+      dateSel: e.detail.value
     })
   }
 
@@ -80,7 +80,7 @@ export default class Index extends React.Component<{}, IndexState> {
       timeSel,
       dateSel,
       isAlipay,
-      width,
+      width
     } = this.state
 
     return (

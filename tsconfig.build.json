@@ -15,8 +15,5 @@
     "resolveJsonModule": true
   },
   "compileOnSave": false,
-  "exclude": [
-    "node_modules/*",
-    "packages/dist/*"
-  ]
+  "exclude": ["node_modules/*", "packages/dist/*"]
 }

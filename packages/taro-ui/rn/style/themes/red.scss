@@ -5,28 +5,31 @@
 @import '../mixins/index.scss';
 
 /* The Color of JD Brand */
-$color-brand: #E93B3D;
-$color-brand-light: #EC585A;
-$color-brand-dark: #E32D2F;
+$color-brand: #e93b3d;
+$color-brand-light: #ec585a;
+$color-brand-dark: #e32d2f;
 
 /* 辅助色 */
-$color-success: #0C8;
-$color-error: #F53;
-$color-warning: #FFD400;
-$color-info: #4D88FF;
+$color-success: #0c8;
+$color-error: #f53;
+$color-warning: #ffd400;
+$color-info: #4d88ff;
 
 /* 文本颜色 */
-$color-text-base: #2E2D2D;
-$color-text-title: #2E2D2D; // 文章标题
+$color-text-base: #2e2d2d;
+$color-text-title: #2e2d2d; // 文章标题
 
 /* 边框颜色 */
-$color-border-base: #DADADA;
+$color-border-base: #dadada;
 
 /* 组件样式 */
-$at-message-bg-color: rgba($color: #000, $alpha: 0.6);
+$at-message-bg-color: rgba(
+  $color: #000,
+  $alpha: 0.6
+);
 
-$at-badge-bg-color: #E93B3D;
-$at-badge-bg: linear-gradient(90deg, #E93B3D 0%, #FF9574 100%);
+$at-badge-bg-color: #e93b3d;
+$at-badge-bg: linear-gradient(90deg, #e93b3d 0%, #ff9574 100%);
 
 $at-tag-color-active: $color-brand;
 

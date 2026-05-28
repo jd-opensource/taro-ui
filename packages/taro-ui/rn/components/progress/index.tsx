@@ -38,14 +38,14 @@ export default class AtProgress extends React.Component<AtProgressProps> {
     const rootClass = classNames(
       'at-progress',
       {
-        [`at-progress--${status}`]: !!status,
+        [`at-progress--${status}`]: !!status
       },
-      this.props.className,
+      this.props.className
     )
 
     const iconClass = classNames('at-progress__at-icon', {
       'at-progress__at-icon--error': status === 'error',
-      'at-progress__at-icon--success': status === 'success',
+      'at-progress__at-icon--success': status === 'success'
     })
 
     return (
@@ -77,7 +77,7 @@ export default class AtProgress extends React.Component<AtProgressProps> {
 }
 
 AtProgress.defaultProps = {
-  color: '#78A4F4',
+  color: '#78A4F4'
 }
 
 AtProgress.propTypes = {
@@ -85,5 +85,5 @@ AtProgress.propTypes = {
   status: PropTypes.string,
   percent: PropTypes.number,
   strokeWidth: PropTypes.number,
-  isHidePercent: PropTypes.bool,
+  isHidePercent: PropTypes.bool
 }

@@ -38,8 +38,7 @@ export default class Index extends React.Component<{}, IndexState> {
       files3: Array.from(dogaImages),
       files4: dogaImages.concat([
         {
-          url:
-            'https://storage.360buyimg.com/mtd/home/36549825_887087111478302_5745542532574478336_n1543234831971.jpg'
+          url: 'https://storage.360buyimg.com/mtd/home/36549825_887087111478302_5745542532574478336_n1543234831971.jpg'
         }
       ])
     }

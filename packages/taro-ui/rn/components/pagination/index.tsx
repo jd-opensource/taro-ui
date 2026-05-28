@@ -31,7 +31,7 @@ export default class AtPagination extends React.Component<
     this.state = {
       currentPage: current || 1,
       maxPage,
-      pickerRange: createPickerRange(maxPage),
+      pickerRange: createPickerRange(maxPage)
     }
   }
 
@@ -64,7 +64,7 @@ export default class AtPagination extends React.Component<
     if (maxPage !== this.state.maxPage) {
       this.setState({
         maxPage,
-        pickerRange: createPickerRange(maxPage),
+        pickerRange: createPickerRange(maxPage)
       })
     }
     if (typeof current === 'number' && current !== this.state.currentPage) {
@@ -86,11 +86,11 @@ export default class AtPagination extends React.Component<
     const {
       icon,
       // pickerSelect,
-      customStyle,
+      customStyle
     } = this.props
     const {
       currentPage,
-      maxPage,
+      maxPage
       // pickerRange,
     } = this.state
 
@@ -100,7 +100,7 @@ export default class AtPagination extends React.Component<
     const nextDisabled = maxPage === MIN_MAXPAGE || currentPage === maxPage
 
     const classObject = {
-      'at-pagination--icon': icon,
+      'at-pagination--icon': icon
     }
 
     return (
@@ -175,7 +175,7 @@ AtPagination.defaultProps = {
   total: 0,
   pageSize: 20,
   icon: false,
-  customStyle: {},
+  customStyle: {}
 }
 
 AtPagination.propTypes = {
@@ -184,5 +184,5 @@ AtPagination.propTypes = {
   pageSize: PropTypes.number,
   icon: PropTypes.bool,
   customStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  onPageChange: PropTypes.func,
+  onPageChange: PropTypes.func
 }

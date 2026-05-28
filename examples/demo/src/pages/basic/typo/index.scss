@@ -3,9 +3,9 @@
 
   &__head {
     padding: 20px 32px;
-    color: #AFB9CC;
+    color: #afb9cc;
     font-size: 28px;
-    border: 1PX solid #C4D9E7;
+    border: 1px solid #c4d9e7;
     border-radius: 8px;
 
     .thead {
@@ -34,8 +34,8 @@
     color: #354052;
     font-size: 28px;
 
-    &:nth-child(2n+1) {
-      background-color: #FAFBFC;
+    &:nth-child(2n + 1) {
+      background-color: #fafbfc;
     }
 
     .col {

@@ -7,64 +7,64 @@
 $hd: 2 !default; // 基本单位
 
 /* The Color of O2Team Brand */
-$color-brand: #6190E8 !default;
-$color-brand-light: #78A4F4 !default;
-$color-brand-dark: #346FC2 !default;
+$color-brand: #6190e8 !default;
+$color-brand-light: #78a4f4 !default;
+$color-brand-dark: #346fc2 !default;
 
 /* Color */
-$color-success: #13CE66 !default;
-$color-error: #FF4949 !default;
-$color-warning: #FFC82C !default;
-$color-info: #78A4FA !default;
+$color-success: #13ce66 !default;
+$color-error: #ff4949 !default;
+$color-warning: #ffc82c !default;
+$color-info: #78a4fa !default;
 
 /* Color Palette */
 $color-black-0: #000 !default;
 $color-black-1: #333 !default;
-$color-black-2: #7F7F7F !default;
-$color-black-3: #B2B2B2 !default;
+$color-black-2: #7f7f7f !default;
+$color-black-3: #b2b2b2 !default;
 
 $color-grey-0: #333 !default;
 $color-grey-1: #666 !default;
 $color-grey-2: #999 !default;
-$color-grey-3: #CCC !default;
-$color-grey-4: #E5E5E5 !default;
-$color-grey-5: #F0F0F0 !default;
-$color-grey-6: #F7F7F7 !default;
+$color-grey-3: #ccc !default;
+$color-grey-4: #e5e5e5 !default;
+$color-grey-5: #f0f0f0 !default;
+$color-grey-6: #f7f7f7 !default;
 
-$color-white: #FFF !default;
+$color-white: #fff !default;
 
 /* Text Color */
 $color-text-base: #333 !default; // 文字的基本色
-$color-text-base-inverse: #FFF !default; // 反色
-$color-text-secondary: #36D57D !default; // 辅助色
-$color-text-placeholder: #C9C9C9 !default;
-$color-text-disabled: #CCC !default;
-$color-text-title: #2C405A !default; // 文章标题
-$color-text-paragraph: #3F536E !default; // 文章段落
+$color-text-base-inverse: #fff !default; // 反色
+$color-text-secondary: #36d57d !default; // 辅助色
+$color-text-placeholder: #c9c9c9 !default;
+$color-text-disabled: #ccc !default;
+$color-text-title: #2c405a !default; // 文章标题
+$color-text-paragraph: #3f536e !default; // 文章段落
 
 /* Link */
-$color-link: #6190E8 !default;
-$color-link-hover: #79A1EB !default;
-$color-link-active: #4F7DE2 !default;
-$color-link-disabled: #BFBFBF !default;
+$color-link: #6190e8 !default;
+$color-link-hover: #79a1eb !default;
+$color-link-active: #4f7de2 !default;
+$color-link-disabled: #bfbfbf !default;
 
 /* 背景色 */
-$color-bg: #FFF !default;
-$color-bg-base: #FAFBFC !default;
-$color-bg-light: #ECF5FD !default;
+$color-bg: #fff !default;
+$color-bg-base: #fafbfc !default;
+$color-bg-light: #ecf5fd !default;
 $color-bg-lighter: tint($color-bg-light, 50%) !default;
-$color-bg-grey: #F7F7F7 !default;
+$color-bg-grey: #f7f7f7 !default;
 
 /* 边框颜色 */
-$color-border-base: #C5D9E8 !default;
+$color-border-base: #c5d9e8 !default;
 $color-border-split: tint($color-border-base, 20%) !default; // 分割线
 $color-border-light: tint($color-border-base, 30%) !default;
 $color-border-lighter: tint($color-border-base, 50%) !default;
 $color-border-lightest: tint($color-border-base, 80%) !default;
-$color-border-grey: #CCC !default;
+$color-border-grey: #ccc !default;
 
 /* 图标颜色 */
-$color-icon-base: #CCC !default;
+$color-icon-base: #ccc !default;
 
 /* Border Radius */
 $border-radius-sm: 2px * $hd !default;
@@ -131,32 +131,32 @@ $timing-func: cubic-bezier(0.36, 0.66, 0.04, 1) !default;
 * CSS cubic-bezier timing functions
 * http://bourbon.io/docs/#timing-functions
 */
-$ease-in-quad: cubic-bezier(0.550, 0.085, 0.680, 0.530) !default;
-$ease-in-cubic: cubic-bezier(0.550, 0.055, 0.675, 0.190) !default;
-$ease-in-quart: cubic-bezier(0.895, 0.030, 0.685, 0.220) !default;
-$ease-in-quint: cubic-bezier(0.755, 0.050, 0.855, 0.060) !default;
-$ease-in-sine: cubic-bezier(0.470, 0.000, 0.745, 0.715) !default;
-$ease-in-expo: cubic-bezier(0.950, 0.050, 0.795, 0.035) !default;
-$ease-in-circ: cubic-bezier(0.600, 0.040, 0.980, 0.335) !default;
-$ease-in-back: cubic-bezier(0.600, -0.280, 0.735, 0.045) !default;
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22) !default;
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715) !default;
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035) !default;
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335) !default;
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045) !default;
 
-$ease-out-quad: cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;
-$ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000) !default;
-$ease-out-quart: cubic-bezier(0.165, 0.840, 0.440, 1.000) !default;
-$ease-out-quint: cubic-bezier(0.230, 1.000, 0.320, 1.000) !default;
-$ease-out-sine: cubic-bezier(0.390, 0.575, 0.565, 1.000) !default;
-$ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000) !default;
-$ease-out-circ: cubic-bezier(0.075, 0.820, 0.165, 1.000) !default;
-$ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275) !default;
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94) !default;
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1) !default;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1) !default;
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1) !default;
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
 
-$ease-in-out-quad: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
-$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1.000) !default;
-$ease-in-out-quart: cubic-bezier(0.770, 0.000, 0.175, 1.000) !default;
-$ease-in-out-quint: cubic-bezier(0.860, 0.000, 0.070, 1.000) !default;
-$ease-in-out-sine: cubic-bezier(0.445, 0.050, 0.550, 0.950) !default;
-$ease-in-out-expo: cubic-bezier(1.000, 0.000, 0.000, 1.000) !default;
-$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.150, 0.860) !default;
-$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550) !default;
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955) !default;
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1) !default;
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1) !default;
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86) !default;
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
 
 /**
  * 组件变量
@@ -197,21 +197,17 @@ $at-fab-size-sm: 40px * $hd !default;
 $at-fab-icon-size: 24px * $hd !default;
 $at-fab-bg-color: $color-brand;
 $at-fab-bg-color-active: $color-brand-dark;
-$at-fab-box-shadow:
-  0 6px 10px -2px rgba(0, 0, 0, 0.2),
-  0 12px 20px 0 rgba(0, 0, 0, 0.14),
-  0 2px 36px 0 rgba(0, 0, 0, 0.12) !default;
-$at-fab-box-shadow-active:
-  0 14px 16px -8px rgba(0, 0, 0, 0.2),
-  0 24px 34px 4px rgba(0, 0, 0, 0.14),
-  0 10px 44px 8px rgba(0, 0, 0, 0.12) !default;
+$at-fab-box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2),
+  0 12px 20px 0 rgba(0, 0, 0, 0.14), 0 2px 36px 0 rgba(0, 0, 0, 0.12) !default;
+$at-fab-box-shadow-active: 0 14px 16px -8px rgba(0, 0, 0, 0.2),
+  0 24px 34px 4px rgba(0, 0, 0, 0.14), 0 10px 44px 8px rgba(0, 0, 0, 0.12) !default;
 
 /* Calendar */
 $at-calendar-day-size: 72px !default;
 $at-calendar-mark-size: 8px !default;
-$at-calendar-header-color: #B8BFC6 !default;
+$at-calendar-header-color: #b8bfc6 !default;
 $at-calendar-main-color: $color-brand !default;
-$at-calendar-day-color: #7C86A2 !default;
+$at-calendar-day-color: #7c86a2 !default;
 
 /* Card */
 $at-card-thumb-size: 32px !default;
@@ -234,7 +230,7 @@ $at-checkbox-desc-color: $color-grey-2 !default;
 /* Countdown */
 $at-countdown-font-size: $font-size-lg !default;
 $at-countdown-num-color: $color-text-base !default;
-$at-countdown-card-num-color: #FF4949 !default;
+$at-countdown-card-num-color: #ff4949 !default;
 $at-countdown-card-num-bg-color: $color-white !default;
 
 /* Curtain */
@@ -300,7 +296,7 @@ $at-list-extra-color: $color-grey-2 !default;
 $at-list-extra-width: 235px !default;
 
 /* LoadMore */
-$at-load-more-height: 80PX !default;
+$at-load-more-height: 80px !default;
 $at-load-more-tips-color: $color-grey-1 !default;
 $at-load-more-tips-size: $font-size-lg !default;
 
@@ -326,8 +322,8 @@ $at-nav-bar-title-color: $color-text-base !default;
 $at-nav-bar-link-color: $color-brand !default;
 
 /* NoticeBar */
-$at-noticebar-text-color: #DE8C17 !default;
-$at-noticebar-bg-color: #FCF6ED !default;
+$at-noticebar-text-color: #de8c17 !default;
+$at-noticebar-bg-color: #fcf6ed !default;
 $at-noticebar-font-size: $font-size-sm !default;
 $at-noticebar-icon-size: 30px !default;
 $at-noticebar-btn-close-size: 32px !default;
@@ -357,17 +353,17 @@ $at-radio-desc-size: $font-size-sm !default;
 $at-radio-check-color: $color-brand !default;
 
 /* Range */
-$at-range-slider-size: 28PX !default;
-$at-range-rail-height: 2PX !default;
-$at-range-rail-bg-color: #E9E9E9 !default;
+$at-range-slider-size: 28px !default;
+$at-range-rail-height: 2px !default;
+$at-range-rail-bg-color: #e9e9e9 !default;
 $at-range-track-bg-color: $color-brand !default;
 $at-range-slider-color: $color-white !default;
-$at-range-slider-shadow: 0 0 4PX 0 rgba(0, 0, 0, 0.2) !default;
+$at-range-slider-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2) !default;
 
 /* Rate */
-$at-rate-icon-size: 20PX !default;
-$at-rate-star-color: #ECECEC !default;
-$at-rate-star-color-on: #FFCA3E !default;
+$at-rate-icon-size: 20px !default;
+$at-rate-star-color: #ececec !default;
+$at-rate-star-color-on: #ffca3e !default;
 
 /* SearchBar */
 $at-search-bar-btn-color: $color-white !default;
@@ -419,7 +415,7 @@ $at-tab-bar-icon-image-size: 50px !default;
 $at-tabs-color: $color-text-base !default;
 $at-tabs-color-active: $color-brand !default;
 $at-tabs-font-size: $font-size-base !default;
-$at-tabs-line-height: 1PX !default;
+$at-tabs-line-height: 1px !default;
 $at-tabs-underline-color: $color-grey-5 !default;
 $at-tabs-bg-color: $color-bg !default;
 

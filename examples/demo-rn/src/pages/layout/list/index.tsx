@@ -8,20 +8,20 @@ import './index.scss'
 
 export default class ListPage extends React.Component {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   private handleChange = (e: CommonEvent): void => {
     Taro.showToast({
       title: `Change Switch: ${e}`,
-      icon: 'none',
+      icon: 'none'
     })
   }
 
   private handleClick = (e: CommonEvent): void => {
     Taro.showToast({
       title: `Click Item: ${e}`,
-      icon: 'none',
+      icon: 'none'
     })
   }
 
@@ -107,7 +107,7 @@ export default class ListPage extends React.Component {
                     iconInfo={{
                       size: 25,
                       color: '#78A4FA',
-                      value: 'calendar',
+                      value: 'calendar'
                     }}
                   />
                   <AtListItem
@@ -118,7 +118,7 @@ export default class ListPage extends React.Component {
                     iconInfo={{
                       size: 25,
                       color: '#FF4949',
-                      value: 'bookmark',
+                      value: 'bookmark'
                     }}
                   />
                 </AtList>

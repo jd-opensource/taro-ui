@@ -72,17 +72,8 @@ export default class Index extends React.Component<{}, IndexState> {
   }
 
   public render(): JSX.Element {
-    const {
-      years,
-      months,
-      days,
-      value,
-      year,
-      month,
-      day,
-      isWeapp,
-      isAlipay
-    } = this.state
+    const { years, months, days, value, year, month, day, isWeapp, isAlipay } =
+      this.state
 
     return (
       <View className='page'>
@@ -109,28 +100,28 @@ export default class Index extends React.Component<{}, IndexState> {
                       style={{
                         width: '100%',
                         height: '300px',
-                        textAlign: 'center',
+                        textAlign: 'center'
                       }}
                       value={value}
                       onChange={this.handleChange}
                     >
                       <PickerViewColumn>
                         {years.map((item, idx) => (
-                          <View key={idx} style={{lineHeight: '50px'}}>
+                          <View key={idx} style={{ lineHeight: '50px' }}>
                             {item}年
                           </View>
                         ))}
                       </PickerViewColumn>
                       <PickerViewColumn>
                         {months.map((item, idx) => (
-                          <View key={idx} style={{lineHeight: '50px'}}>
+                          <View key={idx} style={{ lineHeight: '50px' }}>
                             {item}月
                           </View>
                         ))}
                       </PickerViewColumn>
                       <PickerViewColumn>
                         {days.map((item, idx) => (
-                          <View key={idx} style={{lineHeight: '50px'}}>
+                          <View key={idx} style={{ lineHeight: '50px' }}>
                             {item}日
                           </View>
                         ))}

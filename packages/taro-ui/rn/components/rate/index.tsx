@@ -22,11 +22,11 @@ export default class AtRate extends React.Component<AtRateProps> {
       value = 0,
       max = 5,
       size,
-      margin = 5,
+      margin = 5
     } = this.props
 
     const iconStyle = {
-      marginRight: Taro.pxTransform(margin),
+      marginRight: Taro.pxTransform(margin)
     }
     // const starIconStyle = {
     //   fontSize: size ? `${size}px` : ''
@@ -88,7 +88,7 @@ AtRate.defaultProps = {
   size: 20,
   value: 0,
   max: 5,
-  margin: 5,
+  margin: 5
 }
 
 AtRate.propTypes = {
@@ -98,5 +98,5 @@ AtRate.propTypes = {
   value: PropTypes.number,
   max: PropTypes.number,
   margin: PropTypes.number,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func
 }

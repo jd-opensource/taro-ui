@@ -1,10 +1,10 @@
 # 常见问题
 
-----
+---
 
 本章节收集了网友常问问题，提问之前请先阅读该章节
 
-## 出现xx问题怎么办？
+## 出现 xx 问题怎么办？
 
 在提问前，建议升级 `taro` 和 `taro-ui` 至最新版本，仍有问题请按模板提交 [Issue](https://github.com/NervJS/taro-ui/issues/new/choose)
 
@@ -24,6 +24,7 @@ className)} style={customStyle}>
 |         <View className="at-pagination__operate">
 |           <View className="at-pagination__btns">
 ```
+
 请在 `config/index.js` 文件中添加如下配置项：
 
 ```js
@@ -31,9 +32,12 @@ h5: {
   esnextModules: ['taro-ui']
 }
 ```
+
 ## 出现 `Can't resolve './style/index.scss'` 怎么办？
+
 升级至 `taro` 匹配的 `taro-ui` 版本就可以解决
 例如 taro 3.x
+
 ```json
   ...
   "dependencies": {
@@ -44,7 +48,9 @@ h5: {
   },
   ...
 ```
+
 那么需要升级至
+
 ```
 "taro-ui": "^3.0.0-alpha.3"
 ```

@@ -1,17 +1,9 @@
 {
   "root": true,
-  "extends": [
-    "o2team",
-    "eslint:recommended",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["o2team", "eslint:recommended", "plugin:prettier/recommended"],
   "overrides": [
     {
-      "files": [
-        "packages/**/*.ts",
-        "packages/**/*.tsx",
-        "packages/**/*.d.ts"
-      ],
+      "files": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.d.ts"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 2017,
@@ -21,9 +13,7 @@
         },
         "warnOnUnsupportedTypeScriptVersion": true
       },
-      "plugins": [
-        "@typescript-eslint"
-      ],
+      "plugins": ["@typescript-eslint"],
       "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
@@ -34,24 +24,15 @@
         "plugin:react-hooks/recommended"
       ],
       "rules": {
-        "@typescript-eslint/no-explicit-any": [
-          "off"
-        ],
-        "@typescript-eslint/member-delimiter-style": [
-          "off"
-        ],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/member-delimiter-style": ["off"],
         "import/no-named-as-default": "off",
         "class-methods-use-this": "off",
         "prefer-rest-params": "off",
         "react/jsx-filename-extension": [
           2,
           {
-            "extensions": [
-              ".js",
-              ".jsx",
-              ".ts",
-              ".tsx"
-            ]
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
         ],
         "no-unused-vars": "off",
@@ -65,47 +46,31 @@
         "no-console": [
           "error",
           {
-            "allow": [
-              "warn",
-              "error"
-            ]
+            "allow": ["warn", "error"]
           }
         ],
         "camelcase": [
           "error",
           {
-            "allow": [
-              "^UNSAFE_"
-            ]
+            "allow": ["^UNSAFE_"]
           }
         ],
         "@typescript-eslint/ban-ts-comment": "off"
       },
       "settings": {
-        "import/ignore": [
-          "react-native"
-        ],
+        "import/ignore": ["react-native"],
         "react": {
           "version": "detect"
         },
         "import/resolver": {
           "node": {
-            "extensions": [
-              ".js",
-              ".jsx",
-              ".ts",
-              ".tsx",
-              ".d.ts"
-            ]
+            "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
           }
         }
       }
     },
     {
-      "files": [
-        "packages/**/*.js",
-        "packages/**/*.jsx"
-      ],
+      "files": ["packages/**/*.js", "packages/**/*.jsx"],
       "parser": "@babel/eslint-parser",
       "parserOptions": {
         "ecmaVersion": 2017,
@@ -129,12 +94,7 @@
         "react/jsx-filename-extension": [
           2,
           {
-            "extensions": [
-              ".js",
-              ".jsx",
-              ".ts",
-              ".tsx"
-            ]
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
         ],
         "no-unused-vars": [
@@ -146,36 +106,26 @@
         "no-console": [
           "error",
           {
-            "allow": [
-              "warn",
-              "error"
-            ]
+            "allow": ["warn", "error"]
           }
         ],
         "camelcase": [
           "error",
           {
-            "allow": [
-              "^UNSAFE_"
-            ]
+            "allow": ["^UNSAFE_"]
           }
         ]
       },
       "settings": {
         "import/resolver": {
           "node": {
-            "extensions": [
-              ".js",
-              ".jsx"
-            ]
+            "extensions": [".js", ".jsx"]
           },
           "eslint-import-resolver-custom-alias": {
             "alias": {
               "@md": "./markdown"
             },
-            "packages": [
-              "docs"
-            ]
+            "packages": ["docs"]
           }
         },
         "react": {
@@ -184,9 +134,7 @@
       }
     },
     {
-      "files": [
-        "docs/build/*.js"
-      ],
+      "files": ["docs/build/*.js"],
       "rules": {
         "no-console": "off",
         "no-undefined": "off"
@@ -199,9 +147,7 @@
         "examples/demo-rn/**/*.ts",
         "examples/demo-rn/**/*.tsx"
       ],
-      "extends": [
-        "taro/react"
-      ]
+      "extends": ["taro/react"]
     },
     {
       "files": [
@@ -215,10 +161,7 @@
       }
     },
     {
-      "files": [
-        "packages/**/test/**/*.js",
-        "packages/**/test/**/test.js"
-      ],
+      "files": ["packages/**/test/**/*.js", "packages/**/test/**/test.js"],
       "parser": "@babel/eslint-parser",
       "parserOptions": {
         "ecmaVersion": 2017,

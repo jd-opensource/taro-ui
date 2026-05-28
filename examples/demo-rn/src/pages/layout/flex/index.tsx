@@ -6,7 +6,7 @@ import './index.scss'
 
 export default class FlexPage extends React.Component {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public render(): JSX.Element {

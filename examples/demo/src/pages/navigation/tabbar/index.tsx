@@ -50,21 +50,17 @@ export default class Index extends React.Component<{}, IndexPageState> {
     const tabList3 = [
       {
         title: '领取中心',
-        image:
-          iconDemo1,
-        selectedImage:
-          iconDemo5,
+        image: iconDemo1,
+        selectedImage: iconDemo5,
         text: 'new'
       },
       {
         title: '找折扣',
-        image:
-          iconDemo2
+        image: iconDemo2
       },
       {
         title: '领会员',
-        image:
-          iconDemo3,
+        image: iconDemo3,
         text: '100',
         max: 99
       }

@@ -155,12 +155,12 @@ export default class BasicColor extends React.Component<{}, BasicColorState> {
                     >
                       <View
                         className='color-item__circle'
-                        style={{background: color.hex}}
+                        style={{ background: color.hex }}
                       >
                         <View className='inner-circle-1'></View>
                         <View
                           className='inner-circle-2'
-                          style={{borderColor: color.hex}}
+                          style={{ borderColor: color.hex }}
                         ></View>
                       </View>
                       <View className='color-item__info'>

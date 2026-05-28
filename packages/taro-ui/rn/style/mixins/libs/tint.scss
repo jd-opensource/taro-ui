@@ -15,9 +15,6 @@
  *     background-color: #a8dfc9;
  *   }
  */
-@function tint(
-  $color,
-  $percent
-) {
-  @return mix(#FFF, $color, $percent);
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
 }

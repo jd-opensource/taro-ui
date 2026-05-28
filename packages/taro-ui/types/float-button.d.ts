@@ -1,24 +1,24 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 import { CommonEventFunction } from '@tarojs/components/types/common'
 
 import AtComponent from './base'
 
 export interface AtFloatButtonProps extends AtComponent {
-    size?: number
+  size?: number
 
-    icon?: string
+  icon?: string
 
-    onClick?: CommonEventFunction
+  onClick?: CommonEventFunction
 
-    onTouchStart?: CommonEventFunction
+  onTouchStart?: CommonEventFunction
 
-    onTouchEnd?: CommonEventFunction
+  onTouchEnd?: CommonEventFunction
 
-    backgroundColor?: string
+  backgroundColor?: string
 
-    touchedBackgroundColor?: string
+  touchedBackgroundColor?: string
 
-    borderColor?: string
+  borderColor?: string
 }
 
 declare const AtFloatButton: ComponentClass<AtFloatButtonProps>

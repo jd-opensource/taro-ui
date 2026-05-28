@@ -17,7 +17,7 @@ interface IndexState {
 
 export default class Index extends React.Component<{}, IndexState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -29,63 +29,63 @@ export default class Index extends React.Component<{}, IndexState> {
       checkboxOption1: [
         { value: 'list1', label: 'iPhone X' },
         { value: 'list2', label: 'HUAWEI P20' },
-        { value: 'list3', label: 'OPPO Find X' },
+        { value: 'list3', label: 'OPPO Find X' }
       ],
       checkboxOption2: [
         {
           value: 'list1',
           label: 'iPhone X',
-          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
+          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。'
         },
         {
           value: 'list2',
           label: 'HUAWEI P20',
-          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
+          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。'
         },
         {
           value: 'list3',
           label: 'OPPO Find X',
-          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
-        },
+          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。'
+        }
       ],
       checkboxOption3: [
         {
           value: 'list1',
           label: 'iPhone X',
-          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
+          desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。'
         },
         { value: 'list2', label: 'HUAWEI P20' },
         {
           value: 'list3',
           label: 'OPPO Find X',
           desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
-          disabled: true,
+          disabled: true
         },
         {
           value: 'list4',
           label: 'vivo NEX',
           desc: '部分地区提供电子普通发票，用户可自行打印，效力等同纸质普通发票，具体以实际出具的发票类型为准。',
-          disabled: true,
-        },
-      ],
+          disabled: true
+        }
+      ]
     }
   }
 
   private handleChange(value: string[]): void {
     this.setState({
-      checkedList1: value,
+      checkedList1: value
     })
   }
 
   private handleChangeSnd(value: string[]): void {
     this.setState({
-      checkedList2: value,
+      checkedList2: value
     })
   }
 
   private handleChangeThd(value: string[]): void {
     this.setState({
-      checkedList3: value,
+      checkedList3: value
     })
   }
 

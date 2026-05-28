@@ -3,7 +3,7 @@ name: 🚀 Feature Request
 about: 创建一个新功能请求，请通过 https://nervjs.github.io/taro-ui-issue-helper/ 提交
 ---
 
-<!--- 
+<!---
 🎉建议通过 https://nervjs.github.io/taro-ui-issue-helper/ 网页提交 issue
 
 如果是提交 bug，请搜索文档和 issue，确认以下事项：
@@ -21,11 +21,14 @@ about: 创建一个新功能请求，请通过 https://nervjs.github.io/taro-ui-
 --->
 
 **这个功能解决了什么问题？**
+
 <!--- 请尽可能详尽地说明这个需求的用例和场景 --->
 
 **你期望的功能是怎样的？**
+
 <!--- 描述一下你期望这个新功能是如何使用的，如果可以请提供一些示例 --->
 
 **补充信息**
+
 <!--- 可选 --->
 <!--- 跟本次功能请求相关的截图或额外描述都可以写在此处 --->
