@@ -70,3 +70,11 @@
 
 - [ConfigProvider 全局配置](./config-provider.md) — `ConfigProvider`, `zhCN`, `enUS`
 - [Loading 加载](./loading.md) — `AtLoading`
+
+## 维护（仓库贡献者）
+
+修改 `packages/taro-ui/types` 后重新生成，勿手改各文件 Props 表：
+
+```bash
+pnpm run generate:guide-references
+```

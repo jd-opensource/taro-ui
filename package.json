@@ -25,7 +25,7 @@
     "version:git": "git add . && git commit -m \"chore(release): publish ${npm_package_version}\"",
     "version:changelog": "conventional-changelog -p angular",
     "format": "prettier --write . --ignore-path .gitignore",
-    "generate:guide-references": "node scripts/generate-taro-ui-guide-references.mjs"
+    "generate:guide-references": "node scripts/generate-taro-ui-guide-references.js"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",

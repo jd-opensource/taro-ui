@@ -3,15 +3,13 @@
  * 从 packages/taro-ui/types 生成 packages/taro-ui-guide/references/*.md
  * 仓库维护脚本，与 Agent SKILL 运行时无关。
  */
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
+const fs = require('fs')
+const path = require('path')
 
-const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const REPO_ROOT = path.resolve(__dirname, '..')
 const TYPES_DIR = path.join(REPO_ROOT, 'packages/taro-ui/types')
 const OUT_DIR = path.join(REPO_ROOT, 'packages/taro-ui-guide/references')
 
-/** @type {Array<{slug:string,category:string,title:string,exports:string[],style:string[],types:string[],doc?:string,notes?:string,related?:string[]}>} */
 const MANIFEST = [
   { slug: 'nav-bar', category: 'layout', title: 'NavBar 导航栏', exports: ['AtNavBar'], style: ['nav-bar.scss'], types: ['nav-bar.d.ts'], doc: 'navbar.md' },
   { slug: 'tab-bar', category: 'layout', title: 'TabBar 标签栏', exports: ['AtTabBar'], style: ['tab-bar.scss'], types: ['tab-bar.d.ts'], doc: 'tabbar.md' },
@@ -79,9 +77,10 @@ const CATEGORY_LABEL = {
 function extractInterfaces(content) {
   const interfaces = []
   const re = /(?:export )?interface (\w+)[^{]*\{([\s\S]*?)\n\}/g
-  let m
-  while ((m = re.exec(content)) !== null) {
+  let m = re.exec(content)
+  while (m !== null) {
     interfaces.push({ name: m[1], body: m[2] })
+    m = re.exec(content)
   }
   return interfaces
 }
@@ -123,8 +122,8 @@ function readTypesFiles(files) {
     if (!fs.existsSync(p)) continue
     const content = fs.readFileSync(p, 'utf8')
     for (const iface of extractInterfaces(content)) {
-      const props = extractPropsFromBody(iface.body)
-      if (props.length) allInterfaces.push({ name: iface.name, props })
+      const ifaceProps = extractPropsFromBody(iface.body)
+      if (ifaceProps.length) allInterfaces.push({ name: iface.name, props: ifaceProps })
     }
   }
   return allInterfaces
@@ -175,7 +174,7 @@ function renderComponentMd(entry) {
     : ''
 
   const relatedLine =
-    entry.related?.length
+    entry.related && entry.related.length
       ? `\n## 关联\n\n${entry.related.map(s => `- [${s}](./${s}.md)`).join('\n')}\n`
       : ''
 
@@ -233,7 +232,7 @@ function renderIndex() {
 `
   for (const [cat, label] of Object.entries(CATEGORY_LABEL)) {
     const items = byCategory[cat]
-    if (!items?.length) continue
+    if (!items || !items.length) continue
     md += `### ${label}\n\n`
     for (const e of items) {
       md += `- [${e.title}](./${e.slug}.md) — \`${e.exports.join('`, `')}\`\n`
