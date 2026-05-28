@@ -232,5 +232,3 @@ pnpm --filter docs dev
 - [references/README.md](references/README.md) — 组件索引（按维度渐进披露）
 - `docs/docs/guide/quickstart.md` — 快速上手与 babel 按需
 - `docs/docs/guide/customize-theme.md` — 主题详解
-
-更新组件参考：`node packages/taro-ui-guide/scripts/generate-references.mjs`

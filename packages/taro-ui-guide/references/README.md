@@ -71,10 +71,10 @@
 - [ConfigProvider 全局配置](./config-provider.md) — `ConfigProvider`, `zhCN`, `enUS`
 - [Loading 加载](./loading.md) — `AtLoading`
 
-## 维护
+## 维护（仓库贡献者）
 
-由脚本生成，勿手改单文件 Props 表：
+修改 `packages/taro-ui/types` 后重新生成，勿手改各文件 Props 表：
 
 ```bash
-node packages/taro-ui-guide/scripts/generate-references.mjs
+pnpm run generate:guide-references
 ```

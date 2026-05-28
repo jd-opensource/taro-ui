@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * Generate packages/taro-ui-guide/references/<slug>.md from types/*.d.ts
+ * 从 packages/taro-ui/types 生成 packages/taro-ui-guide/references/*.md
+ * 仓库维护脚本，与 Agent SKILL 运行时无关。
  */
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const ROOT = path.resolve(__dirname, '..')
-const TYPES_DIR = path.resolve(ROOT, '../taro-ui/types')
-const OUT_DIR = path.resolve(ROOT, 'references')
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const TYPES_DIR = path.join(REPO_ROOT, 'packages/taro-ui/types')
+const OUT_DIR = path.join(REPO_ROOT, 'packages/taro-ui-guide/references')
 
 /** @type {Array<{slug:string,category:string,title:string,exports:string[],style:string[],types:string[],doc?:string,notes?:string,related?:string[]}>} */
 const MANIFEST = [
@@ -141,7 +141,6 @@ function renderComponentMd(entry) {
 
   const interfaces = readTypesFiles(entry.types)
   let propsSection = ''
-  const optionsIface = interfaces.find(i => i.name === 'Options')
   if (interfaces.length) {
     const propInterfaces = interfaces.filter(
       i =>
@@ -242,12 +241,12 @@ function renderIndex() {
     md += '\n'
   }
 
-  md += `## 维护
+  md += `## 维护（仓库贡献者）
 
-由脚本生成，勿手改单文件 Props 表：
+修改 \`packages/taro-ui/types\` 后重新生成，勿手改各文件 Props 表：
 
 \`\`\`bash
-node packages/taro-ui-guide/scripts/generate-references.mjs
+pnpm run generate:guide-references
 \`\`\`
 `
   return md
