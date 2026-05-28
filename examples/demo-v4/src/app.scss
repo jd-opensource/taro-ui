@@ -94,17 +94,17 @@ view {
       line-height: 1.5;
 
       &::before {
-        content: "";
+        content: '';
         display: inline-block;
         position: absolute;
         left: 24px;
         top: 50%;
         margin-top: -20px;
-        width: 2PX;
+        width: 2px;
         height: 40px;
         background-color: #6190e8;
         box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
-        border-radius: 1PX;
+        border-radius: 1px;
       }
     }
 

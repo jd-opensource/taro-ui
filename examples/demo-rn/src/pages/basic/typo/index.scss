@@ -3,9 +3,9 @@
 
   &__head {
     padding: 20px 32px;
-    color: #AFB9CC;
+    color: #afb9cc;
     font-size: 28px;
-    border: 1PX solid #C4D9E7;
+    border: 1px solid #c4d9e7;
     border-radius: 8px;
     /*  #ifdef  rn  */
     display: flex;
@@ -44,7 +44,6 @@
     font-size: 28px;
   }
 }
-
 
 .col {
   /*  #ifndef  rn  */
@@ -85,5 +84,5 @@
 }
 
 .has-bg {
-  background-color: #FAFBFC;
+  background-color: #fafbfc;
 }

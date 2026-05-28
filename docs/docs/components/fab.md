@@ -12,44 +12,44 @@
 
 在 Taro 文件中引入组件
 
-
 ```js
 import { AtFab } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/fab.scss";
+@import '~taro-ui/dist/style/components/fab.scss';
 ```
+
 ## 用法
 
 浮动按钮中的图标元素，请自行加上类名 `"at-fab__icon"`
 
 > 浮动按钮默认不会脱离文档流，请自行包含一个父元素并设置 `fixed` 定位
 
-
 ```html
 <AtFab>
-  <Text className='at-fab__icon at-icon at-icon-menu'></Text>
+  <Text className="at-fab__icon at-icon at-icon-menu"></Text>
 </AtFab>
 ```
+
 ## 点击事件
 
-
 ```html
-<AtFab onClick={this.onButtonClick.bind(this)}>
-  <Text className='at-fab__icon at-icon at-icon-menu'></Text>
+<AtFab onClick="{this.onButtonClick.bind(this)}">
+  <Text className="at-fab__icon at-icon at-icon-menu"></Text>
 </AtFab>
 ```
+
 ## Fab 参数
 
-| 参数     | 说明         | 类型    | 可选值        | 默认值 |
-|:---------|:-------------|:--------|:--------------|:-------|
-| size     | 大小尺寸     | String  | `normal`、`small` | `normal` |
+| 参数 | 说明     | 类型   | 可选值            | 默认值   |
+| :--- | :------- | :----- | :---------------- | :------- |
+| size | 大小尺寸 | String | `normal`、`small` | `normal` |
 
 ## Fab 事件
 
-| 事件名称 | 说明                               | 返回参数     |
-|:---------|:-----------------------------------|:-------------|
+| 事件名称 | 说明           | 返回参数   |
+| :------- | :------------- | :--------- |
 | onClick  | 点击标签时触发 | event 对象 |

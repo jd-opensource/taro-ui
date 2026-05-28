@@ -77,7 +77,7 @@
       &--rect {
         &::before {
           display: block;
-          content: " ";
+          content: ' ';
           padding-bottom: 130px;
         }
 
@@ -106,7 +106,7 @@
       &--square {
         &::before {
           display: block;
-          content: " ";
+          content: ' ';
           padding-bottom: 100%;
         }
       }

@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
@@ -49,7 +49,7 @@ $at-curtain-btn-size: 56px;
     bottom: -($at-curtain-btn-size + 24px);
     align-items: center;
     justify-content: center;
-    border: 2PX solid $at-curtain-btn-color;
+    border: 2px solid $at-curtain-btn-color;
     border-radius: math.div($at-curtain-btn-size, 2);
     /*  #ifndef  rn  */
     // box-sizing: border-box;

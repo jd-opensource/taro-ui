@@ -8,19 +8,17 @@
 
 Taro-UI 版本需要在 `v1.3.1` 以上，在 Taro 文件中引入组件
 
-
 ```js
-import { AtSwipeAction } from "taro-ui"
+import { AtSwipeAction } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/swipe-action.scss";
+@import '~taro-ui/dist/style/components/swipe-action.scss';
 ```
+
 ## 一般用法
-
-
 
 ```html
 <AtSwipeAction options={[
@@ -43,8 +41,6 @@ import { AtSwipeAction } from "taro-ui"
 
 ## 禁止滑动
 
-
-
 ```html
 <AtSwipeAction disabled options={[
   {
@@ -65,8 +61,6 @@ import { AtSwipeAction } from "taro-ui"
 ```
 
 ## 自动关闭
-
-
 
 ```html
 <AtSwipeAction autoClose options={[
@@ -89,8 +83,6 @@ import { AtSwipeAction } from "taro-ui"
 
 ## 传递点击事件
 
-
-
 ```html
 <AtSwipeAction onClick={this.handleClick} options={[
   {
@@ -111,8 +103,6 @@ import { AtSwipeAction } from "taro-ui"
 ```
 
 ## 开启和关闭事件
-
-
 
 ```html
 <AtSwipeAction
@@ -138,8 +128,6 @@ import { AtSwipeAction } from "taro-ui"
 ```
 
 ## 与 List 组件使用
-
-
 
 ```html
 <AtList>
@@ -192,19 +180,18 @@ import { AtSwipeAction } from "taro-ui"
 
 ## 控制只显示单个
 
-
-
 ```html
 <AtList>
   {list.map((item, index) => (
-    <AtSwipeAction
-      key={index}
-      onOpened={this.handleSingle.bind(this, index)}
-      isOpened={item.isOpened}
-      options={item.options}
-    >
-      <AtListItem title={item.title} />
-    </AtSwipeAction>
+  <AtSwipeAction
+    key="{index}"
+    onOpened="{this.handleSingle.bind(this,"
+    index)}
+    isOpened="{item.isOpened}"
+    options="{item.options}"
+  >
+    <AtListItem title="{item.title}" />
+  </AtSwipeAction>
   ))}
 </AtList>
 ```

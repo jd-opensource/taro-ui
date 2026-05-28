@@ -5,9 +5,7 @@ import { Text, View } from '@tarojs/components'
 import { AtActivityIndicatorProps } from '../../../types/activity-indicator'
 import AtLoading from '../loading/index'
 
-export default class AtActivityIndicator extends React.Component<
-  AtActivityIndicatorProps
-> {
+export default class AtActivityIndicator extends React.Component<AtActivityIndicatorProps> {
   public static defaultProps: AtActivityIndicatorProps
   public static propTypes: InferProps<AtActivityIndicatorProps>
 

@@ -3,9 +3,7 @@ import React from 'react'
 import { View } from '@tarojs/components'
 import { AtSwipeActionOptionsProps } from '../../../../types/swipe-action'
 
-export default class AtSwipeActionOptions extends React.Component<
-  AtSwipeActionOptionsProps
-> {
+export default class AtSwipeActionOptions extends React.Component<AtSwipeActionOptionsProps> {
   public render(): JSX.Element {
     const rootClass = classNames(
       'at-swipe-action__options',

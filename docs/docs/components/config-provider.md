@@ -1,6 +1,7 @@
 # ConfigProvider 全局配置
 
 ---
+
 通过 Context 为子组件提供国际化等全局配置，默认语言为中文（`zhCN`）。
 
 ## 使用指南
@@ -23,7 +24,7 @@ import { ConfigProvider, AtLoadMore, enUS } from 'taro-ui'
 export default function App() {
   return (
     <ConfigProvider locale={enUS}>
-      <AtLoadMore status="loading" />
+      <AtLoadMore status='loading' />
     </ConfigProvider>
   )
 }
@@ -31,10 +32,10 @@ export default function App() {
 
 ## 内置语言包
 
-| 导出 | 说明 |
-|------|------|
+| 导出   | 说明             |
+| ------ | ---------------- |
 | `zhCN` | 简体中文（默认） |
-| `enUS` | 英文 |
+| `enUS` | 英文             |
 
 ## 文案优先级
 
@@ -49,7 +50,7 @@ export default function App() {
 ```js
 import { ConfigProvider } from 'taro-ui'
 
-<ConfigProvider
+;<ConfigProvider
   locale={{
     LoadMore: {
       moreText: '点击加载更多'
@@ -73,15 +74,15 @@ import { ConfigProvider } from 'taro-ui'
 
 ## 参数
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
+| 参数   | 说明                               | 类型            | 默认值 |
+| ------ | ---------------------------------- | --------------- | ------ |
 | locale | 语言配置，支持与内置 `zhCN` 深合并 | `PartialLocale` | `zhCN` |
 
 ## 导出
 
-| 名称 | 说明 |
-| ---- | ---- |
-| `zhCN` | 简体中文语言包 |
-| `enUS` | 英文语言包 |
-| `Locale` | 语言包类型 |
+| 名称            | 说明             |
+| --------------- | ---------------- |
+| `zhCN`          | 简体中文语言包   |
+| `enUS`          | 英文语言包       |
+| `Locale`        | 语言包类型       |
 | `PartialLocale` | 局部覆盖时的类型 |

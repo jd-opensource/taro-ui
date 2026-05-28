@@ -7,13 +7,13 @@ import './index.scss'
 
 export default class CardPage extends React.Component {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   private handleClick = (): void => {
     Taro.showToast({
       title: 'Card handleClick',
-      icon: 'none',
+      icon: 'none'
     })
   }
 
@@ -58,7 +58,7 @@ export default class CardPage extends React.Component {
                     value: 'tags',
                     color: '#77a1fd',
                     size: '16',
-                    customStyle: { marginRight: 8 },
+                    customStyle: { marginRight: 8 }
                   }}
                 >
                   这也是内容区 可以随意定义功能
@@ -114,7 +114,7 @@ export default class CardPage extends React.Component {
                   extraStyle={{
                     fontSize: 12,
                     maxWidth: 200,
-                    color: '#6190e8',
+                    color: '#6190e8'
                   }}
                   title='这是个标题'
                   thumb='https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'

@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 /**
  * Mixes a color with white. It's different from lighten()
@@ -17,9 +17,6 @@
  *     background-color: #a8dfc9;
  *   }
  */
-@function tint(
-  $color,
-  $percent
-) {
-  @return color.mix(#FFF, $color, $percent);
+@function tint($color, $percent) {
+  @return color.mix(#fff, $color, $percent);
 }

@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 /**
  * Mixes a color with black. It's different from darken()
@@ -17,9 +17,6 @@
  *     background-color: #664a20;
  *   }
  */
-@function shade(
-  $color,
-  $percent
-) {
+@function shade($color, $percent) {
   @return color.mix(#000, $color, $percent);
 }

@@ -1,4 +1,4 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 import { CommonEvent } from '@tarojs/components/types/common'
 
 import AtComponent from './base'
@@ -48,7 +48,7 @@ export interface Item {
 export interface AtStepsProps extends AtComponent {
   /**
    * 当前步骤索引值。
-   * 
+   *
    * **注意：** 必填，开发者需要通过 onChange 事件来更新 current 值。
    */
   current: number
@@ -58,7 +58,7 @@ export interface AtStepsProps extends AtComponent {
   items?: Array<Item>
   /**
    * 点击触发事件。
-   * 
+   *
    * **注意：** 开发者需要通过 onChange 事件来更新 current，onChange 函数必填
    */
   onChange: (current: number, event: CommonEvent) => void

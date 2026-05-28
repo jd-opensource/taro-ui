@@ -8,98 +8,80 @@
 
 在 Taro 文件中引入组件
 
-
 ```js
-import { AtList, AtListItem } from "taro-ui"
+import { AtList, AtListItem } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/list.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import '~taro-ui/dist/style/components/list.scss';
+@import '~taro-ui/dist/style/components/icon.scss';
 ```
+
 ## 一般用法
-
-
 
 ```html
 <AtList>
-  <AtListItem title='标题文字' onClick={this.handleClick} />
-  <AtListItem title='标题文字' arrow='right' />
-  <AtListItem title='标题文字' extraText='详细信息' />
-  <AtListItem title='禁用状态' disabled extraText='详细信息' />
+  <AtListItem title="标题文字" onClick="{this.handleClick}" />
+  <AtListItem title="标题文字" arrow="right" />
+  <AtListItem title="标题文字" extraText="详细信息" />
+  <AtListItem title="禁用状态" disabled extraText="详细信息" />
 </AtList>
 ```
 
 ## 带描述信息
 
-
-
 ```html
 <AtList>
-  <AtListItem title='标题文字' note='描述信息' />
-  <AtListItem title='标题文字' note='描述信息' arrow='right' />
+  <AtListItem title="标题文字" note="描述信息" />
+  <AtListItem title="标题文字" note="描述信息" arrow="right" />
   <AtListItem
-    arrow='right'
-    note='描述信息'
-    title='标题文字标题文字标题文字标题文字标题文字'
-    extraText='详细信息详细信息详细信息详细信息'
+    arrow="right"
+    note="描述信息"
+    title="标题文字标题文字标题文字标题文字标题文字"
+    extraText="详细信息详细信息详细信息详细信息"
   />
 </AtList>
 ```
 
 ## 包含图片
 
-
-
 ```html
 <AtList>
   <AtListItem
-    title='标题文字'
-    arrow='right'
-    thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+    title="标题文字"
+    arrow="right"
+    thumb="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
   />
   <AtListItem
-    title='标题文字'
-    note='描述信息'
-    arrow='right'
-    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+    title="标题文字"
+    note="描述信息"
+    arrow="right"
+    thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
   />
   <AtListItem
-    title='标题文字'
-    note='描述信息'
-    extraText='详细信息'
-    arrow='right'
-    thumb='http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+    title="标题文字"
+    note="描述信息"
+    extraText="详细信息"
+    arrow="right"
+    thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
   />
 </AtList>
 ```
 
 ## 支持图标的 Item
 
-
-
 ```html
 <AtList>
-  <AtListItem
-    title='标题文字'
-    note='描述信息'
-    arrow='right'
-    iconInfo={{ size: 25, color: '#78A4FA', value: 'calendar', }}
-  />
-  <AtListItem
-    title='标题文字'
-    note='描述信息'
-    extraText='详细信息'
-    arrow='right'
-    iconInfo={{ size: 25, color: '#FF4949', value: 'bookmark', }}
-  />
+  <AtListItem title='标题文字' note='描述信息' arrow='right' iconInfo={{ size:
+  25, color: '#78A4FA', value: 'calendar', }} /> <AtListItem title='标题文字'
+  note='描述信息' extraText='详细信息' arrow='right' iconInfo={{ size: 25,
+  color: '#FF4949', value: 'bookmark', }} />
 </AtList>
 ```
+
 ## 支持图标的 Item
-
-
 
 ```jsx
 <AtList>
@@ -113,41 +95,35 @@ import { AtList, AtListItem } from "taro-ui"
   />
 </AtList>
 ```
+
 ::: caution
 
-当 icon、thumb、iconInfo 属性同时存在时，优先级为 icon >  iconInfo > thumb
+当 icon、thumb、iconInfo 属性同时存在时，优先级为 icon > iconInfo > thumb
+
 ## 无边框的 Item
 
-
-
 ```html
- <AtList hasBorder={false}>
+<AtList hasBorder="{false}">
   <AtListItem
     isSwitch
-    title='标题文字'
-    hasBorder={false}
-    onSwitchChange={this.handleChange}
+    title="标题文字"
+    hasBorder="{false}"
+    onSwitchChange="{this.handleChange}"
   />
   <AtListItem
     isSwitch
-    title='标题文字'
-    hasBorder={false}
-    onSwitchChange={this.handleChange}
+    title="标题文字"
+    hasBorder="{false}"
+    onSwitchChange="{this.handleChange}"
   />
 </AtList>
 ```
 
 ## 带 Switch 的 Item
 
-
-
 ```html
 <AtList>
-  <AtListItem
-    title='标题文字'
-    isSwitch
-    onSwitchChange={this.handleChange}
-  />
+  <AtListItem title="标题文字" isSwitch onSwitchChange="{this.handleChange}" />
 </AtList>
 ```
 
@@ -161,12 +137,12 @@ import { AtList, AtListItem } from "taro-ui"
 
 | 参数          | 说明             | 类型                                                                 | 可选值               | 默认值    |
 | ------------- | ---------------- | -------------------------------------------------------------------- | -------------------- | --------- |
-| title         | 元素的标题       | JSX.Element 、String                                                        | -                    | -         |
+| title         | 元素的标题       | JSX.Element 、String                                                 | -                    | -         |
 | disabled      | 是否禁用         | Boolean                                                              | -                    | `false`   |
-| note          | 元素的描述信息   | JSX.Element 、String                                                          | -                    | -         |
+| note          | 元素的描述信息   | JSX.Element 、String                                                 | -                    | -         |
 | thumb         | 元素的主要缩略图 | String                                                               | -                    | -         |
 | arrow         | 箭头的方向       | String                                                               | `right`,`top`,`down` | -         |
-| extraText     | 额外信息的文本   | JSX.Element 、String                                                          | -                    | -         |
+| extraText     | 额外信息的文本   | JSX.Element 、String                                                 | -                    | -         |
 | extraThumb    | 额外信息的缩略图 | String                                                               | -                    | -         |
 | isSwitch      | 额外信息是否开关 | Boolean                                                              | -                    | `false`   |
 | switchColor   | 开关的颜色       | String                                                               | -                    | `#6190E8` |
@@ -181,4 +157,3 @@ import { AtList, AtListItem } from "taro-ui"
 | -------------- | -------------------------- | -------- |
 | onClick        | 用户点击元素触发的事件     | -        |
 | onSwitchChange | 用户点击切换 Switch 时触发 | -        |
-

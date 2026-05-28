@@ -1,6 +1,6 @@
 # 自定义主题
 
-----
+---
 
 Taro UI 目前只有一套默认的主题配色，为满足业务和品牌上多样化的视觉需求，UI 库支持一定程度的样式定制。（请确保微信基础库版本在 v2.2.3 以上）
 
@@ -18,23 +18,23 @@ Taro UI 的组件样式是使用 SCSS 编写的，如果你的项目中也使用
 
 新建一个主题样式文件，例如 `custom-variables.scss`，并写入以下内容：（如有需要，可使用[自定义主题生成器](https://nervjs.github.io/taro-ui-theme-preview/)）
 
-
 ```scss
 /* 改变主题变量，具体变量名可查看 taro-ui/dist/style/variables/default.scss 文件 */
-$color-brand: #6190E8;
+$color-brand: #6190e8;
 
 /* 引入 Taro UI 默认样式 */
-@import "~taro-ui/dist/style/index.scss";
+@import '~taro-ui/dist/style/index.scss';
 ```
+
 > 覆写的变量，需要在引入 taro ui 默认样式之前定义，[默认主题变量命名](https://github.com/NervJS/taro-ui/blob/dev/src/style/variables/default.scss)
 
 之后在项目的入口文件中引入以上的样式文件即可（无需重复引入组件的默认样式）
-
 
 ```js
 /* app.js */
 import './custom-variables.scss'
 ```
+
 > **P.S. Slider, Switch 组件暂时不支持 SCSS 变量覆盖的方式自定义主题**
 
 ## 全局样式类
@@ -45,7 +45,6 @@ import './custom-variables.scss'
 
 > 当开放了全局样式类，存在外部样式无意间污染组件样式的风险。由于 Taro UI 的组件样式采用 BEM 的命名方式，从一定程度上避免了样式污染的问题。
 
-
 ```jsx
 /* page/index/index.js   */
 import Taro from '@tarojs/taro'
@@ -54,12 +53,13 @@ import { AtButton } from 'taro-ui'
 
 import "./index.scss"
 
-export default IndexPage extends Taro.Component {  
+export default IndexPage extends Taro.Component {
   render () {
     return <AtButton className='my-button' />
   }
 }
 ```
+
 ```scss
 /**
  * page/index/index.scss 必须在 Page 上

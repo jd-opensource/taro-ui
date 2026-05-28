@@ -1,5 +1,5 @@
-@import "../variables/default.scss";
-@import "../mixins/index.scss";
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 $at-list-item-horizontal-padding: 24px;
 
@@ -18,11 +18,9 @@ $at-list-item-horizontal-padding: 24px;
   width: 100%;
   background-color: $color-bg;
 
-
   &--no-border {
     @include hairline-top-bottom($width: 0);
   }
-
 
   &__item {
     padding: $spacing-v-lg $spacing-h-lg;

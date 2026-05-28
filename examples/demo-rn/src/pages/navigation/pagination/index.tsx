@@ -17,7 +17,7 @@ export default class PaginationPage extends React.Component<
   PaginationPageState
 > {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
@@ -25,31 +25,31 @@ export default class PaginationPage extends React.Component<
     this.state = {
       list: [],
       current: 1,
-      pageSize: 10,
+      pageSize: 10
     }
   }
 
   private onPage(data: PageChangeData): void {
     this.setState({
-      current: data.current,
+      current: data.current
     })
     Taro.showToast({
       title: `Pagination: ${data}`,
-      icon: 'none',
+      icon: 'none'
     })
   }
 
   private onPageDataChange(): void {
     const _list = new Array(10).fill(1)
     this.setState({
-      list: this.state.list.concat(_list),
+      list: this.state.list.concat(_list)
     })
   }
 
   private onCurrentChange(): void {
     this.setState({
       current: 1,
-      list: [],
+      list: []
     })
   }
 

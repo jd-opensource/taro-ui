@@ -1,4 +1,4 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 
 import AtComponent from './base'
 
@@ -13,7 +13,7 @@ export interface PageChangeData {
   current: number
 }
 
-export interface AtPaginationProps extends AtComponent{
+export interface AtPaginationProps extends AtComponent {
   /**
    * 数据总量
    * @default 0

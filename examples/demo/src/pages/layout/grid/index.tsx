@@ -22,28 +22,23 @@ export default class GridPage extends React.Component<{}, GridPageState> {
     this.state = {
       data: [
         {
-          image:
-            iconDemo1,
+          image: iconDemo1,
           value: '领取中心'
         },
         {
-          image:
-            iconDemo2,
+          image: iconDemo2,
           value: '找折扣'
         },
         {
-          image:
-            iconDemo3,
+          image: iconDemo3,
           value: '领会员'
         },
         {
-          image:
-            iconDemo4,
+          image: iconDemo4,
           value: '新品首发'
         },
         {
-          image:
-            iconDemo5,
+          image: iconDemo5,
           value: '领京豆'
         },
         {
@@ -95,8 +90,7 @@ export default class GridPage extends React.Component<{}, GridPageState> {
                   data={[
                     ...this.state.data,
                     {
-                      image:
-                        iconDemo6,
+                      image: iconDemo6,
                       value: '手机馆'
                     }
                   ]}
@@ -114,8 +108,7 @@ export default class GridPage extends React.Component<{}, GridPageState> {
                   data={[
                     ...this.state.data,
                     {
-                      image:
-                        iconDemo6,
+                      image: iconDemo6,
                       value: '手机馆'
                     }
                   ]}

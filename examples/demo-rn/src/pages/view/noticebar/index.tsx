@@ -9,7 +9,7 @@ const NOTICE = 'volume-plus'
 
 export default class NoticebarPage extends React.Component {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   private onGotoMore(): void {
@@ -20,7 +20,7 @@ export default class NoticebarPage extends React.Component {
 
     Taro.showModal({
       content: '点击了更多!',
-      cancelText: '取消',
+      cancelText: '取消'
     })
   }
 

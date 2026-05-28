@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
-$at-tag-border-size: 1PX;
+$at-tag-border-size: 1px;
 
 .at-tag {
   display: inline-block;

@@ -86,14 +86,8 @@ export default class Index extends React.Component<{}, IndexState> {
   }
 
   public render(): JSX.Element {
-    const {
-      now,
-      minDate,
-      maxDate,
-      mark,
-      multiCurentDate,
-      validDates
-    } = this.state
+    const { now, minDate, maxDate, mark, multiCurentDate, validDates } =
+      this.state
     return (
       <View className='page calendar-page'>
         <DocsHeader title='Calendar 日历' />

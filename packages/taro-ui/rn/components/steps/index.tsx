@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-ignore */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import classNames from 'classnames'
 import PropTypes, { InferProps } from 'prop-types'
 import React from 'react'
@@ -30,7 +30,7 @@ export default class AtSteps extends React.Component<AtStepsProps> {
                 className={classNames({
                   'at-steps__item': true,
                   'at-steps__item--active': active,
-                  'at-steps__item--inactive': inactive,
+                  'at-steps__item--inactive': inactive
                 })}
                 onClick={this.handleClick.bind(this, i)}
               >
@@ -53,7 +53,7 @@ export default class AtSteps extends React.Component<AtStepsProps> {
                         'at-steps__single-icon': true,
                         'at-steps__single-icon--success':
                           item.status === 'success',
-                        'at-steps__single-icon--error': item.status === 'error',
+                        'at-steps__single-icon--error': item.status === 'error'
                       })}
                       value={
                         item.status === 'success'
@@ -64,7 +64,7 @@ export default class AtSteps extends React.Component<AtStepsProps> {
                   ) : (
                     <View
                       className={classNames('at-steps__circular', {
-                        'at-steps__circular--active': active,
+                        'at-steps__circular--active': active
                       })}
                     >
                       {item.icon ? (
@@ -72,7 +72,7 @@ export default class AtSteps extends React.Component<AtStepsProps> {
                           className={classNames('at-icon', {
                             'at-steps__circle-icon': true,
                             'at-steps__circle-icon--active': active,
-                            'at-steps__circle-icon--inactive': inactive,
+                            'at-steps__circle-icon--inactive': inactive
                           })}
                           value={item.icon.value}
                         />
@@ -81,7 +81,7 @@ export default class AtSteps extends React.Component<AtStepsProps> {
                           className={classNames({
                             'at-steps__num': true,
                             'at-steps__item--text__active': active,
-                            'at-steps__item--inactive': inactive,
+                            'at-steps__item--inactive': inactive
                           })}
                         >
                           {i + 1}
@@ -121,7 +121,7 @@ AtSteps.defaultProps = {
   current: 0,
   items: [],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onChange: (): void => {},
+  onChange: (): void => {}
 }
 
 AtSteps.propTypes = {
@@ -129,5 +129,5 @@ AtSteps.propTypes = {
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   current: PropTypes.number,
   items: PropTypes.array,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func
 }

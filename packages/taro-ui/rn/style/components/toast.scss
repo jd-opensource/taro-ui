@@ -16,7 +16,10 @@ $at-toast-image-size: 120px !default;
 $at-toast-font-size: $font-size-base !default;
 $at-toast-icon-size: 80px !default;
 $at-toast-color: $color-white;
-$at-toast-bg-color: rgba($color: $color-black-0, $alpha: 0.8);
+$at-toast-bg-color: rgba(
+  $color: $color-black-0,
+  $alpha: 0.8
+);
 
 .at-toast {
   width: 100%;
@@ -47,7 +50,7 @@ $at-toast-bg-color: rgba($color: $color-black-0, $alpha: 0.8);
   &__body {
     &--loading {
       .toast-body-content__img-item {
-       //  animation: atRotate 1350ms linear infinite;
+        //  animation: atRotate 1350ms linear infinite;
       }
     }
   }

@@ -21,7 +21,6 @@ $ yarn global add @tarojs/cli
 
 使用命令创建模板项目
 
-
 ```bash
 $ taro init myApp
 ```
@@ -53,21 +52,22 @@ h5: {
 ## 使用 Taro UI
 
 ### 常规引入样式
+
 - **方式 1：** 在入口文件中引入 `taro-ui` 所有的样式
-  
+
   ```js
-  import 'taro-ui/dist/style/index.scss' 
+  import 'taro-ui/dist/style/index.scss'
   ```
 
 - **方式 2：** 在 `app.scss` 样式文件中 `import` 组件样式并按照文档说明使用
-  
+
   ```scss
-  @import '~taro-ui/dist/style/index.scss'; 
+  @import '~taro-ui/dist/style/index.scss';
   ```
 
 ### 按需引入样式
 
-- **方式 1：**  在页面样式或全局样式中 import 需要的组件样式
+- **方式 1：** 在页面样式或全局样式中 import 需要的组件样式
 
   ```scss
   @import '~taro-ui/dist/style/components/button.scss';
@@ -112,6 +112,7 @@ h5: {
   ```
 
 ## 注意事项
+
 ::: caution
 
 在 taro3.5 之后的版本中，在开启 `prebundle` (默认开启)的情况下，会导致 taro-ui 所引用的 @taro/components 组件没有被打进最终的 bundle 中，导致页面表现异常。
@@ -126,18 +127,15 @@ module.exports = {
     prebundle: {
       exclude: ['taro-ui']
     }
-  },
+  }
 }
 ```
 
 > 具体的组件样式文件请查看 [组件样式列表](https://github.com/NervJS/taro-ui/tree/dev/src/style/components)
 
-
 ## 示例
 
 在 `/myApp/src/pages/index/index.tsx` 文件添加以下代码
-
-
 
 ```jsx
 import Taro, { Component, Config } from '@tarojs/taro'
@@ -163,8 +161,6 @@ export default class Index extends Component {
 
 在 `/myApp/src/app.scss` 文件中添加如下代码
 
-
-
 ```scss
 @import '~taro-ui/dist/style/index.scss'; // 引入组件样式，仅需引入一次即可
 ```
@@ -172,8 +168,6 @@ export default class Index extends Component {
 ## 按需引入
 
 如果你只希望引入部分组件，比如 Button，那么可以只 `@import` 需要的样式文件
-
-
 
 ```scss
 @import '~taro-ui/dist/style/components/button.scss';
@@ -184,8 +178,6 @@ export default class Index extends Component {
 进入项目目录开始开发，可以选择小程序预览模式，或者 h5 预览模式，若使用小程序预览模式，则需要自行下载并打开对应的小程序开发者工具，并选择预览项目根目录。
 
 **微信小程序编译预览模式**
-
-
 
 ```bash
 # npm script
@@ -198,8 +190,6 @@ $ npx taro build --type weapp --watch
 
 **支付宝小程序编译预览模式**
 
-
-
 ```bash
 # npm script
 $ npm run dev:alipay
@@ -210,8 +200,6 @@ $ npx taro build --type alipay --watch
 ```
 
 **百度小程序编译预览模式**
-
-
 
 ```bash
 # npm script
@@ -224,8 +212,6 @@ $ npx taro build --type swan --watch
 
 **H5 编译预览模式**
 
-
-
 ```bash
 # npm script
 $ npm run dev:h5
@@ -234,4 +220,3 @@ $ taro build --type h5 --watch
 # npx 用户也可以使用
 $ npx taro build --type h5 --watch
 ```
-

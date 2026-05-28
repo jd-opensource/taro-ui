@@ -20,13 +20,13 @@ export default class AtCurtain extends React.Component<AtCurtainProps> {
     const curtainClass = classNames(
       {
         'at-curtain': true,
-        'at-curtain--closed': !isOpened,
+        'at-curtain--closed': !isOpened
       },
-      className,
+      className
     )
     const btnCloseClass = classNames({
       'at-curtain__btn-close': true,
-      [`at-curtain__btn-close--${closeBtnPosition}`]: closeBtnPosition,
+      [`at-curtain__btn-close--${closeBtnPosition}`]: closeBtnPosition
     })
 
     return (
@@ -63,7 +63,7 @@ AtCurtain.defaultProps = {
   isOpened: false,
   closeBtnPosition: 'bottom',
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClose: (): void => {},
+  onClose: (): void => {}
 }
 
 AtCurtain.propTypes = {
@@ -71,5 +71,5 @@ AtCurtain.propTypes = {
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   isOpened: PropTypes.bool,
   closeBtnPosition: PropTypes.string,
-  onClose: PropTypes.func,
+  onClose: PropTypes.func
 }

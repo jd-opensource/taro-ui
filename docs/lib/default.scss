@@ -2,774 +2,776 @@
  * Default Variables
  */
 
- /* Prefix */
+/* Prefix */
 $css-prefix: at;
 
 /* The Color of O2Team Brand */
-$brand-color                : #6190E8;
-$brand-color-light          : #78A4F4;
-$brand-color-dark           : #346FC2;
+$brand-color: #6190e8;
+$brand-color-light: #78a4f4;
+$brand-color-dark: #346fc2;
 
 /* Color */
-$color-normal               : #6190E8;
-$color-primary              : #6190E8;
-$color-success              : #13CE66;
-$color-error                : #FF4949;
-$color-warning              : #FFC82C;
-$color-info                 : #78A4FA;
-$color-white                : #FFF;
+$color-normal: #6190e8;
+$color-primary: #6190e8;
+$color-success: #13ce66;
+$color-error: #ff4949;
+$color-warning: #ffc82c;
+$color-info: #78a4fa;
+$color-white: #fff;
 
 /* Color PalettC */
-$brand-blue-50              : #ECF2FC;
-$brand-blue-100             : #D0DEF8;
-$brand-blue-200             : #B0C8F4;
-$brand-blue-300             : #90B1EF;
-$brand-blue-400             : #79A1EB;
-$brand-blue-500             : #6190E8;
-$brand-blue-600             : #5988E5;
-$brand-blue-700             : #4F7DE2;
-$brand-blue-800             : #4573DE;
-$brand-blue-900             : #3361D8;
+$brand-blue-50: #ecf2fc;
+$brand-blue-100: #d0def8;
+$brand-blue-200: #b0c8f4;
+$brand-blue-300: #90b1ef;
+$brand-blue-400: #79a1eb;
+$brand-blue-500: #6190e8;
+$brand-blue-600: #5988e5;
+$brand-blue-700: #4f7de2;
+$brand-blue-800: #4573de;
+$brand-blue-900: #3361d8;
 
-$green-50                   : #E3F9ED;
-$green-100                  : #B8F0D1;
-$green-200                  : #89E7B3;
-$green-300                  : #5ADD94;
-$green-400                  : #36D57D;
-$green-500                  : #13CE66;
-$green-600                  : #11C95E;
-$green-700                  : #0EC253;
-$green-800                  : #0BBC49;
-$green-900                  : #06B038;
+$green-50: #e3f9ed;
+$green-100: #b8f0d1;
+$green-200: #89e7b3;
+$green-300: #5add94;
+$green-400: #36d57d;
+$green-500: #13ce66;
+$green-600: #11c95e;
+$green-700: #0ec253;
+$green-800: #0bbc49;
+$green-900: #06b038;
 
-$red-50                     : #FFE9E9;
-$red-100                    : #FFC8C8;
-$red-200                    : #FFA4A4;
-$red-300                    : #FF8080;
-$red-400                    : #FF6464;
-$red-500                    : #FF4949;
-$red-600                    : #FF4242;
-$red-700                    : #FF3939;
-$red-800                    : #FF3131;
-$red-900                    : #FF2121;
+$red-50: #ffe9e9;
+$red-100: #ffc8c8;
+$red-200: #ffa4a4;
+$red-300: #ff8080;
+$red-400: #ff6464;
+$red-500: #ff4949;
+$red-600: #ff4242;
+$red-700: #ff3939;
+$red-800: #ff3131;
+$red-900: #ff2121;
 
-$yellow-50                  : #FFF8E6;
-$yellow-100                 : #FFEFC0;
-$yellow-200                 : #FFE496;
-$yellow-300                 : #FFD96B;
-$yellow-400                 : #FFD04C;
-$yellow-500                 : #FFC82C;
-$yellow-600                 : #FFC227;
-$yellow-700                 : #FFBB21;
-$yellow-800                 : #FFB41B;
-$yellow-900                 : #FFA710;
+$yellow-50: #fff8e6;
+$yellow-100: #ffefc0;
+$yellow-200: #ffe496;
+$yellow-300: #ffd96b;
+$yellow-400: #ffd04c;
+$yellow-500: #ffc82c;
+$yellow-600: #ffc227;
+$yellow-700: #ffbb21;
+$yellow-800: #ffb41b;
+$yellow-900: #ffa710;
 
-$blue-50                    : #EFF4FE;
-$blue-100                   : #D7E4FE;
-$blue-200                   : #BCD2FD;
-$blue-300                   : #A1BFFC;
-$blue-400                   : #8CB2FB;
-$blue-500                   : #78A4FA;
-$blue-600                   : #709CF9;
-$blue-700                   : #6592F9;
-$blue-800                   : #5B89F8;
-$blue-900                   : #4878F6;
+$blue-50: #eff4fe;
+$blue-100: #d7e4fe;
+$blue-200: #bcd2fd;
+$blue-300: #a1bffc;
+$blue-400: #8cb2fb;
+$blue-500: #78a4fa;
+$blue-600: #709cf9;
+$blue-700: #6592f9;
+$blue-800: #5b89f8;
+$blue-900: #4878f6;
 
-$grey-50                    : #F7F7F7;
-$grey-100                   : #ECECEC;
-$grey-200                   : #DFDFDF;
-$grey-300                   : #D2D2D2;
-$grey-400                   : #C9C9C9;
-$grey-500                   : #BFBFBF;
-$grey-600                   : #B9B9B9;
-$grey-700                   : #B1B1B1;
-$grey-800                   : #A9A9A9;
-$grey-900                   : #9B9B9B;
+$grey-50: #f7f7f7;
+$grey-100: #ececec;
+$grey-200: #dfdfdf;
+$grey-300: #d2d2d2;
+$grey-400: #c9c9c9;
+$grey-500: #bfbfbf;
+$grey-600: #b9b9b9;
+$grey-700: #b1b1b1;
+$grey-800: #a9a9a9;
+$grey-900: #9b9b9b;
 
-$black-50                   : #E6E8EB;
-$black-100                  : #C0C6CE;
-$black-200                  : #96A0AD;
-$black-300                  : #6B798C;
-$black-400                  : #4C5D73;
-$black-500                  : #2C405A;;
-$black-600                  : #273A52;
-$black-700                  : #213248;
-$black-800                  : #1B2A3F;
-$black-900                  : #101C2E;
+$black-50: #e6e8eb;
+$black-100: #c0c6ce;
+$black-200: #96a0ad;
+$black-300: #6b798c;
+$black-400: #4c5d73;
+$black-500: #2c405a;
+$black-600: #273a52;
+$black-700: #213248;
+$black-800: #1b2a3f;
+$black-900: #101c2e;
 
-$text-color                 : #3F536E;
-$title-color                : #2C405A;;
+$text-color: #3f536e;
+$title-color: #2c405a;
 
-$border-color-gray          : #CCC;
-$border-color-base          : #C5D9E8;
-$border-color-split         : tint($border-color-base, 20%);
-$border-color-light         : tint($border-color-base, 30%);
-$border-color-lighter       : tint($border-color-base, 50%);
-$border-color-lightest      : tint($border-color-base, 80%);
+$border-color-gray: #ccc;
+$border-color-base: #c5d9e8;
+$border-color-split: tint($border-color-base, 20%);
+$border-color-light: tint($border-color-base, 30%);
+$border-color-lighter: tint($border-color-base, 50%);
+$border-color-lightest: tint($border-color-base, 80%);
 
-$bg-color                   : $color-white;
-$bg-color-base              : #FAFBFC;
-$bg-color-light             : #ECF5FD;
-$bg-color-lighter           : tint($bg-color-light, 50%);
-$bg-color-gray              : #f7f7f7;
+$bg-color: $color-white;
+$bg-color-base: #fafbfc;
+$bg-color-light: #ecf5fd;
+$bg-color-lighter: tint($bg-color-light, 50%);
+$bg-color-gray: #f7f7f7;
 
 /* Assistant Color */
-$roof-color                 : #C2ABC7;
-$curtain-color              : #F0D0D5;
-$door-color                 : #F1E4ED;
-$wall-color                 : #EEF0F0;
+$roof-color: #c2abc7;
+$curtain-color: #f0d0d5;
+$door-color: #f1e4ed;
+$wall-color: #eef0f0;
 
 /* Border */
-$border-radius-base         : 4px;
-$border-radius-sm           : 4px;
+$border-radius-base: 4px;
+$border-radius-sm: 4px;
 
 /* Font */
-$font-family                : -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-$code-family                : Consolas, Menlo, Courier, monospace;
+$font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+  'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
+  sans-serif;
+$code-family: Consolas, Menlo, Courier, monospace;
 
-$font-size-smest            : 11px;
-$font-size-smer             : 12px;
-$font-size-sm               : 13px;
-$font-size-base             : 14px;
-$font-size-normal           : 16px;
-$font-size-lg               : 18px;
-$font-size-lger             : 20px;
+$font-size-smest: 11px;
+$font-size-smer: 12px;
+$font-size-sm: 13px;
+$font-size-base: 14px;
+$font-size-normal: 16px;
+$font-size-lg: 18px;
+$font-size-lger: 20px;
 
-$line-height-base           : 1.5;
-$line-height-computed       : floor($font-size-base * $line-height-base);
+$line-height-base: 1.5;
+$line-height-computed: floor($font-size-base * $line-height-base);
 
 /* Link */
-$link-color                 : $brand-blue-500;
-$link-hover-color           : $brand-blue-400;
-$link-active-color          : $brand-blue-700;
-$link-disabled-color        : $grey-500;
-$link-hover-decoration      : none;
+$link-color: $brand-blue-500;
+$link-hover-color: $brand-blue-400;
+$link-active-color: $brand-blue-700;
+$link-disabled-color: $grey-500;
+$link-hover-decoration: none;
 
 /* Disabled cursor */
-$cursor-disabled            : not-allowed;
+$cursor-disabled: not-allowed;
 
 /* Shadow */
-$shadow-color               : rgba(100, 100, 100, .2);
-$shadow-1px-up              : 0 -1px 6px $shadow-color;
-$shadow-1px-down            : 0 1px 6px $shadow-color;
-$shadow-1px-left            : -1px 0 6px $shadow-color;
-$shadow-1px-right           : 1px 0 6px $shadow-color;
+$shadow-color: rgba(100, 100, 100, 0.2);
+$shadow-1px-up: 0 -1px 6px $shadow-color;
+$shadow-1px-down: 0 1px 6px $shadow-color;
+$shadow-1px-left: -1px 0 6px $shadow-color;
+$shadow-1px-right: 1px 0 6px $shadow-color;
 
 /* Button */
-$btn-default-color          : $text-color;
-$btn-default-bg             : $color-white;
-$btn-default-bg-hover       : $border-color-lightest;
-$btn-default-bg-active      : $border-color-lighter;
-$btn-default-border         : $border-color-base;
+$btn-default-color: $text-color;
+$btn-default-bg: $color-white;
+$btn-default-bg-hover: $border-color-lightest;
+$btn-default-bg-active: $border-color-lighter;
+$btn-default-border: $border-color-base;
 
-$btn-primary-bg             : $brand-blue-500;
-$btn-primary-border         : $brand-blue-500;
+$btn-primary-bg: $brand-blue-500;
+$btn-primary-border: $brand-blue-500;
 
-$btn-success-bg             : $green-500;
-$btn-success-border         : $green-500;
+$btn-success-bg: $green-500;
+$btn-success-border: $green-500;
 
-$btn-error-bg               : $red-500;
-$btn-error-border           : $red-500;
+$btn-error-bg: $red-500;
+$btn-error-border: $red-500;
 
-$btn-warning-bg             : $yellow-500;
-$btn-warning-border         : $yellow-500;
+$btn-warning-bg: $yellow-500;
+$btn-warning-border: $yellow-500;
 
-$btn-info-bg                : $blue-500;
-$btn-info-border            : $blue-500;
+$btn-info-bg: $blue-500;
+$btn-info-border: $blue-500;
 
-$btn-text-border            : $brand-blue-500;
+$btn-text-border: $brand-blue-500;
 
-$btn-disabled-color         : $grey-300;
-$btn-disabled-bg            : $grey-50;
-$btn-disabled-border        : $grey-100;
+$btn-disabled-color: $grey-300;
+$btn-disabled-bg: $grey-50;
+$btn-disabled-border: $grey-100;
 
-$btn-font-weight            : 500;
+$btn-font-weight: 500;
 
-$btn-font-size-smer         : 10px;
-$btn-font-size-sm           : 11px;
-$btn-font-size-base         : 12px;
-$btn-font-size-md           : 14px;
-$btn-font-size-lg           : 16px;
+$btn-font-size-smer: 10px;
+$btn-font-size-sm: 11px;
+$btn-font-size-base: 12px;
+$btn-font-size-md: 14px;
+$btn-font-size-lg: 16px;
 
-$btn-padding-smer           : 2px 10px;
-$btn-padding-sm             : 4px 12px;
-$btn-padding-base           : 6px 16px;
-$btn-padding-md             : 8px 16px;
-$btn-padding-lg             : 10px 18px;
+$btn-padding-smer: 2px 10px;
+$btn-padding-sm: 4px 12px;
+$btn-padding-base: 6px 16px;
+$btn-padding-md: 8px 16px;
+$btn-padding-lg: 10px 18px;
 
-$btn-circle-size-smer       : 24px;
-$btn-circle-size-sm         : 28px;
-$btn-circle-size            : 32px;
-$btn-circle-size-lg         : 40px;
+$btn-circle-size-smer: 24px;
+$btn-circle-size-sm: 28px;
+$btn-circle-size: 32px;
+$btn-circle-size-lg: 40px;
 
 /* Tag */
-$tag-bg-color               : $grey-50;
-$tag-border-color           : $grey-200;
+$tag-bg-color: $grey-50;
+$tag-border-color: $grey-200;
 
 /* Checkbox */
-$checkbox-size              : 16px;
-$checkbox-font-size         : $font-size-smer;
+$checkbox-size: 16px;
+$checkbox-font-size: $font-size-smer;
 
-$checkbox-border-c          : $border-color-base;
-$checkbox-border-c-hover    : $brand-blue-400;
-$checkbox-border-c-checked  : $brand-blue-400;
-$checkbox-border-c-disabled : $grey-100;
-$checkbox-bg-c-disabled     : $grey-50;
-$checkbox-label-c-disabled  : $grey-700;
+$checkbox-border-c: $border-color-base;
+$checkbox-border-c-hover: $brand-blue-400;
+$checkbox-border-c-checked: $brand-blue-400;
+$checkbox-border-c-disabled: $grey-100;
+$checkbox-bg-c-disabled: $grey-50;
+$checkbox-label-c-disabled: $grey-700;
 
 /* Input */
-$input-font-size-sm         : 11px;
-$input-font-size-base       : 12px;
-$input-font-size-lg         : 14px;
+$input-font-size-sm: 11px;
+$input-font-size-base: 12px;
+$input-font-size-lg: 14px;
 
-$input-padding-sm           : 4px 10px;
-$input-padding-base         : 6px 12px;
-$input-padding-lg           : 8px 14px;
+$input-padding-sm: 4px 10px;
+$input-padding-base: 6px 12px;
+$input-padding-lg: 8px 14px;
 
-$input-font-color           : $text-color;
-$input-font-color-disabled  : $grey-700;
+$input-font-color: $text-color;
+$input-font-color-disabled: $grey-700;
 
-$input-border-color          : $border-color-base;
-$input-border-color-hover    : $brand-blue-400;
-$input-border-color-focus    : $brand-blue-400;
-$input-border-color-disabled : $grey-100;
-$input-border-color-success  : $color-success;
-$input-border-color-error    : $color-error;
-$input-border-color-warning  : $color-warning;
-$input-border-color-info     : $color-info;
+$input-border-color: $border-color-base;
+$input-border-color-hover: $brand-blue-400;
+$input-border-color-focus: $brand-blue-400;
+$input-border-color-disabled: $grey-100;
+$input-border-color-success: $color-success;
+$input-border-color-error: $color-error;
+$input-border-color-warning: $color-warning;
+$input-border-color-info: $color-info;
 
-$input-bg-color             : $color-white;
-$input-bg-color-disabled    : $grey-50;
+$input-bg-color: $color-white;
+$input-bg-color-disabled: $grey-50;
 
-$input-icon-color           : $border-color-base;
-$input-icon-font-size       : 15px;
+$input-icon-color: $border-color-base;
+$input-icon-font-size: 15px;
 
-$input-placeholder-color          : $grey-400;
-$input-placeholder-color-disabled : $grey-400;
+$input-placeholder-color: $grey-400;
+$input-placeholder-color-disabled: $grey-400;
 
-$input-group-font-color      : $grey-900;
-$input-group-bg-color        : $grey-50;
-$input-group-bg-color-hover  : $grey-100;
-$input-group-bg-color-active : $grey-200;
+$input-group-font-color: $grey-900;
+$input-group-bg-color: $grey-50;
+$input-group-bg-color-hover: $grey-100;
+$input-group-bg-color-active: $grey-200;
 
 /* InputNumber */
-$inputnumber-min-width      : 80px;
-$inputnumber-height-sm      : 28px;
-$inputnumber-height-base    : 32px;
-$inputnumber-height-lg      : 36px;
+$inputnumber-min-width: 80px;
+$inputnumber-height-sm: 28px;
+$inputnumber-height-base: 32px;
+$inputnumber-height-lg: 36px;
 
-$inputnumber-font-color     : $input-font-color;
+$inputnumber-font-color: $input-font-color;
 
-$inputnumber-bg-color           : $input-bg-color;
-$inputnumber-bg-color-disabled  : $input-bg-color-disabled;
+$inputnumber-bg-color: $input-bg-color;
+$inputnumber-bg-color-disabled: $input-bg-color-disabled;
 
-$inputnumber-border-radius          : $border-radius-base;
-$inputnumber-border-color           : $input-border-color;
-$inputnumber-border-color-hover     : $input-border-color-hover;
-$inputnumber-border-color-disabled  : $input-border-color-disabled;
+$inputnumber-border-radius: $border-radius-base;
+$inputnumber-border-color: $input-border-color;
+$inputnumber-border-color-hover: $input-border-color-hover;
+$inputnumber-border-color-disabled: $input-border-color-disabled;
 
-$inputnumber-padding-sm           : 0 8px;
-$inputnumber-padding-base         : 0 8px;
-$inputnumber-padding-lg           : 0 8px;
+$inputnumber-padding-sm: 0 8px;
+$inputnumber-padding-base: 0 8px;
+$inputnumber-padding-lg: 0 8px;
 
-$inputnumber-handler-width            : 22px;
-$inputnumber-handler-border-color     : $grey-200;
-$inputnumber-handler-bg-color-active  : $grey-100;
+$inputnumber-handler-width: 22px;
+$inputnumber-handler-border-color: $grey-200;
+$inputnumber-handler-bg-color-active: $grey-100;
 
-$inputnumber-handler-font-color       : $grey-500;
-$inputnumber-handler-font-color-hover : $grey-900;
+$inputnumber-handler-font-color: $grey-500;
+$inputnumber-handler-font-color-hover: $grey-900;
 
-$inputnumber-handler-font-size-sm   : 9px;
-$inputnumber-handler-font-size-base : 10px;
-$inputnumber-handler-font-size-lg   : 11px;
+$inputnumber-handler-font-size-sm: 9px;
+$inputnumber-handler-font-size-base: 10px;
+$inputnumber-handler-font-size-lg: 11px;
 
-$inputnumber-handler-ele-height-sm    : 14px;
-$inputnumber-handler-ele-height-base  : 16px;
-$inputnumber-handler-ele-height-lg    : 18px;
+$inputnumber-handler-ele-height-sm: 14px;
+$inputnumber-handler-ele-height-base: 16px;
+$inputnumber-handler-ele-height-lg: 18px;
 
-$inputnumber-handler-ele-height-sm-hover    : 16px;
-$inputnumber-handler-ele-height-base-hover  : 18px;
-$inputnumber-handler-ele-height-lg-hover    : 20px;
+$inputnumber-handler-ele-height-sm-hover: 16px;
+$inputnumber-handler-ele-height-base-hover: 18px;
+$inputnumber-handler-ele-height-lg-hover: 20px;
 
-$inputnumber-handler-ele-font-color-disabled : $grey-100;
+$inputnumber-handler-ele-font-color-disabled: $grey-100;
 
 /* Switch */
-$switch-min-width-sm        : 32px;
-$switch-min-width-base      : 40px;
-$switch-min-width-lg        : 48px;
+$switch-min-width-sm: 32px;
+$switch-min-width-base: 40px;
+$switch-min-width-lg: 48px;
 
-$switch-height-sm           : 16px;
-$switch-height-base         : 20px;
-$switch-height-lg           : 24px;
+$switch-height-sm: 16px;
+$switch-height-base: 20px;
+$switch-height-lg: 24px;
 
-$switch-border-radius-sm      : 16px;
-$switch-border-radius-base    : 20px;
-$switch-border-radius-lg      : 24px;
+$switch-border-radius-sm: 16px;
+$switch-border-radius-base: 20px;
+$switch-border-radius-lg: 24px;
 
-$switch-border-color          : $grey-500;
-$switch-border-color-checked  : $brand-blue-400;
-$switch-border-color-disabled : $grey-100;
+$switch-border-color: $grey-500;
+$switch-border-color-checked: $brand-blue-400;
+$switch-border-color-disabled: $grey-100;
 
-$switch-bg-color            : $grey-500;
-$switch-bg-color-checked    : $brand-blue-400;
-$switch-bg-color-disabled   : $grey-100;
+$switch-bg-color: $grey-500;
+$switch-bg-color-checked: $brand-blue-400;
+$switch-bg-color-disabled: $grey-100;
 
-$switch-font-color          : $color-white;
-$switch-font-color-disabled : $grey-300;
+$switch-font-color: $color-white;
+$switch-font-color-disabled: $grey-300;
 
-$switch-font-size-sm        : $font-size-smest;
-$switch-font-size-base      : $font-size-smer;
-$switch-font-size-lg        : $font-size-sm;
+$switch-font-size-sm: $font-size-smest;
+$switch-font-size-base: $font-size-smer;
+$switch-font-size-lg: $font-size-sm;
 
-$switch-circle-size-sm            : 12px;
-$switch-circle-size-base          : 16px;
-$switch-circle-size-lg            : 20px;
+$switch-circle-size-sm: 12px;
+$switch-circle-size-base: 16px;
+$switch-circle-size-lg: 20px;
 
-$switch-circle-bg-color           : $color-white;
-$switch-circle-bg-color-disabled  : $grey-400;
+$switch-circle-bg-color: $color-white;
+$switch-circle-bg-color-disabled: $grey-400;
 
 /* Slider */
-$slider-bar-height            : 4px;
-$slider-margin                : 8px 0;
+$slider-bar-height: 4px;
+$slider-margin: 8px 0;
 
-$slider-bar-bg-color          : $brand-blue-400;
-$slider-bar-bg-color-disabled : $grey-400;
-$slider-track-bg-color        : $grey-100;
-$slider-bar-border-radius     : 2px;
+$slider-bar-bg-color: $brand-blue-400;
+$slider-bar-bg-color-disabled: $grey-400;
+$slider-track-bg-color: $grey-100;
+$slider-bar-border-radius: 2px;
 
-$slider-dot-color             : $brand-blue-400;
-$slider-dot-color-hover       : $brand-blue-600;
-$slider-dot-color-disabled    : $grey-300;
-$slider-dot-size              : 12px;
-$slider-dot-wrapper-size      : $slider-dot-size;
-$slider-dot-wrapper-offset    : -6px;
+$slider-dot-color: $brand-blue-400;
+$slider-dot-color-hover: $brand-blue-600;
+$slider-dot-color-disabled: $grey-300;
+$slider-dot-size: 12px;
+$slider-dot-wrapper-size: $slider-dot-size;
+$slider-dot-wrapper-offset: -6px;
 
 /* Textarea */
-$textarea-padding           : 6px 8px;
+$textarea-padding: 6px 8px;
 
 /* Alert */
-$alert-padding                : 8px 16px;
-$alert-padding-lg             : 14px 16px;
-$alert-border-radius          : $border-radius-base;
+$alert-padding: 8px 16px;
+$alert-padding-lg: 14px 16px;
+$alert-border-radius: $border-radius-base;
 
-$alert-text-color-success     : #53664A;
-$alert-text-color-error       : #AD3430;
-$alert-text-color-warning     : #7F6128;
-$alert-text-color-info        : #3B688C;
+$alert-text-color-success: #53664a;
+$alert-text-color-error: #ad3430;
+$alert-text-color-warning: #7f6128;
+$alert-text-color-info: #3b688c;
 
-$alert-message-font-size      : $font-size-sm;
-$alert-description-font-size  : $font-size-smer;
-$alert-close-font-size        : $font-size-smer;
+$alert-message-font-size: $font-size-sm;
+$alert-description-font-size: $font-size-smer;
+$alert-close-font-size: $font-size-smer;
 
-$alert-icon-font-size         : 15px;
-$alert-icon-font-size-lg      : 28px;
+$alert-icon-font-size: 15px;
+$alert-icon-font-size-lg: 28px;
 
-$alert-icon-color-success     : #7D9970;
-$alert-icon-color-error       : #FA4C46;
-$alert-icon-color-warning     : #CC9B3F;
-$alert-icon-color-info        : #66B3F3;
+$alert-icon-color-success: #7d9970;
+$alert-icon-color-error: #fa4c46;
+$alert-icon-color-warning: #cc9b3f;
+$alert-icon-color-info: #66b3f3;
 
-$alert-bg-color-success     : $green-50;
-$alert-bg-color-error       : $red-50;
-$alert-bg-color-warning     : $yellow-50;
-$alert-bg-color-info        : $blue-50;
+$alert-bg-color-success: $green-50;
+$alert-bg-color-error: $red-50;
+$alert-bg-color-warning: $yellow-50;
+$alert-bg-color-info: $blue-50;
 
-$alert-border-color-success : $green-100;
-$alert-border-color-error   : $red-100;
-$alert-border-color-warning : $yellow-100;
-$alert-border-color-info    : $blue-100;
+$alert-border-color-success: $green-100;
+$alert-border-color-error: $red-100;
+$alert-border-color-warning: $yellow-100;
+$alert-border-color-info: $blue-100;
 
 /* Badge */
-$badge-height               : 18px;
-$badge-padding              : 0 6px;
-$badge-border-radius        : $badge-height / 2;
-$badge-font-size            : $font-size-smer;
-$badge-font-color           : $color-white;
+$badge-height: 18px;
+$badge-padding: 0 6px;
+$badge-border-radius: $badge-height / 2;
+$badge-font-size: $font-size-smer;
+$badge-font-color: $color-white;
 
-$badge-bg-color             : $red-500;
-$badge-bg-color-success     : $green-500;
-$badge-bg-color-warning     : $yellow-500;
-$badge-bg-color-info        : $blue-500;
+$badge-bg-color: $red-500;
+$badge-bg-color-success: $green-500;
+$badge-bg-color-warning: $yellow-500;
+$badge-bg-color-info: $blue-500;
 
-$badge-dot-size             : 10px;
+$badge-dot-size: 10px;
 
 /* Card */
-$card-bg-color              : $color-white;
-$card-border-color          : $grey-100;
-$card-border-color-hover    : $grey-50;
-$card-border-radius         : $border-radius-base;
-$card-head-height           : 48px;
+$card-bg-color: $color-white;
+$card-border-color: $grey-100;
+$card-border-color-hover: $grey-50;
+$card-border-radius: $border-radius-base;
+$card-head-height: 48px;
 
 /* Collapse */
-$collapse-border-color               : $grey-200;
-$collapse-border-radius              : $border-radius-base;
+$collapse-border-color: $grey-200;
+$collapse-border-radius: $border-radius-base;
 
-$collapse-header-bg-color            : $grey-50;
-$collapse-header-text-color          : $title-color;
-$collapse-header-text-color-disabled : $grey-400;
+$collapse-header-bg-color: $grey-50;
+$collapse-header-text-color: $title-color;
+$collapse-header-text-color-disabled: $grey-400;
 
-$collapse-icon-size                  : $font-size-smer;
-$collapse-icon-color                 : tint($title-color, 50%);
+$collapse-icon-size: $font-size-smer;
+$collapse-icon-color: tint($title-color, 50%);
 
-$collapse-body-text-color            : $text-color;
-$collapse-body-bg-color              : $color-white;
+$collapse-body-text-color: $text-color;
+$collapse-body-bg-color: $color-white;
 
 /* Loading Bar */
-$loading-bar-bg-color-success   : $color-primary;
-$loading-bar-bg-color-error     : $color-error;
+$loading-bar-bg-color-success: $color-primary;
+$loading-bar-bg-color-error: $color-error;
 
 /* Modal */
-$modal-initial-top          : 100px;
-$modal-bg-color             : $color-white;
-$modal-mask-bg-color        : rgba(0, 0, 0, .5);
-$modal-section-border-color : $grey-100;
+$modal-initial-top: 100px;
+$modal-bg-color: $color-white;
+$modal-mask-bg-color: rgba(0, 0, 0, 0.5);
+$modal-section-border-color: $grey-100;
 
-$modal-header-padding       : 12px 16px;
-$modal-header-font-size     : $font-size-base;
-$modal-close-font-size      : $font-size-sm;
-$modal-icon-font-size       : 32px;
+$modal-header-padding: 12px 16px;
+$modal-header-font-size: $font-size-base;
+$modal-close-font-size: $font-size-sm;
+$modal-icon-font-size: 32px;
 
-$modal-body-padding         : 16px;
-$modal-body-font-size       : $font-size-sm;
+$modal-body-padding: 16px;
+$modal-body-font-size: $font-size-sm;
 
-$modal-footer-padding       : 12px 16px;
+$modal-footer-padding: 12px 16px;
 
-$modal-icon-color-success  : $green-300;
-$modal-icon-color-error    : $red-300;
-$modal-icon-color-warning  : $yellow-300;
-$modal-icon-color-info     : $blue-300;
+$modal-icon-color-success: $green-300;
+$modal-icon-color-error: $red-300;
+$modal-icon-color-warning: $yellow-300;
+$modal-icon-color-info: $blue-300;
 
 /* Message */
-$message-padding            : 6px 16px;
-$message-font-size          : $font-size-sm;
-$message-bg-color           : $color-white;
-$message-box-shadow         : 0 1px 8px rgba(0, 0, 0, .15);
+$message-padding: 6px 16px;
+$message-font-size: $font-size-sm;
+$message-bg-color: $color-white;
+$message-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 
-$message-icon-color-success  : $green-300;
-$message-icon-color-error    : $red-300;
-$message-icon-color-warning  : $yellow-300;
-$message-icon-color-info     : $blue-300;
-$message-icon-color-loading  : $blue-300;
+$message-icon-color-success: $green-300;
+$message-icon-color-error: $red-300;
+$message-icon-color-warning: $yellow-300;
+$message-icon-color-info: $blue-300;
+$message-icon-color-loading: $blue-300;
 
 /* Radio */
-$radio-size                 : 16px;
-$radio-dot-size             : 8px;
-$radio-font-size            : $font-size-smer;
+$radio-size: 16px;
+$radio-dot-size: 8px;
+$radio-font-size: $font-size-smer;
 
-$radio-border-c-hover       : $brand-blue-400;
-$radio-border-c-checked     : $brand-blue-400;
-$radio-border-c-disabled    : $grey-100;
-$radio-bg-c-disabled        : $grey-50;
-$radio-dot-c-disabled       : $grey-300;
+$radio-border-c-hover: $brand-blue-400;
+$radio-border-c-checked: $brand-blue-400;
+$radio-border-c-disabled: $grey-100;
+$radio-bg-c-disabled: $grey-50;
+$radio-dot-c-disabled: $grey-300;
 
 /* Rate */
-$rate-icon-font-size        : 20px;
-$rate-icon-color            : $grey-100;
-$rate-icon-color-on         : $yellow-500;
-$rate-text-font-size        : $font-size-smer;
+$rate-icon-font-size: 20px;
+$rate-icon-color: $grey-100;
+$rate-icon-color-on: $yellow-500;
+$rate-text-font-size: $font-size-smer;
 
 /* Select */
-$select-font-size-sm        : $font-size-smest;
-$select-font-size-base      : $font-size-smer;
-$select-font-size-lg        : $font-size-base;
+$select-font-size-sm: $font-size-smest;
+$select-font-size-base: $font-size-smer;
+$select-font-size-lg: $font-size-base;
 
-$select-bg-color            : $color-white;
-$select-font-color          : $text-color;
+$select-bg-color: $color-white;
+$select-font-color: $text-color;
 
-$select-border-c-hover       : $brand-blue-400;
-$select-border-c-checked     : $brand-blue-400;
-$select-border-c-disabled    : $grey-100;
-$select-bg-c-disabled        : $grey-50;
+$select-border-c-hover: $brand-blue-400;
+$select-border-c-checked: $brand-blue-400;
+$select-border-c-disabled: $grey-100;
+$select-bg-c-disabled: $grey-50;
 
-$select-selection-bg-color          : $color-white;
-$select-selection-bg-color-disabled : tint($border-color-base, 70%);
+$select-selection-bg-color: $color-white;
+$select-selection-bg-color-disabled: tint($border-color-base, 70%);
 
-$select-padding-sm            : 0 24px 0 8px;
-$select-padding-base          : 0 24px 0 8px;
-$select-padding-lg            : 0 24px 0 8px;
+$select-padding-sm: 0 24px 0 8px;
+$select-padding-base: 0 24px 0 8px;
+$select-padding-lg: 0 24px 0 8px;
 
-$select-selection-height-sm     : 24px;
-$select-selection-height-base   : 26px;
-$select-selection-height-lg     : 30px;
+$select-selection-height-sm: 24px;
+$select-selection-height-base: 26px;
+$select-selection-height-lg: 30px;
 
 /* Select Dropdown */
-$select-dropdown-font-size-sm   : $font-size-smest;
-$select-dropdown-font-size-base : $font-size-smer;
-$select-dropdown-font-size-lg   : $font-size-sm;
+$select-dropdown-font-size-sm: $font-size-smest;
+$select-dropdown-font-size-base: $font-size-smer;
+$select-dropdown-font-size-lg: $font-size-sm;
 
-$select-dropdown-bg-color       : $color-white;
-$select-dropdown-height         : 200px;
+$select-dropdown-bg-color: $color-white;
+$select-dropdown-height: 200px;
 
-$dropdown-option-padding-base   : 6px 12px;
-$dropdown-option-bg-c-hover     : $brand-blue-50;
-$dropdown-option-bg-c-selected  : $grey-50;
+$dropdown-option-padding-base: 6px 12px;
+$dropdown-option-bg-c-hover: $brand-blue-50;
+$dropdown-option-bg-c-selected: $grey-50;
 
-$option-group-font-c        : $grey-500;
+$option-group-font-c: $grey-500;
 
 /* Notification */
-$notification-width             : 320px;
-$notification-padding           : 8px 16px;
-$notification-padding-lg        : 12px 16px;
-$notification-shadow            : 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$notification-text-color        : $text-color;
-$notification-bg-color          : $color-white;
+$notification-width: 320px;
+$notification-padding: 8px 16px;
+$notification-padding-lg: 12px 16px;
+$notification-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+$notification-text-color: $text-color;
+$notification-bg-color: $color-white;
 
-$notification-font-size-lg      : 28px;
-$notification-title-font-size   : $font-size-sm;
-$notification-message-font-size : $font-size-smer;
+$notification-font-size-lg: 28px;
+$notification-title-font-size: $font-size-sm;
+$notification-message-font-size: $font-size-smer;
 
-$notification-icon-color          : $text-color;
-$notification-icon-font-size      : $font-size-sm;
-$notification-icon-font-size-lg   : 24px;
-$notification-close-color         : $grey-300;
-$notification-close-color-focus   : $grey-700;
-$notification-close-font-size     : $font-size-smer;
-$notification-close-font-size-lg  : $font-size-base;
+$notification-icon-color: $text-color;
+$notification-icon-font-size: $font-size-sm;
+$notification-icon-font-size-lg: 24px;
+$notification-close-color: $grey-300;
+$notification-close-color-focus: $grey-700;
+$notification-close-font-size: $font-size-smer;
+$notification-close-font-size-lg: $font-size-base;
 
-$notification-icon-color-success  : $green-300;
-$notification-icon-color-error    : $red-300;
-$notification-icon-color-warning  : $yellow-300;
-$notification-icon-color-info     : $blue-300;
+$notification-icon-color-success: $green-300;
+$notification-icon-color-error: $red-300;
+$notification-icon-color-warning: $yellow-300;
+$notification-icon-color-info: $blue-300;
 
 /* Popover */
-$popover-title-font-size    : $font-size-smer;
-$popover-content-font-size  : $font-size-smest;
-$popover-popper-max-width   : 400px;
+$popover-title-font-size: $font-size-smer;
+$popover-content-font-size: $font-size-smest;
+$popover-popper-max-width: 400px;
 
-$popover-bg-color           : $color-white;
-$popover-title-bg-color     : $grey-50;
-$popover-border-color       : $grey-100;
-$popover-title-border-color : $brand-blue-50;
+$popover-bg-color: $color-white;
+$popover-title-bg-color: $grey-50;
+$popover-border-color: $grey-100;
+$popover-title-border-color: $brand-blue-50;
 
-$popover-arrow-size         : 10px;
-$popover-arrow-bg-color     : $popover-bg-color;
+$popover-arrow-size: 10px;
+$popover-arrow-bg-color: $popover-bg-color;
 
-$popover-padding            : 4px 8px;
-$popover-title-padding      : 6px 10px;
-$popover-content-padding    : 8px 12px;
+$popover-padding: 4px 8px;
+$popover-title-padding: 6px 10px;
+$popover-content-padding: 8px 12px;
 
 /* Progress */
-$progress-height            : 10px;
-$progress-border-radius     : 50px;
-$progress-font-color        : $text-color;
-$progress-font-size         : $font-size-smer;
+$progress-height: 10px;
+$progress-border-radius: 50px;
+$progress-font-color: $text-color;
+$progress-font-size: $font-size-smer;
 
-$progress-track-bg-color       : $grey-200;
-$progress-bar-bg-color         : $brand-color-light;
-$progress-bar-bg-color-success : $color-success;
-$progress-bar-bg-color-error   : $color-error;
+$progress-track-bg-color: $grey-200;
+$progress-bar-bg-color: $brand-color-light;
+$progress-bar-bg-color-success: $color-success;
+$progress-bar-bg-color-error: $color-error;
 
 /* Timeline */
-$timeline-dot-color            : $blue-500;
-$timeline-dot-color-success    : $green-500;
-$timeline-dot-color-error      : $red-500;
-$timeline-dot-color-warning    : $yellow-500;
+$timeline-dot-color: $blue-500;
+$timeline-dot-color-success: $green-500;
+$timeline-dot-color-error: $red-500;
+$timeline-dot-color-warning: $yellow-500;
 
-$timeline-dot-bg-color         : $color-white;
+$timeline-dot-bg-color: $color-white;
 
-$timeline-dot-size             : 12px;
-$timeline-custom-dot-size      : 20px;
-$timeline-custom-dot-font-size : $font-size-normal;
+$timeline-dot-size: 12px;
+$timeline-custom-dot-size: 20px;
+$timeline-custom-dot-font-size: $font-size-normal;
 
-$timeline-line-color           : $grey-100;
-$timeline-item-last-min-height : 48px;
-$timeline-text-font-size       : $font-size-smer;
+$timeline-line-color: $grey-100;
+$timeline-item-last-min-height: 48px;
+$timeline-text-font-size: $font-size-smer;
 
 /* Tooltip */
-$tooltip-padding            : 4px 8px;
-$tooltip-arrow-size         : 4px;
-$tooltip-max-width          : 200px;
-$tooltip-font-color         : $color-white;
-$tooltip-font-size          : $font-size-smer;
-$tooltip-bg-color           : rgba(0, 0, 0, .75);
-$tooltip-border-color       : rgba(0, 0, 0, .75);
+$tooltip-padding: 4px 8px;
+$tooltip-arrow-size: 4px;
+$tooltip-max-width: 200px;
+$tooltip-font-color: $color-white;
+$tooltip-font-size: $font-size-smer;
+$tooltip-bg-color: rgba(0, 0, 0, 0.75);
+$tooltip-border-color: rgba(0, 0, 0, 0.75);
 
 /* Table */
-$table-font-size-small      : $font-size-smest;
-$table-font-size            : $font-size-smer;
-$table-font-size-large      : $font-size-sm;
+$table-font-size-small: $font-size-smest;
+$table-font-size: $font-size-smer;
+$table-font-size-large: $font-size-sm;
 
-$table-text-color           : $text-color;
-$table-border-color         : $grey-100;
-$table-thead-bg-color       : $grey-50;
-$table-tr-bg-color-hover    : $bg-color-lighter;
-$table-tr-bg-color-stripe   : tint($grey-50, 50%);
-$table-footer-height        : 28px;
+$table-text-color: $text-color;
+$table-border-color: $grey-100;
+$table-thead-bg-color: $grey-50;
+$table-tr-bg-color-hover: $bg-color-lighter;
+$table-tr-bg-color-stripe: tint($grey-50, 50%);
+$table-footer-height: 28px;
 
-$table-cell-height-small    : 32px;
-$table-cell-height          : 40px;
-$table-cell-height-large    : 56px;
-$table-cell-padding         : 0 16px;
+$table-cell-height-small: 32px;
+$table-cell-height: 40px;
+$table-cell-height-large: 56px;
+$table-cell-padding: 0 16px;
 
-$table-sorter-width           : 9px;
-$table-sorter-width-small     : 7px;
-$table-sorter-height          : 18px;
-$table-sorter-height-small    : 14px;
-$table-sorter-icon-size       : 9px;
-$table-sorter-icon-size-small : 7px;
+$table-sorter-width: 9px;
+$table-sorter-width-small: 7px;
+$table-sorter-height: 18px;
+$table-sorter-height-small: 14px;
+$table-sorter-icon-size: 9px;
+$table-sorter-icon-size-small: 7px;
 
 /* Breadcrumb */
-$breadcrumb-font-size         : $font-size-base;
-$breadcrumb-separator-color   : $grey-300;
+$breadcrumb-font-size: $font-size-base;
+$breadcrumb-separator-color: $grey-300;
 
 /* Dropdown */
-$dropdown-max-height             : 200px;
-$dropdown-bg-color               : $color-white;
-$dropdown-box-shadow             : 0 1px 6px rgba(0, 0, 0, 0.2);
-$dropdown-font-size              : $font-size-smer;
+$dropdown-max-height: 200px;
+$dropdown-bg-color: $color-white;
+$dropdown-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+$dropdown-font-size: $font-size-smer;
 
-$dropdown-item-padding           : 8px 16px;
-$dropdown-item-min-width         : 100px;
-$dropdown-item-bg-color-hover    : $brand-blue-50;
-$dropdown-item-bg-color-disabled : $grey-300;
+$dropdown-item-padding: 8px 16px;
+$dropdown-item-min-width: 100px;
+$dropdown-item-bg-color-hover: $brand-blue-50;
+$dropdown-item-bg-color-disabled: $grey-300;
 
-$dropdown-divided-color          : $brand-blue-50;
+$dropdown-divided-color: $brand-blue-50;
 
 /* Menu */
-$menu-text-color                     : $text-color;
-$menu-text-color-disabled            : $grey-400;
-$menu-text-color-dark                : $grey-200;
-$menu-text-color-dark-hover          : $color-white;
-$menu-bg-color-light                 : $color-white;
-$menu-bg-color-dark                  : $black-500;
-$menu-bg-color-dark-hover            : $black-600;
-$menu-font-size                      : $font-size-base;
-$menu-icon-size                      : $font-size-base;
+$menu-text-color: $text-color;
+$menu-text-color-disabled: $grey-400;
+$menu-text-color-dark: $grey-200;
+$menu-text-color-dark-hover: $color-white;
+$menu-bg-color-light: $color-white;
+$menu-bg-color-dark: $black-500;
+$menu-bg-color-dark-hover: $black-600;
+$menu-font-size: $font-size-base;
+$menu-icon-size: $font-size-base;
 
-$menu-item-text-color-active         : $brand-blue-500;
-$menu-item-bg-color-active           : $brand-blue-50;
-$menu-item-bg-color-active-inline    : rgba(236, 242, 252, 0.2);
+$menu-item-text-color-active: $brand-blue-500;
+$menu-item-bg-color-active: $brand-blue-50;
+$menu-item-bg-color-active-inline: rgba(236, 242, 252, 0.2);
 
-$menu-submenu-padding                : 12px 16px;
-$menu-item-padding                   : 12px 16px;
-$menu-item-padding-inline            : 12px 16px;
-$menu-item-padding-base              : 0 16px;
+$menu-submenu-padding: 12px 16px;
+$menu-item-padding: 12px 16px;
+$menu-item-padding-inline: 12px 16px;
+$menu-item-padding-base: 0 16px;
 
-$menu-group-title-padding            : 12px;
-$menu-group-title-text-color         : $grey-500;
-$menu-group-title-font-size          : $font-size-smer;
-$menu-group-item-padding             : 12px 16px;
+$menu-group-title-padding: 12px;
+$menu-group-title-text-color: $grey-500;
+$menu-group-title-font-size: $font-size-smer;
+$menu-group-item-padding: 12px 16px;
 
-$menu-dropdown-item-padding          : 12px 16px;
-$menu-dropdown-item-font-size        : $font-size-smer;
+$menu-dropdown-item-padding: 12px 16px;
+$menu-dropdown-item-font-size: $font-size-smer;
 
-$menu-height-horizontal              : 48px;
-$menu-border-color                   : $border-color-lighter;
-$menu-prefix-bg-color                : $brand-blue-500;
-$menu-prefix-bg-color-dark           : $brand-blue-500;
-$menu-icon-color-inline              : $border-color-base;
+$menu-height-horizontal: 48px;
+$menu-border-color: $border-color-lighter;
+$menu-prefix-bg-color: $brand-blue-500;
+$menu-prefix-bg-color-dark: $brand-blue-500;
+$menu-icon-color-inline: $border-color-base;
 
 /* Pagination */
-$pagination-item-size-sm             : 20px;
-$pagination-item-size                : 28px;
-$pagination-input-width              : 40px;
-$pagination-item-font-size-sm        : $font-size-smest;
-$pagination-item-font-size           : $font-size-smer;
-$pagination-btn-font-size            : $font-size-smer;
+$pagination-item-size-sm: 20px;
+$pagination-item-size: 28px;
+$pagination-input-width: 40px;
+$pagination-item-font-size-sm: $font-size-smest;
+$pagination-item-font-size: $font-size-smer;
+$pagination-btn-font-size: $font-size-smer;
 
-$pagination-item-text-color          : $text-color;
-$pagination-item-text-color-hover    : $brand-blue-400;
-$pagination-item-text-color-active   : $color-white;
-$pagination-btn-jump-text-color      : $grey-100;
+$pagination-item-text-color: $text-color;
+$pagination-item-text-color-hover: $brand-blue-400;
+$pagination-item-text-color-active: $color-white;
+$pagination-btn-jump-text-color: $grey-100;
 
-$pagination-item-bg-color            : $color-white;
-$pagination-item-bg-color-active     : $brand-blue-400;
+$pagination-item-bg-color: $color-white;
+$pagination-item-bg-color-active: $brand-blue-400;
 
-$pagination-item-border-color        : $border-color-base;
-$pagination-item-border-color-hover  : $brand-blue-400;
-$pagination-item-border-color-active : $brand-blue-400;
+$pagination-item-border-color: $border-color-base;
+$pagination-item-border-color-hover: $brand-blue-400;
+$pagination-item-border-color-active: $brand-blue-400;
 
 /* Tabs */
-$tabs-border-color                   : $grey-100;
-$tabs-nav-height                     : 36px;
-$tabs-nav-height-sm                  : 32px;
-$tabs-nav-font-size                  : $font-size-base;
-$tabs-nav-font-size-sm               : $font-size-smer;
-$tabs-navigation-btn-width           : 32px;
-$tabs-navigation-color               : $text-color;
-$tabs-navigation-color-hover         : $brand-blue-500;
-$tabs-navigation-color-disabled      : $grey-400;
+$tabs-border-color: $grey-100;
+$tabs-nav-height: 36px;
+$tabs-nav-height-sm: 32px;
+$tabs-nav-font-size: $font-size-base;
+$tabs-nav-font-size-sm: $font-size-smer;
+$tabs-navigation-btn-width: 32px;
+$tabs-navigation-color: $text-color;
+$tabs-navigation-color-hover: $brand-blue-500;
+$tabs-navigation-color-disabled: $grey-400;
 
-$tabs-nav-item-padding               : 0 20px;
-$tabs-nav-item-padding-sm            : 0 16px;
-$tabs-nav-item-bg-color              : $color-white;
-$tabs-nav-item-bg-color-card         : $grey-50;
-$tabs-nav-item-icon-color            : tint($text-color, 30%);
-$tabs-nav-item-icon-color-hover      : $text-color;
+$tabs-nav-item-padding: 0 20px;
+$tabs-nav-item-padding-sm: 0 16px;
+$tabs-nav-item-bg-color: $color-white;
+$tabs-nav-item-bg-color-card: $grey-50;
+$tabs-nav-item-icon-color: tint($text-color, 30%);
+$tabs-nav-item-icon-color-hover: $text-color;
 
 /* Steps */
-$step-font-size                      : $font-size-base;
-$step-font-size-sm                   : $font-size-smer;
-$step-description-font-size          : $font-size-smer;
-$step-description-font-size-sm       : $font-size-smest;
+$step-font-size: $font-size-base;
+$step-font-size-sm: $font-size-smer;
+$step-description-font-size: $font-size-smer;
+$step-description-font-size-sm: $font-size-smest;
 
-$step-color                          : $grey-600;
-$step-color-active                   : $color-white;
-$step-color-process                  : $text-color;
-$step-color-error                    : $red-500;
-$step-text-color                     : $black-200;
+$step-color: $grey-600;
+$step-color-active: $color-white;
+$step-color-process: $text-color;
+$step-color-error: $red-500;
+$step-text-color: $black-200;
 
-$step-bg-color                       : $color-white;
-$step-bg-color-active                : $brand-blue-500;
-$step-bg-color-error                 : $red-500;
+$step-bg-color: $color-white;
+$step-bg-color-active: $brand-blue-500;
+$step-bg-color-error: $red-500;
 
-$step-border-color                   : $grey-600;
-$step-border-color-active            : $brand-blue-500;
-$step-border-color-error             : $red-500;
+$step-border-color: $grey-600;
+$step-border-color-active: $brand-blue-500;
+$step-border-color-error: $red-500;
 
-$step-icon-color                     : $grey-600;
-$step-icon-color-active              : $brand-blue-500;
-$step-icon-color-error               : $red-500;
+$step-icon-color: $grey-600;
+$step-icon-color-active: $brand-blue-500;
+$step-icon-color-error: $red-500;
 
-$step-label-size                     : 30px;
-$step-label-size-sm                  : 18px;
+$step-label-size: 30px;
+$step-label-size-sm: 18px;
 
-$step-line-color                     : $grey-600;
-$step-line-color-active              : $brand-blue-500;
+$step-line-color: $grey-600;
+$step-line-color-active: $brand-blue-500;
 
-$step-main-height-vertical           : 64px;
-$step-main-height-vertical-sm        : 48px;
+$step-main-height-vertical: 64px;
+$step-main-height-vertical-sm: 48px;
 
 /**
  * Media queries
  */
 /* Extra small screen / Mobile */
-$screen-xs                  : 480px;
-$screen-xs-min              : $screen-xs;
-$screen-xs-max              : $screen-xs-min - 1;
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-xs-max: $screen-xs-min - 1;
 
 /* Small screen / Tablet */
-$screen-sm                  : 768px;
-$screen-sm-min              : $screen-sm;
-$screen-sm-max              : $screen-sm-min - 1;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-sm-max: $screen-sm-min - 1;
 
 /* Medium screen / Desktop */
-$screen-md                  : 992px;
-$screen-md-min              : $screen-md;
-$screen-md-max              : $screen-md-min - 1;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-md-max: $screen-md-min - 1;
 
 /* Large screen / Wide Desktop */
-$screen-lg                  : 1200px;
-$screen-lg-min              : $screen-lg;
-$screen-lg-max              : $screen-lg-min - 1;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-max: $screen-lg-min - 1;
 
 /**
  * Grid system
  */
-$grid-columns               : 24;
-$grid-gutter-width          : 0;
+$grid-columns: 24;
+$grid-gutter-width: 0;
 
 /* Container sizes */
-$container-sm               : 720px + $grid-gutter-width;
-$container-md               : 940px + $grid-gutter-width;
-$container-lg               : 1140px + $grid-gutter-width;
+$container-sm: 720px + $grid-gutter-width;
+$container-md: 940px + $grid-gutter-width;
+$container-lg: 1140px + $grid-gutter-width;
 
 /* z-index list */
-$zindex-menu                : 900;
-$zindex-modal               : 1000;
-$zindex-notification        : 1010;
-$zindex-message             : 1010;
-$zindex-popover             : 1020;
-$zindex-dropdown            : 1050;
-$zindex-tooltip             : 1050;
-$zindex-loading-bar         : 1080;
+$zindex-menu: 900;
+$zindex-modal: 1000;
+$zindex-notification: 1010;
+$zindex-message: 1010;
+$zindex-popover: 1020;
+$zindex-dropdown: 1050;
+$zindex-tooltip: 1050;
+$zindex-loading-bar: 1080;

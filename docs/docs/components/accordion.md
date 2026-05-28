@@ -1,30 +1,29 @@
 # Accordion 手风琴
 
 ---
+
 可以折叠 / 展开的内容区域。
 
 ## 使用指南
 
 Taro-UI 版本需要在 `v1.3.1` 以上，在 Taro 文件中引入组件
 
-
 ```js
 import { AtAccordion } from 'taro-ui'
 ```
+
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
 ```scss
-@import "~taro-ui/dist/style/components/accordion.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import '~taro-ui/dist/style/components/accordion.scss';
+@import '~taro-ui/dist/style/components/icon.scss';
 ```
+
 ## 一般用法
 
 说明：
 
-* 该组件为受控组件，开发者通过 open 来控制组件开关状态，可通过触发 onClick 函数时修改 open 实现状态切换
-
-
+- 该组件为受控组件，开发者通过 open 来控制组件开关状态，可通过触发 onClick 函数时修改 open 实现状态切换
 
 ```js
 import Taro from '@tarojs/taro'
@@ -32,19 +31,18 @@ import { View } from '@tarojs/components'
 import { AtAccordion, AtList, AtListItem } from 'taro-ui'
 
 export default class Index extends Taro.Component {
-  constructor () {
+  constructor() {
     super(...arguments)
     this.state = {
-      open: false,
+      open: false
     }
   }
-  handleClick (value) {
+  handleClick(value) {
     this.setState({
       open: value
     })
   }
-  render () {
-
+  render() {
     return (
       <AtAccordion
         open={this.state.open}
@@ -75,13 +73,9 @@ export default class Index extends Taro.Component {
     )
   }
 }
-
-
 ```
 
 ## 带图标
-
-
 
 ```html
 <AtAccordion title='标题三' icon={{ value: 'chevron-down', color: 'red', size: '15' }}>
@@ -110,17 +104,17 @@ export default class Index extends Taro.Component {
 
 ## 参数
 
-| 参数       | 说明                                   | 类型    | 可选值                                                              | 默认值   |
-| ---------- | -------------------------------------- | ------- | ------------------------------------------------------------------- | -------- |
-| open | 是否默认开启 | Boolean  | - | false |
-| title | 标题 | String  | - | - |
-| hasBorder | 是否有头部下划线 | Boolean  | - | true |
-| isAnimation | 是否开启动画 (v2.0.0-beta.3 支持)| Boolean  | - | true |
-| icon | 图标，仅支持 AtIcon 支持的类型，object 属性有 value color size prefixClass  | object  | - | - |
-| note | 描述信息 | string | - | -
+| 参数        | 说明                                                                       | 类型    | 可选值 | 默认值 |
+| ----------- | -------------------------------------------------------------------------- | ------- | ------ | ------ |
+| open        | 是否默认开启                                                               | Boolean | -      | false  |
+| title       | 标题                                                                       | String  | -      | -      |
+| hasBorder   | 是否有头部下划线                                                           | Boolean | -      | true   |
+| isAnimation | 是否开启动画 (v2.0.0-beta.3 支持)                                          | Boolean | -      | true   |
+| icon        | 图标，仅支持 AtIcon 支持的类型，object 属性有 value color size prefixClass | object  | -      | -      |
+| note        | 描述信息                                                                   | string  | -      | -      |
 
 ## 事件
 
-| 事件名称 | 说明          | 返回参数  |
-|---------- |-------------- |---------- |
-| onClick | 点击头部触发事件 | (open,event) => void |
+| 事件名称 | 说明             | 返回参数             |
+| -------- | ---------------- | -------------------- |
+| onClick  | 点击头部触发事件 | (open,event) => void |

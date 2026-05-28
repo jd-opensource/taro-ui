@@ -1,7 +1,7 @@
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
-$component:'.at-tabs';
+$component: '.at-tabs';
 $at-tabs-pane-min-height: 100px;
 
 #{$component} {
@@ -34,7 +34,7 @@ $at-tabs-pane-min-height: 100px;
       color: $at-tabs-color-active;
 
       // #{$component}__item-underline {
-        // transform: scaleX(1);
+      // transform: scaleX(1);
       // }
     }
 

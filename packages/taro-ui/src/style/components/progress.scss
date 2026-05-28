@@ -54,7 +54,7 @@
   /* modifiers */
   &--progress {
     .at-progress__outer-inner-background::before {
-      content: "";
+      content: '';
       opacity: 0;
       position: absolute;
       top: 0;

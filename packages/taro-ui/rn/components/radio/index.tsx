@@ -26,21 +26,21 @@ export default class AtRadio extends React.Component<AtRadioProps<any>> {
             onClick={this.handleClick.bind(this, option)}
             className={classNames({
               'at-radio__option': true,
-              'at-radio__option--disabled': option.disabled,
+              'at-radio__option--disabled': option.disabled
             })}
           >
             <View
               className={classNames({
                 'at-radio__option-wrap': true,
                 'at-radio__option-wrap--without-border':
-                  !border || options.length === index + 1,
+                  !border || options.length === index + 1
               })}
             >
               <View className='at-radio__option-container'>
                 <View
                   className={classNames({
                     'at-radio__title': true,
-                    'at-radio__title--disabled': option.disabled,
+                    'at-radio__title--disabled': option.disabled
                   })}
                 >
                   {option.label}
@@ -51,7 +51,7 @@ export default class AtRadio extends React.Component<AtRadioProps<any>> {
                       value='check'
                       className={classNames({
                         'at-radio__icon': true,
-                        'at-radio__at-icon': true,
+                        'at-radio__at-icon': true
                       })}
                     />
                   )}
@@ -61,7 +61,7 @@ export default class AtRadio extends React.Component<AtRadioProps<any>> {
                 <View
                   className={classNames({
                     'at-radio__desc': true,
-                    'at-radio__desc--disabled': option.disabled,
+                    'at-radio__desc--disabled': option.disabled
                   })}
                 >
                   {option.desc}
@@ -82,7 +82,7 @@ AtRadio.defaultProps = {
   border: true,
   options: [],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {},
+  onClick: (): void => {}
 }
 
 AtRadio.propTypes = {
@@ -90,5 +90,5 @@ AtRadio.propTypes = {
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   value: PropTypes.string,
   options: PropTypes.array,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }

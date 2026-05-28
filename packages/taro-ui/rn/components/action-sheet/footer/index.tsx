@@ -4,9 +4,7 @@ import React from 'react'
 import { View } from '@tarojs/components'
 import { AtActionSheetFooterProps } from '../../../../types/action-sheet'
 
-export default class AtActionSheetFooter extends React.Component<
-  AtActionSheetFooterProps
-> {
+export default class AtActionSheetFooter extends React.Component<AtActionSheetFooterProps> {
   public static defaultProps: AtActionSheetFooterProps
   public static propTypes: InferProps<AtActionSheetFooterProps>
 

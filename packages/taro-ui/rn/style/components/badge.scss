@@ -1,9 +1,13 @@
-@use "sass:math";
+@use 'sass:math';
 @import '../variables/default.scss';
 @import '../mixins/index.scss';
 
 $at-badge-border-radius: $at-badge-font-size * 0.7;
-$at-badge-box-shadow: 0 4px 8px 0 rgba($color: $at-badge-bg-color, $alpha: 0.2);
+$at-badge-box-shadow: 0 4px 8px 0
+  rgba(
+    $color: $at-badge-bg-color,
+    $alpha: 0.2
+  );
 
 .at-badge {
   position: relative;
@@ -35,11 +39,12 @@ $at-badge-box-shadow: 0 4px 8px 0 rgba($color: $at-badge-bg-color, $alpha: 0.2);
   &__num {
     position: absolute;
     top: -$at-badge-border-radius;
-    right: -16PX;
+    right: -16px;
     padding: 0 $spacing-h-sm;
     color: $at-badge-color;
     font-size: $at-badge-font-size;
-    border-radius: $at-badge-border-radius $at-badge-border-radius $at-badge-border-radius 0;
+    border-radius: $at-badge-border-radius $at-badge-border-radius
+      $at-badge-border-radius 0;
     background: $at-badge-bg;
     line-height: $at-badge-font-size * 1.4;
     /*  #ifndef  rn  */

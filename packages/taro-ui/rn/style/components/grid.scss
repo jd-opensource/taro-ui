@@ -1,14 +1,13 @@
-@import "../variables/default.scss";
-@import "../mixins/index.scss";
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
 
 .at-grid {
   /* elements */
   &__flex-item {
-    border: 1PX solid $color-border-light;
+    border: 1px solid $color-border-light;
     border-top-width: 0;
     border-left-width: 0;
     // @include hairline-surround();
-
   }
 
   &__flex {
@@ -59,7 +58,6 @@
     &--square {
       padding-bottom: 100%;
     }
-
   }
 
   &--last {
@@ -99,6 +97,4 @@
     width: $at-grid-img-size;
     height: $at-grid-img-size;
   }
-
 }
-

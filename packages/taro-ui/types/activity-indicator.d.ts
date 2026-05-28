@@ -1,8 +1,8 @@
-import { MouseEvent, ComponentClass } from 'react'
+import { ComponentClass } from 'react'
 
 import AtComponent from './base'
 
-export interface AtActivityIndicatorProps extends AtComponent{
+export interface AtActivityIndicatorProps extends AtComponent {
   /**
    * loading 图的大小
    * @default 24

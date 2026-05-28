@@ -4,9 +4,7 @@ import { Text, View } from '@tarojs/components'
 import { AtCountdownItemProps } from '../../../../types/countdown'
 import '../../../style/components/countdown.scss'
 
-export default class AtCountdownItem extends React.Component<
-  AtCountdownItemProps
-> {
+export default class AtCountdownItem extends React.Component<AtCountdownItemProps> {
   public static defaultProps: AtCountdownItemProps
   public static propTypes: InferProps<AtCountdownItemProps>
 

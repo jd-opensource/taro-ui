@@ -11,20 +11,20 @@ interface IndexPageState {
 
 export default class Index extends React.Component<{}, IndexPageState> {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
     super(props)
     this.state = {
       current1: 0,
-      current2: 0,
+      current2: 0
     }
   }
 
   private handleClick(num: number, value: number): void {
     this.setState({
-      [`current${num}`]: value,
+      [`current${num}`]: value
     })
   }
 

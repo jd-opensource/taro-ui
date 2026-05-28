@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Log meta
-      - name : GITHUB CONTEXT
+      - name: GITHUB CONTEXT
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
@@ -54,7 +54,7 @@ jobs:
           COMMIT_MESSAGE=$(git log --format=%s -n 1)
           echo "COMMIT_MESSAGE=${COMMIT_MESSAGE}" >> $GITHUB_ENV
       - name: Show commit message
-        run : echo "$COMMIT_MESSAGE"
+        run: echo "$COMMIT_MESSAGE"
 
       - name: Commit message compliance verification
         if: startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) != true
@@ -134,7 +134,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           github_repo: ${{ github.repository }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+          git_tag_prefix: 'v'
 
       # Publish
       - name: Publish

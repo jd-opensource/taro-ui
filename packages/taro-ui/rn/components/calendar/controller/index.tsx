@@ -12,13 +12,8 @@ export default class AtCalendarController extends React.Component<
   AtCalendarControllerState
 > {
   public render(): JSX.Element {
-    const {
-      generateDate,
-      minDate,
-      maxDate,
-      monthFormat,
-      hideArrow
-    } = this.props
+    const { generateDate, minDate, maxDate, monthFormat, hideArrow } =
+      this.props
 
     const dayjsDate: Dayjs = dayjs(generateDate)
     const dayjsMinDate: Dayjs | boolean = !!minDate && dayjs(minDate)

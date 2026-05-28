@@ -16,13 +16,13 @@ export default class ProgressPage extends React.Component<
   ProgressPageState
 > {
   public config: Taro.PageConfig = {
-    navigationBarTitleText: 'Taro UI',
+    navigationBarTitleText: 'Taro UI'
   }
 
   public constructor(props: any) {
     super(props)
     this.state = {
-      percent: 0,
+      percent: 0
     }
   }
 
@@ -35,7 +35,7 @@ export default class ProgressPage extends React.Component<
     percent = percent - OFFSET < 0 ? 0 : percent - OFFSET
 
     this.setState({
-      percent,
+      percent
     })
   }
 
@@ -48,7 +48,7 @@ export default class ProgressPage extends React.Component<
     percent = percent + OFFSET > 100 ? 100 : percent + OFFSET
 
     this.setState({
-      percent,
+      percent
     })
   }
 

@@ -8,19 +8,15 @@
 
 在 Taro 文件中引入组件
 
-
-
 ```js
 import { AtInputNumber } from 'taro-ui'
 ```
 
 **组件依赖的样式文件（仅按需引用时需要）**
 
-
-
 ```scss
-@import "~taro-ui/dist/style/components/input-number.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
+@import '~taro-ui/dist/style/components/input-number.scss';
+@import '~taro-ui/dist/style/components/icon.scss';
 ```
 
 ## 一般用法
@@ -33,24 +29,22 @@ import { AtInputNumber } from 'taro-ui'
 
 - 由于此组件是基于小程序的 Input 进行封装，该组件是原生组件，使用前请阅读[使用限制](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)
 
-
-
 ```js
 import Taro from '@tarojs/taro'
-import { AtInputNumber }  from 'taro-ui'
+import { AtInputNumber } from 'taro-ui'
 export default class Index extends Taro.Component {
-  constructor () {
+  constructor() {
     super(...arguments)
     this.state = {
       value: 1
     }
   }
-  handleChange (value) {
+  handleChange(value) {
     this.setState({
       value
     })
   }
-  render () {
+  render() {
     return (
       <AtInputNumber
         min={0}
@@ -62,66 +56,57 @@ export default class Index extends Taro.Component {
     )
   }
 }
-
 ```
 
 ## 小数
 
-
-
 ```html
 <AtInputNumber
-  type='digit'
-  min={0}
-  max={10}
-  step={0.1}
-  value={this.state.value}
-  onChange={this.handleChange.bind(this)}
+  type="digit"
+  min="{0}"
+  max="{10}"
+  step="{0.1}"
+  value="{this.state.value}"
+  onChange="{this.handleChange.bind(this)}"
 />
 ```
 
 ## 禁止状态
 
-
-
 ```html
 <AtInputNumber
   disabled
-  min={0}
-  max={10}
-  step={1}
-  value={this.state.value}
-  onChange={this.handleChange.bind(this)}
+  min="{0}"
+  max="{10}"
+  step="{1}"
+  value="{this.state.value}"
+  onChange="{this.handleChange.bind(this)}"
 />
 ```
 
 ## 禁止输入状态
 
-
-
 ```html
 <AtInputNumber
   disabledInput
-  min={0}
-  max={10}
-  step={1}
-  value={this.state.value}
-  onChange={this.handleChange.bind(this)}
+  min="{0}"
+  max="{10}"
+  step="{1}"
+  value="{this.state.value}"
+  onChange="{this.handleChange.bind(this)}"
 />
 ```
 
 ## 自定义宽度
 
-
-
 ```html
 <AtInputNumber
-  min={0}
-  max={10}
-  step={1}
-  width={200}
-  value={this.state.value}
-  onChange={this.handleChange.bind(this)}
+  min="{0}"
+  max="{10}"
+  step="{1}"
+  width="{200}"
+  value="{this.state.value}"
+  onChange="{this.handleChange.bind(this)}"
 />
 ```
 

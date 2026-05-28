@@ -16,15 +16,8 @@ export default class AtSwitch extends React.Component<AtSwitchProps> {
   }
 
   public render(): JSX.Element {
-    const {
-      customStyle,
-      className,
-      disabled,
-      border,
-      title,
-      checked,
-      color
-    } = this.props
+    const { customStyle, className, disabled, border, title, checked, color } =
+      this.props
 
     const rootCls = classNames(
       'at-switch',

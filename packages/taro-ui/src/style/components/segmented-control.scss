@@ -12,7 +12,7 @@ $at-segmented-control-min-width: 120px;
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
-  @include border-thin($color: $at-segmented-control-color, $width: 1PX);
+  @include border-thin($color: $at-segmented-control-color, $width: 1px);
 
   /* elements */
   &__item {
@@ -35,7 +35,7 @@ $at-segmented-control-min-width: 120px;
   }
 
   &__item + &__item {
-    @include border-thin-left($color: $at-segmented-control-color, $width: 1PX);
+    @include border-thin-left($color: $at-segmented-control-color, $width: 1px);
   }
 
   /* modifiers */

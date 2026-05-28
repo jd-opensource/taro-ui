@@ -5,33 +5,33 @@
 @import '../mixins/index.scss';
 
 /* The Color of 7FRESH Brand */
-$color-brand: #345B8F;
-$color-brand-light: #5274A0;
-$color-brand-dark: #27497C;
+$color-brand: #345b8f;
+$color-brand-light: #5274a0;
+$color-brand-dark: #27497c;
 
 /* 辅助色 */
-$color-success: #0C8;
-$color-error: #FA5B5B;
-$color-warning: #FFD400;
-$color-info: #4D88FF;
+$color-success: #0c8;
+$color-error: #fa5b5b;
+$color-warning: #ffd400;
+$color-info: #4d88ff;
 
 /* 文本颜色 */
-$color-text-base: #1D1F2B;
-$color-text-title: #1D1F2B; // 文章标题
+$color-text-base: #1d1f2b;
+$color-text-title: #1d1f2b; // 文章标题
 
 /* 组件样式 */
 $at-button-border-color-primary: transparent;
-$at-button-bg: linear-gradient(90deg, #5274A0, #27497C 100%);
+$at-button-bg: linear-gradient(90deg, #5274a0, #27497c 100%);
 
-$at-message-bg-color: #95969F;
+$at-message-bg-color: #95969f;
 
 $at-tag-color: $color-text-base;
 $at-tag-color-primary: $color-brand-light;
 $at-tag-color-primary-active: $color-brand-light;
-$at-tag-border-color: #BDBEC3;
-$at-tag-bg-color: #FFF;
-$at-tag-bg-color-primary: #E9F3FF;
-$at-tag-bg-color-primary-active: #E9F3FF;
+$at-tag-border-color: #bdbec3;
+$at-tag-bg-color: #fff;
+$at-tag-bg-color-primary: #e9f3ff;
+$at-tag-bg-color-primary-active: #e9f3ff;
 
 $at-range-track-bg-color: $color-brand-light;
 

@@ -52,7 +52,7 @@
     align-items: center;
     font-size: 0;
     // box-sizing: border-box;
-    @include border-thin($width: 1PX);
+    @include border-thin($width: 1px);
   }
 
   &__remove-btn {

@@ -23,7 +23,20 @@ export interface AtImagePickerProps extends AtComponent {
    * 图片预览模式，详见[微信开发者文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
    * @default 'aspectFill'
    */
-  mode?: 'scaleToFill' | 'aspectFit' | 'aspectFill' | 'widthFix' | 'top' | 'bottom' | 'center' | 'left' | 'right' | 'top left' | 'top right' | 'bottom left' | 'bottom right'
+  mode?:
+    | 'scaleToFill'
+    | 'aspectFit'
+    | 'aspectFill'
+    | 'widthFix'
+    | 'top'
+    | 'bottom'
+    | 'center'
+    | 'left'
+    | 'right'
+    | 'top left'
+    | 'top right'
+    | 'bottom left'
+    | 'bottom right'
   /**
    * 是否显示添加图片按钮
    * @default true
@@ -57,11 +70,15 @@ export interface AtImagePickerProps extends AtComponent {
   /**
    * files 值发生变化触发的回调函数, operationType 操作类型有添加，移除，如果是移除操作，则第三个参数代表的是移除图片的索引
    */
-  onChange: (files: File[], operationType: 'add' | 'remove', index?: number) => void
+  onChange: (
+    files: File[],
+    operationType: 'add' | 'remove',
+    index?: number
+  ) => void
   /**
    * 点击图片触发的回调
    */
-  onImageClick?: (index: number, file: Object) => void
+  onImageClick?: (index: number, file: File) => void
   /**
    * 选择失败触发的回调
    */

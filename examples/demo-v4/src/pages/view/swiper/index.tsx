@@ -40,11 +40,7 @@ export default class SwiperPage extends React.Component<{}, SwiperPageState> {
       isCircular: false,
       isAutoplay: false,
       hasIndicatorDots: true,
-      imgUrls: [
-        swiper1,
-        swiper2,
-        swiper3
-      ]
+      imgUrls: [swiper1, swiper2, swiper3]
     }
   }
 

@@ -16,7 +16,7 @@ Issues 是用来提交 Bug 或 Feature 相关的内容，一个 Bug Issue 应该
 
 ## Pull requests
 
-**第一次提 Pull Request?** 您可以学习这套 *免费* 的课程
+**第一次提 Pull Request?** 您可以学习这套 _免费_ 的课程
 [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 我们欢迎所有类型的 PR，感谢您愿意花时间贡献代码~

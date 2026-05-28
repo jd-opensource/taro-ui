@@ -1,7 +1,7 @@
-version: ">= 1.0.0"
+version: '>= 1.0.0'
 language: node_js
 node_js:
-  - "10"
+  - '10'
 os: linux
 dist: xenial
 arch: amd64
@@ -23,7 +23,7 @@ jobs:
       script:
         - yarn run test:ci
     - stage: release
-      if: "(tag =~ /^v3/) AND (NOT (type IN (pull_request)))"
+      if: '(tag =~ /^v3/) AND (NOT (type IN (pull_request)))'
       before_install:
         - curl -o- -L https://yarnpkg.com/install.sh | bash
         - export PATH="$HOME/.yarn/bin:$PATH"
@@ -38,12 +38,12 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        script: "yarn run publish"
+        script: 'yarn run publish'
         on:
           tags: true
           repo: NervJS/taro-ui
     - stage: deploy
-      if: "(branch = master) AND (NOT (type IN (pull_request)))"
+      if: '(branch = master) AND (NOT (type IN (pull_request)))'
       before_install:
         - curl -o- -L https://yarnpkg.com/install.sh | bash
         - export PATH="$HOME/.yarn/bin:$PATH"

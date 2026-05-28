@@ -4,9 +4,7 @@ import React from 'react'
 import { View } from '@tarojs/components'
 import { AtActionSheetItemProps } from '../../../../../types/action-sheet'
 
-export default class AtActionSheetItem extends React.Component<
-  AtActionSheetItemProps
-> {
+export default class AtActionSheetItem extends React.Component<AtActionSheetItemProps> {
   public static defaultProps: AtActionSheetItemProps
   public static propTypes: InferProps<AtActionSheetItemProps>
 

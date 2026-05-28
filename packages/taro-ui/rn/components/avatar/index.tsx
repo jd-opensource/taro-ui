@@ -15,7 +15,7 @@ if (process.env.TARO_ENV === 'rn') {
 const SIZE_CLASS = {
   large: 'large',
   normal: 'normal',
-  small: 'small',
+  small: 'small'
 }
 
 export default class AtAvatar extends React.Component<
@@ -29,7 +29,7 @@ export default class AtAvatar extends React.Component<
     super(props)
     this.state = {
       isWEAPP: Taro.getEnv() === Taro.ENV_TYPE.WEAPP,
-      _width: 0,
+      _width: 0
     }
   }
 
@@ -45,7 +45,7 @@ export default class AtAvatar extends React.Component<
     const iconSize = SIZE_CLASS[size || 'normal']
     const classObject = {
       [`at-avatar--${iconSize}`]: iconSize,
-      'at-avatar--circle': circle,
+      'at-avatar--circle': circle
     }
 
     let letter = ''
@@ -85,7 +85,7 @@ AtAvatar.defaultProps = {
   text: '',
   image: '',
   customStyle: {},
-  className: '',
+  className: ''
 }
 
 AtAvatar.propTypes = {
@@ -95,5 +95,5 @@ AtAvatar.propTypes = {
   image: PropTypes.string,
   openData: PropTypes.object,
   customStyle: PropTypes.oneOfType([PropTypes.object]),
-  className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  className: PropTypes.oneOfType([PropTypes.array, PropTypes.string])
 }

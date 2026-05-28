@@ -17,14 +17,14 @@ class Docs extends React.Component {
     super(...arguments)
     this.state = {
       fixed: false,
-      mode: 'light',
+      mode: 'light'
     }
   }
 
   componentDidMount() {
     const _mode = localStorage.getItem('mode')
     this.setState({
-      mode: _mode || 'light',
+      mode: _mode || 'light'
     })
   }
 
@@ -40,7 +40,7 @@ class Docs extends React.Component {
 
     handleMode && handleMode()
     this.setState({
-      mode: mode === 'light' ? 'dark' : 'light',
+      mode: mode === 'light' ? 'dark' : 'light'
     })
   }
 
@@ -57,15 +57,24 @@ class Docs extends React.Component {
 
     return (
       <div className='app' id='app'>
-        <PageHeader collapse themeMode handleMode={this.changeMode.bind(this)} />
+        <PageHeader
+          collapse
+          themeMode
+          handleMode={this.changeMode.bind(this)}
+        />
         <div className={classnames('at-container row', { darkbox })}>
-          <div className={classnames('at-sidebar col-sm-24 col-md-6 col-lg-4', { darkbox })}>
+          <div
+            className={classnames('at-sidebar col-sm-24 col-md-6 col-lg-4', {
+              darkbox
+            })}
+          >
             <Sidebar data={data} mode={mode} />
           </div>
           <div
             ref='atMarkdown'
-            className={`at-markdown col-sm-24 col-md-18 col-lg-20 ${curDemoPath ? 'at-markdown--demo' : ''
-              }`}
+            className={`at-markdown col-sm-24 col-md-18 col-lg-20 ${
+              curDemoPath ? 'at-markdown--demo' : ''
+            }`}
           >
             {curDemoPath && (
               <div className='qrcode-menu' style={{ right: '420px' }}>

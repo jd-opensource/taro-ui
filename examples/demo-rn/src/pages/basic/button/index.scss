@@ -5,12 +5,12 @@
 }
 
 .btn-demo-fab {
-   /*  #ifndef  rn  */
+  /*  #ifndef  rn  */
   position: fixed;
-    /*  #endif  */
-   /*  #ifdef  rn  */
+  /*  #endif  */
+  /*  #ifdef  rn  */
   position: absolute;
-    /*  #endif  */
+  /*  #endif  */
   right: 32px;
   z-index: 1100;
   bottom: 32px;
@@ -29,7 +29,7 @@
     margin-bottom: 20px;
 
     &--subitem {
-       display: flex;
+      display: flex;
       flex-direction: row;
       margin-left: 24px;
     }
