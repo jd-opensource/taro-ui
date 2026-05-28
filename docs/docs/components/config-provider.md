@@ -49,7 +49,6 @@ export default function App() {
 
 ```js
 import { ConfigProvider } from 'taro-ui'
-
 ;<ConfigProvider
   locale={{
     LoadMore: {
