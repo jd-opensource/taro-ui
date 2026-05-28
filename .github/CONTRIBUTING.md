@@ -31,40 +31,57 @@ Issues 是用来提交 Bug 或 Feature 相关的内容，一个 Bug Issue 应该
 
 ## 开发环境
 
-请确保您的 Node 版本是 16.x，并且 Taro 升级到最新版
+请确保您的 Node 版本是 18.x，并且 Taro 升级到最新版
 
 ```bash
-git clone git@github.com:NervJS/taro-ui.git
-npm install
+git clone https://github.com/jd-opensource/taro-ui
+pnpm install
 ```
 
 运行项目：
 
 ```bash
 # 小程序端
-npm run dev:weapp
+pnpm --filter demo dev:weapp
 
 # H5 端
-npm run dev:h5
+pnpm --filter demo dev:h5
 
 # 文档页面
-npm run dev:doc
+pnpm --filter docs dev
+```
+
+运行测试：
+
+```bash
+# H5 端
+pnpm --filter demo test
 ```
 
 项目打包：
 
 ```bash
 # 小程序端
-npm run build:weapp
+pnpm build
 
 # H5 端
-npm run build:h5
+pnpm build
 
 # 文档页面
-npm run build:doc
+pnpm build:doc
 
 # 组件打包
-npm run build:component
+pnpm build:ui
+```
+
+文档预览
+
+```bash
+pnpm --filter demo build:h5
+pnpm --filter docs build
+pnpm --filter docs build:static
+pnpm --filter docs preview
+# visit http://localhost:4173/taro-ui/
 ```
 
 ## 代码规范
