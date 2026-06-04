@@ -82,4 +82,4 @@ MIT
 [david-dm-url]: https://david-dm.org/NervJS/taro-ui
 [license-image]: https://img.shields.io/github/license/jd-opensource/taro-ui?style=flat-square
 [license-url]: ../../LICENSE
-[roadmap-image]: ../docs/assets/taro-ui-roadmap.svg
+[roadmap-image]: ../../docs/assets/taro-ui-roadmap.svg
