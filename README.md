@@ -59,7 +59,7 @@ import { AtButton } from 'taro-ui'
 通过安装skill获取AI Native支持
 
 ```bash
-npx skills add https://github.com/jd-opensource/taro-ui/packages/taro-ui-guide/SKILL.md
+npx skills add https://raw.githubusercontent.com/jd-opensource/taro-ui/master/packages/taro-ui-guide/SKILL.md
 ```
 
 ## 开发交流
