@@ -24,6 +24,7 @@ jobs:
       !(github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true)
     permissions:
       contents: write # to create tags and refs
+      actions: write # to cancel running workflow (andymckay/cancel-action)
       issues: write # to create comment
       pull-requests: write # to create comment and so on
 
