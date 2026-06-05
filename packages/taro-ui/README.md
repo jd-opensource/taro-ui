@@ -33,7 +33,6 @@ Taro 是由 [凹凸实验室](https://aotu.io) 倾力打造的多端开发解决
 ## 安装
 
 ### 2.x
-
 当 Taro 版本 < 3 时，使用 2.x 版本
 
 ```bash
@@ -41,7 +40,6 @@ $ npm install taro-ui@2.3.4
 ```
 
 ### 3.x
-
 当 Taro 版本 ≥ 3 时，使用 3.x 版本
 
 ```bash
@@ -56,27 +54,21 @@ $ npm install taro-ui@latest
 import { AtButton } from 'taro-ui'
 ```
 
-通过安装skill获取AI Native支持
-
-```bash
-npx skills add https://raw.githubusercontent.com/jd-opensource/taro-ui/master/packages/taro-ui-guide/SKILL.md
-```
-
 ## 开发交流
 
 [官方微信交流群](https://github.com/NervJS/taro-ui/issues/16)
 
 ## 开发计划
 
-[查看 Roadmap →](./ROADMAP.md)
+[查看 Roadmap →](../../ROADMAP.md)
 
 ## 路线图
 
-Taro UI 正在积极恢复维护中，当前重点完成 Monorepo 重构、CSS 预编译和 Taro v4 兼容性验证。详细规划请查看 [ROADMAP.md](./ROADMAP.md)。
+Taro UI 正在积极恢复维护中，当前重点完成 Monorepo 重构、CSS 预编译和 Taro v4 兼容性验证。详细规划请查看 [ROADMAP.md](../../ROADMAP.md)。
 
 ## 贡献
 
-如果你在使用 `Taro UI` 时遇到问题，或者有好的建议，欢迎给我们提 `Issue` 或 `Pull Request`。在开始之前，请阅读 [贡献指南](./.github/CONTRIBUTING.md)
+如果你在使用 `Taro UI` 时遇到问题，或者有好的建议，欢迎给我们提 `Issue` 或 `Pull Request`。在开始之前，请阅读 [贡献指南](../../.github/CONTRIBUTING.md)
 
 ## License
 
@@ -89,5 +81,5 @@ MIT
 [david-dm-image]: https://david-dm.org/NervJS/taro-ui.svg?style=flat-square
 [david-dm-url]: https://david-dm.org/NervJS/taro-ui
 [license-image]: https://img.shields.io/github/license/jd-opensource/taro-ui?style=flat-square
-[license-url]: ./LICENSE
-[roadmap-image]: ./docs/assets/taro-ui-roadmap.svg
+[license-url]: ../../LICENSE
+[roadmap-image]: ../../docs/assets/taro-ui-roadmap.svg
