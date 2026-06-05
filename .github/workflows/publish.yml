@@ -17,6 +17,11 @@ env:
 permissions: {}
 jobs:
   publish:
+    # 仅 release 提交（chore(release):）触发；pull_request 须已 merge
+    # push 到非 next 分支时，commit message 还需包含 --tag=
+    if: |
+      startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) ||
+      !(github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true)
     permissions:
       contents: write # to create tags and refs
       actions: write # to cancel running workflow (andymckay/cancel-action)
@@ -55,14 +60,6 @@ jobs:
           echo "COMMIT_MESSAGE=${COMMIT_MESSAGE}" >> $GITHUB_ENV
       - name: Show commit message
         run: echo "$COMMIT_MESSAGE"
-
-      - name: Commit message compliance verification
-        if: startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) != true
-        uses: andymckay/cancel-action@0.3
-
-      - name: Publish push tag verification
-        if: github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true
-        uses: andymckay/cancel-action@0.3
 
       # Get & check npm publish
       - name: Get publish params
