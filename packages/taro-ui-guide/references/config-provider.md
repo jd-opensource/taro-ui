@@ -14,9 +14,7 @@ import { ConfigProvider, zhCN, enUS } from 'taro-ui'
 
 ## 样式（按需）
 
-```scss
 _无独立样式文件_
-```
 
 ## 源码与类型
 

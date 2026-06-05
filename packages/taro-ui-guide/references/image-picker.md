@@ -39,9 +39,6 @@ import { AtImagePicker } from 'taro-ui'
 | `sizeType` | 是 | 所选的图片的尺寸 |
 | `sourceType` | 是 | 选择图片的来源 |
 | `onChange` | 否 | files 值发生变化触发的回调函数, operationType 操作类型有添加，移除，如果是移除操作，则第三个参数代表的是移除图片的索引 |
-| `files` | 否 | — |
-| `operationType` | 否 | — |
-| `index` | 是 | — |
 | `onImageClick` | 是 | 点击图片触发的回调 |
 | `onFail` | 是 | 选择失败触发的回调 |
 

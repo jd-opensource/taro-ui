@@ -52,7 +52,6 @@ import { AtInput } from 'taro-ui'
 | `onConfirm` | 是 | 点击完成按钮时触发，v2.0.3 版本可以获取 event 参数 |
 | `onClick` | 是 | 当 editable 为 false 时，点击组件触发的事件，v2.3.3 版本可以获取 event 参数 |
 | `onKeyboardHeightChange` | 是 | 键盘高度发生变化的时候触发此事件 |
-| `event` | 是 | — |
 | `onErrorClick` | 是 | 点击错误按钮触发的事件，v2.3.3 版本可以获取 event 参数 |
 
 

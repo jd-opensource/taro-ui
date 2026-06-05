@@ -85,32 +85,64 @@ function extractInterfaces(content) {
   return interfaces
 }
 
+function updateNestingDepth(line, depth) {
+  let inString = false
+  let stringChar = ''
+  let escaped = false
+
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i]
+    if (inString) {
+      if (escaped) escaped = false
+      else if (ch === '\\') escaped = true
+      else if (ch === stringChar) inString = false
+      continue
+    }
+    if (ch === '"' || ch === "'" || ch === '`') {
+      inString = true
+      stringChar = ch
+      continue
+    }
+    if (ch === '{' || ch === '(' || ch === '[') depth++
+    else if (ch === '}' || ch === ')' || ch === ']') depth = Math.max(0, depth - 1)
+  }
+  return depth
+}
+
 function extractPropsFromBody(body) {
   const props = []
   const lines = body.split('\n')
   let docLines = []
+  let depth = 0
+
   for (const line of lines) {
-    if (/^\s*\/\*\*/.test(line)) {
-      docLines = []
-      continue
-    }
-    if (/^\s*\*\//.test(line)) continue
-    const docMatch = line.match(/^\s*\*\s+(.+)/)
-    if (docMatch) {
-      const text = docMatch[1].trim()
-      if (text.startsWith('@')) continue
-      docLines.push(text)
-      continue
-    }
-    const propMatch = line.match(/^\s*(\w+)(\?)?:\s*/)
-    if (propMatch && !['extends', 'Omit'].some(k => line.includes(k))) {
-      const name = propMatch[1]
-      if (!name.startsWith('_')) {
-        const doc = docLines.join(' ').trim() || '—'
-        props.push({ name, optional: !!propMatch[2], doc })
+    const atTopLevel = depth === 0
+
+    if (atTopLevel) {
+      if (/^\s*\/\*\*/.test(line)) {
+        docLines = []
+      } else if (/^\s*\*\//.test(line)) {
+        // end of JSDoc
+      } else {
+        const docMatch = line.match(/^\s*\*\s+(.+)/)
+        if (docMatch) {
+          const text = docMatch[1].trim()
+          if (!text.startsWith('@')) docLines.push(text)
+        } else {
+          const propMatch = line.match(/^\s*(\w+)(\?)?:\s*/)
+          if (propMatch && !['extends', 'Omit'].some(k => line.includes(k))) {
+            const name = propMatch[1]
+            if (!name.startsWith('_')) {
+              const doc = docLines.join(' ').trim() || '—'
+              props.push({ name, optional: !!propMatch[2], doc })
+            }
+            docLines = []
+          }
+        }
       }
-      docLines = []
     }
+
+    depth = updateNestingDepth(line, depth)
   }
   return props
 }
@@ -131,12 +163,12 @@ function readTypesFiles(files) {
 
 function renderComponentMd(entry) {
   const importList = entry.exports.join(', ')
-  const styleBlock =
+  const styleSection =
     entry.style.length === 0
-      ? '_无独立样式文件_'
-      : entry.style
+      ? '## 样式（按需）\n\n_无独立样式文件_\n'
+      : `## 样式（按需）\n\n\`\`\`scss\n${entry.style
           .map(s => `@import 'taro-ui/dist/style/components/${s}';`)
-          .join('\n')
+          .join('\n')}\n\`\`\`\n`
 
   const interfaces = readTypesFiles(entry.types)
   let propsSection = ''
@@ -194,12 +226,7 @@ function renderComponentMd(entry) {
 import { ${importList} } from 'taro-ui'
 \`\`\`
 
-## 样式（按需）
-
-\`\`\`scss
-${styleBlock}
-\`\`\`
-
+${styleSection}
 ## 源码与类型
 
 - 实现：\`packages/taro-ui/src/components/${srcDir}/\`

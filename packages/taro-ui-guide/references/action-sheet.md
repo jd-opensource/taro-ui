@@ -36,18 +36,6 @@ import { AtActionSheet, AtActionSheetItem } from 'taro-ui'
 | `onClose` | 是 | 元素被关闭触发的事件 |
 | `onCancel` | 是 | 点击了底部取消按钮触发的事件 |
 
-### `AtActionSheetHeaderProps`
-
-| Prop | 可选 | 说明 |
-|------|------|------|
-| `onClick` | 是 | — |
-
-### `AtActionSheetBodyProps`
-
-| Prop | 可选 | 说明 |
-|------|------|------|
-| `onClick` | 是 | 点击 Item 触发的事件 |
-
 
 ---
 [← 组件索引](./README.md)
