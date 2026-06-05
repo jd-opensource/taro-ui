@@ -17,10 +17,12 @@ env:
 permissions: {}
 jobs:
   publish:
-    # push 仅 release 提交才执行；非 next 分支还需含 --tag= 参数
-    if: 
-      startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) == true ||
-      (github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) == true)
+    # 仅 release 提交（chore(release):）触发；pull_request 须已 merge
+    # push 到非 next 分支时，commit message 还需包含 --tag=
+    if: |
+      (github.event_name != 'pull_request' || github.event.pull_request.merged == true) &&
+      startsWith(env.COMMIT_MESSAGE, 'chore(release):') &&
+      (github.event_name != 'push' || github.ref_name == 'next' || contains(env.COMMIT_MESSAGE, '--tag='))
     permissions:
       contents: write # to create tags and refs
       issues: write # to create comment
