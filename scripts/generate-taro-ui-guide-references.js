@@ -13,7 +13,7 @@ const OUT_DIR = path.join(REPO_ROOT, 'packages/taro-ui-guide/references')
 const MANIFEST = [
   { slug: 'nav-bar', category: 'layout', title: 'NavBar 导航栏', exports: ['AtNavBar'], style: ['nav-bar.scss'], types: ['nav-bar.d.ts'], doc: 'navbar.md' },
   { slug: 'tab-bar', category: 'layout', title: 'TabBar 标签栏', exports: ['AtTabBar'], style: ['tab-bar.scss'], types: ['tab-bar.d.ts'], doc: 'tabbar.md' },
-  { slug: 'tabs', category: 'layout', title: 'Tabs 标签页', exports: ['AtTabs', 'AtTabsPane'], style: ['tabs.scss'], types: ['tabs.d.ts', 'tabs-pane.d.ts'], doc: 'tabs.md', related: ['tabs-pane'] },
+  { slug: 'tabs', category: 'layout', title: 'Tabs 标签页', exports: ['AtTabs', 'AtTabsPane'], style: ['tabs.scss'], types: ['tabs.d.ts', 'tabs-pane.d.ts'], doc: 'tabs.md' },
   { slug: 'drawer', category: 'layout', title: 'Drawer 抽屉', exports: ['AtDrawer'], style: ['drawer.scss'], types: ['drawer.d.ts'], doc: 'drawer.md' },
   { slug: 'float-layout', category: 'layout', title: 'FloatLayout 浮层', exports: ['AtFloatLayout'], style: ['float-layout.scss'], types: ['float-layout.d.ts'], doc: 'float-layout.md' },
   { slug: 'curtain', category: 'layout', title: 'Curtain 幕帘', exports: ['AtCurtain'], style: ['curtain.scss'], types: ['curtain.d.ts'], doc: 'curtain.md' },

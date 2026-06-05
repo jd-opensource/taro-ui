@@ -48,9 +48,5 @@ import { AtTabs, AtTabsPane } from 'taro-ui'
 | `index` | 否 | tabPane 排序，从 0 计数 |
 
 
-## 关联
-
-- [tabs-pane](./tabs-pane.md)
-
 ---
 [← 组件索引](./README.md)
