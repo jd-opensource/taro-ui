@@ -17,9 +17,10 @@ env:
 permissions: {}
 jobs:
   publish:
+    # push 仅 release 提交才执行；非 next 分支还需含 --tag= 参数
+    if: startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) == true
     permissions:
       contents: write # to create tags and refs
-      actions: write # to cancel running workflow (andymckay/cancel-action)
       issues: write # to create comment
       pull-requests: write # to create comment and so on
 
@@ -55,14 +56,6 @@ jobs:
           echo "COMMIT_MESSAGE=${COMMIT_MESSAGE}" >> $GITHUB_ENV
       - name: Show commit message
         run: echo "$COMMIT_MESSAGE"
-
-      - name: Commit message compliance verification
-        if: startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) != true
-        uses: andymckay/cancel-action@0.3
-
-      - name: Publish push tag verification
-        if: github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true
-        uses: andymckay/cancel-action@0.3
 
       # Get & check npm publish
       - name: Get publish params
