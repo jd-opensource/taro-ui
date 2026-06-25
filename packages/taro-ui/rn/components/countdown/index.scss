@@ -48,7 +48,7 @@ $font-size: $font-size-lg;
   &--card {
     .at-count-down__time-box {
       padding: $spacing-v-xs 0;
-      border: 1px solid $color-border-grey;
+      border: 1PX solid $color-border-grey;
       border-radius: $border-radius-md;
       color: #ff4949;
       //  display: inline-block;
@@ -64,7 +64,7 @@ $font-size: $font-size-lg;
         position: absolute;
         content: '';
         width: 100%;
-        height: 1px;
+        height: 1PX;
         top: 50%;
         left: 0;
         z-index: $zindex-divider;

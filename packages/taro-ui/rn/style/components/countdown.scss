@@ -51,7 +51,7 @@
       min-width: $at-countdown-font-size;
       position: relative;
       padding: $spacing-v-xs 0;
-      border: 1px solid $color-border-grey;
+      border: 1PX solid $color-border-grey;
       border-radius: $border-radius-md;
       background-color: $at-countdown-card-num-bg-color;
 
@@ -61,7 +61,7 @@
         left: 0;
         width: 100%;
         height: 55%;
-        border-bottom-width: 1px;
+        border-bottom-width: 1PX;
         border-bottom-color: $color-grey-3;
         z-index: $zindex-divider;
       }
