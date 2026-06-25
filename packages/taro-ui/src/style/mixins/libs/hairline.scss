@@ -24,7 +24,7 @@
 @mixin hairline-surround(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px
+  $width: 1PX
 ) {
   position: relative;
 
@@ -48,7 +48,7 @@
 @mixin hairline-bottom(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px
+  $width: 1PX
 ) {
   position: relative;
 
@@ -82,7 +82,7 @@
 @mixin hairline-top-bottom(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px
+  $width: 1PX
 ) {
   position: relative;
 
@@ -97,7 +97,7 @@
 @mixin hairline-bottom-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px,
+  $width: 1PX,
   $left: 0
 ) {
   position: relative;
@@ -117,7 +117,7 @@
 @mixin hairline-top-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px,
+  $width: 1PX,
   $left: 0
 ) {
   position: relative;
@@ -137,7 +137,7 @@
 @mixin hairline-left-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px,
+  $width: 1PX,
   $top: 0
 ) {
   position: relative;
@@ -157,7 +157,7 @@
 @mixin hairline-right-relative(
   $color: $color-border-light,
   $style: solid,
-  $width: 1px,
+  $width: 1PX,
   $top: 0
 ) {
   position: relative;

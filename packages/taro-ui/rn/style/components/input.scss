@@ -9,7 +9,7 @@
   margin-left: $spacing-h-xl;
 
   /* 修复底线隐藏问题 */
-  margin-bottom: 1px;
+  margin-bottom: 1PX;
   @include hairline-bottom();
 
   &__overlay {

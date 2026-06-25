@@ -48,7 +48,7 @@
       box-sizing: border-box;
       width: $at-timeline-dot-size;
       height: $at-timeline-dot-size;
-      border: 1px solid transparent;
+      border: 1PX solid transparent;
       border-radius: $border-radius-circle;
       border-color: $at-timeline-dot-border-color;
     }
@@ -69,7 +69,7 @@
     top: calc($at-timeline-dot-size / 2);
     bottom: calc($at-timeline-dot-size / -2);
     left: calc($at-timeline-dot-size / 2) - 2px;
-    border-left: 1px solid $at-timeline-line-color;
+    border-left: 1PX solid $at-timeline-line-color;
   }
 
   /* modifiers */

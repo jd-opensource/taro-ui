@@ -12,7 +12,7 @@
   line-height: $at-button-height - 2;
   text-align: center;
   border-radius: $border-radius-md;
-  border: 1px solid $color-border-base;
+  border: 1PX solid $color-border-base;
   margin: 0 $spacing-h-xl;
   // &:active {
   //   opacity: $opacity-active;
@@ -21,7 +21,7 @@
   /* elements */
 
   &__icon {
-    margin: 2px 20px 0 20px;
+    margin: 2PX 20px 0 20px;
   }
 
   /* modifiers */
@@ -35,12 +35,12 @@
 
   &--primary {
     color: $color-text-base-inverse;
-    border: 1px solid $at-button-border-color-primary;
+    border: 1PX solid $at-button-border-color-primary;
     background: $at-button-bg;
   }
 
   &--secondary {
-    border: 1px solid $at-button-border-color-secondary;
+    border: 1PX solid $at-button-border-color-secondary;
     background-color: $color-white;
 
     &--text {

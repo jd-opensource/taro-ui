@@ -2,7 +2,7 @@
 @import '../mixins/index.scss';
 
 .at-card {
-  @include border-thin($color: $color-border-light, $width: 1px);
+  @include border-thin($color: $color-border-light, $width: 1PX);
   flex: 1;
   margin: 0 $spacing-h-lg;
   border-radius: $border-radius-lg;
@@ -12,7 +12,7 @@
   &__header {
     @include display-flex;
     @include align-items(center);
-    @include border-thin-bottom($width: 1px);
+    @include border-thin-bottom($width: 1PX);
 
     padding: $spacing-v-md $spacing-h-lg;
     position: relative;

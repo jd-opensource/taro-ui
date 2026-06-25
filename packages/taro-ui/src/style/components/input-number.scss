@@ -7,7 +7,7 @@ $at-input-number-btn-padding-lg: 20px;
 
 #{$component} {
   display: inline-flex;
-  @include border-thin($width: 1px);
+  @include border-thin($width: 1PX);
 
   font-size: $at-input-number-font-size;
   border-radius: $border-radius-md;
@@ -45,7 +45,7 @@ $at-input-number-btn-padding-lg: 20px;
     font-size: $at-input-number-font-size;
     text-align: center;
     align-items: center;
-    @include border-thin($width: 1px, $directions: left right);
+    @include border-thin($width: 1PX, $directions: left right);
   }
 
   /* modifiers */

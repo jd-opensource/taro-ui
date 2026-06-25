@@ -13,7 +13,7 @@ $at-textarea-bg-color: $color-bg;
   border-radius: $border-radius-md;
   background-color: $at-textarea-bg-color;
   // box-sizing: border-box;
-  @include border-thin($width: 1px);
+  @include border-thin($width: 1PX);
 
   &__textarea {
     width: 100%;
