@@ -5,7 +5,7 @@ const path = require('path')
 const escape = require('escape-string-regexp')
 const exclusionList = require('metro-config/src/defaults/exclusionList')
 
-const taroUI = path.resolve(__dirname, '../taro-ui')
+const taroUI = path.resolve(__dirname, '../../packages/taro-ui')
 const pak = JSON.parse(
   fs.readFileSync(path.join(taroUI, 'package.json'), 'utf8')
 )
