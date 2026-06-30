@@ -60,8 +60,7 @@
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.21.0",
+    "stylelint-config-standard-scss": "^11.1.0",
     "tslib": "2.5.0",
     "typescript": "~5.3.3"
   },
@@ -78,7 +77,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --quiet --cache --fix",
-    "src/**/*.scss": "stylelint --syntax scss --fix"
+    "src/**/*.scss": "stylelint --fix"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.22.15"

@@ -1,15 +1,24 @@
 {
-  "extends": "stylelint-config-standard",
-  "plugins": ["stylelint-scss"],
+  "extends": "stylelint-config-standard-scss",
   "rules": {
-    "declaration-colon-newline-after": null,
     "at-rule-no-unknown": null,
-    "color-hex-case": null,
-    "block-closing-brace-newline-after": null,
     "at-rule-empty-line-before": null,
-    "number-no-trailing-zeros": null,
     "no-empty-source": null,
-    "unit-case": null,
-    "scss/at-rule-no-unknown": true
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-empty-line-before": null,
+    "keyframes-name-pattern": null,
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null,
+    "shorthand-property-no-redundant-values": null,
+    "value-keyword-case": null,
+    "scss/at-import-partial-extension": null,
+    "scss/at-mixin-argumentless-call-parentheses": null,
+    "scss/at-mixin-pattern": null,
+    "scss/at-rule-conditional-no-parentheses": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "scss/operator-no-newline-after": null
   }
 }
