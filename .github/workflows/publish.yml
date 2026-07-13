@@ -10,6 +10,7 @@ on:
     branches:
       - next
     types: [closed]
+  workflow_dispatch:
 
 env:
   CI: true
@@ -17,11 +18,12 @@ env:
 permissions: {}
 jobs:
   publish:
-    # 仅 release 提交（chore(release):）触发；pull_request 须已 merge
-    # push 到非 next 分支时，commit message 还需包含 --tag=
+    # 仅 release 提交（chore(release):）触发；job 级 if 不允许引用 env 上下文，
+    # 必须从 github.event 读取 commit message。workflow_dispatch 用于手动补发。
     if: |
-      startsWith( env.COMMIT_MESSAGE , 'chore(release):' ) ||
-      !(github.event_name == 'push' && github.ref_name != 'next' && contains( env.COMMIT_MESSAGE , '--tag=' ) != true)
+      github.event_name == 'workflow_dispatch' ||
+      startsWith(github.event.head_commit.message, 'chore(release):') ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true && startsWith(github.event.pull_request.title, 'chore(release):'))
     permissions:
       contents: write # to create tags and refs
       actions: write # to cancel running workflow (andymckay/cancel-action)
