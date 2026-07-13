@@ -1,6 +1,6 @@
 {
   "name": "taro-ui",
-  "version": "3.3.3",
+  "version": "3.4.0",
   "description": "UI KIT for Taro",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -23,6 +23,8 @@
       "require": "./dist/components/*/index.js",
       "import": "./dist/components/*/index.js"
     },
+    "./lib/style/*": "./dist/style/*",
+    "./lib/*": "./dist/*",
     "./dist/style/index.css": "./dist/style/index.css",
     "./dist/*": "./dist/*"
   },

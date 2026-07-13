@@ -1,5 +1,31 @@
 # Changelog
 
+## [3.4.0](https://github.com/jd-opensource/taro-ui/compare/v3.3.3...v3.4.0) (2026-07-13)
+
+> **现代化发布**：全部组件完成 Class → Function Component 迁移，新增国际化（ConfigProvider）能力，构建与发布流程进一步收敛。
+
+### Features
+
+- **Function Component 迁移**：全部 48 个组件从 Class Component 迁移为 Function Component + Hooks，props API 保持 100% 兼容 ([#1886](https://github.com/jd-opensource/taro-ui/pull/1886))
+- **国际化 i18n**：新增 `ConfigProvider` 组件，通过 `locale` prop 覆盖组件内置文案；内置 zh_CN / en_US 语言包，默认中文零配置 ([#1891](https://github.com/jd-opensource/taro-ui/pull/1891))
+
+### Bug Fixes
+
+- **exports 兼容**：恢复 `lib/style/*` 与 `lib/*` 到 `dist/` 的 exports 映射，修复老路径引用失效（该修复曾随 3.3.4 被 revert 一并回滚）
+- **PX 单位**：修复 Prettier 将 Taro `PX` 单位误转为小写导致的样式问题 ([#1901](https://github.com/jd-opensource/taro-ui/pull/1901))
+- **README**：补充 `packages/taro-ui/README.md` 修复 npm 页面展示，修复文档无效链接 ([#1895](https://github.com/jd-opensource/taro-ui/pull/1895), [#1897](https://github.com/jd-opensource/taro-ui/pull/1897))
+
+### Build & Toolchain
+
+- **stylelint 15**：迁移至 stylelint 15 兼容的 SCSS preset；修复 demo-rn metro 路径
+- **CI**：publish 步骤限定仅对 release 提交执行，避免误发布 ([#1899](https://github.com/jd-opensource/taro-ui/pull/1899))
+
+### 附注：3.3.3（静默发布，未单独记录）
+
+3.3.3 包含：测试框架迁移至 Jest + React Testing Library ([#1883](https://github.com/jd-opensource/taro-ui/pull/1883))、构建产物统一收敛至 `dist/` 并保持 `lib/` 路径兼容 ([#1884](https://github.com/jd-opensource/taro-ui/pull/1884))、CI 自定义 setup action ([#1885](https://github.com/jd-opensource/taro-ui/pull/1885))。
+
+---
+
 ## [3.3.2](https://github.com/jd-opensource/taro-ui/compare/v3.3.1...v3.3.2) (2026-05-21)
 
 > **恢复维护发布**：taro-ui 在停更多年后恢复活跃维护，本次发布包含大量工具链升级、构建系统重构和 bug 修复。
