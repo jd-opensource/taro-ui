@@ -140,7 +140,7 @@ jobs:
         run: |
           if [ '${{ github.event_name }}' == 'pull_request' ] ; then
             pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=next
-          elif [ '${{ github.event_name }}' == 'push' ] ; then
+          elif [ '${{ github.event_name }}' == 'push' ] || [ '${{ github.event_name }}' == 'workflow_dispatch' ] ; then
             pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=${{ github.ref_name }} ${{ env.PUBLISH_PARAMS }}
           fi
         env:
