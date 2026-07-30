@@ -1,0 +1,60 @@
+# Auto-triage inactive issues and PRs after repo maintenance resumed (2026).
+# Policy: docs/MAINTENANCE.md
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+    # Daily 03:17 UTC
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-issue-stale: 180
+          days-before-issue-close: 30
+          days-before-pr-stale: 90
+          days-before-pr-close: 14
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
+          ascending: true
+          operations-per-run: 60
+          remove-stale-when-updated: true
+          enable-statistics: true
+
+          stale-issue-message: |
+            本 issue 已超过 **180 天** 无活动。
+
+            仓库已恢复维护，主线为 **Taro 3.x + taro-ui 3.x**。为清理历史列表，将标记为 stale。
+            - 若问题在 **最新 taro-ui** 仍存在：请评论补充版本、`taro info`、复现步骤，或重新打开并更新信息。
+            - 若不再相关：无需操作，将在约 **30 天后** 自动关闭。
+
+            维护说明：见仓库 `docs/MAINTENANCE.md`。
+
+          close-issue-message: |
+            因长期无活动自动关闭。
+
+            若问题在最新版仍可复现，请 **新开 issue**（附版本与最小复现）或评论请求 reopen。感谢理解。
+
+          stale-pr-message: |
+            本 PR 已超过 **90 天** 无活动。
+
+            主线已大幅变更（构建 / Taro 3 / 目录结构）。若仍希望合入，请基于 `next` rebase 并评论说明；
+            否则将在约 **14 天后** 自动关闭。
+
+          close-pr-message: |
+            因长期无活动自动关闭。如仍有价值，请基于最新 `next` 重新提交 PR。感谢贡献。
+
+          # Do not stale actively tracked work
+          exempt-issue-labels: 'pinned,security,fixed but not released,waiting taro fix,iron-tree:adopted,stage:task,stage:run,stage:verify'
+          exempt-pr-labels: 'pinned,security'
+          exempt-all-milestones: false
+          exempt-all-assignees: true
