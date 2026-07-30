@@ -58,6 +58,7 @@ describe('AtCheckbox Event', () => {
     fireEvent.click(items[0])
     expect(onClick).toBeCalled()
     expect(onClick.mock.calls[0][0]).toEqual(['list2', 'list1'])
+    expect(onClick.mock.calls[0][1]).toEqual('list1')
   })
 
   it('AtCheckbox disabled, onChange not to be called', () => {

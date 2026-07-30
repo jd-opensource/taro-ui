@@ -64,6 +64,11 @@ declare namespace Calendar {
     minDate?: DateArg
 
     maxDate?: DateArg
+
+    /**
+     * 自定义禁用日期，返回 true 表示禁用
+     */
+    disabledDate?: (current: dayjs.Dayjs) => boolean
   }
 
   export type List<T> = Array<T>
@@ -88,6 +93,11 @@ export interface AtCalendarPropsBase {
   minDate?: Calendar.DateArg
 
   maxDate?: Calendar.DateArg
+
+  /**
+   * 自定义禁用日期；传入 dayjs 实例，返回 true 表示该日不可选
+   */
+  disabledDate?: (current: dayjs.Dayjs) => boolean
 
   isSwiper?: boolean
 
@@ -199,6 +209,8 @@ export interface AtCalendarBodyProps {
   minDate?: Calendar.DateArg
 
   maxDate?: Calendar.DateArg
+
+  disabledDate?: (current: dayjs.Dayjs) => boolean
 
   isVertical: boolean
 

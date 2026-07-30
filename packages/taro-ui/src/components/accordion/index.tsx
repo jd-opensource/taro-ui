@@ -20,7 +20,8 @@ function AtAccordion({
 }: AtAccordionProps): JSX.Element {
   const isCompletedRef = useRef(true)
   const [componentId] = useState(() => uuid())
-  const [wrapperHeight, setWrapperHeight] = useState(0)
+  // 使用 null 表示 auto 高度，避免默认 open 时 height:0 触发错误动画
+  const [wrapperHeight, setWrapperHeight] = useState<number | null>(null)
   const [startOpen, setStartOpen] = useState(false)
   const [, setRenderEpoch] = useState(0)
   const prevOpenRef = useRef(open)
@@ -31,7 +32,7 @@ function AtAccordion({
     isCompletedRef.current = false
 
     delayQuerySelector(`#at-accordion__body-${componentId}`, 0).then(rect => {
-      const height = parseInt(rect[0].height.toString())
+      const height = parseInt(rect[0].height.toString()) || 0
       const startHeight = wasOpen ? height : 0
       const endHeight = wasOpen ? 0 : height
       setStartOpen(false)
@@ -40,6 +41,7 @@ function AtAccordion({
         setWrapperHeight(endHeight)
         setTimeout(() => {
           isCompletedRef.current = true
+          setWrapperHeight(null)
           setRenderEpoch(epoch => epoch + 1)
         }, 700)
       }, 100)
@@ -48,7 +50,8 @@ function AtAccordion({
 
   useLayoutEffect(() => {
     if (prevOpenRef.current !== open) {
-      setStartOpen(!!open && !!isAnimation)
+      // 仅在「从未展开 → 展开」时标记 startOpen，避免默认 open 首帧误动画
+      setStartOpen(!!open && !prevOpenRef.current && !!isAnimation)
       toggleWithAnimation(prevOpenRef.current)
       prevOpenRef.current = open
     }
@@ -81,10 +84,9 @@ function AtAccordion({
     color: (icon && icon.color) || '',
     fontSize: (icon && `${icon.size}px`) || ''
   }
-  const contentStyle: { height?: string } = { height: `${wrapperHeight}px` }
-
-  if (isCompletedRef.current) {
-    contentStyle.height = ''
+  const contentStyle: { height?: string } = {}
+  if (!isCompletedRef.current && wrapperHeight !== null) {
+    contentStyle.height = `${wrapperHeight}px`
   }
 
   return (

@@ -1,0 +1,8 @@
+/**
+ * H5: lock page scroll when modal / float-layout is open
+ * (class toggled on document.body via handleTouchScroll)
+ */
+.at-frozen {
+  position: fixed;
+  width: 100%;
+}

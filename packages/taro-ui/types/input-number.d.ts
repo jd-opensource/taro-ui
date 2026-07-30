@@ -68,6 +68,11 @@ export interface AtInputNumberProps extends AtComponent {
    */
   disabledInput?: boolean
   /**
+   * 是否在失焦时才触发 onChange（输入过程中不触发；加减按钮仍立即 onChange）
+   * @default false
+   */
+  changeOnBlur?: boolean
+  /**
    * 输入框值改变时触发的事件
    * @param {number} value 输入框当前值
    * @description 开发者需要通过 onChange 事件来更新 value 值变化，onChange 函数必填

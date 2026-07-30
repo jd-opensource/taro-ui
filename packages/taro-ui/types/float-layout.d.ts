@@ -46,6 +46,16 @@ export interface AtFloatLayoutProps extends AtComponent {
    */
   scrollWithAnimation?: boolean
   /**
+   * 点击浮层的时候时候自动关闭
+   * @default true
+   */
+  closeOnClickOverlay?: boolean
+  /**
+   * 弹出位置
+   * @default 'bottom'
+   */
+  position?: 'top' | 'bottom'
+  /**
    * 元素被关闭时候触发的事件
    */
   onClose?: CommonEventFunction

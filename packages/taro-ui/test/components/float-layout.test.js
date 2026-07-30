@@ -57,4 +57,34 @@ describe('FloatLayout Behavior ', () => {
       expect(onClose).toBeCalled()
     })
   })
+
+  it('FloatLayout closeOnClickOverlay=false does not close', async () => {
+    const onClose = jest.fn()
+
+    const { container } = render(
+      <AtFloatLayout
+        isOpened
+        title='这是个标题'
+        closeOnClickOverlay={false}
+        onClose={onClose}
+      >
+        content
+      </AtFloatLayout>
+    )
+    const componentDom = queryByClass(container, 'at-float-layout')
+    const overlayDom = componentDom.querySelector('.at-float-layout__overlay')
+
+    fireEvent.click(overlayDom)
+    expect(onClose).not.toBeCalled()
+  })
+
+  it('FloatLayout position=top applies modifier class', () => {
+    const { container } = render(
+      <AtFloatLayout isOpened position='top'>
+        content
+      </AtFloatLayout>
+    )
+    const componentDom = queryByClass(container, 'at-float-layout')
+    expect(componentDom.className).toContain('at-float-layout--top')
+  })
 })
