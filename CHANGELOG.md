@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.4.1](https://github.com/jd-opensource/taro-ui/compare/v3.4.0...v3.4.1) (2026-07-30)
+
+### Bug Fixes
+
+- **types**：重新将 `types/` 纳入 npm 发布产物，修复 3.4.0 类型声明缺失导致的 TypeScript 解析失败 ([#1904](https://github.com/jd-opensource/taro-ui/issues/1904))
+  - `files` 增加 `types`
+  - `types` / `exports["."].types` 指向 `types/index.d.ts`
+  - 增加 `./types`、`./types/*` 子路径导出，恢复 `taro-ui/types/*` 深度导入
+
+---
+
 ## [3.4.0](https://github.com/jd-opensource/taro-ui/compare/v3.3.3...v3.4.0) (2026-07-13)
 
 > **现代化发布**：全部组件完成 Class → Function Component 迁移，新增国际化（ConfigProvider）能力，构建与发布流程进一步收敛。
