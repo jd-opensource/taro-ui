@@ -28,6 +28,7 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
     monthFormat,
     minDate,
     maxDate,
+    disabledDate,
     className,
     onMonthChange,
     onClickPreMonth,
@@ -222,6 +223,33 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
     return stateValue
   }
 
+  const isDateDisabled = (date: Dayjs): boolean => {
+    const day = date.startOf('day')
+    if (minDate && day.isBefore(dayjs(minDate).startOf('day'))) return true
+    if (maxDate && day.isAfter(dayjs(maxDate).startOf('day'))) return true
+    if (validDates && validDates.length > 0) {
+      const included = validDates.some(d =>
+        dayjs(d.value).startOf('day').isSame(day)
+      )
+      if (!included) return true
+    }
+    if (typeof disabledDate === 'function' && disabledDate(day)) return true
+    return false
+  }
+
+  const rangeHasDisabledDate = (
+    startUnix: number,
+    endUnix: number
+  ): boolean => {
+    let cursor = dayjs(Math.min(startUnix, endUnix)).startOf('day')
+    const end = dayjs(Math.max(startUnix, endUnix)).startOf('day')
+    while (cursor.isBefore(end) || cursor.isSame(end)) {
+      if (isDateDisabled(cursor)) return true
+      cursor = cursor.add(1, 'day')
+    }
+    return false
+  }
+
   const getMultiSelectedState = (
     value: Dayjs,
     currentSelectedDate: Calendar.SelectedDate
@@ -236,10 +264,17 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
     if (end) {
       state.selectedDate = getSelectedDate(valueUnix, 0)
     } else {
-      state.selectedDate = {
-        ...currentSelectedDate,
-        end: Math.max(valueUnix, +start),
-        start: Math.min(valueUnix, +start)
+      const nextStart = Math.min(valueUnix, +start)
+      const nextEnd = Math.max(valueUnix, +start)
+      // 多选区间不得跨越不可选日期
+      if (rangeHasDisabledDate(nextStart, nextEnd)) {
+        state.selectedDate = getSelectedDate(valueUnix, 0)
+      } else {
+        state.selectedDate = {
+          ...currentSelectedDate,
+          end: nextEnd,
+          start: nextStart
+        }
       }
     }
 
@@ -298,6 +333,7 @@ function AtCalendar(props: AtCalendarProps): JSX.Element {
         format={format}
         minDate={minDate}
         maxDate={maxDate}
+        disabledDate={disabledDate}
         isSwiper={isSwiper}
         isVertical={isVertical}
         selectedDate={selectedDate}

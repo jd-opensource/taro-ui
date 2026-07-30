@@ -16,6 +16,8 @@ function AtFloatLayout({
   scrollLeft,
   upperThreshold,
   lowerThreshold,
+  closeOnClickOverlay = true,
+  position = 'bottom',
   className,
   children,
   onClose,
@@ -45,6 +47,12 @@ function AtFloatLayout({
     handleClose(e)
   }
 
+  const handleOverlayClick = (e): void => {
+    if (closeOnClickOverlay) {
+      close(e)
+    }
+  }
+
   const handleTouchMove = (e: CommonEvent): void => {
     e.stopPropagation()
   }
@@ -52,14 +60,15 @@ function AtFloatLayout({
   const rootClass = classNames(
     'at-float-layout',
     {
-      'at-float-layout--active': _isOpened
+      'at-float-layout--active': _isOpened,
+      'at-float-layout--top': position === 'top'
     },
     className
   )
 
   return (
     <View className={rootClass} onTouchMove={handleTouchMove}>
-      <View onClick={close} className='at-float-layout__overlay' />
+      <View onClick={handleOverlayClick} className='at-float-layout__overlay' />
       <View className='at-float-layout__container layout'>
         {title ? (
           <View className='layout-header'>
@@ -99,6 +108,8 @@ AtFloatLayout.propTypes = {
   upperThreshold: PropTypes.number,
   lowerThreshold: PropTypes.number,
   scrollWithAnimation: PropTypes.bool,
+  closeOnClickOverlay: PropTypes.bool,
+  position: PropTypes.oneOf(['top', 'bottom']),
   onClose: PropTypes.func,
   onScroll: PropTypes.func,
   onScrollToLower: PropTypes.func,

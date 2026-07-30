@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
+import { CommonEvent } from '@tarojs/components/types/common'
 import { AtDrawerProps } from '../../../types/drawer'
 import AtList from '../list/index'
 import AtListItem from '../list/item/index'
@@ -86,6 +87,11 @@ function AtDrawer({
     animHide()
   }
 
+  const onMaskTouchMove = (e: CommonEvent): void => {
+    // 阻止遮罩下页面滚动/点击穿透
+    e.stopPropagation()
+  }
+
   const maskStyle = {
     display: mask ? 'block' : 'none',
     opacity: animShow ? 1 : 0
@@ -109,6 +115,8 @@ function AtDrawer({
         className='at-drawer__mask'
         style={maskStyle}
         onClick={onMaskClick}
+        onTouchMove={onMaskTouchMove}
+        catchMove
       ></View>
 
       <View className='at-drawer__content' style={listStyle}>

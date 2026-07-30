@@ -30,6 +30,7 @@ function AtCalendarBody({
   validDates,
   minDate,
   maxDate,
+  disabledDate,
   selectedDates,
   isSwiper,
   isVertical,
@@ -51,6 +52,7 @@ function AtCalendarBody({
       format,
       minDate,
       maxDate,
+      disabledDate,
       marks,
       selectedDates
     })
@@ -119,6 +121,7 @@ function AtCalendarBody({
       format,
       minDate,
       maxDate,
+      disabledDate,
       marks,
       selectedDates
     })
@@ -132,6 +135,7 @@ function AtCalendarBody({
     format,
     minDate,
     maxDate,
+    disabledDate,
     generateDate,
     selectedDate,
     selectedDates

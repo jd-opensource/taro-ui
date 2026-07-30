@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View } from '@tarojs/components'
-import { AtCheckboxProps } from '../../../types/checkbox'
+import { AtCheckboxProps, CheckboxOption } from '../../../types/checkbox'
 import { noop } from '../../common/utils'
 
 function AtCheckbox({
@@ -12,8 +12,7 @@ function AtCheckbox({
   selectedList = [],
   onChange = noop
 }: AtCheckboxProps<any>): JSX.Element {
-  const handleClick = (idx: number): void => {
-    const option = options[idx]
+  const handleClick = (option: CheckboxOption<any>): void => {
     const { disabled, value } = option
     if (disabled) return
 
@@ -23,14 +22,14 @@ function AtCheckbox({
     } else {
       selectedSet.delete(value)
     }
-    onChange([...selectedSet])
+    onChange([...selectedSet], value)
   }
 
   const rootCls = classNames('at-checkbox', className)
 
   return (
     <View className={rootCls} style={customStyle}>
-      {options.map((option, idx) => {
+      {options.map(option => {
         const { value, disabled, label, desc } = option
         const optionCls = classNames('at-checkbox__option', {
           'at-checkbox__option--disabled': disabled,
@@ -41,7 +40,7 @@ function AtCheckbox({
           <View
             className={optionCls}
             key={value}
-            onClick={() => handleClick(idx)}
+            onClick={() => handleClick(option)}
           >
             <View className='at-checkbox__option-wrap'>
               <View className='at-checkbox__option-cnt'>

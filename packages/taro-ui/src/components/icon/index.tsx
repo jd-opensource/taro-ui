@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text } from '@tarojs/components'
+import { CommonEvent } from '@tarojs/components/types/common'
 import { AtIconProps } from '../../../types/icon'
 import { mergeStyle, pxTransform } from '../../common/utils'
 
@@ -14,8 +15,8 @@ export default function AtIcon({
   size = 24,
   onClick
 }: AtIconProps): JSX.Element {
-  function handleClick(): void {
-    onClick && onClick(arguments as any)
+  function handleClick(event: CommonEvent): void {
+    onClick && onClick(event)
   }
 
   const rootStyle = {

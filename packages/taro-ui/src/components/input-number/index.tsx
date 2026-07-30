@@ -49,6 +49,7 @@ function AtInputNumber({
   className = '',
   disabled = false,
   disabledInput = false,
+  changeOnBlur = false,
   type = 'number',
   width = 0,
   min = 0,
@@ -127,11 +128,31 @@ function AtInputNumber({
     if (disabled) return ''
 
     const newValue = handleValue(inputVal)
-    onChange(Number(newValue), e)
+    if (!changeOnBlur) {
+      onChange(Number(newValue), e)
+    }
     return newValue
   }
 
-  const handleBlur = (event: ITouchEvent): void => onBlur && onBlur(event)
+  const handleBlur = (event: ITouchEvent): void => {
+    if (changeOnBlur && !disabled) {
+      const target = event.target as unknown as { value?: string | number }
+      const detail = (
+        event as unknown as { detail?: { value?: string | number } }
+      ).detail
+      let raw: string | number | null = null
+      if (target && typeof target.value !== 'undefined') {
+        raw = target.value
+      } else if (detail && typeof detail.value !== 'undefined') {
+        raw = detail.value
+      }
+      if (raw !== null) {
+        const newValue = handleValue(raw)
+        onChange(Number(newValue), event as unknown as CommonEvent)
+      }
+    }
+    onBlur && onBlur(event)
+  }
 
   const inputStyle = {
     width: width ? `${pxTransform(width)}` : ''
@@ -193,6 +214,7 @@ AtInputNumber.propTypes = {
   step: PropTypes.number,
   size: PropTypes.oneOf(['normal', 'large']),
   disabledInput: PropTypes.bool,
+  changeOnBlur: PropTypes.bool,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onErrorInput: PropTypes.func
