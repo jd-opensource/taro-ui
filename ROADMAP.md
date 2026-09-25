@@ -1,20 +1,21 @@
 # Taro UI Roadmap
 
-> 制定时间：2026-05-08
-> 当前代码库版本：3.3.1（未发布）
-> npm 最新发布：3.2.2（2024-01-04）
-> Taro 生态：v3.6.x（长期维护）+ v4.2.x（当前主线）
+> 制定时间：2026-05-08，最近校对：2026-09-25
+> 当前代码库版本：3.4.2
+> npm：随 `chore(release): publish 3.4.2` 发布（上一版 3.4.1，2026-07-30）
+> 主线分支：`next`
+> Taro 生态：v3.6.x（开发依赖 `3.6.40`）+ v4.2.x（`examples/demo-v4`，实验性支持）
 
 ---
 
 ## 现状速览
 
-| 维度          | 状态                                                                  |
-| ------------- | --------------------------------------------------------------------- |
-| **发布状态**  | 代码库 3.3.1 已完成工具链升级（tsup/TS5.3/VitePress），但未发布到 npm |
-| **Taro 版本** | 开发依赖锁在 `3.6.40`，`peerDependencies` 声明 `>=3`，实际未验证 v4   |
-| **架构债务**  | 48/48 组件为 Class Component，SCSS `@import` 已废弃，测试用 `nervjs`  |
-| **Monorepo**  | 结构混乱：demo 和文档站混在 `packages/` 中                            |
+| 维度          | 状态                                                                                                      |
+| ------------- | --------------------------------------------------------------------------------------------------------- |
+| **发布状态**  | 3.4.0 已完成函数组件迁移与 `ConfigProvider` 国际化；3.4.1 补回类型声明；3.4.2 发布 3.4.1 之后已合入的积压 |
+| **Taro 版本** | 开发依赖锁在 `3.6.40`，`peerDependencies` 仍为 `>=3`。v4 仅 H5 与微信小程序编译验证通过                 |
+| **架构债务**  | 组件已是 Function Component。SCSS 仍用 `@import`。`propTypes` 还在。测试为 Jest + React Testing Library   |
+| **Monorepo**  | `packages/` 放发布包，`examples/` 放 demo，`docs/` 放文档站                                               |
 
 ---
 
@@ -22,7 +23,7 @@
 
 | 决策              | 结论                                                                                                                             |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **发布时机**      | 先完成重构，再发布。不零散发版，CHANGELOG 一次性写清楚                                                                           |
+| **发布时机**      | 重构期已过。修复和小能力按 patch / minor 随 CHANGELOG 发布                                                                      |
 | **Taro v4 策略**  | 重构阶段初始化 `demo-v4` 并完成 H5 编译验证；发布时 `peerDependencies` 仍为 `>=3`，v4 为实验性支持；小程序平台兼容性后续逐步验证 |
 | **Monorepo 结构** | `packages/` 只放发布包（`taro-ui`），`examples/` 放 demo，`docs/` 放文档站                                                       |
 | **CSS 预编译**    | 随重构一起做，构建时产出 `dist/style/index.css`，消除消费者 Sass warnings                                                        |
@@ -60,67 +61,60 @@
 
 ### v3.3.1 — 恢复发布（Restore Release）
 
-> **目标**：把重构后的版本正式发布到 npm，宣告项目恢复维护。
+> **目标**：把重构后的版本正式发布到 npm，宣告项目恢复维护。已于 2026-04 发布，后续以 3.3.2 作为恢复维护说明。
 
-- [ ] 最终验证全平台编译通过（weapp / h5 / alipay / tt）
-- [ ] 撰写 CHANGELOG（一次性涵盖 3.2.2 → 3.3.1：工具链升级 + Monorepo 重构 + CSS 预编译 + 实验性 v4 支持）
-- [ ] 发布到 npm
-- [ ] 更新官方文档站点
-- [ ] 发布说明声明 Taro v4 为实验性支持（H5 已验证，小程序平台持续验证中）
+- [x] 撰写 CHANGELOG，并发布到 npm
+- [x] 官方文档站改为 GitHub Pages
+- [ ] 全平台编译验证（alipay / tt / jd / qq）仍未做完，见下方「接下来」
 
-**里程碑**：npm 上重新出现活跃版本，项目恢复维护信号。
+**里程碑**：npm 上重新出现活跃版本。
 
 ---
 
-### v3.3.2 — 快速修复 + v4 持续验证（Stabilize）
+### v3.3.2 — 快速修复（Stabilize）
 
-> **目标**：处理发布后社区反馈，推进 v4 小程序平台兼容性。
+> 已于 2026-05-21 发布：工具链升级、CSS 预编译、`demo-v4` 的 H5 / 微信小程序验证。
 
-- [ ] 根据社区 Issue 修复 v3.3.1 中发现的问题
-- [ ] `demo-v4` alipay / tt / jd / qq 编译验证
-- [ ] `demo-v4` 运行时兼容性测试（如有问题，修复后 patch 发布）
-- [ ] 根据验证结果调整 Taro v4 兼容策略
+- [x] 发布到 npm，并写明恢复维护
+- [ ] `demo-v4` alipay / tt / jd / qq 编译验证（未完成，顺延）
 
-**里程碑**：版本稳定，v4 兼容性逐步完善。
+**里程碑**：版本恢复发布。v4 多端验证未结束。
 
 ---
 
-### v3.4.0 — Function Component 迁移（Modernization）
+### v3.4.0 / v3.4.1 — 函数组件、国际化、类型声明（Modernization）
 
-> **目标**：首批高频组件从 Class → Function Component + Hooks。
+> 3.4.0（2026-07-13）和 3.4.1（2026-07-30）已发布。
 
-- [ ] 制定迁移规范（API 保持 100% 兼容）
-- [ ] 优先迁移 Top 10 高频组件：
-  - `AtButton`
-  - `AtInput`
-  - `AtModal`
-  - `AtToast`
-  - `AtTabs`
-  - `AtForm`
-  - `AtList`
-  - `AtCard`
-  - `AtIcon`
-  - `AtSwitch`
-- [ ] 同步更新对应组件的测试用例（nervjs → React Testing Library）
-- [ ] 移除 PropTypes，纯 TypeScript 类型
-- [ ] 发布到 npm
+- [x] 迁移规范见 `docs/MIGRATION_FC.md`，对外 props 保持兼容
+- [x] 全部组件改为 Function Component（不止原先的 Top 10）
+- [x] 测试改为 Jest + React Testing Library（3.3.3）
+- [x] `ConfigProvider` + zh_CN / en_US
+- [x] 3.4.1 把 `types/` 重新打进 npm 包
+- [ ] 移除 `propTypes`，只留 TypeScript 类型（未做）
 
-**里程碑**：核心组件现代化，包体积可能减小，Tree-shaking 更优。
+**里程碑**：组件实现已现代化。`propTypes` 仍保留。
 
 ---
 
-### v3.5.0 — 全组件 FC 迁移 + SCSS 升级（Completion）
+### v3.4.2 — 已合入积压（当前发版）
 
-> **目标**：完成剩余 38 个组件的 FC 迁移，升级样式系统。
+> 3.4.1 标签之后当天下午合进 `next`、当时没有升版本的改动。
 
-- [ ] 迁移剩余全部组件为 Function Component
-- [ ] SCSS `@import` → `@use` / `@forward`
-- [ ] 验证主题覆盖能力不受影响
-- [ ] 清理代码中所有 TODO/FIXME/hack（百度小程序 hack 等）
-- [ ] 测试体系全面现代化（RTL + jest）
-- [ ] 发布到 npm
+- [x] 日历 `disabledDate`、浮层 `closeOnClickOverlay` / `position`、步进器 `changeOnBlur`
+- [x] 图标 `onClick`、复选框 `onChange` 第二个参数、抽屉遮罩、手风琴默认展开、H5 `.at-frozen`
+- [ ] 发到 npm，并补 GitHub Release
 
-**里程碑**：项目全面现代化，技术债务清零。
+**里程碑**：npm 与 `next` 上的组件代码重新对齐。
+
+---
+
+### 接下来
+
+1. **SCSS**（[#1871](https://github.com/jd-opensource/taro-ui/issues/1871)）：`@import` 改 `@use` / `@forward`，确认主题覆盖还能用。原先放在 3.5.0。
+2. **Taro v4 多端**：`demo-v4` 补支付宝、字节、京东、QQ 的编译验证。通过之前 `peerDependencies` 保持 `>=3`。
+3. **仓库分流**：按 `docs/MAINTENANCE.md` 处理打开的历史 issue。
+4. **更后面**：去掉 `propTypes`；暗色主题 / CSS Variables（[#1873](https://github.com/jd-opensource/taro-ui/issues/1873)）；骨架屏、水印。国际化已在 3.4.0 落地，不再作为 4.0.0 的前提。
 
 ---
 
@@ -131,8 +125,7 @@
 - [ ] 验证 `taro-ui` 在 Taro v4 下全平台无 breaking changes
 - [ ] `peerDependencies` 更新为 `"@tarojs/*": ">=3 || ^4"`
 - [ ] 新特性（待定，根据社区需求）：
-  - 国际化 i18n（提取组件硬编码文案）
-  - 暗色主题 / CSS Variables 主题方案
+  - 暗色主题 / CSS Variables 主题方案（国际化已在 3.4.0 完成）
   - 新组件：Skeleton（骨架屏）、Watermark（水印）等
 - [ ] 发布 Major 版本
 
@@ -177,13 +170,16 @@ gantt
     title Taro UI Roadmap Timeline
     dateFormat  YYYY-MM
     section Foundation
-    v3.3.0 重构+验证     :active, 2026-05, 4w
-    v3.3.1 发布          :milestone, after v3.3.0, 0d
+    v3.3.0 重构+验证     :done, 2026-05, 4w
+    v3.3.1 发布          :done, milestone, 2026-04, 0d
     section Stabilize
-    v3.3.2 Hotfix+v4验证  :2026-06, 3w
+    v3.3.2 恢复维护发布   :done, 2026-05, 3w
     section Modernization
-    v3.4.0 FC迁移(Top10) :2026-07, 6w
-    v3.5.0 全FC迁移      :2026-09, 8w
+    v3.4.x FC 与 i18n    :done, 2026-07, 4w
+    v3.4.2 积压发版      :active, 2026-09, 1w
+    section Next
+    SCSS @use            :2026-10, 4w
+    v4 多端验证          :2026-10, 6w
     section Major
     v4.0.0 Taro v4适配   :2027-Q1, 12w
 ```
@@ -196,10 +192,10 @@ gantt
 
 | 计划                | 原计划时间 | 当前状态  | Roadmap 归属                           |
 | ------------------- | ---------- | --------- | -------------------------------------- |
-| 组件 JSX props 改造 | v2.3.0     | ❌ 未开始 | v3.4.0 / v3.5.0（FC 迁移覆盖）         |
-| 字节跳动小程序适配  | v2.3.0     | ❌ 未开始 | 已在 `peerDependencies` 中声明，需验证 |
-| QQ 轻应用适配       | v2.3.0     | ❌ 未开始 | 同上                                   |
-| 国际化 i18n         | v2.3.0     | ❌ 未开始 | v4.0.0                                 |
+| 组件 JSX props 改造 | v2.3.0     | 已由函数组件迁移覆盖 | 3.4.0                                      |
+| 字节跳动小程序适配  | v2.3.0     | 未验证               | 已在 `peerDependencies` 中声明，需验证 |
+| QQ 轻应用适配       | v2.3.0     | 未验证               | 同上                                   |
+| 国际化 i18n         | v2.3.0     | 已发布               | 3.4.0 `ConfigProvider`                 |
 
 ---
 

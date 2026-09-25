@@ -6,7 +6,7 @@ Taro 目前还在成长，如果您愿意为 Taro UI 贡献代码或者反馈使
 
 ## 团队成员
 
-Taro 是由 [凹凸实验室](htts://aotu.io) 团队的十余名成员开发的项目，而 Taro UI 则是由小分队开发完成的，旨在为 Taro 贡献一套官方的 UI 组件库。
+Taro 是由 [凹凸实验室](https://aotu.io) 团队的十余名成员开发的项目，而 Taro UI 则是由小分队开发完成的，旨在为 Taro 贡献一套官方的 UI 组件库。
 
 ## Issue
 
@@ -23,11 +23,10 @@ Issues 是用来提交 Bug 或 Feature 相关的内容，一个 Bug Issue 应该
 
 - 如果是组件相关的 PR，麻烦先创建一个 Issue，这么做是避免大家同时修改同一个问题
 - Fork 一份代码到自己的账号下，请不要直接在仓库中创建分支
-- 基于 `dev` 创建一个新分支，如果你想添加新的组件，分支的命名请使用 `feature_component_[Component Name]`。（例如：`feature_component_list`）
-- Git Commit Message 的格式请遵循：`feat(Component Name): info about this commit`
-- 编写组件的测试用例，小程序端暂时无法做测试，请确保 H5 下测试用例可通过即可
-- 提交 PR 的时候，请使用 Rebase，这是为了保持 Commit 历史的干净（Merge request 到分支 `dev`）
-- 提交 PR 的时候，请添加一些关于你此次 PR 的描述信息
+- 基于 `next` 创建一个新分支。新组件分支使用 `feature_component_[Component Name]`（例如 `feature_component_list`），修复分支使用 `fix/` 前缀
+- Git Commit Message 使用约定式提交：`feat(button): info about this commit`
+- 组件改动请补 `packages/taro-ui/test/components` 下的测试。小程序端暂时无法做测试，请确保这些测试可以通过
+- 提交 PR 到 `next`，并写上这次改动的说明
 
 ## 开发环境
 
@@ -54,8 +53,7 @@ pnpm --filter docs dev
 运行测试：
 
 ```bash
-# H5 端
-pnpm --filter demo test
+pnpm --filter taro-ui test
 ```
 
 项目打包：
