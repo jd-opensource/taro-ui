@@ -49,7 +49,7 @@
   "homepage": "https://jd-opensource.github.io/taro-ui/#/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nervjs/taro-ui.git"
+    "url": "git+https://github.com/jd-opensource/taro-ui.git"
   },
   "license": "MIT",
   "scripts": {

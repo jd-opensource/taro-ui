@@ -25,6 +25,7 @@ jobs:
       startsWith(github.event.head_commit.message, 'chore(release):') ||
       (github.event_name == 'pull_request' && github.event.pull_request.merged == true && startsWith(github.event.pull_request.title, 'chore(release):'))
     permissions:
+      id-token: write # npm trusted publishing (GitHub OIDC)
       contents: write # to create tags and refs
       actions: write # to cancel running workflow (andymckay/cancel-action)
       issues: write # to create comment
@@ -135,17 +136,18 @@ jobs:
           git_commit_sha: ${{ github.sha }}
           git_tag_prefix: 'v'
 
-      # Publish
+      # Publish with GitHub OIDC. npm trusted publishing needs Node >= 22.14
+      # and npm CLI >= 11.5.1. pnpm 10 does not exchange the OIDC token itself.
+      # Leave NODE_AUTH_TOKEN unset so an expired NPM_TOKEN cannot override OIDC.
+      - name: Setup Node for npm publish
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Publish
+        working-directory: packages/taro-ui
         run: |
-          if [ '${{ github.event_name }}' == 'pull_request' ] ; then
-            pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=next
-          elif [ '${{ github.event_name }}' == 'push' ] || [ '${{ github.event_name }}' == 'workflow_dispatch' ] ; then
-            pnpm publish --filter=taro-ui --registry=https://registry.npmjs.org/ --publish-branch=${{ github.ref_name }} ${{ env.PUBLISH_PARAMS }}
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          npm install -g npm@11.15.0
+          npm publish --registry https://registry.npmjs.org/ --access public
 
       # Create relase when event is PR
       - name: Create Release
