@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.4.2](https://github.com/jd-opensource/taro-ui/compare/v3.4.1...v3.4.2) (2026-09-25)
+
+> 收进 `v3.4.1` 之后合入 `next`、当时未发版的组件修复与能力。
+
+### Features
+
+- **AtCalendar**：新增 `disabledDate`，多选时跳过范围内的禁用日期 ([#1917](https://github.com/jd-opensource/taro-ui/issues/1917), [#1918](https://github.com/jd-opensource/taro-ui/issues/1918))
+- **AtFloatLayout**：新增 `closeOnClickOverlay`（默认 `true`）和 `position`（`top` / `bottom`，默认 `bottom`）([#1915](https://github.com/jd-opensource/taro-ui/issues/1915), [#1916](https://github.com/jd-opensource/taro-ui/issues/1916))
+- **AtInputNumber**：新增 `changeOnBlur`，输入过程中不触发 `onChange`，失焦后再触发；加减按钮仍立即触发 ([#1912](https://github.com/jd-opensource/taro-ui/issues/1912))
+
+### Bug Fixes
+
+- **AtIcon**：`onClick` 传入点击事件 ([#1908](https://github.com/jd-opensource/taro-ui/issues/1908))
+- **AtCheckbox**：按 option value 切换，`onChange` 第二个参数为本次变更的 value ([#1913](https://github.com/jd-opensource/taro-ui/issues/1913), [#1914](https://github.com/jd-opensource/taro-ui/issues/1914))
+- **AtDrawer**：遮罩拦截触摸滑动 ([#1911](https://github.com/jd-opensource/taro-ui/issues/1911))
+- **AtAccordion**：默认展开时避免高度落到 `0` 再撑开 ([#1910](https://github.com/jd-opensource/taro-ui/issues/1910))
+- **H5 滚动锁定**：补上 `.at-frozen`，弹层打开时锁住页面滚动 ([#1909](https://github.com/jd-opensource/taro-ui/issues/1909))
+
+---
+
 ## [3.4.1](https://github.com/jd-opensource/taro-ui/compare/v3.4.0...v3.4.1) (2026-07-30)
 
 ### Bug Fixes
