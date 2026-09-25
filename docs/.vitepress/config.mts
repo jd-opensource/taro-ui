@@ -51,6 +51,7 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/taro-ui/favicon.png' }]],
   themeConfig: {
     logo: '/navbar-logo.png',
+    siteTitle: false,
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/guide/introduction' },
@@ -65,6 +66,7 @@ export default defineConfig({
             { text: '介绍', link: '/guide/introduction' },
             { text: '快速上手', link: '/guide/quickstart' },
             { text: '自定义主题', link: '/guide/customize-theme' },
+            { text: '色彩', link: '/guide/color' },
             { text: '常见问题', link: '/guide/questions' },
             { text: '更新日志', link: '/guide/changelog' },
             { text: '设计资源', link: '/guide/resource' }

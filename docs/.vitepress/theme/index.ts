@@ -1,6 +1,7 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import '../../components/iconlist/style.scss'
 import IconList from './components/IconList.vue'
 import Layout from './Layout.vue'
 
