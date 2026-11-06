@@ -5,14 +5,14 @@ import { Text, View } from '@tarojs/components'
 import { AtCheckboxProps, CheckboxOption } from '../../../types/checkbox'
 import { noop } from '../../common/utils'
 
-function AtCheckbox({
+function AtCheckbox<T>({
   customStyle = '',
   className = '',
   options = [],
   selectedList = [],
   onChange = noop
-}: AtCheckboxProps<any>): JSX.Element {
-  const handleClick = (option: CheckboxOption<any>): void => {
+}: AtCheckboxProps<T>): JSX.Element {
+  const handleClick = (option: CheckboxOption<T>): void => {
     const { disabled, value } = option
     if (disabled) return
 
@@ -39,7 +39,8 @@ function AtCheckbox({
         return (
           <View
             className={optionCls}
-            key={value}
+            // React 的 key 只接受 string | number，这里与 runtime 的隐式转换保持一致
+            key={String(value)}
             onClick={() => handleClick(option)}
           >
             <View className='at-checkbox__option-wrap'>

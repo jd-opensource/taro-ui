@@ -2,11 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { View } from '@tarojs/components'
 import { pxTransform } from '../../common/utils'
-
-interface AtLoadingProps {
-  size?: string | number
-  color?: string | number
-}
+import { AtLoadingProps } from '../../../types/loading'
 
 function AtLoading({ color = '', size = 0 }: AtLoadingProps): JSX.Element {
   const loadingSize = typeof size === 'string' ? size : String(size)
