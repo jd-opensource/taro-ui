@@ -42,21 +42,29 @@ export { default as AtCountdown } from './countdown'
 export { default as AtSteps } from './steps'
 export { default as AtCurtain } from './curtain'
 export { default as AtSlider } from './slider'
-export { AtMessage, message } from './message'
+export { AtMessage } from './message'
 export { default as AtImagePicker } from './image-picker'
 export { default as AtIndexes } from './indexes'
 export { default as AtRange } from './range'
-export { default as AtFloatButton } from './float-button'
 export { default as ConfigProvider } from './config-provider'
 export type { Locale, PartialLocale } from './locale'
 
+/* 私有的组件  */
+export { default as AtLoading } from './loading'
+export { default as AtComponent } from './component'
+
 import { Locale } from './locale'
+import {
+  AtModalActionProps,
+  AtModalContentProps,
+  AtModalHeaderProps
+} from './modal'
 
 export declare const zhCN: Locale
 export declare const enUS: Locale
 
 export declare const AtCalendar: ComponentClass<AtCalendarProps>
 
-export declare const AtModalHeader: ComponentClass
-export declare const AtModalAction: ComponentClass
-export declare const AtModalContent: ComponentClass
+export declare const AtModalHeader: ComponentClass<AtModalHeaderProps>
+export declare const AtModalAction: ComponentClass<AtModalActionProps>
+export declare const AtModalContent: ComponentClass<AtModalContentProps>

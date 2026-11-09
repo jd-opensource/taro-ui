@@ -6,14 +6,14 @@ import { CommonEvent } from '@tarojs/components/types/common'
 import { AtRadioProps, RadioOption } from '../../../types/radio'
 import { noop } from '../../common/utils'
 
-function AtRadio({
+function AtRadio<T>({
   customStyle = '',
   className = '',
-  value = '',
+  value = '' as unknown as T,
   options = [],
   onClick = noop
-}: AtRadioProps<any>): JSX.Element {
-  const handleClick = (option: RadioOption<any>, event: CommonEvent): void => {
+}: AtRadioProps<T>): JSX.Element {
+  const handleClick = (option: RadioOption<T>, event: CommonEvent): void => {
     if (option.disabled) return
     onClick(option.value, event)
   }
@@ -22,7 +22,8 @@ function AtRadio({
     <View className={classNames('at-radio', className)} style={customStyle}>
       {options.map(option => (
         <View
-          key={option.value}
+          // React 的 key 只接受 string | number，这里与 runtime 的隐式转换保持一致
+          key={String(option.value)}
           onClick={event => handleClick(option, event)}
           className={classNames({
             'at-radio__option': true,

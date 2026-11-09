@@ -1,5 +1,3 @@
-import { ComponentClass } from 'react'
-
 import AtComponent from './base'
 
 export interface CheckboxOption<T> {
@@ -24,6 +22,6 @@ export interface AtCheckboxProps<T> extends AtComponent {
   onChange: (selectedList: Array<T>, changedValue?: T) => void
 }
 
-declare const AtCheckbox: ComponentClass<AtCheckboxProps<any>>
+declare function AtCheckbox<T>(props: AtCheckboxProps<T>): JSX.Element
 
 export default AtCheckbox
