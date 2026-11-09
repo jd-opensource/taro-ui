@@ -51,7 +51,11 @@ export interface AtModalState {
 }
 
 export interface AtModalActionProps extends AtComponent {
-  isSimple: boolean
+  /**
+   * 是否是简单风格，无分割线
+   * @default false
+   */
+  isSimple?: boolean
 }
 
 export type AtModalContentProps = AtComponent
