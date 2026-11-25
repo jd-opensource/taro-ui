@@ -88,11 +88,13 @@ export default class AtRange extends React.Component<
   }
 
   private triggerEvent(funcName: string): void {
-    const { min = 0 } = this.props
+    const { min = 0, max = 100 } = this.props
     const { aX, bX } = this.state
     const a = Math.round((aX / 100) * this.deltaValue) + min // fix issue #670
     const b = Math.round((bX / 100) * this.deltaValue) + min // fix issue #670
-    const result = [a, b].sort((x, y) => x - y) as [number, number]
+    const result = [a, b]
+      .map(value => Math.min(max, Math.max(min, value)))
+      .sort((x, y) => x - y) as [number, number]
 
     if (funcName === 'onChange') {
       this.props.onChange && this.props.onChange(result)
